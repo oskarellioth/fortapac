@@ -161,7 +161,7 @@ export const STRINGS = {
   },
   product_sacks_capacity: { sv: "10–100 kg kapacitet", en: "10–100 kg capacity" },
 
-  product_forestry_name: { sv: "Skyddsöverdrag", en: "Protective Covers" },
+  product_forestry_name: { sv: "Virkesöverdrag", en: "Lumber Covers" },
   product_forestry_short: {
     sv: "UV-stabiliserade överdrag för timmer, flis och massaved.",
     en: "UV-stabilised covers for timber, wood chip and pulpwood.",
