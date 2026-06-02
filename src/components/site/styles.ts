@@ -61,6 +61,8 @@ export const SITE_CSS = `
 .fortapac .mega-showcase{background:var(--deep);color:#fff;display:flex;flex-direction:column;padding:1.75rem;gap:1.25rem}
 .fortapac .mega-photo{aspect-ratio:16/9;display:grid;place-items:center;border:1px dashed rgba(255,255,255,.2);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.08));overflow:hidden;position:relative;border-radius:2px}
 .fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2);text-align:center;max-width:80%}
+.fortapac .mega-photo.has-image{border:none;background:#000;padding:0}
+.fortapac .mega-photo.has-image img{width:100%;height:100%;object-fit:cover;display:block}
 .fortapac .mega-focus-meta{display:flex;flex-direction:column;gap:.55rem}
 .fortapac .mega-focus-meta .focus-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.9);padding:.35rem .7rem;font-size:.62rem;align-self:flex-start;border-radius:2px}
 .fortapac .mega-focus-meta .focus-title{font-family:"Archivo",Arial,sans-serif;font-size:1.55rem;font-weight:900;letter-spacing:-.025em;line-height:1.05;color:#fff;margin:.15rem 0 0}

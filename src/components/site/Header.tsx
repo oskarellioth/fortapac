@@ -19,6 +19,7 @@ const PRODUCT_KEYS: Array<{
   shortKey: StringKey;
   focusKey: StringKey;
   image: string;
+  focusPhoto?: string;
   fallbackIcon?: ReactNode;
   specs: ProductSpec[];
   detailHref?: string;
@@ -29,6 +30,7 @@ const PRODUCT_KEYS: Array<{
     shortKey: "product_fibc_short",
     focusKey: "product_fibc_focus",
     image: "/products/fibc-bulk-bags.png",
+    focusPhoto: "/products/focus/fibc.jpg",
     specs: [
       { label: "spec_swl", value: "500–2 000 kg" },
       { label: "spec_safety_factor", value: "5:1" },
@@ -369,9 +371,15 @@ export function Header() {
                     ))}
                   </div>
                   <div className="mega-showcase">
-                    <div className="mega-photo">
-                      <div className="tag">{t("mega_product_photo")} · {t(active.nameKey)}</div>
-                    </div>
+                    {active.focusPhoto ? (
+                      <div className="mega-photo has-image">
+                        <img src={active.focusPhoto} alt={t(active.nameKey)} />
+                      </div>
+                    ) : (
+                      <div className="mega-photo">
+                        <div className="tag">{t("mega_product_photo")} · {t(active.nameKey)}</div>
+                      </div>
+                    )}
                     <div className="mega-focus-meta">
                       <span className="focus-badge mono">{t("mega_focus_badge")}</span>
                       <h4 className="focus-title">{t(active.nameKey)}</h4>
