@@ -30,8 +30,8 @@ const css = `
 .fortapac{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",Arial,sans-serif;line-height:1.5}
 .fortapac img{display:block;max-width:100%}
 .fortapac a{color:inherit;text-decoration:none}
-.fortapac .wrap{width:min(var(--max), calc(100% - 40px));margin:0 auto}
-.fortapac .hero-wrap{width:min(1420px, calc(100% - 70px));margin:0 auto}
+.fortapac .wrap{width:calc(100% - 80px);margin:0 auto}
+.fortapac .hero-wrap{width:calc(100% - 80px);margin:0 auto}
 .fortapac .mono{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600}
 .fortapac .eyebrow{color:var(--orange);margin-bottom:.55rem}
 .fortapac h1,.fortapac h2,.fortapac h3{font-family:"Archivo",Arial,sans-serif;line-height:.94;letter-spacing:-.045em;margin:0}
@@ -124,7 +124,7 @@ const css = `
 @media (max-width: 980px) {
   .fortapac .nav,.fortapac .header-cta{display:none}
   .fortapac .menu-button{display:block}
-  .fortapac .hero-wrap{width:min(calc(100% - 40px), var(--max))}
+  .fortapac .hero-wrap{width:calc(100% - 40px)}
   .fortapac .hero::before{background:linear-gradient(0deg, rgba(6,27,45,.96) 0%, rgba(6,27,45,.78) 45%, rgba(6,27,45,.24) 100%)}
   .fortapac .hero-placeholder{inset:0;left:0;top:0;height:42%;border-left:none;border-bottom:1px dashed rgba(255,255,255,.22)}
   .fortapac .hero-shell{align-items:flex-end}
@@ -140,7 +140,7 @@ const css = `
 }
 
 @media (max-width: 560px) {
-  .fortapac .wrap,.fortapac .hero-wrap{width:min(100% - 28px, var(--max))}
+  .fortapac .wrap,.fortapac .hero-wrap{width:calc(100% - 28px)}
   .fortapac .header-inner{height:70px}
   .fortapac .brand{width:178px}
   .fortapac h1{font-size:4.1rem}
