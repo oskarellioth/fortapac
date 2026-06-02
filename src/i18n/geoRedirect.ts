@@ -2,7 +2,7 @@
  * One-shot, client-side IP geolocation. If the visitor is *not* in Sweden,
  * the Swedish default at "/" doesn't suit them; redirect to "/en".
  * Conversely, a Swedish IP arriving at "/en" via a shared link could be
- * redirected to "/", but we don't do that — users who picked English by URL
+ * redirected to "/", but we don't do that , users who picked English by URL
  * stay in English.
  *
  * Mechanics:
@@ -10,7 +10,7 @@
  *   - Skips entirely if the user has previously chosen a locale via the
  *     switcher (localStorage flag).
  *   - Uses ipapi.co/json/ (free tier, no auth, ~30k req/month). Caller's
- *     IP only — no API key, no PII beyond what their browser already sends.
+ *     IP only , no API key, no PII beyond what their browser already sends.
  *   - Server-side rendering (e.g. Cloudflare cf-ipcountry) is the production
  *     path; we'll move there in the Astro migration. This is a v1 stop-gap.
  */
@@ -22,21 +22,21 @@ export function rememberLocalePreference(locale: "sv" | "en") {
   try {
     localStorage.setItem(PREF_KEY, locale);
   } catch {
-    /* private mode etc. — ignore */
+    /* private mode etc. , ignore */
   }
 }
 
 export async function maybeGeoRedirect(currentPath: string): Promise<void> {
   if (typeof window === "undefined") return;
 
-  // Already checked this session — don't pester.
+  // Already checked this session , don't pester.
   try {
     if (sessionStorage.getItem(SESSION_KEY)) return;
   } catch {
     return;
   }
 
-  // User has explicitly picked a locale before — respect that, never override.
+  // User has explicitly picked a locale before , respect that, never override.
   try {
     if (localStorage.getItem(PREF_KEY)) {
       sessionStorage.setItem(SESSION_KEY, "1");
@@ -75,7 +75,7 @@ export async function maybeGeoRedirect(currentPath: string): Promise<void> {
       window.location.replace(target);
     }
   } catch {
-    // Network blocked, ad-blocker, timeout — silently give up. Worst case the
+    // Network blocked, ad-blocker, timeout , silently give up. Worst case the
     // visitor sees Swedish; the language switcher in the header lets them flip.
     try {
       sessionStorage.setItem(SESSION_KEY, "1");

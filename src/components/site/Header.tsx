@@ -73,7 +73,7 @@ const PRODUCT_KEYS: Array<{
     specs: [
       { label: "spec_material", value: "PE / PP" },
       { label: "spec_stabilised", value: "UV" },
-      { label: "spec_safety_factor", value: "—" },
+      { label: "spec_safety_factor", value: "n/a" },
       { label: "spec_recyclable", value: "100%" },
     ],
   },
@@ -116,9 +116,9 @@ const PRODUCT_KEYS: Array<{
     ),
     specs: [
       { label: "spec_material", value: "PP / Steel" },
-      { label: "spec_safety_factor", value: "—" },
+      { label: "spec_safety_factor", value: "n/a" },
       { label: "spec_stabilised", value: "UV" },
-      { label: "spec_recyclable", value: "—" },
+      { label: "spec_recyclable", value: "n/a" },
     ],
   },
 ];
@@ -378,7 +378,7 @@ const INDUSTRY_VALUES: ValueProp[] = [
   },
 ];
 
-// Bottom strip — industries variant
+// Bottom strip, industries variant
 const INDUSTRY_ADDONS: Addon[] = [
   {
     titleKey: "ind_addon_custom",

@@ -3,7 +3,7 @@ export type Locale = "sv" | "en";
 export const LOCALES: Locale[] = ["sv", "en"];
 export const DEFAULT_LOCALE: Locale = "sv";
 
-// Slugs per locale — used to build canonical URLs and the language switcher.
+// Slugs per locale, used to build canonical URLs and the language switcher.
 export const ROUTES = {
   home: { sv: "/", en: "/en" },
   about: { sv: "/om-oss", en: "/en/about" },
@@ -120,7 +120,7 @@ export const STRINGS = {
   value_sustainable_title: { sv: "Hållbara alternativ", en: "Sustainable options" },
   value_sustainable_sub: { sv: "Ansvarsfulla lösningar för en bättre framtid", en: "Responsible solutions for a better future" },
 
-  // Bottom addon strip — industries variant
+  // Bottom addon strip, industries variant
   ind_addon_custom: { sv: "Skräddarsydda lösningar", en: "Custom solutions" },
   ind_addon_custom_sub: { sv: "Anpassat efter dina behov", en: "Tailored to your needs" },
   ind_addon_quality: { sv: "Konsekvent kvalitet", en: "Consistent quality" },
@@ -152,8 +152,8 @@ export const STRINGS = {
     en: "Valve, open-mouth and leno sacks for grain, feed, chemicals and more.",
   },
   product_sacks_focus: {
-    sv: "Flexibla, vävda säckar i många utföranden — för spannmål, foder, kemi, bygg och industri.",
-    en: "Flexible woven sacks in many configurations — for grain, feed, chemicals, construction and industry.",
+    sv: "Flexibla, vävda säckar i många utföranden för spannmål, foder, kemi, bygg och industri.",
+    en: "Flexible woven sacks in many configurations for grain, feed, chemicals, construction and industry.",
   },
   product_sacks_card: {
     sv: "Starka och mångsidiga säckar för industri och jordbruk.",
@@ -182,8 +182,8 @@ export const STRINGS = {
     en: "Tarpaulins, ground covers and container liners in many configurations.",
   },
   product_covers_focus: {
-    sv: "Innerpåsar och liners i PE och PP — extra skydd, täthet och separation för dina förpackningar.",
-    en: "Inner bags and liners in PE and PP — extra protection, sealing and separation for your packaging.",
+    sv: "Innerpåsar och liners i PE och PP. Extra skydd, täthet och separation för dina förpackningar.",
+    en: "Inner bags and liners in PE and PP. Extra protection, sealing and separation for your packaging.",
   },
   product_covers_card: {
     sv: "Skyddsöverdrag och liners för transport, lager och arbetsplats.",
@@ -197,8 +197,8 @@ export const STRINGS = {
     en: "Woven polypropylene fabric on the roll for industrial applications.",
   },
   product_rolls_focus: {
-    sv: "Vävd PP-väv på rulle — råmaterial för konfektion, isolering, separation och förstärkning.",
-    en: "Woven PP fabric on the roll — raw material for fabrication, insulation, separation and reinforcement.",
+    sv: "Vävd PP-väv på rulle. Råmaterial för konfektion, isolering, separation och förstärkning.",
+    en: "Woven PP fabric on the roll. Raw material for fabrication, insulation, separation and reinforcement.",
   },
   product_rolls_card: {
     sv: "Vävd polypropenväv på rulle för industriellt bruk.",
@@ -224,15 +224,15 @@ export const STRINGS = {
   // ───── Home ─────
   home_title: { sv: "Fortapac | Byggda att bära", en: "Fortapac | Built to carry" },
   home_meta: {
-    sv: "Vävt polypropylenemballage — FIBC storsäckar, PP-säckar och överdrag. Direkt från vår moderfabrik, lagerförda och med support i Sverige.",
-    en: "Woven polypropylene packaging — FIBC bulk bags, PP sacks and covers. Factory-direct from our parent producer, stocked and supported in Sweden.",
+    sv: "Vävt polypropylenemballage. FIBC storsäckar, PP-säckar och överdrag, direkt från vår moderfabrik, lagerförda och med support i Sverige.",
+    en: "Woven polypropylene packaging. FIBC bulk bags, PP sacks and covers, factory-direct from our parent producer, stocked and supported in Sweden.",
   },
   hero_photo_label: { sv: "Hjältebild", en: "Hero photography" },
   hero_h1_a: { sv: "Byggda", en: "Built" },
   hero_h1_b: { sv: "att bära", en: "to carry" },
   hero_p: {
-    sv: "FIBC storsäckar, PP-säckar och skyddsöverdrag — tillverkade i vår moderfabrik, lagerförda och servade i Sverige. Direkt från fabrik, utan mellanhand.",
-    en: "FIBC bulk bags, PP sacks and protective covers — manufactured at our parent factory, stocked and serviced in Sweden. Factory-direct, without the middleman.",
+    sv: "FIBC storsäckar, PP-säckar och skyddsöverdrag, tillverkade i vår moderfabrik, lagerförda och servade i Sverige. Direkt från fabrik, utan mellanhand.",
+    en: "FIBC bulk bags, PP sacks and protective covers, manufactured at our parent factory, stocked and serviced in Sweden. Factory-direct, without the middleman.",
   },
   hero_btn_explore: { sv: "Utforska produkter", en: "Explore products" },
   hero_btn_quote: { sv: "Begär offert", en: "Get a quote" },
@@ -268,7 +268,7 @@ export const STRINGS = {
   materials_eyebrow: { sv: "Material & hantverk", en: "Material & craftsmanship" },
   materials_h2: { sv: "Styrka du kan se.", en: "Strength you can see." },
   materials_p: {
-    sv: "Vävt av högkvalitativa polypropylentejper med precisionsvävteknik. Vår varp- och inslagskonstruktion ger draghållfasthet, rena fyllningar och lång livslängd — i fält, i hamn och på arbetsplatsen.",
+    sv: "Vävt av högkvalitativa polypropylentejper med precisionsvävteknik. Vår varp- och inslagskonstruktion ger draghållfasthet, rena fyllningar och lång livslängd: i fält, i hamn och på arbetsplatsen.",
     en: "Woven from high grade polypropylene tapes using precision loom technology. Our warp and weft construction delivers tensile strength, clear fills and long service life in the field, in ports and on the job.",
   },
   materials_link: { sv: "Läs mer om våra material", en: "Learn more about our materials" },
@@ -293,7 +293,7 @@ export const STRINGS = {
   },
   sus_lasts_h: { sv: "Konstruerad att hålla", en: "Engineered to last" },
   sus_lasts_p: {
-    sv: "UV-stabiliserad och fältbeprövad — byggd för att klara verkliga förhållanden längre.",
+    sv: "UV-stabiliserad och fältbeprövad, byggd för att klara verkliga förhållanden längre.",
     en: "UV stabilised and field proven, made to handle real conditions for longer.",
   },
   sus_label: { sv: "Insydd etikett", en: "Sewn-in label" },
@@ -309,8 +309,8 @@ export const STRINGS = {
 
   // ───── Footer ─────
   footer_blurb: {
-    sv: "Vävt polypropylenemballage — tillverkat i vår moderfabrik, lagerfört och med support i Sverige.",
-    en: "Woven polypropylene packaging — manufactured at our parent factory, stocked and supported in Sweden.",
+    sv: "Vävt polypropylenemballage, tillverkat i vår moderfabrik, lagerfört och med support i Sverige.",
+    en: "Woven polypropylene packaging, manufactured at our parent factory, stocked and supported in Sweden.",
   },
   footer_col_products: { sv: "Produkter", en: "Products" },
   footer_col_industries: { sv: "Branscher", en: "Industries" },
@@ -346,31 +346,31 @@ export const STRINGS = {
   about_h1_a: { sv: "Svensk närvaro.", en: "Swedish presence." },
   about_h1_b: { sv: "Direkt från fabrik", en: "Factory direct" },
   about_hero_p: {
-    sv: "Fortapac är ett svensk–indiskt joint venture. Halvägt av en börsnoterad tillverkare av vävt polypropylen, halvägt av det svenska team du jobbar med. Storskalig tillverkning på ena sidan, lokalt ansvar på den andra — och inget däremellan.",
-    en: "Fortapac is a Swedish–Indian joint venture. Half-owned by a publicly listed woven polypropylene producer, half-owned by the Swedish team you work with. Industrial-scale manufacturing on one side, local accountability on the other — and nothing in between.",
+    sv: "Fortapac är ett svensk–indiskt joint venture. Halvägt av en börsnoterad tillverkare av vävt polypropylen, halvägt av det svenska team du jobbar med. Storskalig tillverkning på ena sidan, lokalt ansvar på den andra. Inget däremellan.",
+    en: "Fortapac is a Swedish–Indian joint venture. Half-owned by a publicly listed woven polypropylene producer, half-owned by the Swedish team you work with. Industrial-scale manufacturing on one side, local accountability on the other. Nothing in between.",
   },
   about_pillars_eyebrow: { sv: "Så är vi byggda", en: "How we're built" },
   about_pillars_h2: {
     sv: "Tre saker du kan räkna med.",
     en: "Three things you can count on.",
   },
-  pillar1_num: { sv: "01 — LOKAL", en: "01 — LOCAL" },
+  pillar1_num: { sv: "01 · LOKAL", en: "01 · LOCAL" },
   pillar1_h: { sv: "Svenskstyrt", en: "Swedish-led" },
   pillar1_p: {
-    sv: "Försäljning, lager och teknisk support i Sverige. Du pratar med personerna som ansvarar för din order — svensk arbetstid, din tidszon.",
+    sv: "Försäljning, lager och teknisk support i Sverige. Du pratar med personerna som ansvarar för din order, på svensk arbetstid, i din tidszon.",
     en: "Sales, stock and technical support based in Sweden. You talk to the people responsible for your order, on Swedish business hours, in your time zone.",
   },
-  pillar2_num: { sv: "02 — DIREKT", en: "02 — DIRECT" },
+  pillar2_num: { sv: "02 · DIREKT", en: "02 · DIRECT" },
   pillar2_h: { sv: "Direkt från fabrik", en: "Factory direct" },
   pillar2_p: {
     sv: "Byggd i vår moderfabriks vävsalar, fraktad till vårt svenska lager och vidare till dig. Inga handelshuspåslag, ingen extra QC-mellanhand, ingen bruten telefonlina mellan dig och specen.",
     en: "Built at our parent's loom rooms, shipped to our Swedish warehouse, and on to your site. No trading-house markup, no extra quality middleman, no broken phone line between you and the spec.",
   },
-  pillar3_num: { sv: "03 — TRYGGHET", en: "03 — BACKED" },
+  pillar3_num: { sv: "03 · TRYGGHET", en: "03 · BACKED" },
   pillar3_h: { sv: "Börsnoterad partner i ryggen", en: "Listed-partner backed" },
   pillar3_p: {
-    sv: "Halvägt av en börsnoterad tillverkningspartner. Industriell kapacitet, reviderade räkenskaper och leveranssäkerheten som följer med båda — utan att du själv behöver jaga en fabrik.",
-    en: "Half-owned by a publicly listed manufacturing partner. Industrial-scale capacity, audited financials, and the supply security that comes with both — without you ever needing to chase a factory directly.",
+    sv: "Halvägt av en börsnoterad tillverkningspartner. Industriell kapacitet, reviderade räkenskaper och leveranssäkerheten som följer med båda, utan att du själv behöver jaga en fabrik.",
+    en: "Half-owned by a publicly listed manufacturing partner. Industrial-scale capacity, audited financials, and the supply security that comes with both, without you ever needing to chase a factory directly.",
   },
   about_story_eyebrow: { sv: "Varför det betyder något", en: "Why it matters" },
   about_story_h2: {
@@ -382,11 +382,11 @@ export const STRINGS = {
     en: "Most importers of woven polypropylene packaging are trading houses: a website, a desk in Stockholm and a long phone line to a factory you've never visited. We're built differently.",
   },
   about_story_p2_sv: {
-    sv: "Fortapac är halvägt av **fabriken själv** — en börsnoterad tillverkare med betydande PP-vävkapacitet — och halvägt av det **svenska team** du arbetar med dagligen. Två ägare, en ansvarsfull leverantörskedja.",
-    en: "Fortapac is half-owned by the **factory itself** — a publicly listed manufacturer with significant woven PP capacity — and half-owned by the **Swedish team** you work with day to day. Two owners, one accountable supply chain.",
+    sv: "Fortapac är halvägt av **fabriken själv** (en börsnoterad tillverkare med betydande PP-vävkapacitet) och halvägt av det **svenska team** du arbetar med dagligen. Två ägare, en ansvarsfull leverantörskedja.",
+    en: "Fortapac is half-owned by the **factory itself** (a publicly listed manufacturer with significant woven PP capacity) and half-owned by the **Swedish team** you work with day to day. Two owners, one accountable supply chain.",
   },
   about_story_p3: {
-    sv: "Den strukturen förändrar vad vi kan erbjuda. Vi styr vävprogrammet, så vi kan garantera specen. Vi sitter innanför tillverkningsmarginalen, så vi kan ge fabrikspris. Och vi lagerför i Sverige de artiklar våra kunder oftast använder — så ett trasigt truckhjul eller ett akut jobb inte betyder sex veckors leveranstid från Asien.",
+    sv: "Den strukturen förändrar vad vi kan erbjuda. Vi styr vävprogrammet, så vi kan garantera specen. Vi sitter innanför tillverkningsmarginalen, så vi kan ge fabrikspris. Och vi lagerför i Sverige de artiklar våra kunder oftast använder, så ett trasigt truckhjul eller ett akut jobb inte betyder sex veckors leveranstid från Asien.",
     en: "That structure changes what we can offer. We control the loom programme, so we can guarantee specs. We're inside the manufacturing margin, so we can pass on factory pricing. And we hold stock in Sweden of the lines our customers use most, so a forklift breakdown or a last-minute job doesn't mean a six-week lead time from Asia.",
   },
   about_story_p4: {
