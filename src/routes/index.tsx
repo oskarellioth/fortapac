@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Woven polypropylene packaging, FIBC bulk bags, PP sacks and protective covers engineered in Sweden.",
+          "Woven polypropylene packaging — FIBC bulk bags, PP sacks and covers. Factory-direct from our parent producer, stocked and supported in Sweden.",
       },
     ],
     links: [
@@ -202,7 +202,7 @@ const html = `
     <div class="hero-wrap hero-shell">
       <div class="hero-content">
         <h1>Built<br>to carry<span style="color:var(--orange)">.</span></h1>
-        <p>Woven polypropylene packaging — FIBC bulk bags, PP sacks and protective covers — engineered in Sweden for the weight of real work.</p>
+        <p>FIBC bulk bags, PP sacks and protective covers — manufactured at our parent factory, stocked and serviced in Sweden. Factory-direct, without the middleman.</p>
         <div class="hero-actions">
           <a class="button primary" href="#products">Explore products <span class="arrow">→</span></a>
           <a class="button dark" href="#contact">Get a quote <span class="arrow">→</span></a>
@@ -298,7 +298,7 @@ const html = `
       <div class="woven-lines"></div>
       <div>
         <h2 style="font-size:2rem">Need the right bag for the job?</h2>
-        <p style="color:rgba(255,255,255,.8);max-width:620px">Our team will help you spec the right solution for your load, site and conditions. Fast quotes. Proven performance.</p>
+        <p style="color:rgba(255,255,255,.8);max-width:620px">Our Swedish team specs your bag, our factory builds it. Fast quotes, factory pricing, proven performance.</p>
       </div>
       <a class="button primary" href="mailto:hello@fortapac.se">Get a quote <span class="arrow">→</span></a>
     </div>
@@ -434,7 +434,7 @@ function Header() {
                     <div className="eyebrow mono">Products</div>
                     <h3>Woven packaging for load, storage and transport.</h3>
                     <div className="rule" />
-                    <p>Engineered for strength and reliability across every stage of the supply chain.</p>
+                    <p>Manufactured at our parent factory. Specified, stocked and supported from Sweden.</p>
                     <a className="button light" href="#products">
                       View all products <span className="arrow">→</span>
                     </a>
