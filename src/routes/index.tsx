@@ -71,7 +71,7 @@ const css = `
 .fortapac .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .fortapac .product-card{background:#fff;border:1px solid var(--line);padding:2rem;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
 .fortapac .product-card svg{width:54px;height:54px;color:var(--navy);margin-bottom:1.4rem}
-.fortapac .product-card .product-image{width:100%;height:150px;object-fit:contain;object-position:left center;margin-bottom:1.2rem;mix-blend-mode:multiply}
+.fortapac .product-card .product-image{width:100%;height:150px;object-fit:contain;object-position:center;margin-bottom:1.2rem;mix-blend-mode:multiply}
 .fortapac .product-card p{margin:.7rem 0 0;color:rgba(11,27,45,.76)}
 
 .fortapac .spec-row{background:linear-gradient(110deg,var(--deep),var(--navy));color:#fff;padding:52px 0}
