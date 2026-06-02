@@ -133,7 +133,7 @@ const ADDONS: Addon[] = [
   {
     titleKey: "addon_custom_sizes",
     subKey: "addon_custom_sub",
-    iconSrc: "/icons/custom.svg",
+    iconSrc: "/icons/custom.png",
     fallbackIcon: (
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -146,7 +146,7 @@ const ADDONS: Addon[] = [
   {
     titleKey: "addon_printed_logos",
     subKey: "addon_print_sub",
-    iconSrc: "/icons/print.svg",
+    iconSrc: "/icons/print.png",
     fallbackIcon: (
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -160,7 +160,7 @@ const ADDONS: Addon[] = [
   {
     titleKey: "addon_uv_options",
     subKey: "addon_uv_sub",
-    iconSrc: "/icons/uv.svg",
+    iconSrc: "/icons/uv.png",
     fallbackIcon: (
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -173,7 +173,7 @@ const ADDONS: Addon[] = [
   {
     titleKey: "addon_liners_coatings",
     subKey: "addon_liners_sub",
-    iconSrc: "/icons/liners.svg",
+    iconSrc: "/icons/liners.png",
     fallbackIcon: (
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -187,7 +187,7 @@ const ADDONS: Addon[] = [
   {
     titleKey: "addon_tech_support",
     subKey: "addon_support_sub",
-    iconSrc: "/icons/support.svg",
+    iconSrc: "/icons/support.png",
     fallbackIcon: (
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">

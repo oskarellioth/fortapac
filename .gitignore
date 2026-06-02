@@ -30,3 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local working assets — not part of the deploy.
+# Drop new icons/photos here; public/ symlinks point at them.
+_source/
