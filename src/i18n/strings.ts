@@ -31,7 +31,8 @@ export function routeKeyForPath(pathname: string): RouteKey | null {
 export const STRINGS = {
   // ───── Header / nav / mega ─────
   nav_products: { sv: "Produkter", en: "Products" },
-  nav_industries: { sv: "Branscher", en: "Industries" },
+  nav_industries: { sv: "Industrier", en: "Industries" },
+  nav_material: { sv: "Material", en: "Materials" },
   nav_about: { sv: "Om oss", en: "About us" },
   nav_sustainability: { sv: "Hållbarhet", en: "Sustainability" },
   nav_contact: { sv: "Kontakt", en: "Contact" },
@@ -40,15 +41,17 @@ export const STRINGS = {
 
   mega_eyebrow: { sv: "Produkter", en: "Products" },
   mega_headline: {
-    sv: "Vävt emballage för last, lager och transport.",
-    en: "Woven packaging for load, storage and transport.",
+    sv: "Vävda lösningar för last, lagring och transport.",
+    en: "Woven solutions for load, storage and transport.",
   },
   mega_intro: {
-    sv: "Tillverkat i vår moderfabrik. Speccat, lagerfört och supporterat från Sverige.",
-    en: "Manufactured at our parent factory. Specified, stocked and supported from Sweden.",
+    sv: "Tillverkade i vår egen fabrik. Specificerade, lagerförda och stödda från Sverige.",
+    en: "Manufactured at our own factory. Specified, stocked and supported from Sweden.",
   },
   mega_view_all: { sv: "Se alla produkter", en: "View all products" },
-  mega_product_photo: { sv: "Produktbild", en: "Product photo" },
+  mega_product_photo: { sv: "Produktbild kommer snart", en: "Product photo coming soon" },
+  mega_focus_badge: { sv: "Produkt i fokus", en: "Featured product" },
+  mega_focus_link: { sv: "Visa produktdetaljer", en: "View product details" },
 
   spec_swl: { sv: "SWL", en: "SWL" },
   spec_safety_factor: { sv: "Säkerhetsfaktor", en: "Safety factor" },
@@ -57,17 +60,26 @@ export const STRINGS = {
   spec_stabilised: { sv: "Stabiliserad", en: "Stabilised" },
   spec_optional: { sv: "Tillval", en: "Optional" },
 
-  addon_custom_sizes: { sv: "Måttbeställda storlekar", en: "Custom sizes available" },
-  addon_printed_logos: { sv: "Tryckta logotyper", en: "Printed logos" },
+  addon_custom_sizes: { sv: "Anpassade lösningar", en: "Custom solutions" },
+  addon_custom_sub: { sv: "Skräddarsytt efter dina behov", en: "Tailored to your needs" },
+  addon_printed_logos: { sv: "Tryck & logotyp", en: "Print & branding" },
+  addon_print_sub: { sv: "Högkvalitativ profilering", en: "High-quality branding" },
   addon_uv_options: { sv: "UV-alternativ", en: "UV options" },
+  addon_uv_sub: { sv: "Ökad hållbarhet", en: "Increased durability" },
   addon_liners_coatings: { sv: "Liners & beläggningar", en: "Liners & coatings" },
+  addon_liners_sub: { sv: "Extra skydd och täthet", en: "Extra protection and sealing" },
   addon_tech_support: { sv: "Teknisk support", en: "Technical support" },
+  addon_support_sub: { sv: "Rådgivning i varje steg", en: "Guidance at every stage" },
 
   // ───── Products ─────
-  product_fibc_name: { sv: "FIBC storsäckar", en: "FIBC Bulk Bags" },
+  product_fibc_name: { sv: "FIBC Storsäckar", en: "FIBC Bulk Bags" },
   product_fibc_short: {
-    sv: "500–2 000 kg SWL för torrt, rinnande material.",
-    en: "500–2,000 kg SWL containers for dry, flowable products.",
+    sv: "500–2 000 kg SWL säckar för torra, flytande och pastösa produkter.",
+    en: "500–2,000 kg SWL containers for dry, flowable and paste-like products.",
+  },
+  product_fibc_focus: {
+    sv: "Starka, pålitliga och UN-certifierade för säker transport av torra, flytande och pastösa produkter.",
+    en: "Strong, reliable and UN-certified for safe transport of dry, flowable and paste-like products.",
   },
   product_fibc_card: {
     sv: "Robusta storsäckar för pulver, granulat och bulkvaror.",
@@ -75,10 +87,14 @@ export const STRINGS = {
   },
   product_fibc_capacity: { sv: "SWL 500–2 000 kg", en: "SWL 500–2000 kg" },
 
-  product_sacks_name: { sv: "PP-säckar (vävda)", en: "PP Woven Sacks" },
+  product_sacks_name: { sv: "PP Vävda Säckar", en: "PP Woven Sacks" },
   product_sacks_short: {
-    sv: "Öppen-, ventil- och leno-säckar för spannmål, foder och kemi.",
-    en: "Open-mouth, valve and leno sacks for grain, feed, chemicals and more.",
+    sv: "Ventilsäckar, öppen mynning och leno-säckar för spannmål, foder, kemikalier m.m.",
+    en: "Valve, open-mouth and leno sacks for grain, feed, chemicals and more.",
+  },
+  product_sacks_focus: {
+    sv: "Flexibla, vävda säckar i många utföranden — för spannmål, foder, kemi, bygg och industri.",
+    en: "Flexible woven sacks in many configurations — for grain, feed, chemicals, construction and industry.",
   },
   product_sacks_card: {
     sv: "Starka och mångsidiga säckar för industri och jordbruk.",
@@ -86,10 +102,14 @@ export const STRINGS = {
   },
   product_sacks_capacity: { sv: "10–100 kg kapacitet", en: "10–100 kg capacity" },
 
-  product_forestry_name: { sv: "Skogsbruksöverdrag", en: "Forestry Covers" },
+  product_forestry_name: { sv: "Skyddsöverdrag", en: "Protective Covers" },
   product_forestry_short: {
-    sv: "UV-stabiliserade överdrag för timmer och massa.",
-    en: "UV-stabilised covers for timber and pulp protection.",
+    sv: "UV-stabiliserade överdrag för timmer, flis och massaved.",
+    en: "UV-stabilised covers for timber, wood chip and pulpwood.",
+  },
+  product_forestry_focus: {
+    sv: "UV-stabiliserade överdrag som skyddar timmerstaplar, flis och massaved mot väder och vind.",
+    en: "UV-stabilised covers that protect timber stacks, wood chip and pulpwood from the elements.",
   },
   product_forestry_card: {
     sv: "Hållbara överdrag för timmerstaplar och skogsbruk.",
@@ -97,16 +117,50 @@ export const STRINGS = {
   },
   product_forestry_capacity: { sv: "UV-stabiliserade", en: "UV stabilised" },
 
-  product_covers_name: { sv: "Överdrag & liners", en: "Covers & Liners" },
+  product_covers_name: { sv: "Innerpåsar & Liners", en: "Inner Bags & Liners" },
   product_covers_short: {
-    sv: "Presenningar, markduk och containerliners.",
-    en: "Tarpaulins, ground covers and container liners.",
+    sv: "Tältdukar, markskydd och containerliners i olika utföranden.",
+    en: "Tarpaulins, ground covers and container liners in many configurations.",
+  },
+  product_covers_focus: {
+    sv: "Innerpåsar och liners i PE och PP — extra skydd, täthet och separation för dina förpackningar.",
+    en: "Inner bags and liners in PE and PP — extra protection, sealing and separation for your packaging.",
   },
   product_covers_card: {
     sv: "Skyddsöverdrag och liners för transport, lager och arbetsplats.",
     en: "Protective covers and liners built for transport, storage and site use.",
   },
   product_covers_capacity: { sv: "Måttbeställda", en: "Custom made" },
+
+  product_rolls_name: { sv: "Väv & Rullar", en: "Fabric & Rolls" },
+  product_rolls_short: {
+    sv: "Vävd polypropenväv på rulle för industriella applikationer.",
+    en: "Woven polypropylene fabric on the roll for industrial applications.",
+  },
+  product_rolls_focus: {
+    sv: "Vävd PP-väv på rulle — råmaterial för konfektion, isolering, separation och förstärkning.",
+    en: "Woven PP fabric on the roll — raw material for fabrication, insulation, separation and reinforcement.",
+  },
+  product_rolls_card: {
+    sv: "Vävd polypropenväv på rulle för industriellt bruk.",
+    en: "Woven polypropylene fabric on the roll for industrial use.",
+  },
+  product_rolls_capacity: { sv: "Bredd på beställning", en: "Width to order" },
+
+  product_accessories_name: { sv: "Tillbehör", en: "Accessories" },
+  product_accessories_short: {
+    sv: "Lyftöglor, snören och andra komponenter som kompletterar din lösning.",
+    en: "Lifting loops, cords and other components that complete your solution.",
+  },
+  product_accessories_focus: {
+    sv: "Lyftöglor, snören, ventiler och tillbehör som kompletterar och anpassar din emballagelösning.",
+    en: "Lifting loops, cords, valves and accessories that complete and customise your packaging.",
+  },
+  product_accessories_card: {
+    sv: "Komponenter och tillbehör som kompletterar våra produkter.",
+    en: "Components and accessories that complete our product range.",
+  },
+  product_accessories_capacity: { sv: "Måttanpassade", en: "Made to spec" },
 
   // ───── Home ─────
   home_title: { sv: "Fortapac | Byggda att bära", en: "Fortapac | Built to carry" },

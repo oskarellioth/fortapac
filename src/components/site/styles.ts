@@ -40,34 +40,46 @@ export const SITE_CSS = `
 .fortapac .lang-switch .on{color:#fff}
 .fortapac .lang-switch .sep{color:rgba(255,255,255,.3);font-weight:400}
 
-.fortapac .mega{position:fixed;left:0;right:0;top:78px;background:var(--paper);color:var(--ink);box-shadow:0 30px 60px -20px rgba(6,27,45,.45);z-index:20;border-top:1px solid rgba(255,255,255,.12)}
-.fortapac .mega-grid{display:grid;grid-template-columns:1fr 1.35fr 1.45fr;min-height:480px}
-.fortapac .mega-intro{padding:3rem 2.5rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:1.25rem}
-.fortapac .mega-intro h3{font-family:"Archivo",Arial,sans-serif;font-size:1.7rem;font-weight:900;line-height:1.05;letter-spacing:-.035em;margin:0}
+.fortapac .mega{position:fixed;left:0;right:0;top:78px;background:#F9F9F9;color:var(--ink);box-shadow:0 30px 60px -20px rgba(6,27,45,.45);z-index:20;border-top:1px solid rgba(255,255,255,.12)}
+.fortapac .mega-grid{display:grid;grid-template-columns:1fr 1.45fr 1.55fr;min-height:560px}
+.fortapac .mega-intro{padding:3rem 2.5rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:1.25rem;background:#F9F9F9}
+.fortapac .mega-intro h3{font-family:"Archivo",Arial,sans-serif;font-size:1.7rem;font-weight:900;line-height:1.05;letter-spacing:-.035em;margin:0;color:var(--navy)}
 .fortapac .mega-intro .rule{width:64px;height:3px;background:var(--orange)}
-.fortapac .mega-intro p{margin:0;color:rgba(11,27,45,.7);font-size:.95rem;max-width:280px}
+.fortapac .mega-intro p{margin:0;color:rgba(11,27,45,.7);font-size:.95rem;max-width:300px}
 .fortapac .mega-intro .button{align-self:flex-start;margin-top:auto}
-.fortapac .mega-list{display:flex;flex-direction:column;border-right:1px solid var(--line)}
-.fortapac .mega-item{display:grid;grid-template-columns:84px 1fr 24px;gap:1.25rem;align-items:center;padding:1.4rem 2rem;border-bottom:1px solid var(--line);position:relative;transition:background .15s;cursor:pointer;text-align:left;background:transparent;border-left:none;border-right:none;border-top:none;width:100%;font-family:inherit;color:inherit}
+.fortapac .mega-list{display:flex;flex-direction:column;background:#F9F9F9;border-right:1px solid var(--line)}
+.fortapac .mega-item{display:grid;grid-template-columns:72px 1fr 24px;gap:1rem;align-items:center;padding:1.1rem 1.75rem;border-bottom:1px solid var(--line);position:relative;transition:background .15s;cursor:pointer;text-align:left;background:transparent;border-left:none;border-right:none;border-top:none;width:100%;font-family:inherit;color:inherit}
 .fortapac .mega-item:last-child{border-bottom:none}
-.fortapac .mega-item.active{background:rgba(255,255,255,.55)}
+.fortapac .mega-item.active{background:#fff}
 .fortapac .mega-item.active::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange)}
-.fortapac .mega-icon{display:grid;place-items:center}
-.fortapac .mega-icon img{width:64px;height:64px;object-fit:contain;mix-blend-mode:multiply}
-.fortapac .mega-item h4{font-family:"Archivo",Arial,sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.01em;margin:0 0 .3rem;text-transform:uppercase}
-.fortapac .mega-item p{margin:0;font-size:.85rem;color:rgba(11,27,45,.7);line-height:1.4}
+.fortapac .mega-icon{display:grid;place-items:center;width:56px;height:56px;color:var(--navy)}
+.fortapac .mega-icon img{width:56px;height:56px;object-fit:contain;mix-blend-mode:multiply}
+.fortapac .mega-icon svg{width:48px;height:48px}
+.fortapac .mega-item h4{font-family:"Archivo",Arial,sans-serif;font-size:.95rem;font-weight:800;letter-spacing:.01em;margin:0 0 .25rem;text-transform:uppercase;color:var(--navy)}
+.fortapac .mega-item p{margin:0;font-size:.82rem;color:rgba(11,27,45,.65);line-height:1.4}
 .fortapac .mega-item .arrow{color:var(--orange);font-size:1.1rem;justify-self:end}
-.fortapac .mega-showcase{background:var(--deep);color:#fff;display:flex;flex-direction:column;padding:1.5rem}
-.fortapac .mega-photo{flex:1;display:grid;place-items:center;min-height:300px;border:1px dashed rgba(255,255,255,.2);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.08));margin-bottom:1.5rem;overflow:hidden;position:relative}
-.fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2)}
-.fortapac .mega-specs{display:grid;grid-template-columns:repeat(4,1fr)}
-.fortapac .mega-specs > div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;padding:.5rem .75rem;border-right:1px solid rgba(255,255,255,.1)}
+.fortapac .mega-showcase{background:var(--deep);color:#fff;display:flex;flex-direction:column;padding:1.75rem;gap:1.25rem}
+.fortapac .mega-photo{aspect-ratio:16/9;display:grid;place-items:center;border:1px dashed rgba(255,255,255,.2);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.08));overflow:hidden;position:relative;border-radius:2px}
+.fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2);text-align:center;max-width:80%}
+.fortapac .mega-focus-meta{display:flex;flex-direction:column;gap:.55rem}
+.fortapac .mega-focus-meta .focus-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.9);padding:.35rem .7rem;font-size:.62rem;align-self:flex-start;border-radius:2px}
+.fortapac .mega-focus-meta .focus-title{font-family:"Archivo",Arial,sans-serif;font-size:1.55rem;font-weight:900;letter-spacing:-.025em;line-height:1.05;color:#fff;margin:.15rem 0 0}
+.fortapac .mega-focus-meta .focus-blurb{margin:0;color:rgba(255,255,255,.82);font-size:.92rem;line-height:1.5;max-width:46ch}
+.fortapac .mega-focus-meta .focus-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--orange);font-size:.72rem;align-self:flex-start;margin-top:.25rem}
+.fortapac .mega-focus-meta .focus-link:hover{filter:brightness(1.15)}
+.fortapac .mega-specs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1);padding-top:1.25rem;margin-top:auto}
+.fortapac .mega-specs > div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.3rem;padding:.25rem .5rem;border-right:1px solid rgba(255,255,255,.08)}
 .fortapac .mega-specs > div:last-child{border-right:none}
-.fortapac .mega-specs svg{width:22px;height:22px;color:#fff;margin-bottom:.15rem}
-.fortapac .mega-specs .label{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:rgba(255,255,255,.65);line-height:1.2}
-.fortapac .mega-specs .val{font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:600;color:#fff;line-height:1.2}
-.fortapac .mega-addons{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:1rem 2rem;background:#fff;border-top:1px solid var(--line);font-family:"Archivo",Arial,sans-serif;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);flex-wrap:wrap}
-.fortapac .mega-addons .dot{color:var(--orange);font-style:normal;margin:0 .25rem}
+.fortapac .mega-specs .label{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:rgba(255,255,255,.6);line-height:1.2}
+.fortapac .mega-specs .val{font-family:"IBM Plex Mono",monospace;font-size:1rem;font-weight:600;color:#fff;line-height:1.1}
+.fortapac .mega-addons{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--line);padding:1.1rem 2rem}
+.fortapac .mega-addons .addon-item{display:flex;align-items:center;gap:.85rem;padding:.25rem .75rem;border-right:1px solid var(--line)}
+.fortapac .mega-addons .addon-item:last-child{border-right:none}
+.fortapac .mega-addons .addon-icon{flex:none;width:34px;height:34px;display:grid;place-items:center;color:var(--orange)}
+.fortapac .mega-addons .addon-icon svg{width:28px;height:28px}
+.fortapac .mega-addons .addon-icon img{width:28px;height:28px;object-fit:contain}
+.fortapac .mega-addons .addon-title{display:block;font-family:"Archivo",Arial,sans-serif;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);line-height:1.2}
+.fortapac .mega-addons .addon-sub{display:block;font-size:.74rem;color:rgba(11,27,45,.6);line-height:1.3;margin-top:.15rem}
 
 .fortapac .hero{position:relative;min-height:720px;overflow:hidden;background:var(--navy);color:#fff}
 .fortapac .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(6,27,45,.96) 0%, rgba(6,27,45,.84) 28%, rgba(6,27,45,.44) 50%, rgba(6,27,45,.12) 73%, rgba(6,27,45,.08) 100%);z-index:2}
@@ -174,6 +186,8 @@ export const SITE_CSS = `
   .fortapac .sustainability-grid>div{border-right:none;border-bottom:1px solid var(--line)}
   .fortapac .placeholder-fill{min-height:260px}
   .fortapac .about-pillars-grid,.fortapac .about-story-grid{grid-template-columns:1fr;gap:2.5rem}
+  .fortapac .mega-grid{grid-template-columns:1fr}
+  .fortapac .mega-addons{grid-template-columns:1fr 1fr}
   .fortapac .about-hero{padding:80px 0 70px}
 }
 
