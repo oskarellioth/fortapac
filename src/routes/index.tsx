@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -50,8 +51,43 @@ const css = `
 .fortapac .brand{display:inline-flex;width:212px;color:inherit}
 .fortapac .brand svg{width:100%;height:auto}
 .fortapac .nav{display:flex;gap:clamp(1rem,3vw,3rem);align-items:center}
-.fortapac .nav a{font-family:"Archivo",Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;color:rgba(255,255,255,.92)}
+.fortapac .nav a,.fortapac .nav button.mega-trigger-btn{font-family:"Archivo",Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;color:rgba(255,255,255,.92);letter-spacing:.02em}
+.fortapac .nav button.mega-trigger-btn{background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem;padding:0;line-height:1;position:relative}
+.fortapac .nav .mega-wrap{position:relative;display:inline-flex;align-items:center;height:78px}
+.fortapac .nav .mega-wrap.open button.mega-trigger-btn{color:var(--orange)}
+.fortapac .nav .mega-wrap.open::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--orange)}
+.fortapac .mega-trigger-btn .chev{display:inline-block;transition:transform .2s;font-size:.85rem}
+.fortapac .nav .mega-wrap.open .chev{transform:rotate(180deg)}
 .fortapac .menu-button{display:none;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+
+.fortapac .mega{position:fixed;left:0;right:0;top:78px;background:var(--paper);color:var(--ink);box-shadow:0 30px 60px -20px rgba(6,27,45,.45);z-index:20;border-top:1px solid rgba(255,255,255,.12)}
+.fortapac .mega-grid{display:grid;grid-template-columns:1fr 1.35fr 1.45fr;min-height:480px}
+.fortapac .mega-intro{padding:3rem 2.5rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:1.25rem}
+.fortapac .mega-intro h3{font-family:"Archivo",Arial,sans-serif;font-size:1.7rem;font-weight:900;line-height:1.05;letter-spacing:-.035em;margin:0}
+.fortapac .mega-intro .rule{width:64px;height:3px;background:var(--orange)}
+.fortapac .mega-intro p{margin:0;color:rgba(11,27,45,.7);font-size:.95rem;max-width:280px}
+.fortapac .mega-intro .button{align-self:flex-start;margin-top:auto}
+.fortapac .mega-list{display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.fortapac .mega-item{display:grid;grid-template-columns:84px 1fr 24px;gap:1.25rem;align-items:center;padding:1.4rem 2rem;border-bottom:1px solid var(--line);position:relative;transition:background .15s;cursor:pointer;text-align:left;background:transparent;border-left:none;border-right:none;border-top:none;width:100%;font-family:inherit;color:inherit}
+.fortapac .mega-item:last-child{border-bottom:none}
+.fortapac .mega-item.active{background:rgba(255,255,255,.55)}
+.fortapac .mega-item.active::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange)}
+.fortapac .mega-icon{display:grid;place-items:center}
+.fortapac .mega-icon img{width:64px;height:64px;object-fit:contain;mix-blend-mode:multiply}
+.fortapac .mega-item h4{font-family:"Archivo",Arial,sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.01em;margin:0 0 .3rem;text-transform:uppercase}
+.fortapac .mega-item p{margin:0;font-size:.85rem;color:rgba(11,27,45,.7);line-height:1.4}
+.fortapac .mega-item .arrow{color:var(--orange);font-size:1.1rem;justify-self:end}
+.fortapac .mega-showcase{background:var(--deep);color:#fff;display:flex;flex-direction:column;padding:1.5rem}
+.fortapac .mega-photo{flex:1;display:grid;place-items:center;min-height:300px;border:1px dashed rgba(255,255,255,.2);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.08));margin-bottom:1.5rem;overflow:hidden;position:relative}
+.fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2)}
+.fortapac .mega-specs{display:grid;grid-template-columns:repeat(4,1fr)}
+.fortapac .mega-specs > div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;padding:.5rem .75rem;border-right:1px solid rgba(255,255,255,.1)}
+.fortapac .mega-specs > div:last-child{border-right:none}
+.fortapac .mega-specs svg{width:22px;height:22px;color:#fff;margin-bottom:.15rem}
+.fortapac .mega-specs .label{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:rgba(255,255,255,.65);line-height:1.2}
+.fortapac .mega-specs .val{font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:600;color:#fff;line-height:1.2}
+.fortapac .mega-addons{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:1rem 2rem;background:#fff;border-top:1px solid var(--line);font-family:"Archivo",Arial,sans-serif;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);flex-wrap:wrap}
+.fortapac .mega-addons .dot{color:var(--orange);font-style:normal;margin:0 .25rem}
 
 .fortapac .hero{position:relative;min-height:720px;overflow:hidden;background:var(--navy);color:#fff}
 .fortapac .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(6,27,45,.96) 0%, rgba(6,27,45,.84) 28%, rgba(6,27,45,.44) 50%, rgba(6,27,45,.12) 73%, rgba(6,27,45,.08) 100%);z-index:2}
@@ -122,7 +158,7 @@ const css = `
 .fortapac .copyright a{display:inline-block;margin-left:1.5rem;color:rgba(255,255,255,.72)}
 
 @media (max-width: 980px) {
-  .fortapac .nav,.fortapac .header-cta{display:none}
+  .fortapac .nav,.fortapac .header-cta,.fortapac .mega{display:none}
   .fortapac .menu-button{display:block}
   .fortapac .hero-wrap{width:calc(100% - 40px)}
   .fortapac .hero::before{background:linear-gradient(0deg, rgba(6,27,45,.96) 0%, rgba(6,27,45,.78) 45%, rgba(6,27,45,.24) 100%)}
@@ -160,27 +196,6 @@ const css = `
 `;
 
 const html = `
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="#"><svg viewBox="0 0 212 44" xmlns="http://www.w3.org/2000/svg" aria-label="Fortapac logo">
-      <g stroke-linecap="round" stroke-width="4.8">
-        <path d="M12 8V36" stroke="currentColor"/><path d="M22 8V36" stroke="currentColor"/><path d="M32 8V36" stroke="currentColor"/>
-        <path d="M5 13H39" stroke="currentColor"/><path d="M5 23H39" stroke="#DE5B26"/><path d="M5 33H39" stroke="currentColor"/>
-      </g>
-      <text x="54" y="30" font-family="Arial Black, Archivo, sans-serif" font-size="24" letter-spacing="-1" fill="currentColor">FORTAPAC</text>
-    </svg></a>
-    <nav class="nav">
-      <a href="#products">Products</a>
-      <a href="#industries">Industries</a>
-      <a href="#materials">Materials</a>
-      <a href="#sustainability">Sustainability</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="button primary header-cta" href="#contact">Get a quote <span class="arrow">→</span></a>
-    <button class="menu-button" aria-label="Open menu">☰</button>
-  </div>
-</header>
-
 <main>
   <section class="hero">
     <div class="hero-placeholder"><div class="label">Hero photography</div></div>
@@ -313,11 +328,227 @@ const html = `
 </footer>
 `;
 
+const MEGA_PRODUCTS = [
+  {
+    slug: "fibc",
+    name: "FIBC Bulk Bags",
+    blurb: "500–2,000 kg SWL containers for dry, flowable products.",
+    image: "/products/fibc-bulk-bags.png",
+    specs: { swl: "1,000 KG", sf: "5:1", uv: "Stabilised", material: "PP" },
+  },
+  {
+    slug: "sacks",
+    name: "PP Woven Sacks",
+    blurb: "Open-mouth, valve and leno sacks for grain, feed, chemicals and more.",
+    image: "/products/pp-woven-sacks.png",
+    specs: { swl: "10–100 KG", sf: "5:1", uv: "Optional", material: "PP" },
+  },
+  {
+    slug: "forestry",
+    name: "Forestry Covers",
+    blurb: "UV-stabilised covers for timber and pulp protection.",
+    image: "/products/forestry-covers.png",
+    specs: { swl: "—", sf: "—", uv: "1,600 h", material: "PP" },
+  },
+  {
+    slug: "covers",
+    name: "Covers & Liners",
+    blurb: "Tarpaulins, ground covers and container liners.",
+    image: "/products/covers-liners.png",
+    specs: { swl: "—", sf: "—", uv: "Stabilised", material: "PP / PE" },
+  },
+];
+
+const ADDONS = [
+  "Custom sizes available",
+  "Printed logos",
+  "UV options",
+  "Liners & coatings",
+  "Technical support",
+];
+
+const FortapacMark = () => (
+  <svg viewBox="0 0 212 44" xmlns="http://www.w3.org/2000/svg" aria-label="Fortapac logo">
+    <g strokeLinecap="round" strokeWidth="4.8">
+      <path d="M12 8V36" stroke="currentColor" />
+      <path d="M22 8V36" stroke="currentColor" />
+      <path d="M32 8V36" stroke="currentColor" />
+      <path d="M5 13H39" stroke="currentColor" />
+      <path d="M5 23H39" stroke="#DE5B26" />
+      <path d="M5 33H39" stroke="currentColor" />
+    </g>
+    <text x="54" y="30" fontFamily="Arial Black, Archivo, sans-serif" fontSize="24" letterSpacing="-1" fill="currentColor">
+      FORTAPAC
+    </text>
+  </svg>
+);
+
+function Header() {
+  const [megaOpen, setMegaOpen] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setMegaOpen(false);
+    }
+    function onDocClick(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setMegaOpen(false);
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onDocClick);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onDocClick);
+    };
+  }, []);
+
+  const active = MEGA_PRODUCTS[activeIdx];
+
+  return (
+    <header className="site-header">
+      <div className="wrap header-inner">
+        <a className="brand" href="#"><FortapacMark /></a>
+        <nav className="nav">
+          <div
+            className={`mega-wrap ${megaOpen ? "open" : ""}`}
+            ref={wrapRef}
+            onMouseEnter={() => setMegaOpen(true)}
+            onMouseLeave={() => setMegaOpen(false)}
+          >
+            <button
+              type="button"
+              className="mega-trigger-btn"
+              aria-haspopup="true"
+              aria-expanded={megaOpen}
+              onClick={() => setMegaOpen((o) => !o)}
+            >
+              Products <span className="chev" aria-hidden="true">▾</span>
+            </button>
+            {megaOpen && (
+              <div className="mega" role="menu">
+                <div className="mega-grid">
+                  <div className="mega-intro">
+                    <div className="eyebrow mono">Products</div>
+                    <h3>Woven packaging for load, storage and transport.</h3>
+                    <div className="rule" />
+                    <p>Engineered for strength and reliability across every stage of the supply chain.</p>
+                    <a className="button light" href="#products">
+                      View all products <span className="arrow">→</span>
+                    </a>
+                  </div>
+                  <div className="mega-list">
+                    {MEGA_PRODUCTS.map((p, i) => (
+                      <button
+                        key={p.slug}
+                        type="button"
+                        className={`mega-item ${i === activeIdx ? "active" : ""}`}
+                        onMouseEnter={() => setActiveIdx(i)}
+                        onFocus={() => setActiveIdx(i)}
+                        onClick={() => {
+                          setMegaOpen(false);
+                          const el = document.getElementById("products");
+                          if (el) el.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        <div className="mega-icon">
+                          <img src={p.image} alt="" />
+                        </div>
+                        <div>
+                          <h4>{p.name}</h4>
+                          <p>{p.blurb}</p>
+                        </div>
+                        <div className="arrow" aria-hidden="true">→</div>
+                      </button>
+                    ))}
+                  </div>
+                  <div className="mega-showcase">
+                    <div className="mega-photo">
+                      <div className="tag">Product photo · {active.name}</div>
+                    </div>
+                    <div className="mega-specs">
+                      <div>
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                          <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M18 22h28l5 32H13l5-32Z" />
+                            <path d="M24 22a8 8 0 0 1 16 0" />
+                          </g>
+                        </svg>
+                        <span className="label">SWL</span>
+                        <span className="val">{active.specs.swl}</span>
+                      </div>
+                      <div>
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                          <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M32 8l20 8v13c0 13-8 22-20 27-12-5-20-14-20-27V16l20-8Z" />
+                            <path d="m23 31 6 6 13-15" />
+                          </g>
+                        </svg>
+                        <span className="label">Safety factor</span>
+                        <span className="val">{active.specs.sf}</span>
+                      </div>
+                      <div>
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                          <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="32" cy="32" r="9" />
+                            <path d="M32 7v8M32 49v8M7 32h8M49 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6" />
+                          </g>
+                        </svg>
+                        <span className="label">UV</span>
+                        <span className="val">{active.specs.uv}</span>
+                      </div>
+                      <div>
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                          <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M25 14l7-7 7 7" />
+                            <path d="M32 7v17" />
+                            <path d="M47 37l3 10-10 3" />
+                            <path d="M50 47 36 39" />
+                            <path d="M17 50 7 47l3-10" />
+                            <path d="M7 47l14-8" />
+                          </g>
+                        </svg>
+                        <span className="label">Material</span>
+                        <span className="val">{active.specs.material}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mega-addons">
+                  {ADDONS.map((a, i) => (
+                    <span key={a}>
+                      {a}
+                      {i < ADDONS.length - 1 && <em className="dot">•</em>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          <a href="#industries">Industries</a>
+          <a href="#materials">Materials</a>
+          <a href="#sustainability">Sustainability</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a className="button primary header-cta" href="#contact">
+          Get a quote <span className="arrow">→</span>
+        </a>
+        <button className="menu-button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+  );
+}
+
 function Index() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <div className="fortapac" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="fortapac">
+        <Header />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </>
   );
 }
