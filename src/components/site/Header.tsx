@@ -217,7 +217,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_construction",
     descKey: "industry_construction_desc",
     image: "/icons/industries/construction.png",
-    focusPhoto: "/products/focus/fibc.jpg",
+    focusPhoto: "/industries/focus/construction.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -234,6 +234,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_agriculture",
     descKey: "industry_agriculture_desc",
     image: "/icons/industries/agriculture.png",
+    focusPhoto: "/industries/focus/agriculture.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -253,6 +254,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_chemicals",
     descKey: "industry_chemicals_desc",
     image: "/icons/industries/chemicals.png",
+    focusPhoto: "/industries/focus/chemicals.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -268,6 +270,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_forestry",
     descKey: "industry_forestry_desc",
     image: "/icons/industries/forestry.png",
+    focusPhoto: "/industries/focus/forestry.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -282,6 +285,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_mining_name",
     descKey: "industry_mining_desc",
     image: "/icons/industries/mining.png",
+    focusPhoto: "/industries/focus/mining.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -298,6 +302,7 @@ const INDUSTRY_KEYS: Array<{
     nameKey: "industry_logistics_full",
     descKey: "industry_logistics_desc",
     image: "/icons/industries/logistics.png",
+    focusPhoto: "/industries/focus/logistics.jpg",
     fallbackIcon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -711,15 +716,21 @@ export function Header() {
                     ))}
                   </div>
                   <div className="mega-showcase mega-showcase-values">
-                    {activeIndustry.focusPhoto ? (
-                      <div className="mega-photo has-image">
-                        <img src={activeIndustry.focusPhoto} alt={t(activeIndustry.nameKey)} />
-                      </div>
-                    ) : (
-                      <div className="mega-photo">
-                        <div className="tag">{t("mega_product_photo")} · {t(activeIndustry.nameKey)}</div>
-                      </div>
-                    )}
+                    <div className={`mega-photo ${activeIndustry.focusPhoto ? "has-image" : ""}`}>
+                      {activeIndustry.focusPhoto && (
+                        <img
+                          key={activeIndustry.slug}
+                          src={activeIndustry.focusPhoto}
+                          alt={t(activeIndustry.nameKey)}
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            img.style.display = "none";
+                            (img.parentElement as HTMLElement | null)?.classList.remove("has-image");
+                          }}
+                        />
+                      )}
+                      <div className="tag">{t("mega_product_photo")} · {t(activeIndustry.nameKey)}</div>
+                    </div>
                     <div className="mega-values">
                       {INDUSTRY_VALUES.map((v) => (
                         <div className="mega-value" key={v.titleKey}>

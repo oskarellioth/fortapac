@@ -76,6 +76,7 @@ export const SITE_CSS = `
 .fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2);text-align:center;max-width:80%}
 .fortapac .mega-photo.has-image{border:none;background:#000;padding:0}
 .fortapac .mega-photo.has-image img{width:100%;height:100%;object-fit:cover;display:block}
+.fortapac .mega-photo.has-image .tag{display:none}
 .fortapac .mega-showcase-values{gap:1.25rem}
 .fortapac .mega-values{display:grid;grid-template-columns:repeat(4,1fr);margin-top:auto;border-top:1px solid rgba(255,255,255,.1);padding-top:1.25rem;gap:.5rem}
 .fortapac .mega-value{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;padding:.4rem .5rem;border-right:1px solid rgba(255,255,255,.08)}
