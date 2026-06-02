@@ -63,6 +63,15 @@ export const SITE_CSS = `
 .fortapac .mega-photo .tag{padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2);text-align:center;max-width:80%}
 .fortapac .mega-photo.has-image{border:none;background:#000;padding:0}
 .fortapac .mega-photo.has-image img{width:100%;height:100%;object-fit:cover;display:block}
+.fortapac .mega-showcase-values{gap:1.25rem}
+.fortapac .mega-values{display:grid;grid-template-columns:repeat(4,1fr);margin-top:auto;border-top:1px solid rgba(255,255,255,.1);padding-top:1.25rem;gap:.5rem}
+.fortapac .mega-value{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;padding:.4rem .5rem;border-right:1px solid rgba(255,255,255,.08)}
+.fortapac .mega-value:last-child{border-right:none}
+.fortapac .mega-value .value-icon{color:#fff;display:grid;place-items:center;width:34px;height:34px;margin-bottom:.25rem}
+.fortapac .mega-value .value-icon svg{width:30px;height:30px}
+.fortapac .mega-value .value-icon img{width:30px;height:30px;object-fit:contain;filter:brightness(0) invert(1)}
+.fortapac .mega-value .value-title{font-family:"Archivo",Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;line-height:1.15}
+.fortapac .mega-value .value-sub{font-size:.74rem;color:rgba(255,255,255,.65);line-height:1.35;margin-top:.15rem}
 .fortapac .mega-focus-meta{display:flex;flex-direction:column;gap:.55rem}
 .fortapac .mega-focus-meta .focus-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.9);padding:.35rem .7rem;font-size:.62rem;align-self:flex-start;border-radius:2px}
 .fortapac .mega-focus-meta .focus-title{font-family:"Archivo",Arial,sans-serif;font-size:1.55rem;font-weight:900;letter-spacing:-.025em;line-height:1.05;color:#fff;margin:.15rem 0 0}
@@ -74,7 +83,7 @@ export const SITE_CSS = `
 .fortapac .mega-specs > div:last-child{border-right:none}
 .fortapac .mega-specs .label{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:rgba(255,255,255,.6);line-height:1.2}
 .fortapac .mega-specs .val{font-family:"IBM Plex Mono",monospace;font-size:1rem;font-weight:600;color:#fff;line-height:1.1}
-.fortapac .mega-addons{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--line);padding:1.1rem 2rem}
+.fortapac .mega-addons{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));background:#fff;border-top:1px solid var(--line);padding:1.1rem 2rem}
 .fortapac .mega-addons .addon-item{display:flex;align-items:center;gap:.85rem;padding:.25rem .75rem;border-right:1px solid var(--line)}
 .fortapac .mega-addons .addon-item:last-child{border-right:none}
 .fortapac .mega-addons .addon-icon{flex:none;width:34px;height:34px;display:grid;place-items:center;color:var(--orange)}

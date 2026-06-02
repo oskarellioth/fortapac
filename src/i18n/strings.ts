@@ -71,6 +71,65 @@ export const STRINGS = {
   addon_tech_support: { sv: "Teknisk support", en: "Technical support" },
   addon_support_sub: { sv: "Rådgivning i varje steg", en: "Guidance at every stage" },
 
+  // ───── Industries mega menu ─────
+  ind_mega_eyebrow: { sv: "Industrier", en: "Industries" },
+  ind_mega_headline: {
+    sv: "Vävda förpackningar för last, lagring och transport.",
+    en: "Woven packaging for load, storage and transport.",
+  },
+  ind_mega_intro: {
+    sv: "Anpassade lösningar som skyddar dina produkter, stödjer din verksamhet och driver din affär framåt.",
+    en: "Engineered solutions that protect your products, support your operations and move your business forward.",
+  },
+  ind_mega_view_all: { sv: "Se alla industrier", en: "View all industries" },
+
+  industry_construction_desc: {
+    sv: "Storsäckar, överdrag och liners för cement, sand, ballast och byggmaterial.",
+    en: "Bulk bags, covers and liners for cement, sand, aggregates and building materials.",
+  },
+  industry_agriculture_desc: {
+    sv: "PP-säckar och storsäckar för spannmål, utsäde, foder och gödsel.",
+    en: "PP woven sacks and bulk bags for grain, seeds, feed and fertilisers.",
+  },
+  industry_chemicals_desc: {
+    sv: "Säckar och liners för pulver, granulat och farligt material.",
+    en: "Sacks and liners for powders, granules and hazardous materials.",
+  },
+  industry_forestry_desc: {
+    sv: "UV-stabiliserade överdrag för timmerstaplar och massaved.",
+    en: "UV-stabilised covers for stacked timber and pulp protection.",
+  },
+  industry_mining_name: { sv: "Gruva & Mineral", en: "Mining & Minerals" },
+  industry_mining_desc: {
+    sv: "Tunga storsäckar och skyddsöverdrag för utvunnet material och malm.",
+    en: "Heavy-duty bulk bags and protective covers for mined materials and ores.",
+  },
+  industry_logistics_full: { sv: "Logistik & Lager", en: "Logistics & Storage" },
+  industry_logistics_desc: {
+    sv: "Överdrag, liners och dunnage för lagring, hantering och transport.",
+    en: "Covers, liners and dunnage solutions for storage, handling and transport.",
+  },
+
+  // Right showcase value props (white-on-navy)
+  value_protects_title: { sv: "Skyddar produkter", en: "Protects products" },
+  value_protects_sub: { sv: "Konstruerade för säkerhet och pålitlighet", en: "Engineered for safety and reliability" },
+  value_weather_title: { sv: "Väderbeständiga", en: "Weather resistant" },
+  value_weather_sub: { sv: "Byggda att prestera i tuffa förhållanden", en: "Built to perform in tough conditions" },
+  value_heavy_title: { sv: "Byggda för tunga laster", en: "Built for heavy loads" },
+  value_heavy_sub: { sv: "Starka material för krävande behov", en: "Strong materials for demanding needs" },
+  value_sustainable_title: { sv: "Hållbara alternativ", en: "Sustainable options" },
+  value_sustainable_sub: { sv: "Ansvarsfulla lösningar för en bättre framtid", en: "Responsible solutions for a better future" },
+
+  // Bottom addon strip — industries variant
+  ind_addon_custom: { sv: "Skräddarsydda lösningar", en: "Custom solutions" },
+  ind_addon_custom_sub: { sv: "Anpassat efter dina behov", en: "Tailored to your needs" },
+  ind_addon_quality: { sv: "Konsekvent kvalitet", en: "Consistent quality" },
+  ind_addon_quality_sub: { sv: "Pålitliga material och strikta standarder", en: "Trusted materials and strict standards" },
+  ind_addon_global: { sv: "Global leverans", en: "Global supply" },
+  ind_addon_global_sub: { sv: "Pålitlig leverans världen över", en: "Reliable delivery worldwide" },
+  ind_addon_support: { sv: "Teknisk support", en: "Technical support" },
+  ind_addon_support_sub: { sv: "Expertis i varje steg", en: "Expert guidance at every step" },
+
   // ───── Products ─────
   product_fibc_name: { sv: "FIBC Storsäckar", en: "FIBC Bulk Bags" },
   product_fibc_short: {

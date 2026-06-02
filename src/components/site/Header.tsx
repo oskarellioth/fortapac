@@ -203,6 +203,234 @@ const ADDONS: Addon[] = [
   },
 ];
 
+// ───── Industries catalogue (mega menu) ─────
+const INDUSTRY_KEYS: Array<{
+  slug: string;
+  nameKey: StringKey;
+  descKey: StringKey;
+  image: string;
+  focusPhoto?: string;
+  fallbackIcon: ReactNode;
+}> = [
+  {
+    slug: "construction",
+    nameKey: "industry_construction",
+    descKey: "industry_construction_desc",
+    image: "/icons/industries/construction.png",
+    focusPhoto: "/products/focus/fibc.jpg",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M14 54V18l24-6v42" />
+          <path d="M14 18l24 28" />
+          <path d="M44 54V30h12v24" />
+          <path d="M44 30h12" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    slug: "agriculture",
+    nameKey: "industry_agriculture",
+    descKey: "industry_agriculture_desc",
+    image: "/icons/industries/agriculture.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M32 12v44" />
+          <path d="M32 22c-6 0-10-4-10-10 6 0 10 4 10 10Z" />
+          <path d="M32 22c6 0 10-4 10-10-6 0-10 4-10 10Z" />
+          <path d="M32 34c-6 0-10-4-10-10 6 0 10 4 10 10Z" />
+          <path d="M32 34c6 0 10-4 10-10-6 0-10 4-10 10Z" />
+          <path d="M32 46c-6 0-10-4-10-10 6 0 10 4 10 10Z" />
+          <path d="M32 46c6 0 10-4 10-10-6 0-10 4-10 10Z" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    slug: "chemicals",
+    nameKey: "industry_chemicals",
+    descKey: "industry_chemicals_desc",
+    image: "/icons/industries/chemicals.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M24 8h16" />
+          <path d="M26 8v16L12 50a4 4 0 0 0 4 6h32a4 4 0 0 0 4-6L38 24V8" />
+          <path d="M19 38h26" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    slug: "forestry",
+    nameKey: "industry_forestry",
+    descKey: "industry_forestry_desc",
+    image: "/icons/industries/forestry.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M32 8 18 28h6L14 44h36L40 28h6Z" />
+          <path d="M32 44v12" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    slug: "mining",
+    nameKey: "industry_mining_name",
+    descKey: "industry_mining_desc",
+    image: "/icons/industries/mining.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M10 32h44l-4 14H14Z" />
+          <path d="M14 32 22 14h20l8 18" />
+          <circle cx="20" cy="50" r="4" />
+          <circle cx="44" cy="50" r="4" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    slug: "logistics",
+    nameKey: "industry_logistics_full",
+    descKey: "industry_logistics_desc",
+    image: "/icons/industries/logistics.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="6" y="20" width="28" height="22" />
+          <path d="M34 26h14l8 8v8H34" />
+          <circle cx="18" cy="48" r="5" />
+          <circle cx="44" cy="48" r="5" />
+        </g>
+      </svg>
+    ),
+  },
+];
+
+// Right-panel value-prop tiles (white-on-navy)
+type ValueProp = {
+  titleKey: StringKey;
+  subKey: StringKey;
+  iconSrc: string;
+  fallbackIcon: ReactNode;
+};
+
+const INDUSTRY_VALUES: ValueProp[] = [
+  {
+    titleKey: "value_protects_title",
+    subKey: "value_protects_sub",
+    iconSrc: "/icons/val-protects.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 4 5 8v8c0 7 5 11 11 13 6-2 11-6 11-13V8Z" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "value_weather_title",
+    subKey: "value_weather_sub",
+    iconSrc: "/icons/val-weather.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 19a5 5 0 1 1 1-9.9 7 7 0 0 1 13 2.4A4.5 4.5 0 0 1 22 19Z" />
+          <path d="M11 23v3M16 23v5M21 23v3" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "value_heavy_title",
+    subKey: "value_heavy_sub",
+    iconSrc: "/icons/val-heavy.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 8a3 3 0 0 1 6 0v4h2V8a3 3 0 0 1 6 0v4h2" />
+          <path d="M7 14h18l-2 14H9Z" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "value_sustainable_title",
+    subKey: "value_sustainable_sub",
+    iconSrc: "/icons/val-sustainable.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M26 6c-13 0-20 7-20 20 13-1 20-8 20-20Z" />
+          <path d="M7 26c4-8 10-13 19-19" />
+        </g>
+      </svg>
+    ),
+  },
+];
+
+// Bottom strip — industries variant
+const INDUSTRY_ADDONS: Addon[] = [
+  {
+    titleKey: "ind_addon_custom",
+    subKey: "ind_addon_custom_sub",
+    iconSrc: "/icons/custom.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="11" width="26" height="10" />
+          <path d="M8 11v3M12 11v5M16 11v3M20 11v5M24 11v3" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "ind_addon_quality",
+    subKey: "ind_addon_quality_sub",
+    iconSrc: "/icons/quality.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 4 5 8v8c0 7 5 11 11 13 6-2 11-6 11-13V8Z" />
+          <path d="m11 16 4 4 7-8" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "ind_addon_global",
+    subKey: "ind_addon_global_sub",
+    iconSrc: "/icons/global.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="16" cy="16" r="12" />
+          <path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    titleKey: "ind_addon_support",
+    subKey: "ind_addon_support_sub",
+    iconSrc: "/icons/support.png",
+    fallbackIcon: (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 18v-2a11 11 0 0 1 22 0v2" />
+          <rect x="3" y="18" width="6" height="9" rx="1.5" />
+          <rect x="23" y="18" width="6" height="9" rx="1.5" />
+          <path d="M27 27v1a3 3 0 0 1-3 3h-3" />
+        </g>
+      </svg>
+    ),
+  },
+];
+
 // Render an image, swap to a fallback SVG node if the image fails to load.
 function ImgWithFallback({
   src,
@@ -264,19 +492,26 @@ function LanguageSwitcher() {
   );
 }
 
+type OpenMega = null | "products" | "industries";
+
 export function Header() {
   const { locale, t } = useLocale();
-  const [megaOpen, setMegaOpen] = useState(false);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const wrapRef = useRef<HTMLDivElement>(null);
+  const [openMega, setOpenMega] = useState<OpenMega>(null);
+  const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const [activeIndustryIdx, setActiveIndustryIdx] = useState(0);
+  const productsRef = useRef<HTMLDivElement>(null);
+  const industriesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setMegaOpen(false);
+      if (e.key === "Escape") setOpenMega(null);
     }
     function onDocClick(e: MouseEvent) {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
-        setMegaOpen(false);
+      const t = e.target as Node;
+      const insideProducts = productsRef.current?.contains(t);
+      const insideIndustries = industriesRef.current?.contains(t);
+      if (!insideProducts && !insideIndustries) {
+        setOpenMega(null);
       }
     }
     window.addEventListener("keydown", onKey);
@@ -287,7 +522,8 @@ export function Header() {
     };
   }, []);
 
-  const active = PRODUCT_KEYS[activeIdx];
+  const active = PRODUCT_KEYS[activeProductIdx];
+  const activeIndustry = INDUSTRY_KEYS[activeIndustryIdx];
   const homePath = ROUTES.home[locale];
   const aboutPath = ROUTES.about[locale];
   const homePrefix = homePath === "/" ? "" : homePath;
@@ -313,24 +549,24 @@ export function Header() {
         </Link>
         <nav className="nav">
           <div
-            className={`mega-wrap ${megaOpen ? "open" : ""}`}
-            ref={wrapRef}
-            onMouseEnter={() => setMegaOpen(true)}
-            onMouseLeave={() => setMegaOpen(false)}
+            className={`mega-wrap ${openMega === "products" ? "open" : ""}`}
+            ref={productsRef}
+            onMouseEnter={() => setOpenMega("products")}
+            onMouseLeave={() => setOpenMega(null)}
           >
             <button
               type="button"
               className="mega-trigger-btn"
               aria-haspopup="true"
-              aria-expanded={megaOpen}
-              onClick={() => setMegaOpen((o) => !o)}
+              aria-expanded={openMega === "products"}
+              onClick={() => setOpenMega((o) => (o === "products" ? null : "products"))}
             >
               {t("nav_products")}{" "}
               <span className="chev" aria-hidden="true">
                 ▾
               </span>
             </button>
-            {megaOpen && (
+            {openMega === "products" && (
               <div className="mega" role="menu">
                 <div className="mega-grid">
                   <div className="mega-intro">
@@ -347,11 +583,11 @@ export function Header() {
                       <button
                         key={p.slug}
                         type="button"
-                        className={`mega-item ${i === activeIdx ? "active" : ""}`}
-                        onMouseEnter={() => setActiveIdx(i)}
-                        onFocus={() => setActiveIdx(i)}
+                        className={`mega-item ${i === activeProductIdx ? "active" : ""}`}
+                        onMouseEnter={() => setActiveProductIdx(i)}
+                        onFocus={() => setActiveProductIdx(i)}
                         onClick={() => {
-                          setMegaOpen(false);
+                          setOpenMega(null);
                           window.location.href = productsHash;
                         }}
                       >
@@ -414,7 +650,99 @@ export function Header() {
               </div>
             )}
           </div>
-          <a href={industriesHash}>{t("nav_industries")}</a>
+          <div
+            className={`mega-wrap ${openMega === "industries" ? "open" : ""}`}
+            ref={industriesRef}
+            onMouseEnter={() => setOpenMega("industries")}
+            onMouseLeave={() => setOpenMega(null)}
+          >
+            <button
+              type="button"
+              className="mega-trigger-btn"
+              aria-haspopup="true"
+              aria-expanded={openMega === "industries"}
+              onClick={() => setOpenMega((o) => (o === "industries" ? null : "industries"))}
+            >
+              {t("nav_industries")}{" "}
+              <span className="chev" aria-hidden="true">
+                ▾
+              </span>
+            </button>
+            {openMega === "industries" && (
+              <div className="mega" role="menu">
+                <div className="mega-grid">
+                  <div className="mega-intro">
+                    <div className="eyebrow mono">{t("ind_mega_eyebrow")}</div>
+                    <h3>{t("ind_mega_headline")}</h3>
+                    <div className="rule" />
+                    <p>{t("ind_mega_intro")}</p>
+                    <a className="button light" href={industriesHash}>
+                      {t("ind_mega_view_all")} <span className="arrow">→</span>
+                    </a>
+                  </div>
+                  <div className="mega-list">
+                    {INDUSTRY_KEYS.map((ind, i) => (
+                      <button
+                        key={ind.slug}
+                        type="button"
+                        className={`mega-item ${i === activeIndustryIdx ? "active" : ""}`}
+                        onMouseEnter={() => setActiveIndustryIdx(i)}
+                        onFocus={() => setActiveIndustryIdx(i)}
+                        onClick={() => {
+                          setOpenMega(null);
+                          window.location.href = industriesHash;
+                        }}
+                      >
+                        <div className="mega-icon">
+                          <ImgWithFallback src={ind.image} fallback={ind.fallbackIcon} />
+                        </div>
+                        <div>
+                          <h4>{t(ind.nameKey)}</h4>
+                          <p>{t(ind.descKey)}</p>
+                        </div>
+                        <div className="arrow" aria-hidden="true">→</div>
+                      </button>
+                    ))}
+                  </div>
+                  <div className="mega-showcase mega-showcase-values">
+                    {activeIndustry.focusPhoto ? (
+                      <div className="mega-photo has-image">
+                        <img src={activeIndustry.focusPhoto} alt={t(activeIndustry.nameKey)} />
+                      </div>
+                    ) : (
+                      <div className="mega-photo">
+                        <div className="tag">{t("mega_product_photo")} · {t(activeIndustry.nameKey)}</div>
+                      </div>
+                    )}
+                    <div className="mega-values">
+                      {INDUSTRY_VALUES.map((v) => (
+                        <div className="mega-value" key={v.titleKey}>
+                          <span className="value-icon">
+                            <ImgWithFallback src={v.iconSrc} fallback={v.fallbackIcon} alt="" />
+                          </span>
+                          <span className="value-title">{t(v.titleKey)}</span>
+                          <span className="value-sub">{t(v.subKey)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="mega-addons">
+                  {INDUSTRY_ADDONS.map((a) => (
+                    <div className="addon-item" key={a.titleKey}>
+                      <span className="addon-icon">
+                        <ImgWithFallback src={a.iconSrc} fallback={a.fallbackIcon} alt="" />
+                      </span>
+                      <div>
+                        <span className="addon-title">{t(a.titleKey)}</span>
+                        <span className="addon-sub">{t(a.subKey)}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
           <a href={materialsHash}>{t("nav_material")}</a>
           <a href={sustainabilityHash}>{t("nav_sustainability")}</a>
           <Link to={aboutPath}>{t("nav_about")}</Link>
