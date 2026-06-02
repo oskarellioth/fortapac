@@ -528,7 +528,7 @@ function Header() {
             )}
           </div>
           <a href="#industries">Industries</a>
-          <a href="#materials">Materials</a>
+          <a href="#about">About us</a>
           <a href="#sustainability">Sustainability</a>
           <a href="#contact">Contact</a>
         </nav>
