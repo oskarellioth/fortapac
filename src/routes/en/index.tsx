@@ -1,18 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout } from "../components/site/SiteLayout";
-import { HomeContent } from "../components/site/HomeContent";
-import { STRINGS } from "../i18n/strings";
+import { SiteLayout } from "../../components/site/SiteLayout";
+import { HomeContent } from "../../components/site/HomeContent";
+import { STRINGS } from "../../i18n/strings";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/en/")({
   head: () => ({
     meta: [
-      { title: STRINGS.home_title.sv },
-      { name: "description", content: STRINGS.home_meta.sv },
-      { property: "og:locale", content: "sv_SE" },
-      { property: "og:locale:alternate", content: "en_US" },
+      { title: STRINGS.home_title.en },
+      { name: "description", content: STRINGS.home_meta.en },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "sv_SE" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "/en" },
       { rel: "alternate", hrefLang: "sv", href: "/" },
       { rel: "alternate", hrefLang: "en", href: "/en" },
       { rel: "alternate", hrefLang: "x-default", href: "/" },

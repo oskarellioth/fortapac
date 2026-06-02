@@ -1,21 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "../components/site/SiteLayout";
-import { HomeContent } from "../components/site/HomeContent";
+import { AboutContent } from "../components/site/AboutContent";
 import { STRINGS } from "../i18n/strings";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/om-oss")({
   head: () => ({
     meta: [
-      { title: STRINGS.home_title.sv },
-      { name: "description", content: STRINGS.home_meta.sv },
+      { title: STRINGS.about_title.sv },
+      { name: "description", content: STRINGS.about_meta.sv },
       { property: "og:locale", content: "sv_SE" },
       { property: "og:locale:alternate", content: "en_US" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
-      { rel: "alternate", hrefLang: "sv", href: "/" },
-      { rel: "alternate", hrefLang: "en", href: "/en" },
-      { rel: "alternate", hrefLang: "x-default", href: "/" },
+      { rel: "canonical", href: "/om-oss" },
+      { rel: "alternate", hrefLang: "sv", href: "/om-oss" },
+      { rel: "alternate", hrefLang: "en", href: "/en/about" },
+      { rel: "alternate", hrefLang: "x-default", href: "/om-oss" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 function Page() {
   return (
     <SiteLayout>
-      <HomeContent />
+      <AboutContent />
     </SiteLayout>
   );
 }

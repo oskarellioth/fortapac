@@ -34,6 +34,11 @@ export const SITE_CSS = `
 .fortapac .mega-trigger-btn .chev{display:inline-block;transition:transform .2s;font-size:.85rem}
 .fortapac .nav .mega-wrap.open .chev{transform:rotate(180deg)}
 .fortapac .menu-button{display:none;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+.fortapac .header-right{display:flex;align-items:center;gap:1.5rem}
+.fortapac .lang-switch{display:inline-flex;align-items:center;gap:.35rem;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:.4rem .65rem;border:1px solid rgba(255,255,255,.18);border-radius:4px;transition:.15s}
+.fortapac .lang-switch:hover{border-color:rgba(255,255,255,.35);color:rgba(255,255,255,.85)}
+.fortapac .lang-switch .on{color:#fff}
+.fortapac .lang-switch .sep{color:rgba(255,255,255,.3);font-weight:400}
 
 .fortapac .mega{position:fixed;left:0;right:0;top:78px;background:var(--paper);color:var(--ink);box-shadow:0 30px 60px -20px rgba(6,27,45,.45);z-index:20;border-top:1px solid rgba(255,255,255,.12)}
 .fortapac .mega-grid{display:grid;grid-template-columns:1fr 1.35fr 1.45fr;min-height:480px}

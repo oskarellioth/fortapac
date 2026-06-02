@@ -1,43 +1,54 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { ROUTES, type StringKey } from "../../i18n/strings";
+import { useLocale } from "../../i18n/useLocale";
+import { rememberLocalePreference } from "../../i18n/geoRedirect";
+import { routeKeyForPath } from "../../i18n/strings";
 
-const MEGA_PRODUCTS = [
+// Same product images for all locales; descriptions translate via the dictionary.
+const PRODUCT_KEYS: Array<{
+  slug: string;
+  nameKey: StringKey;
+  blurbKey: StringKey;
+  image: string;
+  specs: { swl: { sv: string; en: string }; sf: string; uv: StringKey | string; material: string };
+}> = [
   {
     slug: "fibc",
-    name: "FIBC Bulk Bags",
-    blurb: "500–2,000 kg SWL containers for dry, flowable products.",
+    nameKey: "product_fibc_name",
+    blurbKey: "product_fibc_short",
     image: "/products/fibc-bulk-bags.png",
-    specs: { swl: "1,000 KG", sf: "5:1", uv: "Stabilised", material: "PP" },
+    specs: { swl: { sv: "1 000 KG", en: "1,000 KG" }, sf: "5:1", uv: "spec_stabilised", material: "PP" },
   },
   {
     slug: "sacks",
-    name: "PP Woven Sacks",
-    blurb: "Open-mouth, valve and leno sacks for grain, feed, chemicals and more.",
+    nameKey: "product_sacks_name",
+    blurbKey: "product_sacks_short",
     image: "/products/pp-woven-sacks.png",
-    specs: { swl: "10–100 KG", sf: "5:1", uv: "Optional", material: "PP" },
+    specs: { swl: { sv: "10–100 KG", en: "10–100 KG" }, sf: "5:1", uv: "spec_optional", material: "PP" },
   },
   {
     slug: "forestry",
-    name: "Forestry Covers",
-    blurb: "UV-stabilised covers for timber and pulp protection.",
+    nameKey: "product_forestry_name",
+    blurbKey: "product_forestry_short",
     image: "/products/forestry-covers.png",
-    specs: { swl: "—", sf: "—", uv: "1,600 h", material: "PP" },
+    specs: { swl: { sv: "—", en: "—" }, sf: "—", uv: "1,600 h", material: "PP" },
   },
   {
     slug: "covers",
-    name: "Covers & Liners",
-    blurb: "Tarpaulins, ground covers and container liners.",
+    nameKey: "product_covers_name",
+    blurbKey: "product_covers_short",
     image: "/products/covers-liners.png",
-    specs: { swl: "—", sf: "—", uv: "Stabilised", material: "PP / PE" },
+    specs: { swl: { sv: "—", en: "—" }, sf: "—", uv: "spec_stabilised", material: "PP / PE" },
   },
 ];
 
-const ADDONS = [
-  "Custom sizes available",
-  "Printed logos",
-  "UV options",
-  "Liners & coatings",
-  "Technical support",
+const ADDON_KEYS: StringKey[] = [
+  "addon_custom_sizes",
+  "addon_printed_logos",
+  "addon_uv_options",
+  "addon_liners_coatings",
+  "addon_tech_support",
 ];
 
 export const FortapacMark = () => (
@@ -63,7 +74,30 @@ export const FortapacMark = () => (
   </svg>
 );
 
+function LanguageSwitcher() {
+  const { locale, otherLocale } = useLocale();
+  const { pathname } = useLocation();
+
+  const routeKey = routeKeyForPath(pathname);
+  // Default fallback: home of the other locale.
+  const target = routeKey ? ROUTES[routeKey][otherLocale] : ROUTES.home[otherLocale];
+
+  return (
+    <a
+      href={target}
+      className="lang-switch mono"
+      onClick={() => rememberLocalePreference(otherLocale)}
+      aria-label={otherLocale === "sv" ? "Byt språk till svenska" : "Switch language to English"}
+    >
+      <span className={locale === "sv" ? "on" : ""}>SV</span>
+      <span className="sep">/</span>
+      <span className={locale === "en" ? "on" : ""}>EN</span>
+    </a>
+  );
+}
+
 export function Header() {
+  const { locale, t } = useLocale();
   const [megaOpen, setMegaOpen] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -85,12 +119,23 @@ export function Header() {
     };
   }, []);
 
-  const active = MEGA_PRODUCTS[activeIdx];
+  const active = PRODUCT_KEYS[activeIdx];
+  const homePath = ROUTES.home[locale];
+  const aboutPath = ROUTES.about[locale];
+  const productsHash = `${homePath === "/" ? "" : homePath}/#products`;
+  const industriesHash = `${homePath === "/" ? "" : homePath}/#industries`;
+  const sustainabilityHash = `${homePath === "/" ? "" : homePath}/#sustainability`;
+  const contactHash = `${homePath === "/" ? "" : homePath}/#contact`;
+
+  const renderUv = (val: string) =>
+    val === "spec_stabilised" || val === "spec_optional"
+      ? t(val as StringKey)
+      : val;
 
   return (
     <header className="site-header">
       <div className="wrap header-inner">
-        <Link to="/" className="brand">
+        <Link to={homePath} className="brand">
           <FortapacMark />
         </Link>
         <nav className="nav">
@@ -107,7 +152,7 @@ export function Header() {
               aria-expanded={megaOpen}
               onClick={() => setMegaOpen((o) => !o)}
             >
-              Products{" "}
+              {t("nav_products")}{" "}
               <span className="chev" aria-hidden="true">
                 ▾
               </span>
@@ -116,16 +161,16 @@ export function Header() {
               <div className="mega" role="menu">
                 <div className="mega-grid">
                   <div className="mega-intro">
-                    <div className="eyebrow mono">Products</div>
-                    <h3>Woven packaging for load, storage and transport.</h3>
+                    <div className="eyebrow mono">{t("mega_eyebrow")}</div>
+                    <h3>{t("mega_headline")}</h3>
                     <div className="rule" />
-                    <p>Manufactured at our parent factory. Specified, stocked and supported from Sweden.</p>
-                    <a className="button light" href="/#products">
-                      View all products <span className="arrow">→</span>
+                    <p>{t("mega_intro")}</p>
+                    <a className="button light" href={productsHash}>
+                      {t("mega_view_all")} <span className="arrow">→</span>
                     </a>
                   </div>
                   <div className="mega-list">
-                    {MEGA_PRODUCTS.map((p, i) => (
+                    {PRODUCT_KEYS.map((p, i) => (
                       <button
                         key={p.slug}
                         type="button"
@@ -134,15 +179,15 @@ export function Header() {
                         onFocus={() => setActiveIdx(i)}
                         onClick={() => {
                           setMegaOpen(false);
-                          window.location.href = "/#products";
+                          window.location.href = productsHash;
                         }}
                       >
                         <div className="mega-icon">
                           <img src={p.image} alt="" />
                         </div>
                         <div>
-                          <h4>{p.name}</h4>
-                          <p>{p.blurb}</p>
+                          <h4>{t(p.nameKey)}</h4>
+                          <p>{t(p.blurbKey)}</p>
                         </div>
                         <div className="arrow" aria-hidden="true">→</div>
                       </button>
@@ -150,7 +195,7 @@ export function Header() {
                   </div>
                   <div className="mega-showcase">
                     <div className="mega-photo">
-                      <div className="tag">Product photo · {active.name}</div>
+                      <div className="tag">{t("mega_product_photo")} · {t(active.nameKey)}</div>
                     </div>
                     <div className="mega-specs">
                       <div>
@@ -160,8 +205,8 @@ export function Header() {
                             <path d="M24 22a8 8 0 0 1 16 0" />
                           </g>
                         </svg>
-                        <span className="label">SWL</span>
-                        <span className="val">{active.specs.swl}</span>
+                        <span className="label">{t("spec_swl")}</span>
+                        <span className="val">{active.specs.swl[locale]}</span>
                       </div>
                       <div>
                         <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -170,7 +215,7 @@ export function Header() {
                             <path d="m23 31 6 6 13-15" />
                           </g>
                         </svg>
-                        <span className="label">Safety factor</span>
+                        <span className="label">{t("spec_safety_factor")}</span>
                         <span className="val">{active.specs.sf}</span>
                       </div>
                       <div>
@@ -180,8 +225,8 @@ export function Header() {
                             <path d="M32 7v8M32 49v8M7 32h8M49 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6" />
                           </g>
                         </svg>
-                        <span className="label">UV</span>
-                        <span className="val">{active.specs.uv}</span>
+                        <span className="label">{t("spec_uv")}</span>
+                        <span className="val">{renderUv(active.specs.uv)}</span>
                       </div>
                       <div>
                         <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -194,32 +239,35 @@ export function Header() {
                             <path d="M7 47l14-8" />
                           </g>
                         </svg>
-                        <span className="label">Material</span>
+                        <span className="label">{t("spec_material")}</span>
                         <span className="val">{active.specs.material}</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mega-addons">
-                  {ADDONS.map((a, i) => (
-                    <span key={a}>
-                      {a}
-                      {i < ADDONS.length - 1 && <em className="dot">•</em>}
+                  {ADDON_KEYS.map((key, i) => (
+                    <span key={key}>
+                      {t(key)}
+                      {i < ADDON_KEYS.length - 1 && <em className="dot">•</em>}
                     </span>
                   ))}
                 </div>
               </div>
             )}
           </div>
-          <a href="/#industries">Industries</a>
-          <Link to="/about">About us</Link>
-          <a href="/#sustainability">Sustainability</a>
-          <a href="/#contact">Contact</a>
+          <a href={industriesHash}>{t("nav_industries")}</a>
+          <Link to={aboutPath}>{t("nav_about")}</Link>
+          <a href={sustainabilityHash}>{t("nav_sustainability")}</a>
+          <a href={contactHash}>{t("nav_contact")}</a>
         </nav>
-        <a className="button primary header-cta" href="/#contact">
-          Get a quote <span className="arrow">→</span>
-        </a>
-        <button className="menu-button" aria-label="Open menu">☰</button>
+        <div className="header-right">
+          <LanguageSwitcher />
+          <a className="button primary header-cta" href={contactHash}>
+            {t("cta_get_quote")} <span className="arrow">→</span>
+          </a>
+        </div>
+        <button className="menu-button" aria-label={t("open_menu")}>☰</button>
       </div>
     </header>
   );
