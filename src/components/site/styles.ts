@@ -33,7 +33,20 @@ export const SITE_CSS = `
 .fortapac .nav .mega-wrap.open::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--orange)}
 .fortapac .mega-trigger-btn .chev{display:inline-block;transition:transform .2s;font-size:.85rem}
 .fortapac .nav .mega-wrap.open .chev{transform:rotate(180deg)}
-.fortapac .menu-button{display:none;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+.fortapac .menu-button{display:none;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center;line-height:1}
+.fortapac .mobile-nav{position:fixed;left:0;right:0;top:78px;bottom:0;background:var(--navy);color:#fff;z-index:30;overflow-y:auto;display:none}
+.fortapac .mobile-nav-inner{padding:1rem 1.5rem 2rem}
+.fortapac .mobile-row{display:flex;align-items:center;justify-content:space-between;width:100%;padding:1.2rem .25rem;background:none;border:none;border-bottom:1px solid rgba(255,255,255,.12);color:#fff;font-family:"Archivo",Arial,sans-serif;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;text-align:left;text-decoration:none}
+.fortapac .mobile-row .mobile-chev{transition:transform .2s;color:rgba(255,255,255,.6);font-size:1.1rem}
+.fortapac .mobile-row.open .mobile-chev{transform:rotate(180deg);color:var(--orange)}
+.fortapac .mobile-row.open{color:var(--orange)}
+.fortapac .mobile-sub{list-style:none;margin:0;padding:.5rem 0 1rem;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+.fortapac .mobile-sub li{padding:0}
+.fortapac .mobile-sub a{display:block;padding:.75rem 1.25rem;color:rgba(255,255,255,.85);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:.95rem;font-weight:500;text-transform:none;letter-spacing:0;text-decoration:none}
+.fortapac .mobile-sub a:hover{color:#fff}
+.fortapac .mobile-foot{margin-top:2rem;display:flex;flex-direction:column;gap:1.25rem;align-items:stretch}
+.fortapac .mobile-foot .lang-switch{align-self:flex-start}
+.fortapac .mobile-foot .button{width:100%}
 .fortapac .header-right{display:flex;align-items:center;gap:1.5rem}
 .fortapac .lang-switch{display:inline-flex;align-items:center;gap:.35rem;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:.4rem .65rem;border:1px solid rgba(255,255,255,.18);border-radius:4px;transition:.15s}
 .fortapac .lang-switch:hover{border-color:rgba(255,255,255,.35);color:rgba(255,255,255,.85)}
@@ -181,8 +194,9 @@ export const SITE_CSS = `
 .fortapac .about-story-grid p strong{color:var(--navy);font-weight:700}
 
 @media (max-width: 980px) {
-  .fortapac .nav,.fortapac .header-cta,.fortapac .mega{display:none}
-  .fortapac .menu-button{display:block}
+  .fortapac .nav,.fortapac .header-right,.fortapac .mega{display:none}
+  .fortapac .menu-button{display:flex}
+  .fortapac .mobile-nav{display:block}
   .fortapac .hero-wrap{width:calc(100% - 40px)}
   .fortapac .hero::before{background:linear-gradient(0deg, rgba(6,27,45,.96) 0%, rgba(6,27,45,.78) 45%, rgba(6,27,45,.24) 100%)}
   .fortapac .hero-placeholder{inset:0;left:0;top:0;height:42%;border-left:none;border-bottom:1px dashed rgba(255,255,255,.22)}

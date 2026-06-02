@@ -499,12 +499,17 @@ export function Header() {
   const [openMega, setOpenMega] = useState<OpenMega>(null);
   const [activeProductIdx, setActiveProductIdx] = useState(0);
   const [activeIndustryIdx, setActiveIndustryIdx] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<null | "products" | "industries">(null);
   const productsRef = useRef<HTMLDivElement>(null);
   const industriesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpenMega(null);
+      if (e.key === "Escape") {
+        setOpenMega(null);
+        setMobileOpen(false);
+      }
     }
     function onDocClick(e: MouseEvent) {
       const t = e.target as Node;
@@ -542,6 +547,7 @@ export function Header() {
   }
 
   return (
+    <>
     <header className="site-header">
       <div className="wrap header-inner">
         <Link to={homePath} className="brand">
@@ -754,8 +760,81 @@ export function Header() {
             {t("cta_get_quote")} <span className="arrow">→</span>
           </a>
         </div>
-        <button className="menu-button" aria-label={t("open_menu")}>☰</button>
+        <button
+          type="button"
+          className="menu-button"
+          aria-label={t("open_menu")}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((o) => !o)}
+        >
+          {mobileOpen ? "✕" : "☰"}
+        </button>
       </div>
     </header>
+
+      {mobileOpen && (
+        <div className="mobile-nav" role="dialog" aria-modal="true">
+          <div className="mobile-nav-inner">
+            <button
+              type="button"
+              className={`mobile-row ${mobileSection === "products" ? "open" : ""}`}
+              onClick={() => setMobileSection((s) => (s === "products" ? null : "products"))}
+              aria-expanded={mobileSection === "products"}
+            >
+              <span>{t("nav_products")}</span>
+              <span className="mobile-chev" aria-hidden="true">▾</span>
+            </button>
+            {mobileSection === "products" && (
+              <ul className="mobile-sub">
+                {PRODUCT_KEYS.map((p) => (
+                  <li key={p.slug}>
+                    <a href={productsHash} onClick={() => setMobileOpen(false)}>{t(p.nameKey)}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <button
+              type="button"
+              className={`mobile-row ${mobileSection === "industries" ? "open" : ""}`}
+              onClick={() => setMobileSection((s) => (s === "industries" ? null : "industries"))}
+              aria-expanded={mobileSection === "industries"}
+            >
+              <span>{t("nav_industries")}</span>
+              <span className="mobile-chev" aria-hidden="true">▾</span>
+            </button>
+            {mobileSection === "industries" && (
+              <ul className="mobile-sub">
+                {INDUSTRY_KEYS.map((ind) => (
+                  <li key={ind.slug}>
+                    <a href={industriesHash} onClick={() => setMobileOpen(false)}>{t(ind.nameKey)}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <a className="mobile-row" href={materialsHash} onClick={() => setMobileOpen(false)}>
+              <span>{t("nav_material")}</span>
+            </a>
+            <a className="mobile-row" href={sustainabilityHash} onClick={() => setMobileOpen(false)}>
+              <span>{t("nav_sustainability")}</span>
+            </a>
+            <Link className="mobile-row" to={aboutPath} onClick={() => setMobileOpen(false)}>
+              <span>{t("nav_about")}</span>
+            </Link>
+            <a className="mobile-row" href={contactHash} onClick={() => setMobileOpen(false)}>
+              <span>{t("nav_contact")}</span>
+            </a>
+
+            <div className="mobile-foot">
+              <LanguageSwitcher />
+              <a className="button primary" href={contactHash} onClick={() => setMobileOpen(false)}>
+                {t("cta_get_quote")} <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
