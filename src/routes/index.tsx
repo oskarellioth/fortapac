@@ -71,6 +71,7 @@ const css = `
 .fortapac .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .fortapac .product-card{background:#fff;border:1px solid var(--line);padding:2rem;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
 .fortapac .product-card svg{width:54px;height:54px;color:var(--navy);margin-bottom:1.4rem}
+.fortapac .product-card .product-image{width:100%;height:150px;object-fit:contain;object-position:left center;margin-bottom:1.2rem;mix-blend-mode:multiply}
 .fortapac .product-card p{margin:.7rem 0 0;color:rgba(11,27,45,.76)}
 
 .fortapac .spec-row{background:linear-gradient(110deg,var(--deep),var(--navy));color:#fff;padding:52px 0}
@@ -206,10 +207,10 @@ const html = `
         <a class="view-link mono" href="#">View all products <span class="arrow">→</span></a>
       </div>
       <div class="products-grid">
-        <article class="product-card"><div><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18h36l-3 34H17l-3-34Z"/><path d="M21 18c1-9 21-9 22 0"/><path d="M24 18V9M40 18V9"/></g></svg><h3>FIBC Bulk Bags</h3><p>Heavy duty bulk bags for powders, granules and commodities.</p></div><div class="mono">SWL 500–2000 kg</div></article>
-        <article class="product-card"><div><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15h28l-3 37H21l-3-37Z"/><path d="M20 15c8 4 16 4 24 0"/><path d="M20 52c8-4 16-4 24 0"/></g></svg><h3>PP Woven Sacks</h3><p>Strong and versatile sacks for industrial and agricultural applications.</p></div><div class="mono">10–100 kg capacity</div></article>
-        <article class="product-card"><div><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7 19 25h8l-10 17h12v12h8V42h12L39 25h8L32 7Z"/></g></svg><h3>Forestry Covers</h3><p>Durable covers for timber stacks and forestry operations.</p></div><div class="mono">UV stabilised</div></article>
-        <article class="product-card"><div><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 43h34L43 17H21l-6 26Z"/><path d="M21 17h22"/></g></svg><h3>Covers &amp; Liners</h3><p>Protective covers and liners built for transport, storage and site use.</p></div><div class="mono">Custom made</div></article>
+        <article class="product-card"><div><img class="product-image" src="/products/fibc-bulk-bags.png" alt="FIBC bulk bag illustration" loading="lazy"><h3>FIBC Bulk Bags</h3><p>Heavy duty bulk bags for powders, granules and commodities.</p></div><div class="mono">SWL 500–2000 kg</div></article>
+        <article class="product-card"><div><img class="product-image" src="/products/pp-woven-sacks.png" alt="PP woven sack illustration" loading="lazy"><h3>PP Woven Sacks</h3><p>Strong and versatile sacks for industrial and agricultural applications.</p></div><div class="mono">10–100 kg capacity</div></article>
+        <article class="product-card"><div><img class="product-image" src="/products/forestry-covers.png" alt="Forestry covers illustration" loading="lazy"><h3>Forestry Covers</h3><p>Durable covers for timber stacks and forestry operations.</p></div><div class="mono">UV stabilised</div></article>
+        <article class="product-card"><div><img class="product-image" src="/products/covers-liners.png" alt="Covers and liners illustration" loading="lazy"><h3>Covers &amp; Liners</h3><p>Protective covers and liners built for transport, storage and site use.</p></div><div class="mono">Custom made</div></article>
       </div>
     </div>
   </section>
