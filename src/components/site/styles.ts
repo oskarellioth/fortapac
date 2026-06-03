@@ -111,7 +111,7 @@ export const SITE_CSS = `
 .fortapac .hero-image{position:absolute;inset:0;width:100%;height:100%;z-index:1;display:block}
 .fortapac .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center right;display:block}
 @media (max-width: 980px){
-  .fortapac .hero-image img{object-position:center center}
+  .fortapac .hero-image img{object-fit:contain;object-position:center top;background:var(--navy)}
 }
 .fortapac .hero-placeholder{position:absolute;inset:0;left:42%;display:flex;align-items:center;justify-content:center;border-left:1px dashed rgba(255,255,255,.22);z-index:0}
 .fortapac .hero-placeholder .label{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:rgba(255,255,255,.45);padding:.55rem .9rem;border:1px solid rgba(255,255,255,.22)}
