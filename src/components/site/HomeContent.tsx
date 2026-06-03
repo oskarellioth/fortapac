@@ -5,18 +5,21 @@ export function HomeContent() {
   return (
     <main>
       <section className="hero">
-        <img
-          className="hero-image"
-          src="/hero/home.jpg"
-          alt=""
-          onLoad={(e) => {
-            const ph = (e.currentTarget.nextElementSibling as HTMLElement | null);
-            if (ph?.classList.contains("hero-placeholder")) ph.style.display = "none";
-          }}
-          onError={(e) => {
-            (e.currentTarget as HTMLImageElement).style.display = "none";
-          }}
-        />
+        <picture className="hero-image">
+          <source media="(max-width: 980px)" srcSet="/hero/mobile.jpg" />
+          <img
+            src="/hero/home.jpg"
+            alt=""
+            onLoad={(e) => {
+              const ph = (e.currentTarget.closest("picture")?.nextElementSibling as HTMLElement | null);
+              if (ph?.classList.contains("hero-placeholder")) ph.style.display = "none";
+            }}
+            onError={(e) => {
+              const pic = e.currentTarget.closest("picture") as HTMLElement | null;
+              if (pic) pic.style.display = "none";
+            }}
+          />
+        </picture>
         <div className="hero-placeholder">
           <div className="label">{t("hero_photo_label")}</div>
         </div>
