@@ -65,10 +65,10 @@ export function AboutContent() {
               <div className="rule" />
             </div>
             <div>
-              <p>{t("about_story_p1")}</p>
+              <p>{renderEmphasised(t("about_story_p1"))}</p>
               <p>{renderEmphasised(t("about_story_p2_sv"))}</p>
-              <p>{t("about_story_p3")}</p>
-              <p>{t("about_story_p4")}</p>
+              <p>{renderEmphasised(t("about_story_p3"))}</p>
+              <p>{renderEmphasised(t("about_story_p4"))}</p>
             </div>
           </div>
         </div>

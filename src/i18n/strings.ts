@@ -374,24 +374,24 @@ export const STRINGS = {
   },
   about_story_eyebrow: { sv: "Varför det betyder något", en: "Why it matters" },
   about_story_h2: {
-    sv: "Byggt kring två styrkor.",
-    en: "Built around two strengths.",
+    sv: "Ett samtal. En spec. Ingen mellanhand.",
+    en: "One call. One spec. No middleman.",
   },
   about_story_p1: {
-    sv: "De flesta importörer av vävt polypropylenemballage är handelshus: en hemsida, ett skrivbord i Stockholm och en lång telefonlina till en fabrik de aldrig besökt. Vi är byggda annorlunda.",
-    en: "Most importers of woven polypropylene packaging are trading houses: a website, a desk in Stockholm and a long phone line to a factory you've never visited. We're built differently.",
+    sv: "Ett nummer att ringa, i Sverige, på svensk arbetstid. De som svarar är de som ansvarar för din order.",
+    en: "One number to call, in Sweden, on Swedish hours. The people who answer are the people responsible for your order.",
   },
   about_story_p2_sv: {
-    sv: "Fortapac är halvägt av **fabriken själv** (en börsnoterad tillverkare med betydande PP-vävkapacitet) och halvägt av det **svenska team** du arbetar med dagligen. Två ägare, en ansvarsfull leverantörskedja.",
-    en: "Fortapac is half-owned by the **factory itself** (a publicly listed manufacturer with significant woven PP capacity) and half-owned by the **Swedish team** you work with day to day. Two owners, one accountable supply chain.",
+    sv: "Den spec ni kommer överens om är den spec som vävs. Vi styr vävprogrammet själva, så inget tappas bort mellan din ritning och fabriksgolvet.",
+    en: "The spec you agree is the spec that gets woven. We set the loom programme ourselves, so nothing is lost between your drawing and the factory floor.",
   },
   about_story_p3: {
-    sv: "Den strukturen förändrar vad vi kan erbjuda. Vi styr vävprogrammet, så vi kan garantera specen. Vi sitter innanför tillverkningsmarginalen, så vi kan ge fabrikspris. Och vi lagerför i Sverige de artiklar våra kunder oftast använder, så ett trasigt truckhjul eller ett akut jobb inte betyder sex veckors leveranstid från Asien.",
-    en: "That structure changes what we can offer. We control the loom programme, so we can guarantee specs. We're inside the manufacturing margin, so we can pass on factory pricing. And we hold stock in Sweden of the lines our customers use most, so a forklift breakdown or a last-minute job doesn't mean a six-week lead time from Asia.",
+    sv: "Priset är fabrikspris, för vi sitter innanför tillverkningsmarginalen i stället för att lägga på den. Och de artiklar våra kunder använder mest står i ett svenskt lager, så ett akut jobb är dagar bort, inte sex veckor från Asien.",
+    en: "Pricing is factory level, because we sit inside the manufacturing margin rather than adding to it. And the lines our customers use most sit in a Swedish warehouse, so an urgent job is days away, not six weeks from Asia.",
   },
   about_story_p4: {
-    sv: "Vi konstruerar, speccar, testar, granskar. Vår moderbolagsfabrik tillverkar. Du får en svensk kontaktperson och en ansvarsfull leverantörskedja. Det är modellen.",
-    en: "We engineer, we specify, we test, we audit. Our parent manufactures. You get one Swedish point of contact and one accountable supply chain. That's the model.",
+    sv: "Det går för att vi ägs som vi gör. Hälften av bolaget tillhör det **svenska team** du har kontakt med. Andra hälften tillhör **fabriken som väver**, en börsnoterad tillverkare. Två ägare, ingen mellanhand.",
+    en: "That works because of who owns us. Half the company belongs to the **Swedish team** you deal with. The other half belongs to the **factory that does the weaving**, a publicly listed manufacturer. Two owners, no middleman.",
   },
   about_cta_h2: {
     sv: "Vill du prata med det svenska teamet?",
