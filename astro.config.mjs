@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import keystatic from "@keystatic/astro";
@@ -13,4 +13,21 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [react(), keystatic()],
   devToolbar: { enabled: false },
+  // Declared here rather than read off import.meta.env, which does not reach
+  // middleware in dev. astro:env resolves .env locally and the host's real
+  // environment variables in production, through the same import.
+  env: {
+    schema: {
+      ADMIN_PASSWORD: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+      ANTHROPIC_API_KEY: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+    },
+  },
 });
