@@ -1,0 +1,301 @@
+---
+export const prerender = false;
+import { GLOSSARY } from "../lib/glossary";
+const glossaryCount = GLOSSARY.length;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Translation review · Fortapac</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #16212e;
+        background: #f6f7f9;
+      }
+      header {
+        position: sticky; top: 0; z-index: 5;
+        background: #102a43; color: #fff;
+        padding: 1rem 1.5rem;
+        display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      }
+      header h1 { font-size: 1.05rem; margin: 0; font-weight: 700; }
+      header .spacer { flex: 1; }
+      header .hint { font-size: .8rem; color: rgba(255,255,255,.6); }
+      button {
+        font: inherit; font-weight: 600; cursor: pointer;
+        border-radius: 6px; padding: .5rem .9rem; border: 1px solid transparent;
+      }
+      .primary { background: #de5b26; color: #fff; }
+      .primary:disabled { opacity: .5; cursor: not-allowed; }
+      .ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.35); }
+      .ghost:disabled { opacity: .4; cursor: not-allowed; }
+      main { padding: 1.5rem; max-width: 1500px; margin: 0 auto; }
+      .bar {
+        background: #fff; border: 1px solid #dfe3e8; border-radius: 8px;
+        padding: .85rem 1rem; margin-bottom: 1rem;
+        display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
+        font-size: .875rem;
+      }
+      .bar label { display: inline-flex; align-items: center; gap: .4rem; cursor: pointer; }
+      .count { color: #5b6b7c; }
+      .count strong { color: #16212e; }
+      .file-group { margin-bottom: 1.75rem; }
+      .file-group > h2 {
+        font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+        color: #5b6b7c; margin: 0 0 .5rem; font-family: ui-monospace, monospace;
+      }
+      table { width: 100%; border-collapse: collapse; background: #fff;
+        border: 1px solid #dfe3e8; border-radius: 8px; overflow: hidden; }
+      th {
+        text-align: left; font-size: .7rem; text-transform: uppercase;
+        letter-spacing: .08em; color: #5b6b7c; padding: .6rem .8rem;
+        background: #f0f2f5; border-bottom: 1px solid #dfe3e8; font-weight: 600;
+      }
+      td { padding: .6rem .8rem; border-bottom: 1px solid #eef1f4; vertical-align: top; }
+      tr:last-child td { border-bottom: none; }
+      td.key { font-family: ui-monospace, monospace; font-size: .72rem; color: #8794a2; width: 17%; word-break: break-all; }
+      td.en { width: 34%; color: #33414f; }
+      td.sv { width: 40%; }
+      td.act { width: 9%; text-align: right; white-space: nowrap; }
+      textarea {
+        width: 100%; font: inherit; padding: .45rem .55rem;
+        border: 1px solid #cfd6dd; border-radius: 5px; resize: vertical;
+        min-height: 2.5rem; background: #fff;
+      }
+      textarea.empty { background: #fff8f0; border-color: #f0c9a8; }
+      textarea.fresh { background: #f0fbf4; border-color: #a8dcb9; }
+      .mini { font-size: .78rem; padding: .35rem .6rem; background: #eef1f4; border-color: #dfe3e8; color: #33414f; }
+      .mini:disabled { opacity: .5; cursor: not-allowed; }
+      .status { padding: .5rem .75rem; border-radius: 6px; font-size: .85rem; margin-bottom: 1rem; display: none; }
+      .status.err { display: block; background: #fdecea; color: #8a2318; border: 1px solid #f5c2bc; }
+      .status.ok  { display: block; background: #eaf7ee; color: #1c6b34; border: 1px solid #b9e2c5; }
+      .loading { padding: 3rem; text-align: center; color: #5b6b7c; }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Translation review</h1>
+      <span class="hint">{glossaryCount} locked terms · English is the source</span>
+      <span class="spacer"></span>
+      <button id="translateMissing" class="ghost">Translate missing</button>
+      <button id="translateAll" class="ghost">Retranslate visible</button>
+      <button id="save" class="primary" disabled>Save changes</button>
+    </header>
+
+    <main>
+      <div id="status" class="status"></div>
+
+      <div class="bar">
+        <label><input type="checkbox" id="onlyMissing" /> Only show missing Swedish</label>
+        <span class="spacer"></span>
+        <span class="count">
+          <strong id="cTotal">0</strong> strings ·
+          <strong id="cMissing">0</strong> missing ·
+          <strong id="cDirty">0</strong> unsaved
+        </span>
+      </div>
+
+      <div id="rows" class="loading">Loading content…</div>
+    </main>
+
+    <script>
+      type Pair = { file: string; path: string; en: string; sv: string };
+
+      let pairs: Pair[] = [];
+      const dirty = new Map<string, string>(); // "file::path" -> new sv
+      const fresh = new Set<string>();          // machine-translated this session
+
+      const $ = (id: string) => document.getElementById(id)!;
+      const key = (p: Pair) => `${p.file}::${p.path}`;
+      const svOf = (p: Pair) => dirty.get(key(p)) ?? p.sv;
+
+      function say(msg: string, kind: "ok" | "err") {
+        const el = $("status");
+        el.textContent = msg;
+        el.className = `status ${kind}`;
+        if (kind === "ok") setTimeout(() => (el.className = "status"), 4000);
+      }
+
+      function counts() {
+        $("cTotal").textContent = String(pairs.length);
+        $("cMissing").textContent = String(pairs.filter((p) => !svOf(p).trim()).length);
+        $("cDirty").textContent = String(dirty.size);
+        ($("save") as HTMLButtonElement).disabled = dirty.size === 0;
+      }
+
+      function visible(): Pair[] {
+        const onlyMissing = ($("onlyMissing") as HTMLInputElement).checked;
+        return onlyMissing ? pairs.filter((p) => !svOf(p).trim()) : pairs;
+      }
+
+      function render() {
+        const list = visible();
+        const host = $("rows");
+        host.className = "";
+
+        if (list.length === 0) {
+          host.innerHTML = `<div class="loading">Nothing to show.</div>`;
+          counts();
+          return;
+        }
+
+        const byFile = new Map<string, Pair[]>();
+        for (const p of list) {
+          if (!byFile.has(p.file)) byFile.set(p.file, []);
+          byFile.get(p.file)!.push(p);
+        }
+
+        host.innerHTML = [...byFile.entries()]
+          .map(([file, items]) => `
+            <section class="file-group">
+              <h2>${file}</h2>
+              <table>
+                <thead><tr><th>Field</th><th>English</th><th>Svenska</th><th></th></tr></thead>
+                <tbody>
+                  ${items.map((p) => {
+                    const k = key(p);
+                    const sv = svOf(p);
+                    const cls = !sv.trim() ? "empty" : fresh.has(k) ? "fresh" : "";
+                    return `<tr>
+                      <td class="key">${p.path || "(root)"}</td>
+                      <td class="en">${escapeHtml(p.en)}</td>
+                      <td class="sv"><textarea class="${cls}" data-k="${escapeHtml(k)}" rows="2">${escapeHtml(sv)}</textarea></td>
+                      <td class="act"><button class="mini" data-tr="${escapeHtml(k)}">Translate</button></td>
+                    </tr>`;
+                  }).join("")}
+                </tbody>
+              </table>
+            </section>`)
+          .join("");
+
+        host.querySelectorAll<HTMLTextAreaElement>("textarea").forEach((ta) => {
+          ta.addEventListener("input", () => {
+            const k = ta.dataset.k!;
+            const orig = pairs.find((p) => key(p) === k);
+            if (!orig) return;
+            if (ta.value === orig.sv) dirty.delete(k);
+            else dirty.set(k, ta.value);
+            fresh.delete(k);
+            ta.className = ta.value.trim() ? "" : "empty";
+            counts();
+          });
+        });
+
+        host.querySelectorAll<HTMLButtonElement>("button[data-tr]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const p = pairs.find((x) => key(x) === btn.dataset.tr);
+            if (p) translate([p]);
+          });
+        });
+
+        counts();
+      }
+
+      function escapeHtml(s: string) {
+        return s.replace(/[&<>"']/g, (c) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+      }
+
+      async function translate(targets: Pair[]) {
+        const list = targets.filter((p) => p.en.trim());
+        if (list.length === 0) { say("Nothing to translate: English is empty.", "err"); return; }
+
+        const buttons = document.querySelectorAll<HTMLButtonElement>("button");
+        buttons.forEach((b) => (b.disabled = true));
+        say(`Translating ${list.length} string${list.length === 1 ? "" : "s"}…`, "ok");
+
+        try {
+          // Batched so the glossary prompt stays cached across a whole page.
+          const CHUNK = 40;
+          let done = 0;
+          for (let i = 0; i < list.length; i += CHUNK) {
+            const slice = list.slice(i, i + CHUNK);
+            const res = await fetch("/api/translate", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify({ texts: slice.map((p) => p.en) }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+
+            slice.forEach((p, j) => {
+              const t = data.translations[j];
+              if (typeof t === "string" && t.length) {
+                dirty.set(key(p), t);
+                fresh.add(key(p));
+                done++;
+              }
+            });
+          }
+          render();
+          say(`Translated ${done}. Review the green fields, then Save changes.`, "ok");
+        } catch (e) {
+          say(e instanceof Error ? e.message : "Translation failed.", "err");
+        } finally {
+          buttons.forEach((b) => (b.disabled = false));
+          counts();
+        }
+      }
+
+      async function save() {
+        if (dirty.size === 0) return;
+        const updates = [...dirty.entries()].map(([k, sv]) => {
+          const idx = k.indexOf("::");
+          return { file: k.slice(0, idx), path: k.slice(idx + 2), sv };
+        });
+        try {
+          const res = await fetch("/api/content", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ updates }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+          for (const [k, sv] of dirty) {
+            const p = pairs.find((x) => key(x) === k);
+            if (p) p.sv = sv;
+          }
+          dirty.clear();
+          fresh.clear();
+          render();
+          say(`Saved ${data.written} field${data.written === 1 ? "" : "s"}.`, "ok");
+        } catch (e) {
+          say(e instanceof Error ? e.message : "Save failed.", "err");
+        }
+      }
+
+      async function load() {
+        try {
+          const res = await fetch("/api/content");
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+          pairs = data.pairs;
+          render();
+        } catch (e) {
+          $("rows").innerHTML = `<div class="loading">Could not load content: ${
+            e instanceof Error ? e.message : "unknown error"}</div>`;
+        }
+      }
+
+      $("onlyMissing").addEventListener("change", render);
+      $("save").addEventListener("click", save);
+      $("translateMissing").addEventListener("click", () =>
+        translate(pairs.filter((p) => !svOf(p).trim())));
+      $("translateAll").addEventListener("click", () => translate(visible()));
+
+      window.addEventListener("beforeunload", (e) => {
+        if (dirty.size > 0) e.preventDefault();
+      });
+
+      load();
+    </script>
+  </body>
+</html>

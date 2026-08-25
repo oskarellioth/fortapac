@@ -14,20 +14,56 @@
     "sv": "Produktnyheter, insikter och hållbarhetsuppdateringar.",
     "en": "Product updates, insights and sustainability news."
   },
-  "newsletterPlaceholder": { "sv": "Din e-post", "en": "Your email" },
+  "newsletterPlaceholder": {
+    "sv": "Din e-post",
+    "en": "Your email"
+  },
   "copyright": {
     "sv": "© 2026 Fortapac AB. Med ensamrätt.",
     "en": "© 2026 Fortapac AB. All rights reserved."
   },
-  "footerColProducts": { "sv": "Produkter", "en": "Products" },
-  "footerColIndustries": { "sv": "Branscher", "en": "Industries" },
-  "footerColCompany": { "sv": "Företag", "en": "Company" },
-  "footerColContact": { "sv": "Kontakt", "en": "Contact" },
-  "footerColNewsletter": { "sv": "Nyhetsbrev", "en": "Newsletter" },
-  "footerAbout": { "sv": "Om Fortapac", "en": "About Fortapac" },
-  "footerQuality": { "sv": "Kvalitet & standarder", "en": "Quality & Standards" },
-  "footerResources": { "sv": "Resurser", "en": "Resources" },
-  "footerPrivacy": { "sv": "Integritetspolicy", "en": "Privacy Policy" },
-  "footerTerms": { "sv": "Användarvillkor", "en": "Terms of Use" },
-  "footerCookies": { "sv": "Cookie-inställningar", "en": "Cookie Settings" }
+  "footerColProducts": {
+    "sv": "Produkter",
+    "en": "Products"
+  },
+  "footerColIndustries": {
+    "sv": "Branscher",
+    "en": "Industries"
+  },
+  "footerColCompany": {
+    "sv": "Företag",
+    "en": "Company"
+  },
+  "footerColContact": {
+    "sv": "Kontakt",
+    "en": "Contact"
+  },
+  "footerColNewsletter": {
+    "sv": "Nyhetsbrev",
+    "en": "Newsletter"
+  },
+  "footerAbout": {
+    "sv": "Om Fortapac",
+    "en": "About Fortapac"
+  },
+  "footerQuality": {
+    "sv": "Kvalitet & standarder",
+    "en": "Quality & Standards"
+  },
+  "footerResources": {
+    "sv": "Resurser",
+    "en": "Resources"
+  },
+  "footerPrivacy": {
+    "sv": "Integritetspolicy",
+    "en": "Privacy Policy"
+  },
+  "footerTerms": {
+    "sv": "Användarvillkor",
+    "en": "Terms of Use"
+  },
+  "footerCookies": {
+    "sv": "Cookie-inställningar",
+    "en": "Cookie Settings"
+  }
 }
