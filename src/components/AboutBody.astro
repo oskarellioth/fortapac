@@ -1,0 +1,77 @@
+---
+import { content, pick, type Locale } from "../lib/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const a = content.about;
+
+// The team writes **bold** in Keystatic's plain text fields, so turn those
+// markers into real markup. Escaped first, since this ends up in set:html.
+function emphasise(text: string): string {
+  const escaped = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return escaped.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+}
+---
+
+<main>
+  <section class="about-hero">
+    <div class="wrap">
+      <div class="eyebrow mono">{pick(a.heroEyebrow, locale)}</div>
+      <h1>
+        {pick(a.heroTitleLine1, locale)}<br />{pick(a.heroTitleLine2, locale)}<span>.</span>
+      </h1>
+      <p>{pick(a.heroBody, locale)}</p>
+    </div>
+  </section>
+
+  <section class="about-pillars-section">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <div>
+          <div class="eyebrow mono">{pick(a.pillarsEyebrow, locale)}</div>
+          <h2 style="font-size:clamp(2rem,3vw,2.75rem)">{pick(a.pillarsHeading, locale)}</h2>
+        </div>
+      </div>
+      <div class="about-pillars-grid">
+        {a.pillars.map((p) => (
+          <div class="about-pillar">
+            <span class="num">{p.number}</span>
+            <h3>{pick(p.title, locale)}</h3>
+            <p>{pick(p.body, locale)}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="wrap">
+      <div class="about-story-grid">
+        <div>
+          <div class="eyebrow mono">{pick(a.storyEyebrow, locale)}</div>
+          <h2>{pick(a.storyHeading, locale)}</h2>
+          <div class="rule"></div>
+        </div>
+        <div>
+          {a.storyParagraphs.map((p) => <p set:html={emphasise(pick(p, locale))} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap cta-inner">
+      <div class="woven-lines"></div>
+      <div>
+        <h2 style="font-size:2rem">{pick(a.ctaHeading, locale)}</h2>
+        <p style="color:rgba(255,255,255,.8);max-width:620px">{pick(a.ctaBody, locale)}</p>
+      </div>
+      <a class="button primary" href={`mailto:${content.site.email}`}>
+        {pick(a.ctaButton, locale)} <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+</main>

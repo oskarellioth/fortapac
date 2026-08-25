@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import AboutBody from "../components/AboutBody.astro";
+import { content, pick } from "../lib/content";
+const locale = "sv" as const;
+---
+<Base
+  locale={locale}
+  title={pick(content.about.seoTitle, locale)}
+  description={pick(content.about.seoDescription, locale)}
+>
+  <AboutBody locale={locale} />
+</Base>

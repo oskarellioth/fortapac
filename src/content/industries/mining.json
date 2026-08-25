@@ -1,0 +1,7 @@
+{
+  "order": 5,
+  "name": { "sv": "Gruva & Mineral", "en": "Mining & Minerals" },
+  "blurb": { "sv": "Tunga storsäckar och skyddsöverdrag för utvunnet material och malm.", "en": "Heavy-duty bulk bags and protective covers for mined materials and ores." },
+  "icon": "/icons/industries/mining.png",
+  "photo": ""
+}

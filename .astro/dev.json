@@ -1,0 +1,14 @@
+{
+	"pid": 11341,
+	"port": 8080,
+	"url": "http://127.0.0.1:8080",
+	"urls": {
+		"local": [
+			"http://127.0.0.1:8080/"
+		],
+		"network": [],
+		"networkInterfaceNames": []
+	},
+	"background": true,
+	"startedAt": "2026-08-25T21:16:12.446Z"
+}

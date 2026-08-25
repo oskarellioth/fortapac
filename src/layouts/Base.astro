@@ -1,0 +1,111 @@
+---
+import SiteNav from "../components/SiteNav.tsx";
+import Footer from "../components/Footer.astro";
+import {
+  content, products, industries, pick, ROUTES, anchors,
+  routeKeyForPath, type Locale,
+} from "../lib/content";
+import "../styles/site.css";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+}
+const { locale, title, description } = Astro.props;
+
+const path = Astro.url.pathname;
+const other: Locale = locale === "sv" ? "en" : "sv";
+const routeKey = routeKeyForPath(path) ?? "home";
+
+const svHref = ROUTES[routeKey].sv;
+const enHref = ROUTES[routeKey].en;
+const canonical = new URL(locale === "sv" ? svHref : enHref, Astro.site).toString();
+
+const navCopy = content.navigation;
+
+// Only the real production hostnames may be indexed. Staging, Vercel preview
+// URLs and localhost all stay out of search results, so nothing here can ever
+// outrank the live site once it launches.
+const INDEXABLE = new Set(["fortapac.com", "www.fortapac.com"]);
+const indexable = INDEXABLE.has(Astro.url.hostname.toLowerCase());
+
+const labels = {
+  productPhoto: pick(
+    { sv: "Produktbild kommer snart", en: "Product photo coming soon" },
+    locale,
+  ),
+  featured: pick({ sv: "Produkt i fokus", en: "Featured product" }, locale),
+  featuredLink: pick({ sv: "Visa produktdetaljer", en: "View product details" }, locale),
+  menu: pick({ sv: "Öppna meny", en: "Open menu" }, locale),
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="sv" href={new URL(svHref, Astro.site).toString()} />
+    <link rel="alternate" hreflang="en" href={new URL(enHref, Astro.site).toString()} />
+    <link rel="alternate" hreflang="x-default" href={new URL(svHref, Astro.site).toString()} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={locale === "sv" ? "sv_SE" : "en_US"} />
+    <meta property="og:locale:alternate" content={locale === "sv" ? "en_US" : "sv_SE"} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {!indexable && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Fortapac",
+        url: Astro.site?.toString(),
+        email: content.site.email,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Göteborg",
+          addressCountry: "SE",
+        },
+      })}
+    />
+  </head>
+
+  <body>
+    <div class="fortapac">
+      <SiteNav
+        client:load
+        locale={locale}
+        copy={navCopy}
+        products={products}
+        industries={industries}
+        homePath={ROUTES.home[locale]}
+        aboutPath={ROUTES.about[locale]}
+        otherLocaleHref={ROUTES[routeKey][other]}
+        anchors={anchors(locale)}
+        productPhotoLabel={labels.productPhoto}
+        featuredLabel={labels.featured}
+        featuredLinkLabel={labels.featuredLink}
+        menuLabel={labels.menu}
+      />
+      <slot />
+      <Footer locale={locale} />
+    </div>
+  </body>
+</html>

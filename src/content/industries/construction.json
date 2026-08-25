@@ -1,0 +1,7 @@
+{
+  "order": 1,
+  "name": { "sv": "Bygg", "en": "Construction" },
+  "blurb": { "sv": "Storsäckar, överdrag och liners för cement, sand, ballast och byggmaterial.", "en": "Bulk bags, covers and liners for cement, sand, aggregates and building materials." },
+  "icon": "/icons/industries/construction.png",
+  "photo": ""
+}

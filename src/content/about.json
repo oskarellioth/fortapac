@@ -1,0 +1,107 @@
+{
+  "heroEyebrow": {
+    "sv": "Om Fortapac",
+    "en": "About Fortapac"
+  },
+  "heroTitleLine1": {
+    "sv": "Svensk närvaro.",
+    "en": "Swedish presence."
+  },
+  "heroTitleLine2": {
+    "sv": "Direkt från fabrik",
+    "en": "Factory direct"
+  },
+  "heroBody": {
+    "sv": "Fortapac är ett svensk–indiskt joint venture. Halvägt av en börsnoterad tillverkare av vävt polypropylen, halvägt av det svenska team du jobbar med. Storskalig tillverkning på ena sidan, lokalt ansvar på den andra. Inget däremellan.",
+    "en": "Fortapac is a Swedish–Indian joint venture. Half-owned by a publicly listed woven polypropylene producer, half-owned by the Swedish team you work with. Industrial-scale manufacturing on one side, local accountability on the other. Nothing in between."
+  },
+  "pillarsEyebrow": {
+    "sv": "Så är vi byggda",
+    "en": "How we're built"
+  },
+  "pillarsHeading": {
+    "sv": "Tre saker du kan räkna med.",
+    "en": "Three things you can count on."
+  },
+  "pillars": [
+    {
+      "number": "01 · LOCAL",
+      "title": {
+        "sv": "Svenskstyrt",
+        "en": "Swedish-led"
+      },
+      "body": {
+        "sv": "Försäljning, lager och teknisk support i Sverige. Du pratar med personerna som ansvarar för din order, på svensk arbetstid, i din tidszon.",
+        "en": "Sales, stock and technical support based in Sweden. You talk to the people responsible for your order, on Swedish business hours, in your time zone."
+      }
+    },
+    {
+      "number": "02 · DIRECT",
+      "title": {
+        "sv": "Direkt från fabrik",
+        "en": "Factory direct"
+      },
+      "body": {
+        "sv": "Byggd i vår moderfabriks vävsalar, fraktad till vårt svenska lager och vidare till dig. Inga handelshuspåslag, ingen extra QC-mellanhand, ingen bruten telefonlina mellan dig och specen.",
+        "en": "Built at our parent's loom rooms, shipped to our Swedish warehouse, and on to your site. No trading-house markup, no extra quality middleman, no broken phone line between you and the spec."
+      }
+    },
+    {
+      "number": "03 · BACKED",
+      "title": {
+        "sv": "Börsnoterad partner i ryggen",
+        "en": "Listed-partner backed"
+      },
+      "body": {
+        "sv": "Halvägt av en börsnoterad tillverkningspartner. Industriell kapacitet, reviderade räkenskaper och leveranssäkerheten som följer med båda, utan att du själv behöver jaga en fabrik.",
+        "en": "Half-owned by a publicly listed manufacturing partner. Industrial-scale capacity, audited financials, and the supply security that comes with both, without you ever needing to chase a factory directly."
+      }
+    }
+  ],
+  "storyEyebrow": {
+    "sv": "Varför det betyder något",
+    "en": "Why it matters"
+  },
+  "storyHeading": {
+    "sv": "Ett samtal. En spec. Ingen mellanhand.",
+    "en": "One call. One spec. No middleman."
+  },
+  "storyParagraphs": [
+    {
+      "sv": "Ett nummer att ringa, i Sverige, på svensk arbetstid. De som svarar är de som ansvarar för din order.",
+      "en": "One number to call, in Sweden, on Swedish hours. The people who answer are the people responsible for your order."
+    },
+    {
+      "sv": "Den spec ni kommer överens om är den spec som vävs. Vi styr vävprogrammet själva, så inget tappas bort mellan din ritning och fabriksgolvet.",
+      "en": "The spec you agree is the spec that gets woven. We set the loom programme ourselves, so nothing is lost between your drawing and the factory floor."
+    },
+    {
+      "sv": "Priset är fabrikspris, för vi sitter innanför tillverkningsmarginalen i stället för att lägga på den. Och de artiklar våra kunder använder mest står i ett svenskt lager, så ett akut jobb är dagar bort, inte sex veckor från Asien.",
+      "en": "Pricing is factory level, because we sit inside the manufacturing margin rather than adding to it. And the lines our customers use most sit in a Swedish warehouse, so an urgent job is days away, not six weeks from Asia."
+    },
+    {
+      "sv": "Det går för att vi ägs som vi gör. Hälften av bolaget tillhör det **svenska team** du har kontakt med. Andra hälften tillhör **fabriken som väver**, en börsnoterad tillverkare. Två ägare, ingen mellanhand.",
+      "en": "That works because of who owns us. Half the company belongs to the **Swedish team** you deal with. The other half belongs to the **factory that does the weaving**, a publicly listed manufacturer. Two owners, no middleman."
+    }
+  ],
+  "ctaHeading": {
+    "sv": "Vill du prata med det svenska teamet?",
+    "en": "Want to talk to the Swedish team?"
+  },
+  "ctaBody": {
+    "sv": "Berätta om din last, plats och förhållanden. Vi speccar rätt säck, offererar inom dagar och skickar från lager när vi kan.",
+    "en": "Tell us about your load, site and conditions. We'll spec the right bag, quote in days, and ship from stock when we can."
+  },
+  "ctaButton": {
+    "sv": "Hör av dig",
+    "en": "Get in touch"
+  },
+  "seoTitle": {
+    "sv": "Om Fortapac | Svensk närvaro. Direkt från fabrik.",
+    "en": "About Fortapac | Swedish presence. Factory direct."
+  },
+  "seoDescription": {
+    "sv": "Fortapac är ett svensk–indiskt joint venture: halvägt av en börsnoterad tillverkare av vävt polypropylen, halvägt av vårt svenska säljteam. Byggt i fabriken, sålt utan mellanhand.",
+    "en": "Fortapac is a Swedish–Indian joint venture: half-owned by a publicly listed woven polypropylene producer, half-owned by our Swedish sales and support team. Built at the factory, sold without the middleman."
+  }
+}

@@ -1,0 +1,80 @@
+---
+import { content, products, industries, pick, ROUTES, anchors, type Locale } from "../lib/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+
+const s = content.site;
+const a = anchors(locale);
+const homePath = ROUTES.home[locale];
+const aboutPath = ROUTES.about[locale];
+---
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href={homePath} class="brand" style="color:var(--navy)">
+        <svg viewBox="0 0 212 44" xmlns="http://www.w3.org/2000/svg" aria-label="Fortapac">
+          <g stroke-linecap="round" stroke-width="4.8">
+            <path d="M12 8V36" stroke="currentColor" />
+            <path d="M22 8V36" stroke="currentColor" />
+            <path d="M32 8V36" stroke="currentColor" />
+            <path d="M5 13H39" stroke="currentColor" />
+            <path d="M5 23H39" stroke="#DE5B26" />
+            <path d="M5 33H39" stroke="currentColor" />
+          </g>
+          <text x="54" y="30" font-family="Arial Black, Archivo, sans-serif" font-size="24" letter-spacing="-1" fill="currentColor">FORTAPAC</text>
+        </svg>
+      </a>
+      <p>{pick(s.footerBlurb, locale)}</p>
+      <div class="made-in mono" style="color:var(--navy);margin-top:1.5rem">
+        <span class="flag"></span> {pick(s.madeIn, locale)}
+      </div>
+    </div>
+
+    <div>
+      <h4>{pick(s.footerColProducts, locale)}</h4>
+      {products.map((p) => <a href={a.products}>{pick(p.name, locale)}</a>)}
+    </div>
+
+    <div>
+      <h4>{pick(s.footerColIndustries, locale)}</h4>
+      {industries.map((i) => <a href={a.industries}>{pick(i.name, locale)}</a>)}
+    </div>
+
+    <div>
+      <h4>{pick(s.footerColCompany, locale)}</h4>
+      <a href={aboutPath}>{pick(s.footerAbout, locale)}</a>
+      <a href={a.sustainability}>{pick(content.navigation.navSustainability, locale)}</a>
+      <a href="#">{pick(s.footerQuality, locale)}</a>
+      <a href="#">{pick(s.footerResources, locale)}</a>
+    </div>
+
+    <div>
+      <h4>{pick(s.footerColContact, locale)}</h4>
+      <p>{s.companyName}</p>
+      <p>{s.city}</p>
+      <a href={`mailto:${s.email}`}>{s.email}</a>
+    </div>
+
+    <div>
+      <h4>{pick(s.footerColNewsletter, locale)}</h4>
+      <p>{pick(s.newsletterBody, locale)}</p>
+      <form class="newsletter" onsubmit="event.preventDefault()">
+        <input type="email" placeholder={pick(s.newsletterPlaceholder, locale)} />
+        <button type="submit">→</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="wrap">
+      <span>{pick(s.copyright, locale)}</span>
+      <span>
+        <a href="#">{pick(s.footerPrivacy, locale)}</a>
+        <a href="#">{pick(s.footerTerms, locale)}</a>
+        <a href="#">{pick(s.footerCookies, locale)}</a>
+      </span>
+    </div>
+  </div>
+</footer>

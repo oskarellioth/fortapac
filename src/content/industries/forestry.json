@@ -1,0 +1,7 @@
+{
+  "order": 4,
+  "name": { "sv": "Skogsbruk", "en": "Forestry" },
+  "blurb": { "sv": "UV-stabiliserade överdrag för timmerstaplar och massaved.", "en": "UV-stabilised covers for stacked timber and pulp protection." },
+  "icon": "/icons/industries/forestry.png",
+  "photo": ""
+}

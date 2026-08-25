@@ -1,0 +1,7 @@
+{
+  "order": 6,
+  "name": { "sv": "Logistik & Lager", "en": "Logistics & Storage" },
+  "blurb": { "sv": "Överdrag, liners och dunnage för lagring, hantering och transport.", "en": "Covers, liners and dunnage solutions for storage, handling and transport." },
+  "icon": "/icons/industries/logistics.png",
+  "photo": ""
+}

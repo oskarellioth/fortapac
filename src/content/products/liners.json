@@ -1,0 +1,16 @@
+{
+  "order": 4,
+  "name": { "sv": "Innerpåsar & Liners", "en": "Inner Bags & Liners" },
+  "menuBlurb": { "sv": "Tältdukar, markskydd och containerliners i olika utföranden.", "en": "Tarpaulins, ground covers and container liners in many configurations." },
+  "focusBlurb": { "sv": "Innerpåsar och liners i PE och PP. Extra skydd, täthet och separation för dina förpackningar.", "en": "Inner bags and liners in PE and PP. Extra protection, sealing and separation for your packaging." },
+  "cardBlurb": { "sv": "Skyddsöverdrag och liners för transport, lager och arbetsplats.", "en": "Protective covers and liners built for transport, storage and site use." },
+  "cardMeta": { "sv": "Måttbeställda", "en": "Custom made" },
+  "icon": "/products/covers-liners.png",
+  "photo": "",
+  "specs": [
+    { "value": "PE / PP", "label": { "sv": "Material", "en": "Material" } },
+    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
+    { "value": "n/a", "label": { "sv": "Säkerhetsfaktor", "en": "Safety factor" } },
+    { "value": "100%", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+  ]
+}
