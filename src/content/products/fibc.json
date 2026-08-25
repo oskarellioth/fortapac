@@ -1,16 +1,55 @@
 {
   "order": 1,
-  "name": { "sv": "FIBC Storsäckar", "en": "FIBC Bulk Bags" },
-  "menuBlurb": { "sv": "500–2 000 kg SWL säckar för torra, flytande och pastösa produkter.", "en": "500–2,000 kg SWL containers for dry, flowable and paste-like products." },
-  "focusBlurb": { "sv": "Starka, pålitliga och UN-certifierade för säker transport av torra, flytande och pastösa produkter.", "en": "Strong, reliable and UN-certified for safe transport of dry, flowable and paste-like products." },
-  "cardBlurb": { "sv": "Robusta storsäckar för pulver, granulat och bulkvaror.", "en": "Heavy duty bulk bags for powders, granules and commodities." },
-  "cardMeta": { "sv": "SWL 500–2 000 kg", "en": "SWL 500–2000 kg" },
-  "icon": "/products/fibc-bulk-bags.png",
-  "photo": "/products/focus/fibc.jpg",
+  "name": {
+    "sv": "FIBC Storsäckar",
+    "en": "FIBC Bulk Bags"
+  },
+  "menuBlurb": {
+    "sv": "500–2 000 kg SWL säckar för torra, flytande och pastösa produkter.",
+    "en": "500–2,000 kg SWL containers for dry, flowable and paste-like products."
+  },
+  "focusBlurb": {
+    "sv": "Starka, pålitliga och UN-certifierade för säker transport av torra, flytande och pastösa produkter.",
+    "en": "Strong, reliable and UN-certified for safe transport of dry, flowable and paste-like products."
+  },
+  "cardBlurb": {
+    "sv": "Robusta storsäckar för pulver, granulat och bulkvaror.",
+    "en": "Heavy duty bulk bags for powders, granules and commodities."
+  },
+  "cardMeta": {
+    "sv": "SWL 500–2 000 kg",
+    "en": "SWL 500–2000 kg"
+  },
+  "icon": "fibc-bulk-bags.png",
+  "photo": "fibc.jpg",
   "specs": [
-    { "value": "500–2 000 kg", "label": { "sv": "SWL", "en": "SWL" } },
-    { "value": "5:1", "label": { "sv": "Säkerhetsfaktor", "en": "Safety factor" } },
-    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
-    { "value": "100%", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+    {
+      "value": "500–2 000 kg",
+      "label": {
+        "sv": "SWL",
+        "en": "SWL"
+      }
+    },
+    {
+      "value": "5:1",
+      "label": {
+        "sv": "Säkerhetsfaktor",
+        "en": "Safety factor"
+      }
+    },
+    {
+      "value": "UV",
+      "label": {
+        "sv": "Stabiliserad",
+        "en": "Stabilised"
+      }
+    },
+    {
+      "value": "100%",
+      "label": {
+        "sv": "Återvinningsbar PP",
+        "en": "Recyclable PP"
+      }
+    }
   ]
 }

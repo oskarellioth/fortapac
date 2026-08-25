@@ -1,7 +1,13 @@
 {
   "order": 2,
-  "name": { "sv": "Jordbruk", "en": "Agriculture" },
-  "blurb": { "sv": "PP-säckar och storsäckar för spannmål, utsäde, foder och gödsel.", "en": "PP woven sacks and bulk bags for grain, seeds, feed and fertilisers." },
-  "icon": "/icons/industries/agriculture.png",
+  "name": {
+    "sv": "Jordbruk",
+    "en": "Agriculture"
+  },
+  "blurb": {
+    "sv": "PP-säckar och storsäckar för spannmål, utsäde, foder och gödsel.",
+    "en": "PP woven sacks and bulk bags for grain, seeds, feed and fertilisers."
+  },
+  "icon": "agriculture.png",
   "photo": ""
 }

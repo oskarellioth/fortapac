@@ -1,16 +1,55 @@
 {
   "order": 3,
-  "name": { "sv": "Virkesöverdrag", "en": "Lumber Covers" },
-  "menuBlurb": { "sv": "UV-stabiliserade överdrag för timmer, flis och massaved.", "en": "UV-stabilised covers for timber, wood chip and pulpwood." },
-  "focusBlurb": { "sv": "UV-stabiliserade överdrag som skyddar timmerstaplar, flis och massaved mot väder och vind.", "en": "UV-stabilised covers that protect timber stacks, wood chip and pulpwood from the elements." },
-  "cardBlurb": { "sv": "Hållbara överdrag för timmerstaplar och skogsbruk.", "en": "Durable covers for timber stacks and forestry operations." },
-  "cardMeta": { "sv": "UV-stabiliserade", "en": "UV stabilised" },
-  "icon": "/products/forestry-covers.png",
+  "name": {
+    "sv": "Virkesöverdrag",
+    "en": "Lumber Covers"
+  },
+  "menuBlurb": {
+    "sv": "UV-stabiliserade överdrag för timmer, flis och massaved.",
+    "en": "UV-stabilised covers for timber, wood chip and pulpwood."
+  },
+  "focusBlurb": {
+    "sv": "UV-stabiliserade överdrag som skyddar timmerstaplar, flis och massaved mot väder och vind.",
+    "en": "UV-stabilised covers that protect timber stacks, wood chip and pulpwood from the elements."
+  },
+  "cardBlurb": {
+    "sv": "Hållbara överdrag för timmerstaplar och skogsbruk.",
+    "en": "Durable covers for timber stacks and forestry operations."
+  },
+  "cardMeta": {
+    "sv": "UV-stabiliserade",
+    "en": "UV stabilised"
+  },
+  "icon": "forestry-covers.png",
   "photo": "",
   "specs": [
-    { "value": "1,600 h", "label": { "sv": "UV", "en": "UV" } },
-    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
-    { "value": "PP", "label": { "sv": "Material", "en": "Material" } },
-    { "value": "100%", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+    {
+      "value": "1,600 h",
+      "label": {
+        "sv": "UV",
+        "en": "UV"
+      }
+    },
+    {
+      "value": "UV",
+      "label": {
+        "sv": "Stabiliserad",
+        "en": "Stabilised"
+      }
+    },
+    {
+      "value": "PP",
+      "label": {
+        "sv": "Material",
+        "en": "Material"
+      }
+    },
+    {
+      "value": "100%",
+      "label": {
+        "sv": "Återvinningsbar PP",
+        "en": "Recyclable PP"
+      }
+    }
   ]
 }

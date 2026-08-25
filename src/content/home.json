@@ -1,49 +1,90 @@
 {
-  "heroTitleLine1": { "sv": "Byggda", "en": "Built" },
-  "heroTitleLine2": { "sv": "att bära", "en": "to carry" },
+  "heroTitleLine1": {
+    "sv": "Byggda",
+    "en": "Built"
+  },
+  "heroTitleLine2": {
+    "sv": "att bära",
+    "en": "to carry"
+  },
   "heroBody": {
     "sv": "FIBC storsäckar, PP-säckar och skyddsöverdrag, tillverkade i vår moderfabrik, lagerförda och servade i Sverige. Direkt från fabrik, utan mellanhand.",
     "en": "FIBC bulk bags, PP sacks and protective covers, manufactured at our parent factory, stocked and serviced in Sweden. Factory-direct, without the middleman."
   },
-  "heroButtonPrimary": { "sv": "Utforska produkter", "en": "Explore products" },
-  "heroButtonSecondary": { "sv": "Begär offert", "en": "Get a quote" },
+  "heroButtonPrimary": {
+    "sv": "Utforska produkter",
+    "en": "Explore products"
+  },
+  "heroButtonSecondary": {
+    "sv": "Begär offert",
+    "en": "Get a quote"
+  },
   "heroBadge": {
     "sv": "Lagerförda och servade i Sverige",
     "en": "Stocked & supported in Sweden"
   },
-  "heroImage": "/hero/home.jpg",
-  "heroImageMobile": "/hero/mobile.jpg",
-
-  "productsEyebrow": { "sv": "Våra produkter", "en": "Our products" },
+  "heroImage": "home.jpg",
+  "heroImageMobile": "mobile.jpg",
+  "productsEyebrow": {
+    "sv": "Våra produkter",
+    "en": "Our products"
+  },
   "productsHeading": {
     "sv": "Vävt emballage byggt för tunga jobb.",
     "en": "Engineered woven packaging for heavy work."
   },
-  "productsLink": { "sv": "Se alla produkter", "en": "View all products" },
-
-  "specEyebrow": { "sv": "Tekniskt genomtänkt", "en": "Technical by design" },
+  "productsLink": {
+    "sv": "Se alla produkter",
+    "en": "View all products"
+  },
+  "specEyebrow": {
+    "sv": "Tekniskt genomtänkt",
+    "en": "Technical by design"
+  },
   "specHeading": {
     "sv": "Byggd att prestera. Spec för spec.",
     "en": "Built to perform. Spec by spec."
   },
   "specSwlValue": "1,000-2,000 kg",
-  "specSwlLabel": { "sv": "SWL-intervall", "en": "SWL range" },
+  "specSwlLabel": {
+    "sv": "SWL-intervall",
+    "en": "SWL range"
+  },
   "specSafetyValue": "5:1",
-  "specSafetyLabel": { "sv": "Säkerhetsfaktor", "en": "Safety factor" },
+  "specSafetyLabel": {
+    "sv": "Säkerhetsfaktor",
+    "en": "Safety factor"
+  },
   "specUvValue": "UV",
-  "specUvLabel": { "sv": "Stabiliserad", "en": "Stabilised" },
+  "specUvLabel": {
+    "sv": "Stabiliserad",
+    "en": "Stabilised"
+  },
   "specRecycleValue": "100%",
-  "specRecycleLabel": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" },
-
-  "industriesEyebrow": { "sv": "Byggd för industrin", "en": "Built for industry" },
+  "specRecycleLabel": {
+    "sv": "Återvinningsbar PP",
+    "en": "Recyclable PP"
+  },
+  "industriesEyebrow": {
+    "sv": "Byggd för industrin",
+    "en": "Built for industry"
+  },
   "industriesHeading": {
     "sv": "Anlitad i branscherna som bygger vår värld.",
     "en": "Trusted across the industries that build our world."
   },
-  "industriesLink": { "sv": "Utforska branscher", "en": "Explore industries" },
-
-  "materialsEyebrow": { "sv": "Material & hantverk", "en": "Material & craftsmanship" },
-  "materialsHeading": { "sv": "Styrka du kan se.", "en": "Strength you can see." },
+  "industriesLink": {
+    "sv": "Utforska branscher",
+    "en": "Explore industries"
+  },
+  "materialsEyebrow": {
+    "sv": "Material & hantverk",
+    "en": "Material & craftsmanship"
+  },
+  "materialsHeading": {
+    "sv": "Styrka du kan se.",
+    "en": "Strength you can see."
+  },
   "materialsBody": {
     "sv": "Vävt av högkvalitativa polypropylentejper med precisionsvävteknik. Vår varp- och inslagskonstruktion ger draghållfasthet, rena fyllningar och lång livslängd: i fält, i hamn och på arbetsplatsen.",
     "en": "Woven from high grade polypropylene tapes using precision loom technology. Our warp and weft construction delivers tensile strength, clear fills and long service life in the field, in ports and on the job."
@@ -52,36 +93,46 @@
     "sv": "Läs mer om våra material",
     "en": "Learn more about our materials"
   },
-
-  "sustainabilityEyebrow": { "sv": "Bättre från grunden", "en": "Better by design" },
+  "sustainabilityEyebrow": {
+    "sv": "Bättre från grunden",
+    "en": "Better by design"
+  },
   "sustainabilityHeading": {
     "sv": "Praktiskt idag. Ansvarsfullt imorgon.",
     "en": "Practical today. Responsible tomorrow."
   },
   "sustainabilityCards": [
     {
-      "title": { "sv": "Återanvändbar av naturen", "en": "Reusable by nature" },
+      "title": {
+        "sv": "Återanvändbar av naturen",
+        "en": "Reusable by nature"
+      },
       "body": {
         "sv": "Byggd för flergångsbruk, designad att minska engångsavfall och totalkostnad.",
         "en": "Built for repeat use, designed to reduce single use waste and lower total cost."
       }
     },
     {
-      "title": { "sv": "Lägre påverkan", "en": "Lower impact" },
+      "title": {
+        "sv": "Lägre påverkan",
+        "en": "Lower impact"
+      },
       "body": {
         "sv": "Polypropylen är lätt, återvinningsbar och effektiv för säkrare transport.",
         "en": "Polypropylene is lightweight, recyclable and efficient for safer transport."
       }
     },
     {
-      "title": { "sv": "Konstruerad att hålla", "en": "Engineered to last" },
+      "title": {
+        "sv": "Konstruerad att hålla",
+        "en": "Engineered to last"
+      },
       "body": {
         "sv": "UV-stabiliserad och fältbeprövad, byggd för att klara verkliga förhållanden längre.",
         "en": "UV stabilised and field proven, made to handle real conditions for longer."
       }
     }
   ],
-
   "ctaHeading": {
     "sv": "Behöver du rätt säck för jobbet?",
     "en": "Need the right bag for the job?"
@@ -90,7 +141,6 @@
     "sv": "Vårt svenska team speccar säcken, vår fabrik bygger den. Snabba offerter, fabrikspris, bevisad prestanda.",
     "en": "Our Swedish team specs your bag, our factory builds it. Fast quotes, factory pricing, proven performance."
   },
-
   "seoTitle": {
     "sv": "Fortapac | Byggda att bära",
     "en": "Fortapac | Built to carry"

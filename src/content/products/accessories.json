@@ -1,16 +1,55 @@
 {
   "order": 6,
-  "name": { "sv": "Tillbehör", "en": "Accessories" },
-  "menuBlurb": { "sv": "Lyftöglor, snören och andra komponenter som kompletterar din lösning.", "en": "Lifting loops, cords and other components that complete your solution." },
-  "focusBlurb": { "sv": "Lyftöglor, snören, ventiler och tillbehör som kompletterar och anpassar din emballagelösning.", "en": "Lifting loops, cords, valves and accessories that complete and customise your packaging." },
-  "cardBlurb": { "sv": "Komponenter och tillbehör som kompletterar våra produkter.", "en": "Components and accessories that complete our product range." },
-  "cardMeta": { "sv": "Måttanpassade", "en": "Made to spec" },
-  "icon": "/products/accessories.png",
+  "name": {
+    "sv": "Tillbehör",
+    "en": "Accessories"
+  },
+  "menuBlurb": {
+    "sv": "Lyftöglor, snören och andra komponenter som kompletterar din lösning.",
+    "en": "Lifting loops, cords and other components that complete your solution."
+  },
+  "focusBlurb": {
+    "sv": "Lyftöglor, snören, ventiler och tillbehör som kompletterar och anpassar din emballagelösning.",
+    "en": "Lifting loops, cords, valves and accessories that complete and customise your packaging."
+  },
+  "cardBlurb": {
+    "sv": "Komponenter och tillbehör som kompletterar våra produkter.",
+    "en": "Components and accessories that complete our product range."
+  },
+  "cardMeta": {
+    "sv": "Måttanpassade",
+    "en": "Made to spec"
+  },
+  "icon": "accessories.png",
   "photo": "",
   "specs": [
-    { "value": "PP / Steel", "label": { "sv": "Material", "en": "Material" } },
-    { "value": "n/a", "label": { "sv": "Säkerhetsfaktor", "en": "Safety factor" } },
-    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
-    { "value": "n/a", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+    {
+      "value": "PP / Steel",
+      "label": {
+        "sv": "Material",
+        "en": "Material"
+      }
+    },
+    {
+      "value": "n/a",
+      "label": {
+        "sv": "Säkerhetsfaktor",
+        "en": "Safety factor"
+      }
+    },
+    {
+      "value": "UV",
+      "label": {
+        "sv": "Stabiliserad",
+        "en": "Stabilised"
+      }
+    },
+    {
+      "value": "n/a",
+      "label": {
+        "sv": "Återvinningsbar PP",
+        "en": "Recyclable PP"
+      }
+    }
   ]
 }

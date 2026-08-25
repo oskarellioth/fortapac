@@ -1,12 +1,32 @@
 {
-  "navProducts": { "sv": "Produkter", "en": "Products" },
-  "navIndustries": { "sv": "Industrier", "en": "Industries" },
-  "navMaterials": { "sv": "Material", "en": "Materials" },
-  "navSustainability": { "sv": "Hållbarhet", "en": "Sustainability" },
-  "navAbout": { "sv": "Om oss", "en": "About us" },
-  "navContact": { "sv": "Kontakt", "en": "Contact" },
-  "ctaQuote": { "sv": "Begär offert", "en": "Get a quote" },
-
+  "navProducts": {
+    "sv": "Produkter",
+    "en": "Products"
+  },
+  "navIndustries": {
+    "sv": "Industrier",
+    "en": "Industries"
+  },
+  "navMaterials": {
+    "sv": "Material",
+    "en": "Materials"
+  },
+  "navSustainability": {
+    "sv": "Hållbarhet",
+    "en": "Sustainability"
+  },
+  "navAbout": {
+    "sv": "Om oss",
+    "en": "About us"
+  },
+  "navContact": {
+    "sv": "Kontakt",
+    "en": "Contact"
+  },
+  "ctaQuote": {
+    "sv": "Begär offert",
+    "en": "Get a quote"
+  },
   "productsMegaHeading": {
     "sv": "Vävda lösningar för last, lagring och transport.",
     "en": "Woven solutions for load, storage and transport."
@@ -15,35 +35,67 @@
     "sv": "Tillverkade i vår egen fabrik. Specificerade, lagerförda och stödda från Sverige.",
     "en": "Manufactured at our own factory. Specified, stocked and supported from Sweden."
   },
-  "productsMegaLink": { "sv": "Se alla produkter", "en": "View all products" },
+  "productsMegaLink": {
+    "sv": "Se alla produkter",
+    "en": "View all products"
+  },
   "productsMegaAddons": [
     {
-      "title": { "sv": "Anpassade lösningar", "en": "Custom solutions" },
-      "subtitle": { "sv": "Skräddarsytt efter dina behov", "en": "Tailored to your needs" },
-      "icon": "/icons/custom.png"
+      "title": {
+        "sv": "Anpassade lösningar",
+        "en": "Custom solutions"
+      },
+      "subtitle": {
+        "sv": "Skräddarsytt efter dina behov",
+        "en": "Tailored to your needs"
+      },
+      "icon": "custom.png"
     },
     {
-      "title": { "sv": "Tryck & logotyp", "en": "Print & branding" },
-      "subtitle": { "sv": "Högkvalitativ profilering", "en": "High-quality branding" },
-      "icon": "/icons/print.png"
+      "title": {
+        "sv": "Tryck & logotyp",
+        "en": "Print & branding"
+      },
+      "subtitle": {
+        "sv": "Högkvalitativ profilering",
+        "en": "High-quality branding"
+      },
+      "icon": "print.png"
     },
     {
-      "title": { "sv": "UV-alternativ", "en": "UV options" },
-      "subtitle": { "sv": "Ökad hållbarhet", "en": "Increased durability" },
-      "icon": "/icons/uv.png"
+      "title": {
+        "sv": "UV-alternativ",
+        "en": "UV options"
+      },
+      "subtitle": {
+        "sv": "Ökad hållbarhet",
+        "en": "Increased durability"
+      },
+      "icon": "uv.png"
     },
     {
-      "title": { "sv": "Liners & beläggningar", "en": "Liners & coatings" },
-      "subtitle": { "sv": "Extra skydd och täthet", "en": "Extra protection and sealing" },
-      "icon": "/icons/liners.png"
+      "title": {
+        "sv": "Liners & beläggningar",
+        "en": "Liners & coatings"
+      },
+      "subtitle": {
+        "sv": "Extra skydd och täthet",
+        "en": "Extra protection and sealing"
+      },
+      "icon": "liners.png"
     },
     {
-      "title": { "sv": "Teknisk support", "en": "Technical support" },
-      "subtitle": { "sv": "Rådgivning i varje steg", "en": "Guidance at every stage" },
-      "icon": "/icons/support.png"
+      "title": {
+        "sv": "Teknisk support",
+        "en": "Technical support"
+      },
+      "subtitle": {
+        "sv": "Rådgivning i varje steg",
+        "en": "Guidance at every stage"
+      },
+      "icon": "support.png"
     }
   ],
-
   "industriesMegaHeading": {
     "sv": "Vävda förpackningar för last, lagring och transport.",
     "en": "Woven packaging for load, storage and transport."
@@ -52,64 +104,100 @@
     "sv": "Anpassade lösningar som skyddar dina produkter, stödjer din verksamhet och driver din affär framåt.",
     "en": "Engineered solutions that protect your products, support your operations and move your business forward."
   },
-  "industriesMegaLink": { "sv": "Se alla industrier", "en": "View all industries" },
+  "industriesMegaLink": {
+    "sv": "Se alla industrier",
+    "en": "View all industries"
+  },
   "industriesMegaValues": [
     {
-      "title": { "sv": "Skyddar produkter", "en": "Protects products" },
+      "title": {
+        "sv": "Skyddar produkter",
+        "en": "Protects products"
+      },
       "subtitle": {
         "sv": "Konstruerade för säkerhet och pålitlighet",
         "en": "Engineered for safety and reliability"
       },
-      "icon": "/icons/val-protects.png"
+      "icon": "val-protects.png"
     },
     {
-      "title": { "sv": "Väderbeständiga", "en": "Weather resistant" },
+      "title": {
+        "sv": "Väderbeständiga",
+        "en": "Weather resistant"
+      },
       "subtitle": {
         "sv": "Byggda att prestera i tuffa förhållanden",
         "en": "Built to perform in tough conditions"
       },
-      "icon": "/icons/val-weather.png"
+      "icon": "val-weather.png"
     },
     {
-      "title": { "sv": "Byggda för tunga laster", "en": "Built for heavy loads" },
+      "title": {
+        "sv": "Byggda för tunga laster",
+        "en": "Built for heavy loads"
+      },
       "subtitle": {
         "sv": "Starka material för krävande behov",
         "en": "Strong materials for demanding needs"
       },
-      "icon": "/icons/val-heavy.png"
+      "icon": "val-heavy.png"
     },
     {
-      "title": { "sv": "Hållbara alternativ", "en": "Sustainable options" },
+      "title": {
+        "sv": "Hållbara alternativ",
+        "en": "Sustainable options"
+      },
       "subtitle": {
         "sv": "Ansvarsfulla lösningar för en bättre framtid",
         "en": "Responsible solutions for a better future"
       },
-      "icon": "/icons/val-sustainable.png"
+      "icon": "val-sustainable.png"
     }
   ],
   "industriesMegaAddons": [
     {
-      "title": { "sv": "Skräddarsydda lösningar", "en": "Custom solutions" },
-      "subtitle": { "sv": "Anpassat efter dina behov", "en": "Tailored to your needs" },
-      "icon": "/icons/custom.png"
+      "title": {
+        "sv": "Skräddarsydda lösningar",
+        "en": "Custom solutions"
+      },
+      "subtitle": {
+        "sv": "Anpassat efter dina behov",
+        "en": "Tailored to your needs"
+      },
+      "icon": "custom.png"
     },
     {
-      "title": { "sv": "Konsekvent kvalitet", "en": "Consistent quality" },
+      "title": {
+        "sv": "Konsekvent kvalitet",
+        "en": "Consistent quality"
+      },
       "subtitle": {
         "sv": "Pålitliga material och strikta standarder",
         "en": "Trusted materials and strict standards"
       },
-      "icon": "/icons/quality.png"
+      "icon": "quality.png"
     },
     {
-      "title": { "sv": "Global leverans", "en": "Global supply" },
-      "subtitle": { "sv": "Pålitlig leverans världen över", "en": "Reliable delivery worldwide" },
-      "icon": "/icons/global.png"
+      "title": {
+        "sv": "Global leverans",
+        "en": "Global supply"
+      },
+      "subtitle": {
+        "sv": "Pålitlig leverans världen över",
+        "en": "Reliable delivery worldwide"
+      },
+      "icon": "global.png"
     },
     {
-      "title": { "sv": "Teknisk support", "en": "Technical support" },
-      "subtitle": { "sv": "Expertis i varje steg", "en": "Expert guidance at every step" },
-      "icon": "/icons/support.png"
+      "title": {
+        "sv": "Teknisk support",
+        "en": "Technical support"
+      },
+      "subtitle": {
+        "sv": "Expertis i varje steg",
+        "en": "Expert guidance at every step"
+      },
+      "icon": "support.png"
     }
   ]
 }

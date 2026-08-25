@@ -1,16 +1,55 @@
 {
   "order": 2,
-  "name": { "sv": "PP Vävda Säckar", "en": "PP Woven Sacks" },
-  "menuBlurb": { "sv": "Ventilsäckar, öppen mynning och leno-säckar för spannmål, foder, kemikalier m.m.", "en": "Valve, open-mouth and leno sacks for grain, feed, chemicals and more." },
-  "focusBlurb": { "sv": "Flexibla, vävda säckar i många utföranden för spannmål, foder, kemi, bygg och industri.", "en": "Flexible woven sacks in many configurations for grain, feed, chemicals, construction and industry." },
-  "cardBlurb": { "sv": "Starka och mångsidiga säckar för industri och jordbruk.", "en": "Strong and versatile sacks for industrial and agricultural applications." },
-  "cardMeta": { "sv": "10–100 kg kapacitet", "en": "10–100 kg capacity" },
-  "icon": "/products/pp-woven-sacks.png",
+  "name": {
+    "sv": "PP Vävda Säckar",
+    "en": "PP Woven Sacks"
+  },
+  "menuBlurb": {
+    "sv": "Ventilsäckar, öppen mynning och leno-säckar för spannmål, foder, kemikalier m.m.",
+    "en": "Valve, open-mouth and leno sacks for grain, feed, chemicals and more."
+  },
+  "focusBlurb": {
+    "sv": "Flexibla, vävda säckar i många utföranden för spannmål, foder, kemi, bygg och industri.",
+    "en": "Flexible woven sacks in many configurations for grain, feed, chemicals, construction and industry."
+  },
+  "cardBlurb": {
+    "sv": "Starka och mångsidiga säckar för industri och jordbruk.",
+    "en": "Strong and versatile sacks for industrial and agricultural applications."
+  },
+  "cardMeta": {
+    "sv": "10–100 kg kapacitet",
+    "en": "10–100 kg capacity"
+  },
+  "icon": "pp-woven-sacks.png",
   "photo": "",
   "specs": [
-    { "value": "10–100 kg", "label": { "sv": "SWL", "en": "SWL" } },
-    { "value": "5:1", "label": { "sv": "Säkerhetsfaktor", "en": "Safety factor" } },
-    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
-    { "value": "100%", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+    {
+      "value": "10–100 kg",
+      "label": {
+        "sv": "SWL",
+        "en": "SWL"
+      }
+    },
+    {
+      "value": "5:1",
+      "label": {
+        "sv": "Säkerhetsfaktor",
+        "en": "Safety factor"
+      }
+    },
+    {
+      "value": "UV",
+      "label": {
+        "sv": "Stabiliserad",
+        "en": "Stabilised"
+      }
+    },
+    {
+      "value": "100%",
+      "label": {
+        "sv": "Återvinningsbar PP",
+        "en": "Recyclable PP"
+      }
+    }
   ]
 }

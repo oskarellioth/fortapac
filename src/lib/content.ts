@@ -5,6 +5,31 @@ import site from "../content/site.json";
 
 export type Locale = "sv" | "en";
 
+/**
+ * Keystatic's image fields store a bare filename and prepend `publicPath`
+ * themselves when rendering the admin. Storing a full path in the JSON makes
+ * the field fail validation, which blanks the entire entry in the CMS, so the
+ * content files keep filenames only and the prefix is reattached here.
+ *
+ * These must stay in step with the `publicPath` values in keystatic.config.ts.
+ */
+export const MEDIA = {
+  hero: "/hero/",
+  icons: "/icons/",
+  industryIcons: "/icons/industries/",
+  productIcons: "/products/",
+  productPhotos: "/products/focus/",
+  industryPhotos: "/industries/focus/",
+} as const;
+
+/** Empty stays empty, so callers can treat "" as "no image yet". */
+export function media(prefix: string, filename: string | undefined): string {
+  if (!filename) return "";
+  // Tolerate a full path, in case one is pasted in by hand.
+  if (filename.startsWith("/")) return filename;
+  return prefix + filename;
+}
+
 /** A field the team edits in both languages. */
 export type Bilingual = { sv: string; en: string };
 
@@ -46,15 +71,47 @@ function loadCollection<T>(modules: Record<string, unknown>): Array<T & { key: s
     .sort((a, b) => ((a as { order?: number }).order ?? 0) - ((b as { order?: number }).order ?? 0));
 }
 
+// Filenames are resolved to public paths once, here, so every component can
+// treat entry.icon / entry.photo as something it can put straight into src.
 export const products = loadCollection<ProductEntry>(
   import.meta.glob("../content/products/*.json", { eager: true }),
-);
+).map((p) => ({
+  ...p,
+  icon: media(MEDIA.productIcons, p.icon),
+  photo: media(MEDIA.productPhotos, p.photo),
+}));
 
 export const industries = loadCollection<IndustryEntry>(
   import.meta.glob("../content/industries/*.json", { eager: true }),
-);
+).map((i) => ({
+  ...i,
+  icon: media(MEDIA.industryIcons, i.icon),
+  photo: media(MEDIA.industryPhotos, i.photo),
+}));
 
-export const content = { home, about, navigation, site };
+type Strip = { icon: string; [k: string]: unknown };
+const withIcons = (items: Strip[] | undefined, prefix: string) =>
+  (items ?? []).map((item) => ({ ...item, icon: media(prefix, item.icon) }));
+
+const navigationResolved = {
+  ...navigation,
+  productsMegaAddons: withIcons(navigation.productsMegaAddons as Strip[], MEDIA.icons),
+  industriesMegaValues: withIcons(navigation.industriesMegaValues as Strip[], MEDIA.icons),
+  industriesMegaAddons: withIcons(navigation.industriesMegaAddons as Strip[], MEDIA.icons),
+};
+
+const homeResolved = {
+  ...home,
+  heroImage: media(MEDIA.hero, home.heroImage),
+  heroImageMobile: media(MEDIA.hero, home.heroImageMobile),
+};
+
+export const content = {
+  home: homeResolved,
+  about,
+  navigation: navigationResolved,
+  site,
+};
 
 /**
  * Locale-aware URLs. Slugs are translated, so the Swedish about page is

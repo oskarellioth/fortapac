@@ -1,16 +1,55 @@
 {
   "order": 5,
-  "name": { "sv": "Väv & Rullar", "en": "Fabric & Rolls" },
-  "menuBlurb": { "sv": "Vävd polypropenväv på rulle för industriella applikationer.", "en": "Woven polypropylene fabric on the roll for industrial applications." },
-  "focusBlurb": { "sv": "Vävd PP-väv på rulle. Råmaterial för konfektion, isolering, separation och förstärkning.", "en": "Woven PP fabric on the roll. Raw material for fabrication, insulation, separation and reinforcement." },
-  "cardBlurb": { "sv": "Vävd polypropenväv på rulle för industriellt bruk.", "en": "Woven polypropylene fabric on the roll for industrial use." },
-  "cardMeta": { "sv": "Bredd på beställning", "en": "Width to order" },
-  "icon": "/products/woven-rolls.png",
+  "name": {
+    "sv": "Väv & Rullar",
+    "en": "Fabric & Rolls"
+  },
+  "menuBlurb": {
+    "sv": "Vävd polypropenväv på rulle för industriella applikationer.",
+    "en": "Woven polypropylene fabric on the roll for industrial applications."
+  },
+  "focusBlurb": {
+    "sv": "Vävd PP-väv på rulle. Råmaterial för konfektion, isolering, separation och förstärkning.",
+    "en": "Woven PP fabric on the roll. Raw material for fabrication, insulation, separation and reinforcement."
+  },
+  "cardBlurb": {
+    "sv": "Vävd polypropenväv på rulle för industriellt bruk.",
+    "en": "Woven polypropylene fabric on the roll for industrial use."
+  },
+  "cardMeta": {
+    "sv": "Bredd på beställning",
+    "en": "Width to order"
+  },
+  "icon": "woven-rolls.png",
   "photo": "",
   "specs": [
-    { "value": "PP", "label": { "sv": "Material", "en": "Material" } },
-    { "value": "UV", "label": { "sv": "Stabiliserad", "en": "Stabilised" } },
-    { "value": "Bredd / Width", "label": { "sv": "SWL", "en": "SWL" } },
-    { "value": "100%", "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" } }
+    {
+      "value": "PP",
+      "label": {
+        "sv": "Material",
+        "en": "Material"
+      }
+    },
+    {
+      "value": "UV",
+      "label": {
+        "sv": "Stabiliserad",
+        "en": "Stabilised"
+      }
+    },
+    {
+      "value": "Bredd / Width",
+      "label": {
+        "sv": "SWL",
+        "en": "SWL"
+      }
+    },
+    {
+      "value": "100%",
+      "label": {
+        "sv": "Återvinningsbar PP",
+        "en": "Recyclable PP"
+      }
+    }
   ]
 }
