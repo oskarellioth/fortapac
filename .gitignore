@@ -34,3 +34,7 @@ dist-ssr
 # Local working assets — not part of the deploy.
 # Drop new icons/photos here; public/ symlinks point at them.
 _source/
+
+# Build output
+.vercel/
+.output/

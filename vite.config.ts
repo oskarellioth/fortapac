@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Outside a Lovable sandbox the deploy plugin is off by default, which leaves
+  // dist/client + dist/server and nothing that can actually serve them. Force it
+  // on with the Vercel preset so `npm run build` emits a deployable function.
+  nitro: { preset: "vercel" },
 });
