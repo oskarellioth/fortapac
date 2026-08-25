@@ -42,3 +42,6 @@ _source/
 .env*
 
 .env
+
+# Astro generated types
+.astro/
