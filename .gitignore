@@ -38,3 +38,5 @@ _source/
 # Build output
 .vercel/
 .output/
+.vercel
+.env*
