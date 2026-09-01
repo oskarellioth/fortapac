@@ -1,0 +1,64 @@
+{
+  "order": 3,
+  "title": {
+    "sv": "Cookie-inställningar",
+    "en": "Cookie Settings"
+  },
+  "intro": {
+    "sv": "Den här webbplatsen använder inga spårningskakor. Du behöver inte samtycka till någonting för att läsa den.",
+    "en": "This website uses no tracking cookies. There is nothing for you to consent to in order to read it."
+  },
+  "lastUpdated": "",
+  "sections": [
+    {
+      "heading": {
+        "sv": "Vad vi inte gör",
+        "en": "What we do not do"
+      },
+      "body": {
+        "sv": "Vi använder inga kakor för marknadsföring, ingen annonsspårning och inga sociala plugins som följer dig mellan webbplatser.\n\nVi använder inte Google Analytics.\n\nDärför visar vi ingen cookie-banner. En banner som bara ber om samtycke till kakor vi ändå inte sätter fyller ingen funktion.",
+        "en": "We use no marketing cookies, no advertising trackers, and no social plugins that follow you between sites.\n\nWe do not use Google Analytics.\n\nThat is why you see no cookie banner. A banner asking consent for cookies we do not set would serve no purpose."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Vad som faktiskt lagras",
+        "en": "What is actually stored"
+      },
+      "body": {
+        "sv": "Ingenting på de publika sidorna. Sidorna är statiska och läses utan att något sparas i din webbläsare.\n\nOm du loggar in i vårt redigeringsverktyg, vilket bara personal gör, sätts en nödvändig inloggningskaka. Den krävs för att inloggningen ska fungera och kräver inte samtycke.",
+        "en": "Nothing on the public pages. They are static and can be read without anything being stored in your browser.\n\nIf you sign in to our content editing tool, which only staff do, a strictly necessary session cookie is set. It is required for sign-in to work and does not need consent."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Om vi lägger till statistik",
+        "en": "If we add analytics"
+      },
+      "body": {
+        "sv": "Vi kan komma att lägga till besöksstatistik som mäter utan kakor och utan att identifiera enskilda besökare. Om vi gör det uppdaterar vi den här sidan innan det tas i bruk.\n\n[FYLL I: ta bort det här avsnittet, eller beskriv verktyget, när statistik faktiskt har lagts till.]",
+        "en": "We may add visitor statistics that measure without cookies and without identifying individual visitors. If we do, we will update this page before it goes live.\n\n[COMPLETE: remove this section, or describe the tool, once analytics is actually in place.]"
+      }
+    },
+    {
+      "heading": {
+        "sv": "Hantera kakor själv",
+        "en": "Managing cookies yourself"
+      },
+      "body": {
+        "sv": "Du kan blockera och radera kakor i din webbläsares inställningar. Eftersom vi inte sätter några spårningskakor påverkar det inte hur den här webbplatsen fungerar för dig.",
+        "en": "You can block and delete cookies in your browser settings. Since we set no tracking cookies, doing so will not affect how this site works for you."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Frågor",
+        "en": "Questions"
+      },
+      "body": {
+        "sv": "Hör av dig till kontaktadressen längst ned på sidan. Se även vår integritetspolicy för hur vi behandlar personuppgifter.",
+        "en": "Contact us at the address at the foot of the page. See also our privacy policy for how we handle personal data."
+      }
+    }
+  ]
+}

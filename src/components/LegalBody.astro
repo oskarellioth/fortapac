@@ -1,0 +1,68 @@
+---
+import { content, legalByKey, pick, type Locale } from "../lib/content";
+
+interface Props { locale: Locale; entry: string }
+const { locale, entry } = Astro.props;
+
+const doc = legalByKey(entry);
+const s = content.site;
+
+const labels = {
+  updated: locale === "sv" ? "Senast uppdaterad" : "Last updated",
+  registered: locale === "sv" ? "Registrerade uppgifter" : "Registered details",
+  org: locale === "sv" ? "Organisationsnummer" : "Company registration number",
+  vat: locale === "sv" ? "Momsregistreringsnummer" : "VAT number",
+  address: locale === "sv" ? "Säte" : "Registered office",
+  missing: locale === "sv" ? "Sidan saknas." : "Page not found.",
+};
+
+// Blank lines in the CMS field mean new paragraphs.
+const paragraphs = (text: string) =>
+  text.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+---
+
+{doc ? (
+  <main class="legal">
+    <div class="wrap legal-wrap">
+      <header class="legal-head">
+        <h1>{pick(doc.title, locale)}</h1>
+        <p class="legal-intro">{pick(doc.intro, locale)}</p>
+        {doc.lastUpdated && (
+          <p class="legal-updated mono">{labels.updated}: {doc.lastUpdated}</p>
+        )}
+      </header>
+
+      {doc.sections.map((sec) => (
+        <section class="legal-section">
+          <h2>{pick(sec.heading, locale)}</h2>
+          {paragraphs(pick(sec.body, locale)).map((p) => <p>{p}</p>)}
+        </section>
+      ))}
+
+      {/*
+        Swedish law requires the registered name and organisationsnummer on
+        commercial communications. This is the one place the registered entity
+        appears: everywhere a customer looks, the brand is Fortapac.
+      */}
+      <aside class="legal-entity">
+        <h2>{labels.registered}</h2>
+        <dl>
+          {s.legalEntityName && (
+            <><dt>{locale === "sv" ? "Bolag" : "Company"}</dt><dd>{s.legalEntityName}</dd></>
+          )}
+          {s.orgNumber && <><dt>{labels.org}</dt><dd>{s.orgNumber}</dd></>}
+          {s.vatNumber && <><dt>{labels.vat}</dt><dd>{s.vatNumber}</dd></>}
+          {s.registeredAddress && (
+            <><dt>{labels.address}</dt><dd>{s.registeredAddress}</dd></>
+          )}
+          <dt>{locale === "sv" ? "E-post" : "Email"}</dt>
+          <dd><a href={`mailto:${s.privacyEmail || s.email}`}>{s.privacyEmail || s.email}</a></dd>
+        </dl>
+      </aside>
+    </div>
+  </main>
+) : (
+  <main class="legal">
+    <div class="wrap legal-wrap"><h1>{labels.missing}</h1></div>
+  </main>
+)}

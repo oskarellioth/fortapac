@@ -241,3 +241,23 @@
   .fortapac .about-hero h1{font-size:2.6rem}
   .fortapac .about-pillar{padding:1.75rem}
 }
+
+.fortapac .legal{background:var(--paper);padding:clamp(3rem,6vw,5.5rem) 0}
+.fortapac .legal-wrap{max-width:760px}
+.fortapac .legal-head{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+.fortapac .legal h1{font-size:clamp(2.25rem,5vw,3.5rem);color:var(--navy);letter-spacing:-.035em}
+.fortapac .legal-intro{font-size:1.1rem;color:rgba(11,27,45,.75);margin:1.25rem 0 0;line-height:1.6;max-width:60ch}
+.fortapac .legal-updated{color:rgba(11,27,45,.5);margin-top:1.25rem}
+.fortapac .legal-section{margin-bottom:2.5rem}
+.fortapac .legal-section h2{font-size:1.3rem;color:var(--navy);margin-bottom:.85rem;letter-spacing:-.02em}
+.fortapac .legal-section p{margin:0 0 1rem;color:rgba(11,27,45,.8);line-height:1.7;max-width:68ch}
+.fortapac .legal-section p:last-child{margin-bottom:0}
+.fortapac .legal-entity{margin-top:3.5rem;padding:2rem;background:#fff;border:1px solid var(--line)}
+.fortapac .legal-entity h2{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:rgba(11,27,45,.6);margin:0 0 1.25rem;font-weight:600}
+.fortapac .legal-entity dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;font-size:.9rem}
+.fortapac .legal-entity dt{color:rgba(11,27,45,.55)}
+.fortapac .legal-entity dd{margin:0;color:var(--navy);white-space:pre-line}
+@media (max-width:560px){
+  .fortapac .legal-entity dl{grid-template-columns:1fr;gap:.15rem}
+  .fortapac .legal-entity dt{margin-top:.75rem}
+}

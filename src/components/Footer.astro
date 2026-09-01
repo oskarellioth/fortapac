@@ -71,9 +71,9 @@ const aboutPath = ROUTES.about[locale];
     <div class="wrap">
       <span>{pick(s.copyright, locale)}</span>
       <span>
-        <a href="#">{pick(s.footerPrivacy, locale)}</a>
-        <a href="#">{pick(s.footerTerms, locale)}</a>
-        <a href="#">{pick(s.footerCookies, locale)}</a>
+        <a href={ROUTES.privacy[locale]}>{pick(s.footerPrivacy, locale)}</a>
+        <a href={ROUTES.terms[locale]}>{pick(s.footerTerms, locale)}</a>
+        <a href={ROUTES.cookies[locale]}>{pick(s.footerCookies, locale)}</a>
       </span>
     </div>
   </div>

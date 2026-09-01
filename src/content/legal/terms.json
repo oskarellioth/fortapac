@@ -1,0 +1,94 @@
+{
+  "order": 2,
+  "title": {
+    "sv": "Användarvillkor",
+    "en": "Terms of Use"
+  },
+  "intro": {
+    "sv": "Villkor för användning av den här webbplatsen. De reglerar inte köp: leveranser sker enligt separat avtal och offert.",
+    "en": "Terms for using this website. They do not govern purchases: supply is on separate agreed terms and a written quotation."
+  },
+  "lastUpdated": "",
+  "sections": [
+    {
+      "heading": {
+        "sv": "Om webbplatsen",
+        "en": "About this site"
+      },
+      "body": {
+        "sv": "Webbplatsen drivs av [FYLL I: registrerat bolagsnamn], organisationsnummer [FYLL I: NNNNNN-NNNN], som marknadsför sig under varumärket Fortapac.\n\nGenom att använda webbplatsen accepterar du dessa villkor.",
+        "en": "This website is operated by [COMPLETE: registered company name], company registration number [COMPLETE: NNNNNN-NNNN], trading as Fortapac.\n\nBy using the site you accept these terms."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Produktinformation är vägledande",
+        "en": "Product information is indicative"
+      },
+      "body": {
+        "sv": "Specifikationer, lastvärden, mått och bilder på webbplatsen är vägledande och avsedda att ge en översikt. De utgör inte ett anbud och inte heller en garanti för en viss produkts egenskaper.\n\nBindande specifikationer lämnas alltid skriftligt i offert eller orderbekräftelse. Kontrollera alltid att en produkt passar din last, dina förhållanden och tillämpliga krav innan du använder den.",
+        "en": "Specifications, load ratings, dimensions and photographs on this site are indicative and intended to give an overview. They are not an offer, and not a warranty of any particular product's properties.\n\nBinding specifications are always given in writing in a quotation or order confirmation. Always confirm that a product suits your load, your conditions and any applicable requirements before putting it into use."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Säker användning",
+        "en": "Safe use"
+      },
+      "body": {
+        "sv": "Produkterna är avsedda för industriellt bruk och ska användas enligt tillverkarens anvisningar och gällande regler för lyft och hantering. Ansvaret för att en produkt används rätt, och inom sitt angivna lastvärde, ligger hos användaren.",
+        "en": "These products are for industrial use and must be used in line with the manufacturer's instructions and applicable rules for lifting and handling. Responsibility for using a product correctly, and within its stated load rating, rests with the user."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Immateriella rättigheter",
+        "en": "Intellectual property"
+      },
+      "body": {
+        "sv": "Innehållet på webbplatsen, inklusive text, bilder, logotyper och grafik, tillhör oss eller våra licensgivare. Du får läsa och skriva ut material för eget bruk. Kommersiell användning kräver vårt skriftliga medgivande.",
+        "en": "The content of this site, including text, images, logos and graphics, belongs to us or our licensors. You may read and print material for your own use. Commercial use requires our written permission."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Ansvarsbegränsning",
+        "en": "Limitation of liability"
+      },
+      "body": {
+        "sv": "Vi strävar efter att informationen på webbplatsen är korrekt och aktuell, men lämnar inga garantier för det. Vi ansvarar inte för indirekt skada eller följdskada som uppstår genom användning av webbplatsen.\n\nInget i dessa villkor begränsar ansvar som enligt tvingande lag inte kan begränsas.",
+        "en": "We aim to keep the information on this site accurate and current, but we make no warranty that it is. We are not liable for indirect or consequential loss arising from use of the site.\n\nNothing in these terms limits liability that cannot be limited under mandatory law."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Länkar till andra webbplatser",
+        "en": "Links to other sites"
+      },
+      "body": {
+        "sv": "Webbplatsen kan innehålla länkar till andra webbplatser. Vi ansvarar inte för innehållet på dessa.",
+        "en": "This site may link to other websites. We are not responsible for their content."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Tillämplig lag",
+        "en": "Governing law"
+      },
+      "body": {
+        "sv": "Svensk lag gäller för dessa villkor. Tvist prövas av svensk domstol med [FYLL I: t.ex. Göteborgs tingsrätt] som första instans.",
+        "en": "Swedish law applies to these terms. Any dispute will be heard by the Swedish courts, with [COMPLETE: e.g. Gothenburg District Court] as the court of first instance."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Kontakt",
+        "en": "Contact"
+      },
+      "body": {
+        "sv": "Frågor om villkoren skickas till kontaktadressen längst ned på sidan.",
+        "en": "Questions about these terms can be sent to the contact address at the foot of the page."
+      }
+    }
+  ]
+}

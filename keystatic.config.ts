@@ -239,6 +239,37 @@ export default config({
         companyName: fields.text({ label: "Company name", defaultValue: "Fortapac AB" }),
         city: fields.text({ label: "City", defaultValue: "Göteborg, Sweden" }),
         email: fields.text({ label: "Contact email", defaultValue: "hello@fortapac.se" }),
+
+        // Registered-entity details. These appear only in the legal pages'
+        // fine print, never in marketing copy: Fortapac is the brand
+        // everywhere a customer sees it. Swedish law requires the registered
+        // name and organisationsnummer on commercial communications.
+        legalEntityName: fields.text({
+          label: "Registered legal entity",
+          defaultValue: "Britpac AB",
+          description: "Legal pages only. Never shown in marketing copy.",
+        }),
+        orgNumber: fields.text({
+          label: "Organisationsnummer",
+          defaultValue: "",
+          description: "Swedish company registration number, format NNNNNN-NNNN.",
+        }),
+        vatNumber: fields.text({
+          label: "VAT number",
+          defaultValue: "",
+          description: "Momsregistreringsnummer, e.g. SE556123456701.",
+        }),
+        registeredAddress: fields.text({
+          label: "Registered address",
+          multiline: true,
+          defaultValue: "",
+          description: "Full postal address of the registered office.",
+        }),
+        privacyEmail: fields.text({
+          label: "Data protection contact email",
+          defaultValue: "",
+          description: "Where privacy requests go. Falls back to the contact email.",
+        }),
         footerBlurb: bilingualLong("Footer blurb"),
         madeIn: bilingual("Flag badge text"),
         newsletterBody: bilingualLong("Newsletter blurb"),
@@ -260,6 +291,41 @@ export default config({
   },
 
   collections: {
+    legal: collection({
+      label: "Legal pages",
+      slugField: "key",
+      path: "src/content/legal/*",
+      format: { data: "json" },
+      columns: ["key"],
+      schema: {
+        key: fields.slug({
+          name: {
+            label: "Key",
+            description:
+              "privacy, terms or cookies. Determines the URL, so do not change it once live.",
+          },
+        }),
+        order: fields.integer({ label: "Sort order", defaultValue: 0 }),
+        title: bilingual("Page title"),
+        intro: bilingualLong("Intro paragraph"),
+        lastUpdated: fields.text({
+          label: "Last updated",
+          description: "Shown to visitors, e.g. 1 September 2026.",
+          defaultValue: "",
+        }),
+        sections: fields.array(
+          fields.object({
+            heading: bilingual("Heading"),
+            body: bilingualLong("Body", "Blank lines start a new paragraph."),
+          }),
+          {
+            label: "Sections",
+            itemLabel: (props) => props.fields.heading.fields.en.value || "Section",
+          },
+        ),
+      },
+    }),
+
     products: collection({
       label: "Products",
       slugField: "key",

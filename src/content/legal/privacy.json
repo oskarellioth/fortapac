@@ -1,0 +1,94 @@
+{
+  "order": 1,
+  "title": {
+    "sv": "Integritetspolicy",
+    "en": "Privacy Policy"
+  },
+  "intro": {
+    "sv": "Den här policyn beskriver hur vi samlar in och behandlar personuppgifter när du besöker webbplatsen, kontaktar oss eller prenumererar på vårt nyhetsbrev.",
+    "en": "This policy explains how we collect and handle personal data when you visit this website, contact us, or subscribe to our newsletter."
+  },
+  "lastUpdated": "",
+  "sections": [
+    {
+      "heading": {
+        "sv": "Personuppgiftsansvarig",
+        "en": "Who is responsible"
+      },
+      "body": {
+        "sv": "Fortapac är ett varumärke som drivs av [FYLL I: registrerat bolagsnamn], organisationsnummer [FYLL I: NNNNNN-NNNN], med säte på [FYLL I: fullständig postadress].\n\nFrågor om hur vi hanterar dina personuppgifter skickas till [FYLL I: e-postadress för dataskyddsfrågor].",
+        "en": "Fortapac is a trading name of [COMPLETE: registered company name], company registration number [COMPLETE: NNNNNN-NNNN], registered at [COMPLETE: full postal address].\n\nQuestions about how we handle your personal data should go to [COMPLETE: data protection email address]."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Vilka uppgifter vi samlar in",
+        "en": "What we collect"
+      },
+      "body": {
+        "sv": "Kontaktformulär och e-post: namn, företag, e-postadress, telefonnummer och innehållet i ditt meddelande.\n\nNyhetsbrev: den e-postadress du anger.\n\nWebbplatsen använder inga spårningskakor och ingen tredjepartsanalys. Vi bygger ingen profil av ditt besök.",
+        "en": "Contact form and email: your name, company, email address, phone number and whatever you write in your message.\n\nNewsletter: the email address you give us.\n\nThe website uses no tracking cookies and no third-party analytics. We do not build a profile of your visit."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Varför vi behandlar uppgifterna",
+        "en": "Why we process it"
+      },
+      "body": {
+        "sv": "För att besvara din förfrågan, lämna offert och sköta en eventuell affärsrelation. Rättslig grund är berättigat intresse, eller fullgörande av avtal när du är kund hos oss.\n\nFör att skicka nyhetsbrev, när du själv har anmält dig. Rättslig grund är samtycke, som du kan återkalla när som helst via länken i utskicket.",
+        "en": "To answer your enquiry, quote for work, and manage any business relationship that follows. The legal basis is legitimate interest, or performance of a contract once you are a customer.\n\nTo send the newsletter, where you have signed up yourself. The legal basis is consent, which you can withdraw at any time using the link in any email we send."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Hur länge vi sparar uppgifterna",
+        "en": "How long we keep it"
+      },
+      "body": {
+        "sv": "Förfrågningar som inte leder till affär: [FYLL I: t.ex. 12 månader] efter senaste kontakt.\n\nKunduppgifter: så länge affärsrelationen pågår, och därefter så länge bokföringslagen kräver, normalt sju år.\n\nNyhetsbrev: tills du avregistrerar dig.",
+        "en": "Enquiries that do not lead to business: [COMPLETE: e.g. 12 months] after we last hear from you.\n\nCustomer records: for as long as the relationship lasts, and afterwards for as long as Swedish accounting law requires, normally seven years.\n\nNewsletter: until you unsubscribe."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Vilka vi delar uppgifterna med",
+        "en": "Who we share it with"
+      },
+      "body": {
+        "sv": "Vi säljer aldrig personuppgifter.\n\nVi delar uppgifter med leverantörer som behandlar dem för vår räkning: [FYLL I: e-postleverantör], [FYLL I: nyhetsbrevsverktyg] och vår webbhotellsleverantör. Alla är bundna av personuppgiftsbiträdesavtal.\n\nOm en leverantör behandlar uppgifter utanför EU/EES sker det med de skyddsåtgärder som dataskyddsförordningen kräver.",
+        "en": "We never sell personal data.\n\nWe share data with suppliers who process it on our behalf: [COMPLETE: email provider], [COMPLETE: newsletter tool] and our hosting provider. Each is bound by a data processing agreement.\n\nWhere a supplier processes data outside the EU or EEA, it is done under the safeguards the GDPR requires."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Dina rättigheter",
+        "en": "Your rights"
+      },
+      "body": {
+        "sv": "Du har rätt att begära ett utdrag över de uppgifter vi har om dig, få felaktiga uppgifter rättade, få uppgifter raderade, invända mot viss behandling, begära begränsning av behandlingen, och få dina uppgifter överförda till någon annan.\n\nHör av dig till adressen ovan så hanterar vi din begäran inom en månad.",
+        "en": "You can ask for a copy of the data we hold about you, have anything inaccurate corrected, have data erased, object to certain processing, ask us to restrict processing, and ask for your data to be transferred elsewhere.\n\nContact us at the address above and we will deal with your request within one month."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Klagomål",
+        "en": "Complaints"
+      },
+      "body": {
+        "sv": "Om du anser att vi behandlar dina personuppgifter felaktigt kan du vända dig till Integritetsskyddsmyndigheten (IMY), imy.se, som är tillsynsmyndighet i Sverige.",
+        "en": "If you think we are handling your personal data wrongly, you can complain to the Swedish Authority for Privacy Protection (IMY) at imy.se, which supervises data protection in Sweden."
+      }
+    },
+    {
+      "heading": {
+        "sv": "Ändringar",
+        "en": "Changes"
+      },
+      "body": {
+        "sv": "Vi kan komma att uppdatera den här policyn. Datumet högst upp visar när den senast ändrades.",
+        "en": "We may update this policy. The date at the top shows when it last changed."
+      }
+    }
+  ]
+}

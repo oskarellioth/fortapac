@@ -11,7 +11,10 @@ export default defineConfig({
   site: "https://staging.fortapac.com",
   output: "static",
   adapter: vercel(),
-  integrations: [react(), keystatic()],
+  integrations: [
+    react(),
+    keystatic(),
+  ],
   devToolbar: { enabled: false },
   // Declared here rather than read off import.meta.env, which does not reach
   // middleware in dev. astro:env resolves .env locally and the host's real

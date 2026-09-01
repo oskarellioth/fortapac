@@ -89,6 +89,23 @@ export const industries = loadCollection<IndustryEntry>(
   photo: media(MEDIA.industryPhotos, i.photo),
 }));
 
+export type LegalEntry = {
+  key: string;
+  order: number;
+  title: Bilingual;
+  intro: Bilingual;
+  lastUpdated: string;
+  sections: Array<{ heading: Bilingual; body: Bilingual }>;
+};
+
+export const legal = loadCollection<LegalEntry>(
+  import.meta.glob("../content/legal/*.json", { eager: true }),
+);
+
+export function legalByKey(key: string): LegalEntry | undefined {
+  return legal.find((l) => l.key === key);
+}
+
 type Strip = { icon: string; [k: string]: unknown };
 const withIcons = (items: Strip[] | undefined, prefix: string) =>
   (items ?? []).map((item) => ({ ...item, icon: media(prefix, item.icon) }));
@@ -122,6 +139,9 @@ export const content = {
 export const ROUTES = {
   home: { sv: "/", en: "/en" },
   about: { sv: "/om-oss", en: "/en/about" },
+  privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
+  terms: { sv: "/anvandarvillkor", en: "/en/terms" },
+  cookies: { sv: "/cookies", en: "/en/cookies" },
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;

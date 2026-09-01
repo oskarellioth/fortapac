@@ -1,0 +1,12 @@
+---
+import Base from "../../layouts/Base.astro";
+import LegalBody from "../../components/LegalBody.astro";
+import { legalByKey, pick } from "../../lib/content";
+const locale = "en" as const;
+const doc = legalByKey("terms");
+const title = doc ? `${pick(doc.title, locale)} | Fortapac` : "Fortapac";
+const description = doc ? pick(doc.intro, locale) : "";
+---
+<Base locale={locale} title={title} description={description}>
+  <LegalBody locale={locale} entry="terms" />
+</Base>

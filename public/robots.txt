@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /keystatic
+Disallow: /translate
+Disallow: /api/
+
+Sitemap: https://staging.fortapac.com/sitemap.xml
