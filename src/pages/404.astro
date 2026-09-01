@@ -1,0 +1,43 @@
+---
+import Base from "../layouts/Base.astro";
+import { ROUTES } from "../lib/content";
+
+/**
+ * A 404 has to pick a language before it knows anything about the visitor,
+ * since the URL that got them here is by definition not a real route. It shows
+ * both, Swedish first, which is also the least confusing thing for someone who
+ * mistyped a URL in either language.
+ */
+---
+
+<Base
+  locale="sv"
+  title="Sidan finns inte | Page not found | Fortapac"
+  description="Sidan du letar efter finns inte. The page you are looking for does not exist."
+>
+  <main class="notfound">
+    <div class="wrap notfound-wrap">
+      <p class="eyebrow mono">404</p>
+
+      <h1>Sidan finns inte.</h1>
+      <p class="notfound-body">
+        Länken kan vara felstavad, eller så har sidan flyttat.
+      </p>
+      <div class="notfound-actions">
+        <a class="button primary" href={ROUTES.home.sv}>Till startsidan <span class="arrow">→</span></a>
+        <a class="button light" href={ROUTES.about.sv}>Om oss <span class="arrow">→</span></a>
+      </div>
+
+      <hr class="notfound-rule" />
+
+      <h2>Page not found.</h2>
+      <p class="notfound-body">
+        The link may be mistyped, or the page may have moved.
+      </p>
+      <div class="notfound-actions">
+        <a class="button primary" href={ROUTES.home.en}>Go to homepage <span class="arrow">→</span></a>
+        <a class="button light" href={ROUTES.about.en}>About us <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </main>
+</Base>

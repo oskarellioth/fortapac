@@ -270,6 +270,26 @@ export default config({
           defaultValue: "",
           description: "Where privacy requests go. Falls back to the contact email.",
         }),
+
+        // Used in structured data, which is how search engines connect the
+        // site to the real company.
+        phone: fields.text({
+          label: "Phone number",
+          defaultValue: "",
+          description: "International format, e.g. +46 31 123 45 67.",
+        }),
+        linkedin: fields.text({
+          label: "LinkedIn URL",
+          defaultValue: "",
+          description: "Company page. Helps search engines link the site to the company.",
+        }),
+        shareImage: fields.image({
+          label: "Social share image",
+          directory: "public/share",
+          publicPath: "/share/",
+          description:
+            "1200x630. Shown when a link is shared in LinkedIn, Slack or email. Falls back to the hero photo if empty.",
+        }),
         footerBlurb: bilingualLong("Footer blurb"),
         madeIn: bilingual("Flag badge text"),
         newsletterBody: bilingualLong("Newsletter blurb"),

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fortapac">
+  <!--
+    The agreed hashtag mark from the brand SVG, squared off for use as an icon:
+    same three-by-three weave with the orange middle bar. Not a redraw, the same
+    geometry lifted out of the wordmark and centred.
+
+    Replace this file to change the favicon; nothing else needs editing.
+  -->
+  <rect width="64" height="64" rx="8" fill="#102A43"/>
+  <g stroke-linecap="round" stroke-width="6" fill="none">
+    <path d="M22 12V52" stroke="#fff"/>
+    <path d="M42 12V52" stroke="#fff"/>
+    <path d="M12 22H52" stroke="#fff"/>
+    <path d="M12 42H52" stroke="#DE5B26"/>
+  </g>
+</svg>

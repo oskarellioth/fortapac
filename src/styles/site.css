@@ -261,3 +261,12 @@
   .fortapac .legal-entity dl{grid-template-columns:1fr;gap:.15rem}
   .fortapac .legal-entity dt{margin-top:.75rem}
 }
+
+.fortapac .notfound{background:var(--paper);padding:clamp(4rem,9vw,7rem) 0;min-height:60vh}
+.fortapac .notfound-wrap{max-width:640px}
+.fortapac .notfound h1,.fortapac .notfound h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--navy);letter-spacing:-.035em;margin:0 0 .75rem}
+.fortapac .notfound h2{font-size:clamp(1.6rem,3.5vw,2.25rem)}
+.fortapac .notfound-body{color:rgba(11,27,45,.72);font-size:1.05rem;margin:0 0 1.75rem;max-width:48ch}
+.fortapac .notfound-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.fortapac .notfound-rule{border:none;border-top:1px solid var(--line);margin:3rem 0}
+@media (max-width:560px){ .fortapac .notfound-actions{display:grid;grid-template-columns:1fr} }
