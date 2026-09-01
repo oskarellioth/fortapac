@@ -28,10 +28,18 @@ const bilingualLong = (label: string, description?: string) =>
   );
 
 export default config({
-  // Switched to "github" once the repo token works, which turns Save into a
-  // commit. Local mode writes straight to disk so the site can be built and
-  // reviewed before that is wired up.
-  storage: { kind: "local" },
+  // GitHub storage: Save becomes a commit to the repo, so the CMS works from
+  // any machine for anyone with write access, rather than only against the
+  // local filesystem. Local mode could never work on Vercel, whose filesystem
+  // is read-only and has no checkout, which is why the hosted admin was blank.
+  //
+  // Requires a Keystatic GitHub App, which supplies KEYSTATIC_GITHUB_CLIENT_ID,
+  // KEYSTATIC_GITHUB_CLIENT_SECRET and KEYSTATIC_SECRET. Visiting /keystatic
+  // without those walks through creating it.
+  storage: {
+    kind: "github",
+    repo: { owner: "oskarellioth", name: "fortapac" },
+  },
 
   ui: {
     brand: { name: "Fortapac" },
