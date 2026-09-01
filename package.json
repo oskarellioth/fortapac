@@ -9,7 +9,10 @@
     "preview": "astro preview",
     "deploy": "astro build && vercel deploy --prebuilt --prod --yes",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "optimise:images": "node scripts/optimise-images.mjs",
+    "prebuild": "node scripts/optimise-images.mjs",
+    "predev": "node scripts/optimise-images.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
@@ -86,6 +89,7 @@
     "globals": "^15.15.0",
     "nitro": "3.0.260429-beta",
     "prettier": "^3.7.3",
+    "sharp": "^0.35.4",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vercel": "^59.5.0",

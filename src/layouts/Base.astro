@@ -63,12 +63,32 @@ const labels = {
 
     {!indexable && <meta name="robots" content="noindex, nofollow" />}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {/*
+      Fonts are self-hosted rather than pulled from Google. The external
+      stylesheet was a render-blocking request to a third party before any text
+      could paint, and it needed two preconnects just to soften that. Latin and
+      latin-ext subsets only, which is all Swedish and English need, at 167KB
+      for every weight in use.
+
+      Preloading the two faces that appear above the fold, the Archivo used by
+      the hero headline and the body text, so they are fetched alongside the CSS
+      rather than after it.
+    */}
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="preload"
+      href="/fonts/Archivo-700-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="/fonts/IBMPlexSans-400-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
 
     <script
       type="application/ld+json"

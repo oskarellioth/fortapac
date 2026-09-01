@@ -1,9 +1,13 @@
 ---
 import { content, products, industries, pick, type Locale } from "../lib/content";
+import { photo } from "../lib/images";
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const h = content.home;
+
+const heroDesktop = photo(h.heroImage);
+const heroMobile = photo(h.heroImageMobile);
 
 const specs = [
   { value: h.specSwlValue, label: h.specSwlLabel },
@@ -21,9 +25,39 @@ const sustainIcons = [
 
 <main>
   <section class="hero">
+    {/*
+      Two things at once: art direction, since the mobile crop is a different
+      photo, and resolution switching within each, so a phone fetches a 640px
+      file rather than the full desktop image.
+
+      The hero is the LCP element, so it is eagerly loaded and given fetchpriority
+      rather than lazy-loaded, which would delay the largest paint.
+    */}
     <picture class="hero-image">
-      {h.heroImageMobile && <source media="(max-width: 980px)" srcset={h.heroImageMobile} />}
-      {h.heroImage && <img src={h.heroImage} alt="" />}
+      {heroMobile.src && (
+        <source
+          media="(max-width: 980px)"
+          srcset={heroMobile.srcset || heroMobile.src}
+          sizes="100vw"
+          type={heroMobile.srcset ? "image/webp" : undefined}
+        />
+      )}
+      {heroMobile.src && !heroMobile.srcset && (
+        <source media="(max-width: 980px)" srcset={heroMobile.src} />
+      )}
+      {heroDesktop.srcset && (
+        <source srcset={heroDesktop.srcset} sizes="100vw" type="image/webp" />
+      )}
+      {heroDesktop.src && (
+        <img
+          src={heroDesktop.src}
+          alt=""
+          width={heroDesktop.width}
+          height={heroDesktop.height}
+          fetchpriority="high"
+          decoding="async"
+        />
+      )}
     </picture>
     <div class="hero-wrap hero-shell">
       <div class="hero-content">
@@ -59,7 +93,19 @@ const sustainIcons = [
         {products.slice(0, 4).map((p) => (
           <article class="product-card">
             <div>
-              {p.icon && <img class="product-image" src={p.icon} alt="" loading="lazy" />}
+              {/* Icons are generated at a known 320px square, so the intrinsic
+                  size can be stated outright and the card reserves its space. */}
+              {p.icon && (
+                <img
+                  class="product-image"
+                  src={p.icon}
+                  alt=""
+                  width="320"
+                  height="320"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
               <h3>{pick(p.name, locale)}</h3>
               <p>{pick(p.cardBlurb, locale)}</p>
             </div>

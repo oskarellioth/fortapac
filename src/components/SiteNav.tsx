@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Bilingual, Locale } from "../lib/content";
+import { photo } from "../lib/images";
 
 type Strip = { title: Bilingual; subtitle: Bilingual; icon: string };
 
@@ -62,7 +63,18 @@ const t = (v: Bilingual | undefined, l: Locale) => (v ? v[l] || v.sv || "" : "")
 function Icon({ src, className }: { src: string; className?: string }) {
   const [failed, setFailed] = useState(false);
   if (!src || failed) return null;
-  return <img src={src} alt="" className={className} onError={() => setFailed(true)} />;
+  return (
+    <img
+      src={src}
+      alt=""
+      className={className}
+      width={64}
+      height={64}
+      loading="lazy"
+      decoding="async"
+      onError={() => setFailed(true)}
+    />
+  );
 }
 
 const FortapacMark = () => (
@@ -102,9 +114,24 @@ function StripRow({ items, locale }: { items: Strip[]; locale: Locale }) {
 function Photo({ src, alt, placeholder }: { src: string; alt: string; placeholder: string }) {
   const [failed, setFailed] = useState(false);
   const showImage = src && !failed;
+  const data = photo(src);
   return (
     <div className={`mega-photo ${showImage ? "has-image" : ""}`}>
-      {showImage && <img src={src} alt={alt} onError={() => setFailed(true)} />}
+      {showImage && (
+        <img
+          src={data.src}
+          // Rendered at roughly 500px in the panel, so the candidates below the
+          // full size are the ones that actually get used.
+          srcSet={data.srcset || undefined}
+          sizes="(max-width: 1200px) 40vw, 520px"
+          alt={alt}
+          width={data.width}
+          height={data.height}
+          loading="lazy"
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+      )}
       <div className="tag">{placeholder}</div>
     </div>
   );

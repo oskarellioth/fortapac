@@ -1,0 +1,52 @@
+{
+  "/hero/home.jpg": {
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/_img/home-640.webp"
+      },
+      {
+        "w": 1024,
+        "src": "/_img/home-1024.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/_img/home-1600.webp"
+      }
+    ]
+  },
+  "/hero/mobile.jpg": {
+    "width": 1086,
+    "height": 1448,
+    "variants": [
+      {
+        "w": 640,
+        "src": "/_img/mobile-640.webp"
+      },
+      {
+        "w": 1024,
+        "src": "/_img/mobile-1024.webp"
+      }
+    ]
+  },
+  "/products/focus/fibc.jpg": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/_img/fibc-480.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/fibc-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/fibc-1200.webp"
+      }
+    ]
+  }
+}

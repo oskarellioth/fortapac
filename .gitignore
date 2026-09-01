@@ -45,3 +45,6 @@ _source/
 
 # Astro generated types
 .astro/
+
+# Generated image variants
+public/_img/
