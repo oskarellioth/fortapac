@@ -11,8 +11,9 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "optimise:images": "node scripts/optimise-images.mjs",
-    "prebuild": "node scripts/optimise-images.mjs",
-    "predev": "node scripts/optimise-images.mjs"
+    "prebuild": "node scripts/optimise-images.mjs && node scripts/check-content.mjs",
+    "predev": "node scripts/optimise-images.mjs",
+    "check:content": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
