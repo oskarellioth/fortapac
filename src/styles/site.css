@@ -272,3 +272,92 @@
 .fortapac .notfound-actions{display:flex;gap:.75rem;flex-wrap:wrap}
 .fortapac .notfound-rule{border:none;border-top:1px solid var(--line);margin:3rem 0}
 @media (max-width:560px){ .fortapac .notfound-actions{display:grid;grid-template-columns:1fr} }
+
+/* ---------------------------------------------------------------------------
+   FIBC selection guide
+
+   A long reference page, so the type is set for reading rather than for
+   scanning like the marketing sections: wider leading, a measure capped around
+   70 characters, and real tables that scroll horizontally on a phone instead of
+   reflowing into something unreadable.
+   --------------------------------------------------------------------------- */
+.fortapac .guide-head{margin-bottom:2rem;max-width:68ch}
+.fortapac .guide-head h2{font-size:clamp(1.6rem,3vw,2.25rem)}
+.fortapac .guide-table-intro{color:rgba(11,27,45,.72);margin:.9rem 0 0;line-height:1.6}
+
+.fortapac .guide-crumb{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:600;color:rgba(11,27,45,.5);margin-bottom:1.75rem}
+.fortapac .guide-crumb a{color:rgba(11,27,45,.5);text-decoration:none}
+.fortapac .guide-crumb a:hover{color:var(--orange)}
+.fortapac .guide-crumb .sep{margin:0 .5rem;opacity:.45}
+.fortapac .guide-crumb .here{color:var(--navy)}
+
+.fortapac .guide-hero{padding:2.5rem 0 3rem;background:var(--paper)}
+.fortapac .guide-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;margin:0 0 1.25rem;max-width:16ch}
+.fortapac .guide-lede{font-size:1.1rem;line-height:1.65;color:rgba(11,27,45,.78);max-width:62ch;margin:0}
+
+/* The quotable paragraph. Given its own surface so it reads as a summary. */
+.fortapac .guide-summary{padding:0 0 3.5rem;background:var(--paper)}
+.fortapac .guide-summary-inner{background:var(--navy);color:#fff;padding:2.5rem 2.75rem;display:grid;grid-template-columns:260px 1fr;gap:2.5rem;align-items:start}
+.fortapac .guide-summary-head h2{color:#fff;font-size:1.5rem;margin:0;line-height:1.1}
+.fortapac .guide-summary-inner p{margin:0;font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,.86)}
+
+.fortapac .guide-steps{padding:3.5rem 0;background:#fff;border-top:1px solid var(--line)}
+.fortapac .guide-step-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.fortapac .guide-step{display:grid;grid-template-columns:88px 1fr;gap:2rem;padding:2rem 0;border-top:1px solid var(--line)}
+.fortapac .guide-step:first-child{border-top:none;padding-top:0}
+.fortapac .guide-step-num{color:var(--orange);font-size:1.5rem;letter-spacing:.04em;line-height:1}
+.fortapac .guide-step-body h3{font-size:1.25rem;margin:0 0 .75rem;letter-spacing:-.02em}
+.fortapac .guide-step-body p{margin:0;color:rgba(11,27,45,.76);line-height:1.65;max-width:68ch}
+.fortapac .guide-note{margin-top:.9rem !important;padding-left:1rem;border-left:2px solid var(--orange);font-size:.92rem;color:rgba(11,27,45,.62) !important}
+
+.fortapac .guide-table-section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.fortapac .guide-types{background:var(--paper)}
+/* Lets a wide table scroll on its own rather than widening the page. */
+.fortapac .guide-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fortapac .guide-table{width:100%;border-collapse:collapse;background:#fff;min-width:620px}
+.fortapac .guide-table th,.fortapac .guide-table td{text-align:left;padding:1rem 1.15rem;border-bottom:1px solid var(--line);vertical-align:top;font-size:.94rem;line-height:1.55}
+.fortapac .guide-table thead th{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.65rem;font-weight:600;color:#fff;background:var(--navy);border-bottom:none;white-space:nowrap}
+.fortapac .guide-table thead th .unit{text-transform:none;letter-spacing:0;opacity:.6}
+.fortapac .guide-table tbody th{font-weight:600;color:var(--navy)}
+.fortapac .guide-table tbody tr:last-child th,.fortapac .guide-table tbody tr:last-child td{border-bottom:none}
+.fortapac .guide-table td.num{font-family:"IBM Plex Mono",monospace;white-space:nowrap;color:rgba(11,27,45,.8)}
+.fortapac .guide-table-types{min-width:760px}
+.fortapac .guide-type-badge{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--navy);color:#fff;font-family:"Archivo",Arial,sans-serif;font-weight:900;font-size:1rem}
+.fortapac .guide-ground{font-family:"IBM Plex Mono",monospace;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.fortapac .guide-warning{margin:1.5rem 0 0;padding:1.15rem 1.35rem;background:rgba(222,91,38,.08);border-left:3px solid var(--orange);color:rgba(11,27,45,.82);line-height:1.6;max-width:78ch}
+
+.fortapac .guide-cards-section{padding:3.5rem 0;background:#fff;border-top:1px solid var(--line)}
+.fortapac .guide-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.fortapac .guide-card{border:1px solid var(--line);padding:1.5rem;background:var(--paper)}
+.fortapac .guide-card h3{font-size:1.05rem;margin:0 0 .6rem;letter-spacing:-.015em}
+.fortapac .guide-card p{margin:0;font-size:.9rem;line-height:1.55;color:rgba(11,27,45,.72)}
+
+.fortapac .guide-flow{padding:3.5rem 0;background:var(--paper);border-top:1px solid var(--line)}
+.fortapac .guide-flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.fortapac .guide-flow-label{color:var(--orange);margin:0 0 1.1rem;font-family:"IBM Plex Mono",monospace}
+.fortapac .guide-deflist{margin:0;border-top:1px solid var(--line)}
+.fortapac .guide-deflist dt{font-family:"Archivo",Arial,sans-serif;font-weight:800;color:var(--navy);font-size:.98rem;padding-top:1.1rem}
+.fortapac .guide-deflist dd{margin:.4rem 0 0;padding-bottom:1.1rem;border-bottom:1px solid var(--line);color:rgba(11,27,45,.72);font-size:.92rem;line-height:1.55}
+
+.fortapac .guide-checklist-section{padding:3.5rem 0;background:#fff;border-top:1px solid var(--line)}
+.fortapac .guide-checklist-grid{display:grid;grid-template-columns:.9fr 1.3fr;gap:3.5rem;align-items:start}
+.fortapac .guide-checklist-copy h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:0 0 1rem}
+.fortapac .guide-checklist-copy p{margin:0;color:rgba(11,27,45,.72);line-height:1.6}
+.fortapac .guide-checklist{list-style:none;counter-reset:chk;margin:0;padding:0;border-top:1px solid var(--line)}
+.fortapac .guide-checklist li{counter-increment:chk;display:grid;grid-template-columns:40px 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);color:rgba(11,27,45,.82);line-height:1.55}
+.fortapac .guide-checklist li::before{content:counter(chk,decimal-leading-zero);font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--orange);font-weight:600;padding-top:.18rem}
+
+.fortapac .guide-supply{padding:3rem 0;background:var(--paper);border-top:1px solid var(--line)}
+.fortapac .guide-supply h2{font-size:clamp(1.4rem,2.4vw,1.85rem);margin:0 0 1rem}
+.fortapac .guide-supply p{margin:0;max-width:72ch;line-height:1.65;color:rgba(11,27,45,.78)}
+
+@media (max-width: 980px){
+  .fortapac .guide-summary-inner{grid-template-columns:1fr;gap:1.5rem;padding:2rem}
+  .fortapac .guide-card-grid{grid-template-columns:repeat(2,1fr)}
+  .fortapac .guide-flow-grid,.fortapac .guide-checklist-grid{grid-template-columns:1fr;gap:2.5rem}
+}
+@media (max-width: 560px){
+  .fortapac .guide-step{grid-template-columns:1fr;gap:.6rem}
+  .fortapac .guide-step-num{font-size:1.1rem}
+  .fortapac .guide-card-grid{grid-template-columns:1fr}
+}

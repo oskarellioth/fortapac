@@ -12,8 +12,12 @@
  * duplicate copy of the site.
  */
 
-/** Canonical origin, used for canonical tags, hreflang and the sitemap. */
-export const SITE_URL = import.meta.env.PUBLIC_SITE_URL || "https://staging.fortapac.com";
+/**
+ * Canonical origin, used by the sitemap. Canonical tags, hreflang and og:url
+ * come from `Astro.site`, which astro.config resolves from the same
+ * PUBLIC_SITE_URL with the same fallback. Keep the two in step.
+ */
+export const SITE_URL = import.meta.env.PUBLIC_SITE_URL || "https://staging.fortapac.se";
 
 /**
  * Hostnames allowed to appear in search. Everything else, staging, Vercel

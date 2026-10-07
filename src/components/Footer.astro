@@ -47,7 +47,7 @@ const aboutPath = ROUTES.about[locale];
       <a href={aboutPath}>{pick(s.footerAbout, locale)}</a>
       <a href={a.sustainability}>{pick(content.navigation.navSustainability, locale)}</a>
       <a href="#">{pick(s.footerQuality, locale)}</a>
-      <a href="#">{pick(s.footerResources, locale)}</a>
+      <a href={ROUTES.guideFibc[locale]}>{pick(s.footerResources, locale)}</a>
     </div>
 
     <div>

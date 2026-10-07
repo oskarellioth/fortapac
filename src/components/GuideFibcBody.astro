@@ -1,0 +1,255 @@
+---
+import { content, pick, ROUTES, type Locale } from "../lib/content";
+
+/**
+ * The FIBC selection guide.
+ *
+ * Built to answer a specification question end to end, because that is what
+ * both a buyer and a retrieval-based assistant are looking for. The summary
+ * block near the top states the whole method in one paragraph: it is the part
+ * most likely to be quoted, so it has to stand alone without the tables.
+ *
+ * The two tables carry the real value, bulk density for sizing and the
+ * Type A to D comparison for static safety, and are marked up as real tables
+ * rather than styled divs so they survive being read out of the page.
+ */
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const g = content.guideFibc;
+const t = (v: { sv: string; en: string } | undefined) => pick(v, locale);
+
+const labels = {
+  home: locale === "sv" ? "Hem" : "Home",
+  here: locale === "sv" ? "Välja storsäck" : "FIBC selection guide",
+  unitsDensity: "kg/m³",
+  unitsVolume: "m³",
+};
+
+// TechArticle rather than Article: this is reference material, and the type is
+// what tells an assistant the page is a specification source rather than news.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: t(g.heroTitle),
+  description: t(g.seoDescription),
+  inLanguage: locale === "sv" ? "sv-SE" : "en",
+  about: { "@type": "Thing", name: locale === "sv" ? "Storsäckar (FIBC)" : "FIBC bulk bags" },
+  publisher: { "@type": "Organization", name: "Fortapac" },
+  articleSection: g.steps.map((s) => t(s.title)),
+};
+---
+
+<main class="guide">
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <section class="guide-hero">
+    <div class="wrap">
+      <nav class="guide-crumb" aria-label={locale === "sv" ? "Brödsmulor" : "Breadcrumb"}>
+        <a href={ROUTES.home[locale]}>{labels.home}</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span class="here">{labels.here}</span>
+      </nav>
+
+      <div class="eyebrow mono">{t(g.heroEyebrow)}</div>
+      <h1>{t(g.heroTitle)}</h1>
+      <p class="guide-lede">{t(g.heroIntro)}</p>
+    </div>
+  </section>
+
+  {/* The short answer. Deliberately self-contained. */}
+  <section class="guide-summary">
+    <div class="wrap">
+      <div class="guide-summary-inner">
+        <div class="guide-summary-head">
+          <span class="eyebrow mono">{t(g.summaryEyebrow)}</span>
+          <h2>{t(g.summaryHeading)}</h2>
+        </div>
+        <p>{t(g.summaryBody)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-steps">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(g.stepsEyebrow)}</div>
+        <h2>{t(g.stepsHeading)}</h2>
+      </div>
+
+      <ol class="guide-step-list">
+        {g.steps.map((step) => (
+          <li class="guide-step">
+            <span class="guide-step-num mono" aria-hidden="true">{step.number}</span>
+            <div class="guide-step-body">
+              <h3>{t(step.title)}</h3>
+              <p>{t(step.body)}</p>
+              {t(step.note) && <p class="guide-note">{t(step.note)}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  {/* Step 01, expanded: sizing */}
+  <section class="guide-table-section">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(g.densityEyebrow)}</div>
+        <h2>{t(g.densityHeading)}</h2>
+        <p class="guide-table-intro">{t(g.densityIntro)}</p>
+      </div>
+
+      <div class="guide-table-scroll">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th scope="col">{t(g.densityColumns.material)}</th>
+              <th scope="col">{t(g.densityColumns.density)} <span class="unit">{labels.unitsDensity}</span></th>
+              <th scope="col">{t(g.densityColumns.volume)} <span class="unit">{labels.unitsVolume}</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            {g.densities.map((row) => (
+              <tr>
+                <th scope="row">{t(row.material)}</th>
+                <td class="num">{row.density}</td>
+                <td class="num">{row.volume}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {/* Step 03, expanded: the static types */}
+  <section class="guide-table-section guide-types">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(g.typeEyebrow)}</div>
+        <h2>{t(g.typeHeading)}</h2>
+        <p class="guide-table-intro">{t(g.typeIntro)}</p>
+      </div>
+
+      <div class="guide-table-scroll">
+        <table class="guide-table guide-table-types">
+          <thead>
+            <tr>
+              <th scope="col">{t(g.typeColumns.type)}</th>
+              <th scope="col">{t(g.typeColumns.fabric)}</th>
+              <th scope="col">{t(g.typeColumns.grounding)}</th>
+              <th scope="col">{t(g.typeColumns.use)}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {g.types.map((row) => (
+              <tr>
+                <th scope="row"><span class="guide-type-badge">{row.type}</span></th>
+                <td>{t(row.fabric)}</td>
+                <td class="guide-ground">{t(row.grounding)}</td>
+                <td>{t(row.use)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="guide-warning">{t(g.typeWarning)}</p>
+    </div>
+  </section>
+
+  {/* Step 04 */}
+  <section class="guide-cards-section">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(g.constructionEyebrow)}</div>
+        <h2>{t(g.constructionHeading)}</h2>
+      </div>
+      <div class="guide-card-grid">
+        {g.constructions.map((c) => (
+          <div class="guide-card">
+            <h3>{t(c.name)}</h3>
+            <p>{t(c.body)}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Step 05 */}
+  <section class="guide-flow">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(g.flowEyebrow)}</div>
+        <h2>{t(g.flowHeading)}</h2>
+      </div>
+      <div class="guide-flow-grid">
+        <div>
+          <h3 class="guide-flow-label mono">{t(g.fillingLabel)}</h3>
+          <dl class="guide-deflist">
+            {g.filling.map((o) => (
+              <>
+                <dt>{t(o.name)}</dt>
+                <dd>{t(o.body)}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+        <div>
+          <h3 class="guide-flow-label mono">{t(g.dischargeLabel)}</h3>
+          <dl class="guide-deflist">
+            {g.discharge.map((o) => (
+              <>
+                <dt>{t(o.name)}</dt>
+                <dd>{t(o.body)}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-checklist-section">
+    <div class="wrap">
+      <div class="guide-checklist-grid">
+        <div class="guide-checklist-copy">
+          <div class="eyebrow mono">{t(g.checklistEyebrow)}</div>
+          <h2>{t(g.checklistHeading)}</h2>
+          <p>{t(g.checklistIntro)}</p>
+        </div>
+        <ol class="guide-checklist">
+          {g.checklist.map((item) => (
+            <li>{t(item)}</li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-supply">
+    <div class="wrap">
+      <div class="eyebrow mono">{t(g.supplyEyebrow)}</div>
+      <h2>{t(g.supplyHeading)}</h2>
+      <p>{t(g.supplyBody)}</p>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap cta-inner">
+      <div class="woven-lines"></div>
+      <div>
+        <div class="eyebrow mono">{t(g.ctaEyebrow)}</div>
+        <h2 style="font-size:2rem">{t(g.ctaHeading)}</h2>
+        <p style="color:rgba(255,255,255,.8);max-width:620px">{t(g.ctaBody)}</p>
+      </div>
+      <a class="button primary" href={`mailto:${content.site.email}`}>
+        {t(g.ctaButton)} <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+</main>

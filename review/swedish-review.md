@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-10-07. 222 Swedish strings across 19 content files.
+Generated 2026-10-07. 320 Swedish strings across 20 content files.
 
 ## How to use this
 
@@ -46,6 +46,26 @@ No em dashes anywhere, in either language. Commas, semicolons or a new sentence 
 | load rating | **lastklassning** |  |
 | tensile strength | **draghållfasthet** |  |
 | service life | **livslängd** |  |
+| bulk density | **bulkdensitet** | 'skrymdensitet' also exists; bulkdensitet is the trade word |
+| safe working load | **högsta tillåtna last** | the abbreviation SWL stays in English |
+| single trip | **engångsbruk** |  |
+| multi-trip | **flergångsbruk** |  |
+| grounding | **jordning** | electrical earthing, not 'markering' |
+| breakdown voltage | **genomslagsspänning** |  |
+| propagating brush discharge | **fortplantande borsturladdning** |  |
+| antistatic | **antistatisk** |  |
+| baffle | **baffel** | the internal panel that holds a bag square |
+| filling spout | **påfyllningspip** |  |
+| discharge spout | **tömningspip** |  |
+| duffle top | **skärmtopp** |  |
+| flat base | **plan botten** |  |
+| coated | **belagd** |  |
+| uncoated | **obelagd** |  |
+| food contact | **livsmedelskontakt** |  |
+| dangerous goods | **farligt gods** |  |
+| safety data sheet | **säkerhetsdatablad** |  |
+| pallet | **pall** |  |
+| stacking | **stapling** |  |
 | pulpwood | **massaved** | never 'massa trä' |
 | wood chip | **flis** |  |
 | timber | **timmer** |  |
@@ -199,6 +219,596 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 
 - EN: Fortapac is a Swedish–Indian joint venture: half-owned by a publicly listed woven polypropylene producer, half-owned by our Swedish sales and support team. Built at the factory, sold without the middleman.
 - SV: Fortapac är ett svensk–indiskt joint venture: halvägt av en börsnoterad tillverkare av vävt polypropylen, halvägt av vårt svenska säljteam. Byggt i fabriken, sålt utan mellanhand.
+- Correction:
+
+### Other
+
+**seoTitle**
+
+- EN: How to specify an FIBC bulk bag | Fortapac
+- SV: Så väljer du rätt storsäck (FIBC) | Fortapac
+- Correction:
+
+**seoDescription**
+
+- EN: Six decisions determine the FIBC you need: bulk density, load and safety factor, static protection (Type A, B, C or D), construction, filling and discharge, and coating and certification.
+- SV: Sex beslut avgör vilken storsäck du behöver: produktens bulkdensitet, last och säkerhetsfaktor, statisk elektricitet (typ A, B, C eller D), konstruktion, påfyllning och tömning, samt beläggning och certifiering.
+- Correction:
+
+**heroEyebrow**
+
+- EN: Technical guide
+- SV: Teknisk guide
+- Correction:
+
+**heroTitle**
+
+- EN: How to specify an FIBC.
+- SV: Så väljer du rätt storsäck.
+- Correction:
+
+**heroIntro**
+
+- EN: An FIBC is not an off-the-shelf item. Six decisions determine the construction, and they interact: the wrong bulk density gives the wrong volume, the wrong safety factor gives a bag that cannot be reused. This guide takes the decisions in the order they need to be made.
+- SV: En storsäck är inte en hyllvara. Sex beslut avgör konstruktionen, och de hänger ihop: fel bulkdensitet ger fel volym, fel säkerhetsfaktor ger en säck som inte får återanvändas. Den här guiden går igenom besluten i den ordning de behöver fattas.
+- Correction:
+
+**summaryEyebrow**
+
+- EN: Short answer
+- SV: Kort svar
+- Correction:
+
+**summaryHeading**
+
+- EN: If you read one paragraph.
+- SV: Om du bara läser ett stycke.
+- Correction:
+
+**summaryBody**
+
+- EN: Start with the bulk density of your product, because it sets the volume and therefore the dimensions. Then choose the safety factor by how many times the bag will be used: 5:1 for single trip, 6:1 for multi-trip. Next decide whether the product or the surrounding atmosphere is flammable, which fixes the type as A, B, C or D. Everything else, meaning construction, filling, discharge, coating and liner, follows from how you fill, lift, store and empty the bag.
+- SV: Börja med produktens bulkdensitet, eftersom den avgör volymen och därmed måtten. Välj sedan säkerhetsfaktor efter hur många gånger säcken ska användas: 5:1 för engångsbruk, 6:1 för flergångsbruk. Avgör därefter om produkten eller omgivningen är brandfarlig, vilket bestämmer typ A, B, C eller D. Resten, alltså konstruktion, påfyllning, tömning, beläggning och innerpåse, följer av hur du fyller, lyfter, lagrar och tömmer säcken.
+- Correction:
+
+**stepsEyebrow**
+
+- EN: The decisions
+- SV: Besluten
+- Correction:
+
+**stepsHeading**
+
+- EN: Six decisions, in this order.
+- SV: Sex beslut, i den här ordningen.
+- Correction:
+
+**steps › 1 › title**
+
+- EN: Product and bulk density
+- SV: Produkt och bulkdensitet
+- Correction:
+
+**steps › 1 › body**
+
+- EN: Bulk density determines how large the bag has to be. The volume you need is the net weight divided by the bulk density. One tonne of cement at 1 400 kg/m³ needs 0.71 m³. One tonne of plastic granules at 550 kg/m³ needs 1.82 m³, which is more than twice the bag for the same weight.
+- SV: Bulkdensiteten avgör hur stor säcken måste vara. Volymen du behöver är nettovikten delad med bulkdensiteten. En ton cement vid 1 400 kg/m³ kräver 0,71 m³. En ton plastgranulat vid 550 kg/m³ kräver 1,82 m³, alltså mer än dubbelt så stor säck för samma vikt.
+- Correction:
+
+**steps › 1 › note**
+
+- EN: Allow roughly 10 percent extra height so the bag can be closed and lifted without being taut. Measure your own product if you can: table values vary with moisture content and particle size.
+- SV: Räkna med cirka 10 procent extra höjd så att säcken kan stängas och lyftas utan att vara spänd. Mät din egen produkt om du kan: tabellvärden varierar med fukthalt och kornstorlek.
+- Correction:
+
+**steps › 2 › title**
+
+- EN: Load and safety factor
+- SV: Last och säkerhetsfaktor
+- Correction:
+
+**steps › 2 › body**
+
+- EN: SWL, the safe working load, is the net weight the bag is built for. The safety factor states how many times that load the bag is tested against. 5:1 is single trip, 6:1 is multi-trip. A 5:1 bag must not be refilled after emptying, however sound it looks.
+- SV: SWL, högsta tillåtna last, är den nettovikt säcken är konstruerad för. Säkerhetsfaktorn anger hur många gånger den lasten säcken provas mot. 5:1 gäller engångsbruk, 6:1 gäller flergångsbruk. En säck med 5:1 får inte fyllas igen efter tömning, oavsett hur hel den ser ut.
+- Correction:
+
+**steps › 2 › note**
+
+- EN: FIBCs for products not classed as dangerous goods are tested to EN ISO 21898. Dangerous goods require a UN certified bag under ADR, RID or IMDG, which is a separate regime with its own marking.
+- SV: Storsäckar för produkter som inte klassas som farligt gods provas enligt EN ISO 21898. Farligt gods kräver UN-certifierad säck enligt ADR, RID eller IMDG, vilket är ett annat regelverk med egen märkning.
+- Correction:
+
+**steps › 3 › title**
+
+- EN: Static electricity and flammability
+- SV: Statisk elektricitet och brandfara
+- Correction:
+
+**steps › 3 › body**
+
+- EN: This is the decision with safety consequences, and the only one where the wrong choice can ignite something. Polypropylene is an insulator, so filling and discharge build static charge. Which type you need comes down to two questions: is the product flammable, and can flammable gas or vapour be present around the bag.
+- SV: Det här är det beslut som har säkerhetskonsekvenser, och det enda där fel val kan antända något. Polypropen är isolerande, så påfyllning och tömning bygger upp statisk laddning. Vilken typ du behöver avgörs av två frågor: är produkten brandfarlig, och kan det finnas brandfarlig gas eller ånga runt säcken.
+- Correction:
+
+**steps › 3 › note**
+
+- EN: If you are unsure, work from the product safety data sheet and from an area classification. Do not guess from how the product looks.
+- SV: Är du osäker, utgå från produktens säkerhetsdatablad och från en klassning av området. Gissa inte utifrån hur produkten ser ut.
+- Correction:
+
+**steps › 4 › title**
+
+- EN: Construction
+- SV: Konstruktion
+- Correction:
+
+**steps › 4 › body**
+
+- EN: Construction determines how the bag holds its shape when filled, which in turn determines how many fit on a pallet or in a container. A circular bag bulges, a 4-panel bag stands square. The difference shows up most clearly when you calculate container fill.
+- SV: Konstruktionen avgör hur säcken håller formen när den är fylld, vilket i sin tur avgör hur många som får plats på en pall eller i en container. En rund säck buktar ut, en fyrpanelsäck står fyrkantig. Skillnaden syns tydligast när du räknar containerfyllnad.
+- Correction:
+
+**steps › 4 › note**
+
+- EN: 
+- SV: 
+- Correction:
+
+**steps › 5 › title**
+
+- EN: Filling and discharge
+- SV: Påfyllning och tömning
+- Correction:
+
+**steps › 5 › body**
+
+- EN: The top is chosen by how you fill and how dusty the product is. The base is chosen by how you empty and how well the product flows. A common mistake is choosing a flat base for a product that needs to be metered out, which means the bag has to be cut open and cannot be reclosed.
+- SV: Toppen väljs efter hur du fyller och hur dammande produkten är. Botten väljs efter hur du tömmer och hur väl produkten rinner. Ett vanligt misstag är att välja plan botten för en produkt som ska doseras ut, vilket gör att säcken måste skäras upp och inte kan stängas igen.
+- Correction:
+
+**steps › 5 › note**
+
+- EN: 
+- SV: 
+- Correction:
+
+**steps › 6 › title**
+
+- EN: Coating, liner and certification
+- SV: Beläggning, innerpåse och certifiering
+- Correction:
+
+**steps › 6 › body**
+
+- EN: Coating and liner both deal with keeping moisture out and fines in, but they solve different problems. A coating laminated onto the fabric stops moisture from outside and dust from inside. A liner gives a separate barrier and can be changed between loads.
+- SV: Beläggning och innerpåse handlar båda om att hålla ute fukt och hålla kvar finmaterial, men de löser olika problem. En beläggning laminerad på väven stoppar fukt utifrån och damm inifrån. En innerpåse ger en separat barriär och kan bytas mellan laster.
+- Correction:
+
+**steps › 6 › note**
+
+- EN: If the bag will be stored outdoors the fabric needs to be UV stabilised, and that stabilisation is quoted in hours of sun exposure. Uncoated polypropylene degrades visibly after a season in direct sun.
+- SV: Ska säcken lagras utomhus behöver väven vara UV-stabiliserad, och den stabiliseringen anges i timmars solexponering. Obelagd polypropen bryts ned synligt efter en säsong i direkt sol.
+- Correction:
+
+**densityEyebrow**
+
+- EN: Step 01
+- SV: Steg 01
+- Correction:
+
+**densityHeading**
+
+- EN: Typical bulk densities.
+- SV: Typiska bulkdensiteter.
+- Correction:
+
+**densityIntro**
+
+- EN: Indicative figures for working out volume. Your own measured density governs over this table, because moisture content, particle size and packing move the values considerably.
+- SV: Riktvärden för att räkna fram volym. Din egen uppmätta densitet gäller före tabellen, eftersom fukthalt, kornstorlek och packning flyttar värdena betydligt.
+- Correction:
+
+**densityColumns › material**
+
+- EN: Material
+- SV: Material
+- Correction:
+
+**densityColumns › density**
+
+- EN: Bulk density
+- SV: Bulkdensitet
+- Correction:
+
+**densityColumns › volume**
+
+- EN: Volume per tonne
+- SV: Volym per ton
+- Correction:
+
+**densities › 1 › material**
+
+- EN: Cement
+- SV: Cement
+- Correction:
+
+**densities › 2 › material**
+
+- EN: Sand, dry
+- SV: Sand, torr
+- Correction:
+
+**densities › 3 › material**
+
+- EN: Aggregates and gravel
+- SV: Ballast och grus
+- Correction:
+
+**densities › 4 › material**
+
+- EN: Fertiliser, granular
+- SV: Gödsel, granulerad
+- Correction:
+
+**densities › 5 › material**
+
+- EN: Grain
+- SV: Spannmål
+- Correction:
+
+**densities › 6 › material**
+
+- EN: Wood pellets
+- SV: Träpellets
+- Correction:
+
+**densities › 7 › material**
+
+- EN: Plastic granules (PP, PE)
+- SV: Plastgranulat (PP, PE)
+- Correction:
+
+**densities › 8 › material**
+
+- EN: Flour
+- SV: Mjöl
+- Correction:
+
+**typeEyebrow**
+
+- EN: Step 03
+- SV: Steg 03
+- Correction:
+
+**typeHeading**
+
+- EN: Type A, B, C or D.
+- SV: Typ A, B, C eller D.
+- Correction:
+
+**typeIntro**
+
+- EN: The four types differ in how they handle static charge. The choice is driven by the product and by the atmosphere around the bag, not by price.
+- SV: De fyra typerna skiljer sig i hur de hanterar statisk laddning. Valet styrs av produkten och av atmosfären runt säcken, inte av priset.
+- Correction:
+
+**typeColumns › type**
+
+- EN: Type
+- SV: Typ
+- Correction:
+
+**typeColumns › fabric**
+
+- EN: Fabric
+- SV: Väv
+- Correction:
+
+**typeColumns › grounding**
+
+- EN: Grounding
+- SV: Jordning
+- Correction:
+
+**typeColumns › use**
+
+- EN: Use for
+- SV: Används för
+- Correction:
+
+**types › 1 › fabric**
+
+- EN: Plain woven polypropylene, with no static protection.
+- SV: Vanlig vävd polypropen, utan skydd mot statisk elektricitet.
+- Correction:
+
+**types › 1 › grounding**
+
+- EN: None
+- SV: Ingen
+- Correction:
+
+**types › 1 › use**
+
+- EN: Products that are not flammable, in areas with no flammable dust, gas or vapour.
+- SV: Produkter som inte är brandfarliga, i utrymmen utan brandfarligt damm, gas eller ånga.
+- Correction:
+
+**types › 2 › fabric**
+
+- EN: Plain polypropylene with a low breakdown voltage, under 4 kV.
+- SV: Vanlig polypropen med låg genomslagsspänning, under 4 kV.
+- Correction:
+
+**types › 2 › grounding**
+
+- EN: None
+- SV: Ingen
+- Correction:
+
+**types › 2 › use**
+
+- EN: Dry flammable powders. The low breakdown voltage prevents propagating brush discharge. Must not be used where flammable gas or vapour can be present.
+- SV: Torra brandfarliga pulver. Den låga genomslagsspänningen hindrar fortplantande borsturladdning. Får inte användas där brandfarlig gas eller ånga kan förekomma.
+- Correction:
+
+**types › 3 › fabric**
+
+- EN: Conductive threads woven through the fabric, linked to a grounding point.
+- SV: Ledande trådar invävda i väven, sammankopplade till en jordningspunkt.
+- Correction:
+
+**types › 3 › grounding**
+
+- EN: Required
+- SV: Krävs
+- Correction:
+
+**types › 3 › use**
+
+- EN: Flammable powders, and use in areas with flammable gas or vapour. The bag must be grounded throughout filling and discharge.
+- SV: Brandfarliga pulver, och användning i utrymmen med brandfarlig gas eller ånga. Säcken måste vara jordad under hela påfyllning och tömning.
+- Correction:
+
+**types › 4 › fabric**
+
+- EN: Antistatic fabric that dissipates charge without conductive threads.
+- SV: Antistatisk väv som avleder laddning utan ledande trådar.
+- Correction:
+
+**types › 4 › grounding**
+
+- EN: None
+- SV: Ingen
+- Correction:
+
+**types › 4 › use**
+
+- EN: The same applications as Type C, but where reliable grounding cannot be guaranteed every time.
+- SV: Samma tillämpningar som typ C, men där tillförlitlig jordning inte kan garanteras vid varje tillfälle.
+- Correction:
+
+**typeWarning**
+
+- EN: A Type C bag that is not grounded is more dangerous than a Type A bag, because the conductive threads collect charge that then has nowhere to go. If grounding cannot be assured at every fill and discharge, Type D is the correct choice.
+- SV: Typ C utan jordning är farligare än typ A, eftersom de ledande trådarna samlar laddning som sedan inte har någonstans att ta vägen. Kan jordning inte säkerställas vid varje påfyllning och tömning är typ D rätt val.
+- Correction:
+
+**constructionEyebrow**
+
+- EN: Step 04
+- SV: Steg 04
+- Correction:
+
+**constructionHeading**
+
+- EN: Four constructions.
+- SV: Fyra konstruktioner.
+- Correction:
+
+**constructions › 1 › name**
+
+- EN: Circular (tubular)
+- SV: Rund (tubvävd)
+- Correction:
+
+**constructions › 1 › body**
+
+- EN: Woven as a tube, with no side seams. Cheapest to make and strong around the circumference, but bulges when filled and loses its square shape.
+- SV: Vävd som ett rör, utan sidsömmar. Billigast att tillverka och stark i sidled, men buktar ut när den fylls och tappar fyrkantig form.
+- Correction:
+
+**constructions › 2 › name**
+
+- EN: U-panel
+- SV: U-panel
+- Correction:
+
+**constructions › 2 › body**
+
+- EN: Base and two sides cut from one piece, with two panels sewn in. Holds its shape better than circular and is the most common compromise.
+- SV: Botten och två sidor skurna i ett stycke, med två paneler isydda. Håller formen bättre än den runda och är den vanligaste kompromissen.
+- Correction:
+
+**constructions › 3 › name**
+
+- EN: 4-panel
+- SV: Fyrpanel
+- Correction:
+
+**constructions › 3 › body**
+
+- EN: Four separate sides sewn to a base. Stands squarest, which gives the best stacking and the best use of a pallet and a container.
+- SV: Fyra separata sidor sydda mot en botten. Står fyrkantigast, vilket ger bäst stapling och bäst utnyttjande av pall och container.
+- Correction:
+
+**constructions › 4 › name**
+
+- EN: Baffle
+- SV: Bafflad
+- Correction:
+
+**constructions › 4 › body**
+
+- EN: Internal baffles at the corners hold the bag square under load. Holds the most per floor area, and costs the most per bag.
+- SV: Invändiga baffler i hörnen håller säcken fyrkantig under last. Rymmer mest per golvyta, och är dyrast per säck.
+- Correction:
+
+**flowEyebrow**
+
+- EN: Step 05
+- SV: Steg 05
+- Correction:
+
+**flowHeading**
+
+- EN: Top and base.
+- SV: Topp och botten.
+- Correction:
+
+**fillingLabel**
+
+- EN: Filling
+- SV: Påfyllning
+- Correction:
+
+**dischargeLabel**
+
+- EN: Discharge
+- SV: Tömning
+- Correction:
+
+**filling › 1 › name**
+
+- EN: Open top
+- SV: Öppen topp
+- Correction:
+
+**filling › 1 › body**
+
+- EN: Fastest to fill. For products that do not dust and do not need covering from above.
+- SV: Snabbast att fylla. För produkter som inte dammar och som inte behöver skyddas ovanifrån.
+- Correction:
+
+**filling › 2 › name**
+
+- EN: Duffle top
+- SV: Skärmtopp
+- Correction:
+
+**filling › 2 › body**
+
+- EN: A skirt over the opening that is tied off after filling. Keeps dirt and water out without restricting filling speed.
+- SV: En duk över mynningen som knyts ihop efter påfyllning. Håller ute smuts och väta utan att begränsa påfyllningshastigheten.
+- Correction:
+
+**filling › 3 › name**
+
+- EN: Filling spout
+- SV: Påfyllningspip
+- Correction:
+
+**filling › 3 › body**
+
+- EN: Closed filling onto a dust-tight connection. Standard for powders and for products that must not be contaminated.
+- SV: Sluten påfyllning mot en dammtät anslutning. Standard för pulver och för produkter som inte får förorenas.
+- Correction:
+
+**discharge › 1 › name**
+
+- EN: Flat base
+- SV: Plan botten
+- Correction:
+
+**discharge › 1 › body**
+
+- EN: Cheapest. The bag is cut open to empty and cannot be reclosed, so it suits single trip use and products emptied in one go.
+- SV: Billigast. Säcken skärs upp vid tömning och kan inte stängas igen, så den passar engångsbruk och produkter som töms i ett svep.
+- Correction:
+
+**discharge › 2 › name**
+
+- EN: Discharge spout
+- SV: Tömningspip
+- Correction:
+
+**discharge › 2 › body**
+
+- EN: Controlled discharge that can be closed between draws. Necessary when the product is metered out in stages.
+- SV: Kontrollerad tömning som kan stängas mellan uttag. Nödvändig när produkten doseras ut i omgångar.
+- Correction:
+
+**discharge › 3 › name**
+
+- EN: Full-open base
+- SV: Helöppnande botten
+- Correction:
+
+**discharge › 3 › body**
+
+- EN: The whole base opens. For poor-flowing and sticky products that bridge in a spout.
+- SV: Hela botten öppnas. För trögflytande och klibbiga produkter som fastnar i en pip.
+- Correction:
+
+**checklistEyebrow**
+
+- EN: Before you request a quote
+- SV: Innan du begär offert
+- Correction:
+
+**checklistHeading**
+
+- EN: What we need to know.
+- SV: Det här behöver vi veta.
+- Correction:
+
+**checklistIntro**
+
+- EN: With these seven details we can specify the bag straight away, without coming back with questions.
+- SV: Har du de här sju uppgifterna kan vi specificera säcken direkt, utan att vända tillbaka med frågor.
+- Correction:
+
+**supplyEyebrow**
+
+- EN: From Fortapac
+- SV: Från Fortapac
+- Correction:
+
+**supplyHeading**
+
+- EN: What we supply.
+- SV: Vad vi levererar.
+- Correction:
+
+**supplyBody**
+
+- EN: [COMPLETE: which types (A, B, C, D) and constructions Fortapac actually supplies, which certifications are held (food contact, UN, ISO), normal lead time and minimum order quantity. Do not publish anything here that the factory has not confirmed.]
+- SV: [FYLL I: vilka typer (A, B, C, D) och konstruktioner Fortapac faktiskt levererar, vilka certifieringar som finns (livsmedelskontakt, UN, ISO), normal ledtid och minsta orderkvantitet. Skriv inget här som inte är bekräftat av fabriken.]
+- Correction:
+
+**ctaEyebrow**
+
+- EN: Need help specifying?
+- SV: Behöver du hjälp att specificera?
+- Correction:
+
+**ctaHeading**
+
+- EN: Tell us what you are packing.
+- SV: Berätta vad du packar.
+- Correction:
+
+**ctaBody**
+
+- EN: Give us the product, weight, filling method and handling requirements, and we will specify the right FIBC.
+- SV: Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så specificerar vi rätt storsäck.
+- Correction:
+
+**ctaButton**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
 - Correction:
 
 ### Home page
@@ -1503,8 +2113,8 @@ Inget i dessa villkor begränsar ansvar som enligt tvingande lag inte kan begrä
 
 **footerResources**
 
-- EN: Resources
-- SV: Resurser
+- EN: FIBC selection guide
+- SV: Välja storsäck
 - Correction:
 
 **footerPrivacy**

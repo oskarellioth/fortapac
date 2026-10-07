@@ -2,6 +2,7 @@ import home from "../content/home.json";
 import about from "../content/about.json";
 import navigation from "../content/navigation.json";
 import site from "../content/site.json";
+import guideFibc from "../content/guide-fibc.json";
 
 export type Locale = "sv" | "en";
 
@@ -128,6 +129,7 @@ export const content = {
   about,
   navigation: navigationResolved,
   site,
+  guideFibc,
 };
 
 /**
@@ -139,6 +141,9 @@ export const content = {
 export const ROUTES = {
   home: { sv: "/", en: "/en" },
   about: { sv: "/om-oss", en: "/en/about" },
+  // Slugs are chosen for search rather than symmetry: a Swedish buyer types
+  // "välja storsäck", an English one "fibc selection guide".
+  guideFibc: { sv: "/valja-storsack", en: "/en/fibc-selection-guide" },
   privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
   terms: { sv: "/anvandarvillkor", en: "/en/terms" },
   cookies: { sv: "/cookies", en: "/en/cookies" },

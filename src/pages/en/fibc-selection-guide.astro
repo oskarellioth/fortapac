@@ -1,0 +1,13 @@
+---
+import Base from "../../layouts/Base.astro";
+import GuideFibcBody from "../../components/GuideFibcBody.astro";
+import { content, pick } from "../../lib/content";
+const locale = "en" as const;
+---
+<Base
+  locale={locale}
+  title={pick(content.guideFibc.seoTitle, locale)}
+  description={pick(content.guideFibc.seoDescription, locale)}
+>
+  <GuideFibcBody locale={locale} />
+</Base>

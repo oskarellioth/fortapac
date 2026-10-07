@@ -44,7 +44,7 @@ export default config({
   ui: {
     brand: { name: "Fortapac" },
     navigation: {
-      Pages: ["homePage", "aboutPage"],
+      Pages: ["homePage", "aboutPage", "guideFibcPage"],
       Catalogue: ["products", "industries"],
       Settings: ["navigation", "siteSettings"],
     },
@@ -154,6 +154,128 @@ export default config({
           },
         ),
 
+        ctaHeading: bilingual("Contact band, heading"),
+        ctaBody: bilingualLong("Contact band, paragraph"),
+        ctaButton: bilingual("Contact band, button"),
+
+        seoTitle: bilingual("SEO title"),
+        seoDescription: bilingualLong("SEO description"),
+      },
+    }),
+
+    guideFibcPage: singleton({
+      label: "FIBC selection guide",
+      path: "src/content/guide-fibc",
+      format: { data: "json" },
+      // Every key here has to match src/content/guide-fibc.json exactly. A field
+      // declared here but missing from the file, or present in the file but not
+      // declared here, fails validation and blanks the whole entry in the admin.
+      schema: {
+        heroEyebrow: bilingual("Hero eyebrow"),
+        heroTitle: bilingual("Hero headline"),
+        heroIntro: bilingualLong("Hero paragraph"),
+
+        summaryEyebrow: bilingual("Short answer, eyebrow"),
+        summaryHeading: bilingual("Short answer, heading"),
+        summaryBody: bilingualLong(
+          "Short answer, paragraph",
+          "The paragraph most likely to be quoted by search engines and AI assistants. It must make sense on its own, without the tables below.",
+        ),
+
+        stepsEyebrow: bilingual("Steps, eyebrow"),
+        stepsHeading: bilingual("Steps, heading"),
+        steps: fields.array(
+          fields.object({
+            number: fields.text({ label: "Number", description: "e.g. 01" }),
+            title: bilingual("Title"),
+            body: bilingualLong("Body"),
+            note: bilingualLong("Note", "Optional. Shown in smaller type with an orange rule."),
+          }),
+          { label: "Steps", itemLabel: (props) => props.fields.title.fields.en.value || "Step" },
+        ),
+
+        densityEyebrow: bilingual("Density table, eyebrow"),
+        densityHeading: bilingual("Density table, heading"),
+        densityIntro: bilingualLong("Density table, intro"),
+        densityColumns: fields.object(
+          {
+            material: bilingual("Column 1"),
+            density: bilingual("Column 2"),
+            volume: bilingual("Column 3"),
+          },
+          { label: "Density table, column headings" },
+        ),
+        densities: fields.array(
+          fields.object({
+            material: bilingual("Material"),
+            density: fields.text({ label: "Bulk density, kg/m3", description: "e.g. 1 400-1 500" }),
+            volume: fields.text({ label: "Volume per tonne, m3", description: "e.g. 0,67-0,71" }),
+          }),
+          { label: "Density rows", itemLabel: (props) => props.fields.material.fields.en.value || "Row" },
+        ),
+
+        typeEyebrow: bilingual("Type table, eyebrow"),
+        typeHeading: bilingual("Type table, heading"),
+        typeIntro: bilingualLong("Type table, intro"),
+        typeColumns: fields.object(
+          {
+            type: bilingual("Column 1"),
+            fabric: bilingual("Column 2"),
+            grounding: bilingual("Column 3"),
+            use: bilingual("Column 4"),
+          },
+          { label: "Type table, column headings" },
+        ),
+        types: fields.array(
+          fields.object({
+            type: fields.text({ label: "Type letter", description: "A, B, C or D" }),
+            fabric: bilingualLong("Fabric"),
+            grounding: bilingual("Grounding"),
+            use: bilingualLong("Use for"),
+          }),
+          { label: "Types", itemLabel: (props) => `Type ${props.fields.type.value || "?"}` },
+        ),
+        typeWarning: bilingualLong(
+          "Type table, warning",
+          "Safety wording. Do not soften this without checking with the factory.",
+        ),
+
+        constructionEyebrow: bilingual("Constructions, eyebrow"),
+        constructionHeading: bilingual("Constructions, heading"),
+        constructions: fields.array(
+          fields.object({ name: bilingual("Name"), body: bilingualLong("Body") }),
+          { label: "Constructions", itemLabel: (props) => props.fields.name.fields.en.value || "Construction" },
+        ),
+
+        flowEyebrow: bilingual("Filling and discharge, eyebrow"),
+        flowHeading: bilingual("Filling and discharge, heading"),
+        fillingLabel: bilingual("Filling column label"),
+        dischargeLabel: bilingual("Discharge column label"),
+        filling: fields.array(
+          fields.object({ name: bilingual("Name"), body: bilingualLong("Body") }),
+          { label: "Filling options", itemLabel: (props) => props.fields.name.fields.en.value || "Option" },
+        ),
+        discharge: fields.array(
+          fields.object({ name: bilingual("Name"), body: bilingualLong("Body") }),
+          { label: "Discharge options", itemLabel: (props) => props.fields.name.fields.en.value || "Option" },
+        ),
+
+        checklistEyebrow: bilingual("Checklist, eyebrow"),
+        checklistHeading: bilingual("Checklist, heading"),
+        checklistIntro: bilingualLong("Checklist, intro"),
+        checklist: fields.array(bilingualLong("Item"), {
+          label: "Checklist items",
+          itemLabel: (props) => props.fields.en.value?.slice(0, 45) || "Item",
+        }),
+
+        supplyEyebrow: bilingual("What we supply, eyebrow"),
+        supplyHeading: bilingual("What we supply, heading"),
+        supplyBody: bilingualLong(
+          "What we supply, paragraph",
+          "Only state what the factory has confirmed. While this still contains [FYLL I: ...] the site will refuse to build for the live domain.",
+        ),
+
+        ctaEyebrow: bilingual("Contact band, eyebrow"),
         ctaHeading: bilingual("Contact band, heading"),
         ctaBody: bilingualLong("Contact band, paragraph"),
         ctaButton: bilingual("Contact band, button"),

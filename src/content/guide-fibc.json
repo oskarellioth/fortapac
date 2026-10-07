@@ -1,0 +1,522 @@
+{
+  "seoTitle": {
+    "sv": "Så väljer du rätt storsäck (FIBC) | Fortapac",
+    "en": "How to specify an FIBC bulk bag | Fortapac"
+  },
+  "seoDescription": {
+    "sv": "Sex beslut avgör vilken storsäck du behöver: produktens bulkdensitet, last och säkerhetsfaktor, statisk elektricitet (typ A, B, C eller D), konstruktion, påfyllning och tömning, samt beläggning och certifiering.",
+    "en": "Six decisions determine the FIBC you need: bulk density, load and safety factor, static protection (Type A, B, C or D), construction, filling and discharge, and coating and certification."
+  },
+  "heroEyebrow": {
+    "sv": "Teknisk guide",
+    "en": "Technical guide"
+  },
+  "heroTitle": {
+    "sv": "Så väljer du rätt storsäck.",
+    "en": "How to specify an FIBC."
+  },
+  "heroIntro": {
+    "sv": "En storsäck är inte en hyllvara. Sex beslut avgör konstruktionen, och de hänger ihop: fel bulkdensitet ger fel volym, fel säkerhetsfaktor ger en säck som inte får återanvändas. Den här guiden går igenom besluten i den ordning de behöver fattas.",
+    "en": "An FIBC is not an off-the-shelf item. Six decisions determine the construction, and they interact: the wrong bulk density gives the wrong volume, the wrong safety factor gives a bag that cannot be reused. This guide takes the decisions in the order they need to be made."
+  },
+  "summaryEyebrow": {
+    "sv": "Kort svar",
+    "en": "Short answer"
+  },
+  "summaryHeading": {
+    "sv": "Om du bara läser ett stycke.",
+    "en": "If you read one paragraph."
+  },
+  "summaryBody": {
+    "sv": "Börja med produktens bulkdensitet, eftersom den avgör volymen och därmed måtten. Välj sedan säkerhetsfaktor efter hur många gånger säcken ska användas: 5:1 för engångsbruk, 6:1 för flergångsbruk. Avgör därefter om produkten eller omgivningen är brandfarlig, vilket bestämmer typ A, B, C eller D. Resten, alltså konstruktion, påfyllning, tömning, beläggning och innerpåse, följer av hur du fyller, lyfter, lagrar och tömmer säcken.",
+    "en": "Start with the bulk density of your product, because it sets the volume and therefore the dimensions. Then choose the safety factor by how many times the bag will be used: 5:1 for single trip, 6:1 for multi-trip. Next decide whether the product or the surrounding atmosphere is flammable, which fixes the type as A, B, C or D. Everything else, meaning construction, filling, discharge, coating and liner, follows from how you fill, lift, store and empty the bag."
+  },
+  "stepsEyebrow": {
+    "sv": "Besluten",
+    "en": "The decisions"
+  },
+  "stepsHeading": {
+    "sv": "Sex beslut, i den här ordningen.",
+    "en": "Six decisions, in this order."
+  },
+  "steps": [
+    {
+      "number": "01",
+      "title": {
+        "sv": "Produkt och bulkdensitet",
+        "en": "Product and bulk density"
+      },
+      "body": {
+        "sv": "Bulkdensiteten avgör hur stor säcken måste vara. Volymen du behöver är nettovikten delad med bulkdensiteten. En ton cement vid 1 400 kg/m³ kräver 0,71 m³. En ton plastgranulat vid 550 kg/m³ kräver 1,82 m³, alltså mer än dubbelt så stor säck för samma vikt.",
+        "en": "Bulk density determines how large the bag has to be. The volume you need is the net weight divided by the bulk density. One tonne of cement at 1 400 kg/m³ needs 0.71 m³. One tonne of plastic granules at 550 kg/m³ needs 1.82 m³, which is more than twice the bag for the same weight."
+      },
+      "note": {
+        "sv": "Räkna med cirka 10 procent extra höjd så att säcken kan stängas och lyftas utan att vara spänd. Mät din egen produkt om du kan: tabellvärden varierar med fukthalt och kornstorlek.",
+        "en": "Allow roughly 10 percent extra height so the bag can be closed and lifted without being taut. Measure your own product if you can: table values vary with moisture content and particle size."
+      }
+    },
+    {
+      "number": "02",
+      "title": {
+        "sv": "Last och säkerhetsfaktor",
+        "en": "Load and safety factor"
+      },
+      "body": {
+        "sv": "SWL, högsta tillåtna last, är den nettovikt säcken är konstruerad för. Säkerhetsfaktorn anger hur många gånger den lasten säcken provas mot. 5:1 gäller engångsbruk, 6:1 gäller flergångsbruk. En säck med 5:1 får inte fyllas igen efter tömning, oavsett hur hel den ser ut.",
+        "en": "SWL, the safe working load, is the net weight the bag is built for. The safety factor states how many times that load the bag is tested against. 5:1 is single trip, 6:1 is multi-trip. A 5:1 bag must not be refilled after emptying, however sound it looks."
+      },
+      "note": {
+        "sv": "Storsäckar för produkter som inte klassas som farligt gods provas enligt EN ISO 21898. Farligt gods kräver UN-certifierad säck enligt ADR, RID eller IMDG, vilket är ett annat regelverk med egen märkning.",
+        "en": "FIBCs for products not classed as dangerous goods are tested to EN ISO 21898. Dangerous goods require a UN certified bag under ADR, RID or IMDG, which is a separate regime with its own marking."
+      }
+    },
+    {
+      "number": "03",
+      "title": {
+        "sv": "Statisk elektricitet och brandfara",
+        "en": "Static electricity and flammability"
+      },
+      "body": {
+        "sv": "Det här är det beslut som har säkerhetskonsekvenser, och det enda där fel val kan antända något. Polypropen är isolerande, så påfyllning och tömning bygger upp statisk laddning. Vilken typ du behöver avgörs av två frågor: är produkten brandfarlig, och kan det finnas brandfarlig gas eller ånga runt säcken.",
+        "en": "This is the decision with safety consequences, and the only one where the wrong choice can ignite something. Polypropylene is an insulator, so filling and discharge build static charge. Which type you need comes down to two questions: is the product flammable, and can flammable gas or vapour be present around the bag."
+      },
+      "note": {
+        "sv": "Är du osäker, utgå från produktens säkerhetsdatablad och från en klassning av området. Gissa inte utifrån hur produkten ser ut.",
+        "en": "If you are unsure, work from the product safety data sheet and from an area classification. Do not guess from how the product looks."
+      }
+    },
+    {
+      "number": "04",
+      "title": {
+        "sv": "Konstruktion",
+        "en": "Construction"
+      },
+      "body": {
+        "sv": "Konstruktionen avgör hur säcken håller formen när den är fylld, vilket i sin tur avgör hur många som får plats på en pall eller i en container. En rund säck buktar ut, en fyrpanelsäck står fyrkantig. Skillnaden syns tydligast när du räknar containerfyllnad.",
+        "en": "Construction determines how the bag holds its shape when filled, which in turn determines how many fit on a pallet or in a container. A circular bag bulges, a 4-panel bag stands square. The difference shows up most clearly when you calculate container fill."
+      },
+      "note": {
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "number": "05",
+      "title": {
+        "sv": "Påfyllning och tömning",
+        "en": "Filling and discharge"
+      },
+      "body": {
+        "sv": "Toppen väljs efter hur du fyller och hur dammande produkten är. Botten väljs efter hur du tömmer och hur väl produkten rinner. Ett vanligt misstag är att välja plan botten för en produkt som ska doseras ut, vilket gör att säcken måste skäras upp och inte kan stängas igen.",
+        "en": "The top is chosen by how you fill and how dusty the product is. The base is chosen by how you empty and how well the product flows. A common mistake is choosing a flat base for a product that needs to be metered out, which means the bag has to be cut open and cannot be reclosed."
+      },
+      "note": {
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "number": "06",
+      "title": {
+        "sv": "Beläggning, innerpåse och certifiering",
+        "en": "Coating, liner and certification"
+      },
+      "body": {
+        "sv": "Beläggning och innerpåse handlar båda om att hålla ute fukt och hålla kvar finmaterial, men de löser olika problem. En beläggning laminerad på väven stoppar fukt utifrån och damm inifrån. En innerpåse ger en separat barriär och kan bytas mellan laster.",
+        "en": "Coating and liner both deal with keeping moisture out and fines in, but they solve different problems. A coating laminated onto the fabric stops moisture from outside and dust from inside. A liner gives a separate barrier and can be changed between loads."
+      },
+      "note": {
+        "sv": "Ska säcken lagras utomhus behöver väven vara UV-stabiliserad, och den stabiliseringen anges i timmars solexponering. Obelagd polypropen bryts ned synligt efter en säsong i direkt sol.",
+        "en": "If the bag will be stored outdoors the fabric needs to be UV stabilised, and that stabilisation is quoted in hours of sun exposure. Uncoated polypropylene degrades visibly after a season in direct sun."
+      }
+    }
+  ],
+  "densityEyebrow": {
+    "sv": "Steg 01",
+    "en": "Step 01"
+  },
+  "densityHeading": {
+    "sv": "Typiska bulkdensiteter.",
+    "en": "Typical bulk densities."
+  },
+  "densityIntro": {
+    "sv": "Riktvärden för att räkna fram volym. Din egen uppmätta densitet gäller före tabellen, eftersom fukthalt, kornstorlek och packning flyttar värdena betydligt.",
+    "en": "Indicative figures for working out volume. Your own measured density governs over this table, because moisture content, particle size and packing move the values considerably."
+  },
+  "densityColumns": {
+    "material": {
+      "sv": "Material",
+      "en": "Material"
+    },
+    "density": {
+      "sv": "Bulkdensitet",
+      "en": "Bulk density"
+    },
+    "volume": {
+      "sv": "Volym per ton",
+      "en": "Volume per tonne"
+    }
+  },
+  "densities": [
+    {
+      "material": {
+        "sv": "Cement",
+        "en": "Cement"
+      },
+      "density": "1 400–1 500",
+      "volume": "0,67–0,71"
+    },
+    {
+      "material": {
+        "sv": "Sand, torr",
+        "en": "Sand, dry"
+      },
+      "density": "1 500–1 600",
+      "volume": "0,63–0,67"
+    },
+    {
+      "material": {
+        "sv": "Ballast och grus",
+        "en": "Aggregates and gravel"
+      },
+      "density": "1 500–1 700",
+      "volume": "0,59–0,67"
+    },
+    {
+      "material": {
+        "sv": "Gödsel, granulerad",
+        "en": "Fertiliser, granular"
+      },
+      "density": "900–1 100",
+      "volume": "0,91–1,11"
+    },
+    {
+      "material": {
+        "sv": "Spannmål",
+        "en": "Grain"
+      },
+      "density": "750–800",
+      "volume": "1,25–1,33"
+    },
+    {
+      "material": {
+        "sv": "Träpellets",
+        "en": "Wood pellets"
+      },
+      "density": "650–700",
+      "volume": "1,43–1,54"
+    },
+    {
+      "material": {
+        "sv": "Plastgranulat (PP, PE)",
+        "en": "Plastic granules (PP, PE)"
+      },
+      "density": "550–600",
+      "volume": "1,67–1,82"
+    },
+    {
+      "material": {
+        "sv": "Mjöl",
+        "en": "Flour"
+      },
+      "density": "500–600",
+      "volume": "1,67–2,00"
+    }
+  ],
+  "typeEyebrow": {
+    "sv": "Steg 03",
+    "en": "Step 03"
+  },
+  "typeHeading": {
+    "sv": "Typ A, B, C eller D.",
+    "en": "Type A, B, C or D."
+  },
+  "typeIntro": {
+    "sv": "De fyra typerna skiljer sig i hur de hanterar statisk laddning. Valet styrs av produkten och av atmosfären runt säcken, inte av priset.",
+    "en": "The four types differ in how they handle static charge. The choice is driven by the product and by the atmosphere around the bag, not by price."
+  },
+  "typeColumns": {
+    "type": {
+      "sv": "Typ",
+      "en": "Type"
+    },
+    "fabric": {
+      "sv": "Väv",
+      "en": "Fabric"
+    },
+    "grounding": {
+      "sv": "Jordning",
+      "en": "Grounding"
+    },
+    "use": {
+      "sv": "Används för",
+      "en": "Use for"
+    }
+  },
+  "types": [
+    {
+      "type": "A",
+      "fabric": {
+        "sv": "Vanlig vävd polypropen, utan skydd mot statisk elektricitet.",
+        "en": "Plain woven polypropylene, with no static protection."
+      },
+      "grounding": {
+        "sv": "Ingen",
+        "en": "None"
+      },
+      "use": {
+        "sv": "Produkter som inte är brandfarliga, i utrymmen utan brandfarligt damm, gas eller ånga.",
+        "en": "Products that are not flammable, in areas with no flammable dust, gas or vapour."
+      }
+    },
+    {
+      "type": "B",
+      "fabric": {
+        "sv": "Vanlig polypropen med låg genomslagsspänning, under 4 kV.",
+        "en": "Plain polypropylene with a low breakdown voltage, under 4 kV."
+      },
+      "grounding": {
+        "sv": "Ingen",
+        "en": "None"
+      },
+      "use": {
+        "sv": "Torra brandfarliga pulver. Den låga genomslagsspänningen hindrar fortplantande borsturladdning. Får inte användas där brandfarlig gas eller ånga kan förekomma.",
+        "en": "Dry flammable powders. The low breakdown voltage prevents propagating brush discharge. Must not be used where flammable gas or vapour can be present."
+      }
+    },
+    {
+      "type": "C",
+      "fabric": {
+        "sv": "Ledande trådar invävda i väven, sammankopplade till en jordningspunkt.",
+        "en": "Conductive threads woven through the fabric, linked to a grounding point."
+      },
+      "grounding": {
+        "sv": "Krävs",
+        "en": "Required"
+      },
+      "use": {
+        "sv": "Brandfarliga pulver, och användning i utrymmen med brandfarlig gas eller ånga. Säcken måste vara jordad under hela påfyllning och tömning.",
+        "en": "Flammable powders, and use in areas with flammable gas or vapour. The bag must be grounded throughout filling and discharge."
+      }
+    },
+    {
+      "type": "D",
+      "fabric": {
+        "sv": "Antistatisk väv som avleder laddning utan ledande trådar.",
+        "en": "Antistatic fabric that dissipates charge without conductive threads."
+      },
+      "grounding": {
+        "sv": "Ingen",
+        "en": "None"
+      },
+      "use": {
+        "sv": "Samma tillämpningar som typ C, men där tillförlitlig jordning inte kan garanteras vid varje tillfälle.",
+        "en": "The same applications as Type C, but where reliable grounding cannot be guaranteed every time."
+      }
+    }
+  ],
+  "typeWarning": {
+    "sv": "Typ C utan jordning är farligare än typ A, eftersom de ledande trådarna samlar laddning som sedan inte har någonstans att ta vägen. Kan jordning inte säkerställas vid varje påfyllning och tömning är typ D rätt val.",
+    "en": "A Type C bag that is not grounded is more dangerous than a Type A bag, because the conductive threads collect charge that then has nowhere to go. If grounding cannot be assured at every fill and discharge, Type D is the correct choice."
+  },
+  "constructionEyebrow": {
+    "sv": "Steg 04",
+    "en": "Step 04"
+  },
+  "constructionHeading": {
+    "sv": "Fyra konstruktioner.",
+    "en": "Four constructions."
+  },
+  "constructions": [
+    {
+      "name": {
+        "sv": "Rund (tubvävd)",
+        "en": "Circular (tubular)"
+      },
+      "body": {
+        "sv": "Vävd som ett rör, utan sidsömmar. Billigast att tillverka och stark i sidled, men buktar ut när den fylls och tappar fyrkantig form.",
+        "en": "Woven as a tube, with no side seams. Cheapest to make and strong around the circumference, but bulges when filled and loses its square shape."
+      }
+    },
+    {
+      "name": {
+        "sv": "U-panel",
+        "en": "U-panel"
+      },
+      "body": {
+        "sv": "Botten och två sidor skurna i ett stycke, med två paneler isydda. Håller formen bättre än den runda och är den vanligaste kompromissen.",
+        "en": "Base and two sides cut from one piece, with two panels sewn in. Holds its shape better than circular and is the most common compromise."
+      }
+    },
+    {
+      "name": {
+        "sv": "Fyrpanel",
+        "en": "4-panel"
+      },
+      "body": {
+        "sv": "Fyra separata sidor sydda mot en botten. Står fyrkantigast, vilket ger bäst stapling och bäst utnyttjande av pall och container.",
+        "en": "Four separate sides sewn to a base. Stands squarest, which gives the best stacking and the best use of a pallet and a container."
+      }
+    },
+    {
+      "name": {
+        "sv": "Bafflad",
+        "en": "Baffle"
+      },
+      "body": {
+        "sv": "Invändiga baffler i hörnen håller säcken fyrkantig under last. Rymmer mest per golvyta, och är dyrast per säck.",
+        "en": "Internal baffles at the corners hold the bag square under load. Holds the most per floor area, and costs the most per bag."
+      }
+    }
+  ],
+  "flowEyebrow": {
+    "sv": "Steg 05",
+    "en": "Step 05"
+  },
+  "flowHeading": {
+    "sv": "Topp och botten.",
+    "en": "Top and base."
+  },
+  "fillingLabel": {
+    "sv": "Påfyllning",
+    "en": "Filling"
+  },
+  "dischargeLabel": {
+    "sv": "Tömning",
+    "en": "Discharge"
+  },
+  "filling": [
+    {
+      "name": {
+        "sv": "Öppen topp",
+        "en": "Open top"
+      },
+      "body": {
+        "sv": "Snabbast att fylla. För produkter som inte dammar och som inte behöver skyddas ovanifrån.",
+        "en": "Fastest to fill. For products that do not dust and do not need covering from above."
+      }
+    },
+    {
+      "name": {
+        "sv": "Skärmtopp",
+        "en": "Duffle top"
+      },
+      "body": {
+        "sv": "En duk över mynningen som knyts ihop efter påfyllning. Håller ute smuts och väta utan att begränsa påfyllningshastigheten.",
+        "en": "A skirt over the opening that is tied off after filling. Keeps dirt and water out without restricting filling speed."
+      }
+    },
+    {
+      "name": {
+        "sv": "Påfyllningspip",
+        "en": "Filling spout"
+      },
+      "body": {
+        "sv": "Sluten påfyllning mot en dammtät anslutning. Standard för pulver och för produkter som inte får förorenas.",
+        "en": "Closed filling onto a dust-tight connection. Standard for powders and for products that must not be contaminated."
+      }
+    }
+  ],
+  "discharge": [
+    {
+      "name": {
+        "sv": "Plan botten",
+        "en": "Flat base"
+      },
+      "body": {
+        "sv": "Billigast. Säcken skärs upp vid tömning och kan inte stängas igen, så den passar engångsbruk och produkter som töms i ett svep.",
+        "en": "Cheapest. The bag is cut open to empty and cannot be reclosed, so it suits single trip use and products emptied in one go."
+      }
+    },
+    {
+      "name": {
+        "sv": "Tömningspip",
+        "en": "Discharge spout"
+      },
+      "body": {
+        "sv": "Kontrollerad tömning som kan stängas mellan uttag. Nödvändig när produkten doseras ut i omgångar.",
+        "en": "Controlled discharge that can be closed between draws. Necessary when the product is metered out in stages."
+      }
+    },
+    {
+      "name": {
+        "sv": "Helöppnande botten",
+        "en": "Full-open base"
+      },
+      "body": {
+        "sv": "Hela botten öppnas. För trögflytande och klibbiga produkter som fastnar i en pip.",
+        "en": "The whole base opens. For poor-flowing and sticky products that bridge in a spout."
+      }
+    }
+  ],
+  "checklistEyebrow": {
+    "sv": "Innan du begär offert",
+    "en": "Before you request a quote"
+  },
+  "checklistHeading": {
+    "sv": "Det här behöver vi veta.",
+    "en": "What we need to know."
+  },
+  "checklistIntro": {
+    "sv": "Har du de här sju uppgifterna kan vi specificera säcken direkt, utan att vända tillbaka med frågor.",
+    "en": "With these seven details we can specify the bag straight away, without coming back with questions."
+  },
+  "checklist": [
+    {
+      "sv": "Vilken produkt, och dess bulkdensitet om du har mätt den.",
+      "en": "What the product is, and its bulk density if you have measured it."
+    },
+    {
+      "sv": "Nettovikt per säck.",
+      "en": "Net weight per bag."
+    },
+    {
+      "sv": "Engångsbruk eller flergångsbruk.",
+      "en": "Single trip or multi-trip."
+    },
+    {
+      "sv": "Om produkten eller omgivningen är brandfarlig.",
+      "en": "Whether the product or the surrounding area is flammable."
+    },
+    {
+      "sv": "Hur säcken fylls och hur den töms.",
+      "en": "How the bag is filled and how it is emptied."
+    },
+    {
+      "sv": "Om den lagras utomhus, och i så fall hur länge.",
+      "en": "Whether it is stored outdoors, and if so for how long."
+    },
+    {
+      "sv": "Krav på livsmedelskontakt, UN-certifiering eller tryck.",
+      "en": "Any requirement for food contact, UN certification or printing."
+    }
+  ],
+  "supplyEyebrow": {
+    "sv": "Från Fortapac",
+    "en": "From Fortapac"
+  },
+  "supplyHeading": {
+    "sv": "Vad vi levererar.",
+    "en": "What we supply."
+  },
+  "supplyBody": {
+    "sv": "[FYLL I: vilka typer (A, B, C, D) och konstruktioner Fortapac faktiskt levererar, vilka certifieringar som finns (livsmedelskontakt, UN, ISO), normal ledtid och minsta orderkvantitet. Skriv inget här som inte är bekräftat av fabriken.]",
+    "en": "[COMPLETE: which types (A, B, C, D) and constructions Fortapac actually supplies, which certifications are held (food contact, UN, ISO), normal lead time and minimum order quantity. Do not publish anything here that the factory has not confirmed.]"
+  },
+  "ctaEyebrow": {
+    "sv": "Behöver du hjälp att specificera?",
+    "en": "Need help specifying?"
+  },
+  "ctaHeading": {
+    "sv": "Berätta vad du packar.",
+    "en": "Tell us what you are packing."
+  },
+  "ctaBody": {
+    "sv": "Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så specificerar vi rätt storsäck.",
+    "en": "Give us the product, weight, filling method and handling requirements, and we will specify the right FIBC."
+  },
+  "ctaButton": {
+    "sv": "Diskutera ditt behov",
+    "en": "Discuss your requirement"
+  }
+}

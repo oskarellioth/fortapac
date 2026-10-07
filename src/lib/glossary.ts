@@ -58,6 +58,29 @@ export const GLOSSARY: GlossaryEntry[] = [
   { en: "tensile strength", sv: "draghållfasthet" },
   { en: "service life", sv: "livslängd" },
 
+  // FIBC specification, introduced by the selection guide. Several of these have
+  // a plausible everyday Swedish word that is wrong in a technical context.
+  { en: "bulk density", sv: "bulkdensitet", note: "'skrymdensitet' also exists; bulkdensitet is the trade word" },
+  { en: "safe working load", sv: "högsta tillåtna last", note: "the abbreviation SWL stays in English" },
+  { en: "single trip", sv: "engångsbruk" },
+  { en: "multi-trip", sv: "flergångsbruk" },
+  { en: "grounding", sv: "jordning", note: "electrical earthing, not 'markering'" },
+  { en: "breakdown voltage", sv: "genomslagsspänning" },
+  { en: "propagating brush discharge", sv: "fortplantande borsturladdning" },
+  { en: "antistatic", sv: "antistatisk" },
+  { en: "baffle", sv: "baffel", note: "the internal panel that holds a bag square" },
+  { en: "filling spout", sv: "påfyllningspip" },
+  { en: "discharge spout", sv: "tömningspip" },
+  { en: "duffle top", sv: "skärmtopp" },
+  { en: "flat base", sv: "plan botten" },
+  { en: "coated", sv: "belagd" },
+  { en: "uncoated", sv: "obelagd" },
+  { en: "food contact", sv: "livsmedelskontakt" },
+  { en: "dangerous goods", sv: "farligt gods" },
+  { en: "safety data sheet", sv: "säkerhetsdatablad" },
+  { en: "pallet", sv: "pall" },
+  { en: "stacking", sv: "stapling" },
+
   // Materials handled
   { en: "pulpwood", sv: "massaved", note: "never 'massa trä'" },
   { en: "wood chip", sv: "flis" },
