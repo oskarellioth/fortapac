@@ -86,8 +86,8 @@ const siteIcons = [["public/icons/print.png", "printed-light.png"]];
 
 const photos = [
   ["White FIBC Bulk Bag with Blue Stripe.png", "hero.jpg"],
-  ["White Industrial Bulk Bag with Orange Stitching.png", "standard.jpg"],
-  ["White FIBC Bag with Orange Stitching.png", "filling-discharge.jpg"],
+  ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
+  ["Bulk Bag with Fill and Discharge Spouts.webp", "filling-discharge.jpg"],
   ["Single Loop Bulk Bag with Orange Handle.webp", "single-loop.jpg"],
   ["Conductive Bulk Bag with Spouts and Orange Stitching.webp", "specialist.jpg"],
   ["Forklift Lifting White Bulk Bag.png", "application.jpg"],
