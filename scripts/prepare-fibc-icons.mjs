@@ -85,7 +85,7 @@ const lightIcons = [
 const siteIcons = [["public/icons/print.png", "printed-light.png"]];
 
 const photos = [
-  ["White FIBC Bulk Bag with Blue Stripe.png", "hero.jpg"],
+  ["FIBC Top Detail with Four Lifting Loops.webp", "hero.jpg"],
   ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
   ["Bulk Bag with Fill and Discharge Spouts.webp", "filling-discharge.jpg"],
   ["Single Loop Bulk Bag with Orange Handle.webp", "single-loop.jpg"],
