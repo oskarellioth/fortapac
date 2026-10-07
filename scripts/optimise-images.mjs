@@ -36,7 +36,10 @@ const GROUPS = [
   { dir: "public/products/fibc", widths: [400, 800, 1200, 1600] },
 ];
 
-const PHOTO = /\.(jpe?g|png)$/i;
+// WebP is accepted as a source, not just an output, because cut-outs are
+// delivered that way and flattening them to JPEG would destroy the alpha.
+// sharp carries alpha through resize and webp encoding on its own.
+const PHOTO = /\.(jpe?g|png|webp)$/i;
 
 async function listPhotos(dir) {
   const abs = path.join(ROOT, dir);

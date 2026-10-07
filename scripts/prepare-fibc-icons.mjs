@@ -51,10 +51,24 @@ async function clean(src, out, { navyToWhite = false } = {}) {
   return out;
 }
 
-/** Icons keep their alpha; photos are flattened onto white and resized. */
+/**
+ * Photos that sit inside a white card are flattened onto white: a JPEG is
+ * smaller than a WebP with an alpha channel, and the card hides the edge.
+ */
 async function photo(src, out) {
   await sharp(src).resize({ width: 1400, withoutEnlargement: true }).flatten({ background: "#ffffff" })
     .jpeg({ quality: 86, mozjpeg: true }).toFile(out);
+  return out;
+}
+
+/**
+ * A cut-out that sits directly on the page background keeps its alpha, so it
+ * has to stay WebP. Flattening it onto white would put a white square on the
+ * warm paper background, which is the visible box this avoids.
+ */
+async function cutout(src, out) {
+  await sharp(src).resize({ width: 1400, withoutEnlargement: true })
+    .webp({ quality: 86 }).toFile(out);
   return out;
 }
 
@@ -85,7 +99,7 @@ const lightIcons = [
 const siteIcons = [["public/icons/print.png", "printed-light.png"]];
 
 const photos = [
-  ["FIBC Top Detail with Four Lifting Loops.webp", "hero.jpg"],
+  ["FIBC Top Detail with Four Lifting Loops.webp", "hero.webp"],
   ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
   ["Bulk Bag with Fill and Discharge Spouts.webp", "filling-discharge.jpg"],
   ["Single Loop Bulk Bag with Orange Handle.webp", "single-loop.jpg"],
@@ -97,6 +111,9 @@ for (const [src, out] of icons) await clean(path.join(SRC, src), path.join(ICONS
 for (const [src, out] of lightIcons)
   await clean(path.join(SRC, src), path.join(ICONS, out), { navyToWhite: true });
 for (const [src, out] of siteIcons) await clean(src, path.join(ICONS, out));
-for (const [src, out] of photos) await photo(path.join(SRC, src), path.join(PHOTOS, out));
+for (const [src, out] of photos) {
+  const write = out.endsWith(".webp") ? cutout : photo;
+  await write(path.join(SRC, src), path.join(PHOTOS, out));
+}
 
 console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length} icons, ${photos.length} photos prepared`);
