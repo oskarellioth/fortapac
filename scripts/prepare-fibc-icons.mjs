@@ -98,6 +98,15 @@ const lightIcons = [
 // as a white square on the navy spec strip.
 const siteIcons = [["public/icons/print.png", "printed-light.png"]];
 
+// Contact page benefit icons. Already drawn inside their own pale circle, so
+// they only need the trim; no background to strip and no recolouring.
+const CONTACT_ICONS = "public/icons/contact";
+const contactIcons = [
+  ["Person with Gear Icon.webp", "advice.png"],
+  ["Pencil and Ruler Icon.webp", "specification.png"],
+  ["Clock with Motion Lines Icon.webp", "response.png"],
+];
+
 const photos = [
   ["FIBC Top Detail with Four Lifting Loops.webp", "hero.webp"],
   ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
@@ -111,9 +120,10 @@ for (const [src, out] of icons) await clean(path.join(SRC, src), path.join(ICONS
 for (const [src, out] of lightIcons)
   await clean(path.join(SRC, src), path.join(ICONS, out), { navyToWhite: true });
 for (const [src, out] of siteIcons) await clean(src, path.join(ICONS, out));
+for (const [src, out] of contactIcons) await clean(path.join(SRC, src), path.join(CONTACT_ICONS, out));
 for (const [src, out] of photos) {
   const write = out.endsWith(".webp") ? cutout : photo;
   await write(path.join(SRC, src), path.join(PHOTOS, out));
 }
 
-console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length} icons, ${photos.length} photos prepared`);
+console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length + contactIcons.length} icons, ${photos.length} photos prepared`);

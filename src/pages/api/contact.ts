@@ -26,7 +26,9 @@ export const prerender = false;
 const TURNSTILE_VERIFY = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 const RESEND_SEND = "https://api.resend.com/emails";
 
-const MAX_LENGTHS = { name: 120, company: 160, email: 200, phone: 60, product: 120, message: 4000 };
+// message matches the counter the design shows, and the maxlength on the
+// field. Trimming here as well, because a crafted POST ignores both.
+const MAX_LENGTHS = { name: 120, company: 160, email: 200, phone: 60, product: 120, message: 500 };
 
 /**
  * In-memory, per-instance rate limit. Serverless means several instances and a

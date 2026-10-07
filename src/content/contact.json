@@ -7,19 +7,38 @@
     "sv": "Berätta vad du packar, så återkommer vi med en specifikation och ett pris. Försäljning, lager och support i Göteborg.",
     "en": "Tell us what you are packing and we will come back with a specification and a price. Sales, stock and support in Gothenburg."
   },
-
-  "heroEyebrow": { "sv": "Kontakt", "en": "Contact" },
-  "heroTitle": { "sv": "Berätta vad du packar", "en": "Tell us what you are packing" },
+  "heroEyebrow": {
+    "sv": "Kontakt",
+    "en": "Contact"
+  },
+  "heroTitle": {
+    "sv": "Berätta vad du packar",
+    "en": "Tell us what you are packing"
+  },
   "heroBody": {
     "sv": "Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så återkommer vi med en specifikation och ett pris. Vet du inte allt ännu spelar ingen roll, vi hjälper dig fram till rätt säck.",
     "en": "Give us the product, weight, filling method and handling requirements, and we will come back with a specification and a price. If you do not know all of it yet that is fine, we will help you get to the right bag."
   },
-
-  "detailsHeading": { "sv": "Direkt till oss", "en": "Reach us directly" },
-  "detailsEmailLabel": { "sv": "E-post", "en": "Email" },
-  "detailsPhoneLabel": { "sv": "Telefon", "en": "Phone" },
-  "detailsAddressLabel": { "sv": "Adress", "en": "Address" },
-  "detailsHoursLabel": { "sv": "Öppettider", "en": "Opening hours" },
+  "detailsHeading": {
+    "sv": "Direkt till oss",
+    "en": "Reach us directly"
+  },
+  "detailsEmailLabel": {
+    "sv": "E-post",
+    "en": "Email"
+  },
+  "detailsPhoneLabel": {
+    "sv": "Telefon",
+    "en": "Phone"
+  },
+  "detailsAddressLabel": {
+    "sv": "Adress",
+    "en": "Address"
+  },
+  "detailsHoursLabel": {
+    "sv": "Öppettider",
+    "en": "Opening hours"
+  },
   "detailsHours": {
     "sv": "Måndag till fredag, 08.00 till 17.00",
     "en": "Monday to Friday, 08:00 to 17:00"
@@ -28,44 +47,100 @@
     "sv": "Vi svarar normalt inom en arbetsdag.",
     "en": "We normally reply within one working day."
   },
-
-  "formHeading": { "sv": "Skicka en förfrågan", "en": "Send an enquiry" },
-  "labelName": { "sv": "Namn", "en": "Name" },
-  "labelCompany": { "sv": "Företag", "en": "Company" },
-  "labelEmail": { "sv": "E-post", "en": "Email" },
-  "labelPhone": { "sv": "Telefon", "en": "Phone" },
-  "labelProduct": { "sv": "Vilken produkt gäller det?", "en": "Which product is this about?" },
-  "labelMessage": { "sv": "Vad packar du?", "en": "What are you packing?" },
+  "formHeading": {
+    "sv": "Skicka en förfrågan",
+    "en": "Send an enquiry"
+  },
+  "labelName": {
+    "sv": "Namn",
+    "en": "Name"
+  },
+  "labelCompany": {
+    "sv": "Företag",
+    "en": "Company"
+  },
+  "labelEmail": {
+    "sv": "E-post",
+    "en": "Email"
+  },
+  "labelPhone": {
+    "sv": "Telefon",
+    "en": "Phone"
+  },
+  "labelProduct": {
+    "sv": "Vilken produkt gäller det?",
+    "en": "Which product is this about?"
+  },
+  "labelMessage": {
+    "sv": "Vad packar du?",
+    "en": "What are you packing?"
+  },
   "messagePlaceholder": {
     "sv": "Produkt, vikt per säck, hur den fylls och töms, och om den lagras utomhus.",
     "en": "Product, weight per bag, how it is filled and emptied, and whether it is stored outdoors."
   },
-  "optionalSuffix": { "sv": "valfritt", "en": "optional" },
+  "optionalSuffix": {
+    "sv": "valfritt",
+    "en": "optional"
+  },
   "productOptions": [
-    { "sv": "FIBC storsäckar", "en": "FIBC bulk bags" },
-    { "sv": "PP-säckar", "en": "PP woven sacks" },
-    { "sv": "Virkesöverdrag", "en": "Lumber covers" },
-    { "sv": "Innerpåsar och liners", "en": "Inner bags and liners" },
-    { "sv": "Väv på rulle", "en": "Fabric on the roll" },
-    { "sv": "Tillbehör", "en": "Accessories" },
-    { "sv": "Vet inte än", "en": "Not sure yet" }
+    {
+      "sv": "FIBC storsäckar",
+      "en": "FIBC bulk bags"
+    },
+    {
+      "sv": "PP-säckar",
+      "en": "PP woven sacks"
+    },
+    {
+      "sv": "Virkesöverdrag",
+      "en": "Lumber covers"
+    },
+    {
+      "sv": "Innerpåsar och liners",
+      "en": "Inner bags and liners"
+    },
+    {
+      "sv": "Väv på rulle",
+      "en": "Fabric on the roll"
+    },
+    {
+      "sv": "Tillbehör",
+      "en": "Accessories"
+    },
+    {
+      "sv": "Vet inte än",
+      "en": "Not sure yet"
+    }
   ],
-
   "consentLabel": {
     "sv": "Jag samtycker till att Fortapac behandlar mina uppgifter för att besvara den här förfrågan.",
     "en": "I consent to Fortapac processing my details in order to answer this enquiry."
   },
-  "consentLinkText": { "sv": "Läs integritetspolicyn", "en": "Read the privacy policy" },
-  "submitButton": { "sv": "Skicka förfrågan", "en": "Send enquiry" },
-  "submitSending": { "sv": "Skickar", "en": "Sending" },
-
-  "successHeading": { "sv": "Tack, vi har tagit emot din förfrågan.", "en": "Thank you, we have your enquiry." },
+  "consentLinkText": {
+    "sv": "Läs integritetspolicyn",
+    "en": "Read the privacy policy"
+  },
+  "submitButton": {
+    "sv": "Skicka förfrågan",
+    "en": "Send enquiry"
+  },
+  "submitSending": {
+    "sv": "Skickar",
+    "en": "Sending"
+  },
+  "successHeading": {
+    "sv": "Tack, vi har tagit emot din förfrågan.",
+    "en": "Thank you, we have your enquiry."
+  },
   "successBody": {
     "sv": "Vi återkommer normalt inom en arbetsdag. Brådskar det, ring oss.",
     "en": "We normally reply within one working day. If it is urgent, call us."
   },
-
-  "errorHeading": { "sv": "Förfrågan kunde inte skickas.", "en": "The enquiry could not be sent." },
+  "errorHeading": {
+    "sv": "Förfrågan kunde inte skickas.",
+    "en": "The enquiry could not be sent."
+  },
   "errorValidation": {
     "sv": "Kontrollera namn, e-post, meddelande och att du har samtyckt.",
     "en": "Check your name, email, message, and that you have given consent."
@@ -82,9 +157,71 @@
     "sv": "Något gick fel hos oss. Mejla oss direkt så hjälper vi dig.",
     "en": "Something went wrong on our side. Email us directly and we will help."
   },
-
   "captchaNotice": {
     "sv": "Det här formuläret skyddas av Cloudflare Turnstile för att stoppa automatiserad skräppost.",
     "en": "This form is protected by Cloudflare Turnstile to stop automated spam."
+  },
+  "benefits": [
+    {
+      "title": {
+        "sv": "Teknisk rådgivning",
+        "en": "Expert advice"
+      },
+      "body": {
+        "sv": "Prata med våra FIBC-specialister för teknisk vägledning.",
+        "en": "Speak to our FIBC specialists for technical guidance."
+      },
+      "icon": "advice.png"
+    },
+    {
+      "title": {
+        "sv": "Måttanpassad specifikation",
+        "en": "Custom specification"
+      },
+      "body": {
+        "sv": "Vi hjälper dig bestämma rätt konstruktion och tillval.",
+        "en": "We will help you define the right construction and options."
+      },
+      "icon": "specification.png"
+    },
+    {
+      "title": {
+        "sv": "Snabbt svar",
+        "en": "Fast response"
+      },
+      "body": {
+        "sv": "Vi svarar normalt inom en arbetsdag.",
+        "en": "We normally reply within one working day."
+      },
+      "icon": "response.png"
+    }
+  ],
+  "placeholderName": {
+    "sv": "Ditt namn",
+    "en": "Your name"
+  },
+  "placeholderCompany": {
+    "sv": "Företagsnamn",
+    "en": "Company name"
+  },
+  "placeholderEmail": {
+    "sv": "du@foretag.se",
+    "en": "you@company.com"
+  },
+  "placeholderPhone": {
+    "sv": "+46 70 123 45 67",
+    "en": "+46 70 123 45 67"
+  },
+  "placeholderProduct": {
+    "sv": "Välj en produkt",
+    "en": "Select a product"
+  },
+  "requiredSuffix": {
+    "sv": "obligatoriskt",
+    "en": "required"
+  },
+  "directHeading": {
+    "sv": "Eller nå oss direkt",
+    "en": "Or reach us directly"
   }
 }

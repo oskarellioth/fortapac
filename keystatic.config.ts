@@ -173,6 +173,16 @@ export default config({
         heroTitle: bilingual("Hero headline", "A full stop in brand orange is added automatically."),
         heroBody: bilingualLong("Hero paragraph"),
 
+        benefits: fields.array(
+          fields.object({
+            title: bilingual("Title"),
+            body: bilingualLong("Body"),
+            icon: fields.text({ label: "Icon filename", description: "In public/icons/contact/." }),
+          }),
+          { label: "Benefits beside the form", itemLabel: (props) => props.fields.title.fields.en.value || "Benefit" },
+        ),
+
+        directHeading: bilingual("Reach us directly, heading"),
         detailsHeading: bilingual("Details, heading"),
         detailsEmailLabel: bilingual("Details, email label"),
         detailsPhoneLabel: bilingual("Details, phone label"),
@@ -190,6 +200,12 @@ export default config({
         labelMessage: bilingual("Field, message"),
         messagePlaceholder: bilingualLong("Field, message placeholder"),
         optionalSuffix: bilingual("Optional marker"),
+        requiredSuffix: bilingual("Required marker"),
+        placeholderName: bilingual("Placeholder, name"),
+        placeholderCompany: bilingual("Placeholder, company"),
+        placeholderEmail: bilingual("Placeholder, email"),
+        placeholderPhone: bilingual("Placeholder, phone"),
+        placeholderProduct: bilingual("Placeholder, product dropdown"),
         productOptions: fields.array(bilingual("Option"), {
           label: "Product dropdown options",
           itemLabel: (props) => props.fields.en.value || "Option",

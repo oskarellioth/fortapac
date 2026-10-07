@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-10-07. 412 Swedish strings across 22 content files.
+Generated 2026-10-07. 425 Swedish strings across 22 content files.
 
 ## How to use this
 
@@ -421,6 +421,84 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 
 - EN: This form is protected by Cloudflare Turnstile to stop automated spam.
 - SV: Det här formuläret skyddas av Cloudflare Turnstile för att stoppa automatiserad skräppost.
+- Correction:
+
+**benefits › 1 › title**
+
+- EN: Expert advice
+- SV: Teknisk rådgivning
+- Correction:
+
+**benefits › 1 › body**
+
+- EN: Speak to our FIBC specialists for technical guidance.
+- SV: Prata med våra FIBC-specialister för teknisk vägledning.
+- Correction:
+
+**benefits › 2 › title**
+
+- EN: Custom specification
+- SV: Måttanpassad specifikation
+- Correction:
+
+**benefits › 2 › body**
+
+- EN: We will help you define the right construction and options.
+- SV: Vi hjälper dig bestämma rätt konstruktion och tillval.
+- Correction:
+
+**benefits › 3 › title**
+
+- EN: Fast response
+- SV: Snabbt svar
+- Correction:
+
+**benefits › 3 › body**
+
+- EN: We normally reply within one working day.
+- SV: Vi svarar normalt inom en arbetsdag.
+- Correction:
+
+**placeholderName**
+
+- EN: Your name
+- SV: Ditt namn
+- Correction:
+
+**placeholderCompany**
+
+- EN: Company name
+- SV: Företagsnamn
+- Correction:
+
+**placeholderEmail**
+
+- EN: you@company.com
+- SV: du@foretag.se
+- Correction:
+
+**placeholderPhone**
+
+- EN: +46 70 123 45 67
+- SV: +46 70 123 45 67
+- Correction:
+
+**placeholderProduct**
+
+- EN: Select a product
+- SV: Välj en produkt
+- Correction:
+
+**requiredSuffix**
+
+- EN: required
+- SV: obligatoriskt
+- Correction:
+
+**directHeading**
+
+- EN: Or reach us directly
+- SV: Eller nå oss direkt
 - Correction:
 
 #### guide-fibc

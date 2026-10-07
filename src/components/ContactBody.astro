@@ -1,16 +1,17 @@
 ---
-import { content, pick, ROUTES, type Locale } from "../lib/content";
+import { content, pick, media, MEDIA, ROUTES, type Locale } from "../lib/content";
+import { photo } from "../lib/images";
 
 /**
- * Contact page.
+ * Contact page, built from the supplied mockup.
  *
- * A plain form that POSTs to /api/contact, so it behaves like a form: no fetch,
- * no client state, and the back button works. The endpoint redirects back here
- * with ?status=..., which is what drives the message at the top.
+ * Still a plain form POSTing to /api/contact, so it behaves like a form and
+ * the back button works. The endpoint redirects back with ?status=, which
+ * drives the message above the card.
  *
- * Turnstile's widget is the only script on the page. Without a site key the
- * widget is left out entirely and the form explains that it is not accepting
- * messages yet, rather than rendering a submit button that silently fails.
+ * The bag photograph sits behind both columns rather than inside either, which
+ * is what lets the form card overlap it. It is decorative, so it carries an
+ * empty alt and is hidden from assistive tech.
  */
 
 interface Props {
@@ -24,6 +25,12 @@ const t = (v: { sv: string; en: string } | undefined) => pick(v, locale);
 const status = Astro.url.searchParams.get("status");
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 
+/** The mockup's counter reads 0/500, so that is the limit the field enforces. */
+const MESSAGE_MAX = 500;
+
+// Same photograph as the product page hero, reused rather than shipped twice.
+const bag = photo("/products/fibc/hero.webp");
+
 const errorBody = {
   invalid: t(c.errorValidation),
   captcha: t(c.errorCaptcha),
@@ -33,7 +40,6 @@ const errorBody = {
 
 const labels = {
   home: locale === "sv" ? "Hem" : "Home",
-  required: locale === "sv" ? "obligatoriskt" : "required",
   notConfigured:
     locale === "sv"
       ? "Formuläret är inte aktiverat än. Mejla oss så länge."
@@ -50,36 +56,49 @@ const labels = {
     </nav>
   </div>
 
-  <section class="contact-hero">
-    <div class="wrap">
-      <div class="eyebrow mono">{t(c.heroEyebrow)}</div>
-      <h1>{t(c.heroTitle)}<span class="dot">.</span></h1>
-      <p class="contact-lede">{t(c.heroBody)}</p>
+  <section class="contact-top">
+    <div class="contact-bag" aria-hidden="true">
+      <img
+        src={bag.src}
+        srcset={bag.srcset || undefined}
+        sizes="(max-width: 1100px) 0px, 46vw"
+        width={bag.width}
+        height={bag.height}
+        alt=""
+        loading="eager"
+        decoding="async"
+      />
     </div>
-  </section>
 
-  <section class="contact-main">
-    <div class="wrap contact-grid">
-      <div class="contact-details">
-        <h2>{t(c.detailsHeading)}</h2>
-        <dl>
-          <dt>{t(c.detailsEmailLabel)}</dt>
-          <dd><a href={`mailto:${s.email}`}>{s.email}</a></dd>
-          {s.phone && (
-            <>
-              <dt>{t(c.detailsPhoneLabel)}</dt>
-              <dd><a href={`tel:${s.phone.replace(/\s+/g, "")}`}>{s.phone}</a></dd>
-            </>
-          )}
-          <dt>{t(c.detailsAddressLabel)}</dt>
-          <dd>{s.companyName}<br />{s.city}</dd>
-          <dt>{t(c.detailsHoursLabel)}</dt>
-          <dd>{t(c.detailsHours)}</dd>
-        </dl>
-        <p class="contact-response">{t(c.responseNote)}</p>
+    <div class="wrap contact-top-grid">
+      <div class="contact-intro">
+        <div class="eyebrow mono">{t(c.heroEyebrow)}</div>
+        <h1>{t(c.heroTitle)}<span class="dot">.</span></h1>
+        <p class="contact-lede">{t(c.heroBody)}</p>
+
+        <ul class="contact-benefits">
+          {c.benefits.map((b) => (
+            <li>
+              <span class="contact-benefit-ic">
+                <img
+                  src={media(MEDIA.contactIcons, b.icon)}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div>
+                <strong>{t(b.title)}</strong>
+                <span>{t(b.body)}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div class="contact-form-col" id="form">
+      <div class="contact-card" id="form">
         {status === "sent" && (
           <div class="contact-alert is-success" role="status">
             <strong>{t(c.successHeading)}</strong>
@@ -103,8 +122,8 @@ const labels = {
           <form class="contact-form" method="POST" action="/api/contact">
             <input type="hidden" name="locale" value={locale} />
 
-            {/* Honeypot. Hidden from sight and from screen readers, and left out
-                of the tab order, so only a bot ever fills it in. */}
+            {/* Honeypot: off-screen, out of the tab order, hidden from
+                assistive tech. Only a bot ever fills it in. */}
             <div class="contact-hp" aria-hidden="true">
               <label for="website">Website</label>
               <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
@@ -112,30 +131,34 @@ const labels = {
 
             <div class="contact-row">
               <div class="field">
-                <label for="name">{t(c.labelName)} <span class="req">{labels.required}</span></label>
-                <input id="name" name="name" type="text" required maxlength="120" autocomplete="name" />
+                <label for="name">{t(c.labelName)} <span class="req">{t(c.requiredSuffix)}</span></label>
+                <input id="name" name="name" type="text" required maxlength="120"
+                  autocomplete="name" placeholder={t(c.placeholderName)} />
               </div>
               <div class="field">
                 <label for="company">{t(c.labelCompany)} <span class="opt">{t(c.optionalSuffix)}</span></label>
-                <input id="company" name="company" type="text" maxlength="160" autocomplete="organization" />
+                <input id="company" name="company" type="text" maxlength="160"
+                  autocomplete="organization" placeholder={t(c.placeholderCompany)} />
               </div>
             </div>
 
             <div class="contact-row">
               <div class="field">
-                <label for="email">{t(c.labelEmail)} <span class="req">{labels.required}</span></label>
-                <input id="email" name="email" type="email" required maxlength="200" autocomplete="email" />
+                <label for="email">{t(c.labelEmail)} <span class="req">{t(c.requiredSuffix)}</span></label>
+                <input id="email" name="email" type="email" required maxlength="200"
+                  autocomplete="email" placeholder={t(c.placeholderEmail)} />
               </div>
               <div class="field">
                 <label for="phone">{t(c.labelPhone)} <span class="opt">{t(c.optionalSuffix)}</span></label>
-                <input id="phone" name="phone" type="tel" maxlength="60" autocomplete="tel" />
+                <input id="phone" name="phone" type="tel" maxlength="60"
+                  autocomplete="tel" placeholder={t(c.placeholderPhone)} />
               </div>
             </div>
 
             <div class="field">
               <label for="product">{t(c.labelProduct)} <span class="opt">{t(c.optionalSuffix)}</span></label>
               <select id="product" name="product">
-                <option value="">{locale === "sv" ? "Välj" : "Select"}</option>
+                <option value="">{t(c.placeholderProduct)}</option>
                 {c.productOptions.map((o) => (
                   <option value={t(o)}>{t(o)}</option>
                 ))}
@@ -143,15 +166,12 @@ const labels = {
             </div>
 
             <div class="field">
-              <label for="message">{t(c.labelMessage)} <span class="req">{labels.required}</span></label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                required
-                minlength="10"
-                maxlength="4000"
-                placeholder={t(c.messagePlaceholder)}></textarea>
+              <label for="message">{t(c.labelMessage)} <span class="req">{t(c.requiredSuffix)}</span></label>
+              <textarea id="message" name="message" rows="5" required minlength="10"
+                maxlength={MESSAGE_MAX} placeholder={t(c.messagePlaceholder)}></textarea>
+              {/* aria-live is deliberately off: announcing on every keystroke
+                  would be unusable. The maxlength attribute is the real limit. */}
+              <output class="contact-count" for="message" id="message-count">0/{MESSAGE_MAX}</output>
             </div>
 
             <div class="field contact-consent">
@@ -166,7 +186,7 @@ const labels = {
 
             <div class="cf-turnstile" data-sitekey={siteKey} data-language={locale}></div>
 
-            <button class="button primary" type="submit">
+            <button class="button primary contact-submit" type="submit">
               {t(c.submitButton)} <span class="arrow">→</span>
             </button>
 
@@ -176,8 +196,74 @@ const labels = {
       </div>
     </div>
   </section>
+
+  <section class="contact-direct">
+    <div class="wrap contact-direct-inner">
+      <h2>{t(c.directHeading)}</h2>
+
+      <div class="contact-direct-item">
+        <span class="contact-direct-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+        </span>
+        <div>
+          <strong>{t(c.detailsEmailLabel)}</strong>
+          <a href={`mailto:${s.email}`}>{s.email}</a>
+        </div>
+      </div>
+
+      {s.phone && (
+        <div class="contact-direct-item">
+          <span class="contact-direct-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z" /></svg>
+          </span>
+          <div>
+            <strong>{t(c.detailsPhoneLabel)}</strong>
+            <a href={`tel:${s.phone.replace(/\s+/g, "")}`}>{s.phone}</a>
+          </div>
+        </div>
+      )}
+
+      <div class="contact-direct-item">
+        <span class="contact-direct-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" /><circle cx="12" cy="10" r="2.6" /></svg>
+        </span>
+        <div>
+          <strong>{t(c.detailsAddressLabel)}</strong>
+          <span>{s.companyName}<br />{s.city}</span>
+        </div>
+      </div>
+
+      <div class="contact-direct-item">
+        <span class="contact-direct-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5.5l3.5 2" /></svg>
+        </span>
+        <div>
+          <strong>{t(c.detailsHoursLabel)}</strong>
+          <span>{t(c.detailsHours)}</span>
+          <span class="contact-direct-note">{t(c.responseNote)}</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 {siteKey && (
-  <script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+  <>
+    <script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+    {/* The counter is the only script of our own on the page, and the form
+        works without it: maxlength enforces the limit either way. */}
+    <script is:inline define:vars={{ max: MESSAGE_MAX }}>
+      (() => {
+        const field = document.getElementById("message");
+        const out = document.getElementById("message-count");
+        if (!field || !out) return;
+        const update = () => {
+          out.textContent = `${field.value.length}/${max}`;
+          out.classList.toggle("is-full", field.value.length >= max);
+        };
+        field.addEventListener("input", update);
+        update();
+      })();
+    </script>
+  </>
 )}

@@ -25,6 +25,7 @@ export const MEDIA = {
   industryPhotos: "/industries/focus/",
   fibcIcons: "/icons/fibc/",
   fibcPhotos: "/products/fibc/",
+  contactIcons: "/icons/contact/",
 } as const;
 
 /** Empty stays empty, so callers can treat "" as "no image yet". */
