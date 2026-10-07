@@ -89,7 +89,7 @@ const photos = [
   ["White Industrial Bulk Bag with Orange Stitching.png", "standard.jpg"],
   ["White FIBC Bag with Orange Stitching.png", "filling-discharge.jpg"],
   ["Industrial White Bulk Bag with Orange Lifting Loops.png", "single-loop.jpg"],
-  ["Antistatic Bulk Bag with Orange Stitching.png", "specialist.jpg"],
+  ["Conductive Bulk Bag with Spouts and Orange Stitching.webp", "specialist.jpg"],
   ["Forklift Lifting White Bulk Bag.png", "application.jpg"],
 ];
 
