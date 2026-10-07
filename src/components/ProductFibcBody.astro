@@ -198,6 +198,15 @@ const productSchema = {
   <section id="contact" class="pdp-help">
     <div class="wrap">
       <div class="pdp-help-inner">
+        {/* The mockup's own document icon. No PNG was supplied for this slot,
+            so the inline SVG from the reference is kept as drawn. */}
+        <div class="pdp-help-ic" aria-hidden="true">
+          <svg viewBox="0 0 50 50"
+            ><path d="M12 4h20l10 10v32H12V4z" /><path d="M32 4v10h10" /><path
+              d="M18 22h18M18 28h18M18 34h12"
+            /></svg
+          >
+        </div>
         <div class="pdp-help-copy">
           <div class="eyebrow mono">{t(p.helpEyebrow)}</div>
           <h3>{t(p.helpHeading)}</h3>
