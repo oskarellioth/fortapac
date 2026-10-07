@@ -31,6 +31,9 @@ const GROUPS = [
   { dir: "public/hero", widths: [640, 1024, 1600, 2400] },
   { dir: "public/products/focus", widths: [480, 800, 1200] },
   { dir: "public/industries/focus", widths: [480, 800, 1200] },
+  // Product page photography: a square hero at roughly half the viewport, four
+  // range cards at about a quarter, and one half-width application shot.
+  { dir: "public/products/fibc", widths: [400, 800, 1200, 1600] },
 ];
 
 const PHOTO = /\.(jpe?g|png)$/i;

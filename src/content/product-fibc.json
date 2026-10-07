@@ -1,0 +1,323 @@
+{
+  "seoTitle": {
+    "sv": "FIBC storsäckar, byggda efter din specifikation | Fortapac",
+    "en": "FIBC bulk bags, built to your specification | Fortapac"
+  },
+  "seoDescription": {
+    "sv": "Storsäckar från standard till helt måttanpassade, specificerade efter din produkt, påfyllningsprocess och hantering. SWL 500 till 2 000 kg, säkerhetsfaktor 5:1 och 6:1. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.",
+    "en": "Bulk bags from standard to fully customised, specified around your product, filling process and handling. SWL 500 to 2 000 kg, safety factors 5:1 and 6:1. Manufactured at our parent factory, with sales and support in Sweden."
+  },
+  "crumbProducts": {
+    "sv": "Produkter",
+    "en": "Products"
+  },
+  "crumbHere": {
+    "sv": "FIBC storsäckar",
+    "en": "FIBC Bulk Bags"
+  },
+  "heroEyebrow": {
+    "sv": "FIBC storsäckar",
+    "en": "FIBC Bulk Bags"
+  },
+  "heroTitle": {
+    "sv": "Byggda efter din specifikation",
+    "en": "Built to your specification"
+  },
+  "heroBody1": {
+    "sv": "Från standardstorsäckar till helt måttanpassade FIBC, specificerade efter din produkt, din påfyllningsprocess och dina hanteringskrav.",
+    "en": "From standard bulk bags to fully customised FIBCs, specified around your product, filling process and handling requirements."
+  },
+  "heroBody2": {
+    "sv": "Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.",
+    "en": "Manufactured at our parent factory, with local sales and support in Sweden."
+  },
+  "heroButton": {
+    "sv": "Diskutera ditt behov",
+    "en": "Discuss your requirement"
+  },
+  "heroPhoto": "hero.jpg",
+  "heroPhotoAlt": {
+    "sv": "Närbild på en FIBC storsäck med lyftöglor och orange sömmar.",
+    "en": "Close-up of an FIBC bulk bag showing lifting loops and orange stitching."
+  },
+  "specs": [
+    {
+      "value": "500–2 000 kg",
+      "valueLabel": {
+        "sv": "",
+        "en": ""
+      },
+      "label": {
+        "sv": "SWL-intervall",
+        "en": "SWL range"
+      },
+      "icon": "swl-light.png"
+    },
+    {
+      "value": "5:1 / 6:1",
+      "valueLabel": {
+        "sv": "",
+        "en": ""
+      },
+      "label": {
+        "sv": "Säkerhetsfaktorer",
+        "en": "Safety factors"
+      },
+      "icon": "safety-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": {
+        "sv": "Måttanpassat",
+        "en": "Custom"
+      },
+      "label": {
+        "sv": "Mått och konstruktioner",
+        "en": "Sizes and constructions"
+      },
+      "icon": "sizes-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": {
+        "sv": "Tryck",
+        "en": "Printed"
+      },
+      "label": {
+        "sv": "Efter din specifikation",
+        "en": "To your specification"
+      },
+      "icon": "printed-light.png"
+    }
+  ],
+  "rangeEyebrow": {
+    "sv": "Vårt FIBC-sortiment",
+    "en": "Our FIBC range"
+  },
+  "rangeHeading": {
+    "sv": "Rätt säck för jobbet.",
+    "en": "The right bag for the job."
+  },
+  "range": [
+    {
+      "name": {
+        "sv": "Standard-FIBC",
+        "en": "Standard FIBCs"
+      },
+      "body": {
+        "sv": "För allmän industri och bulkhantering.",
+        "en": "For general industrial and bulk applications."
+      },
+      "photo": "standard.jpg"
+    },
+    {
+      "name": {
+        "sv": "FIBC med påfyllning och tömning",
+        "en": "Filling and discharge FIBCs"
+      },
+      "body": {
+        "sv": "För kontrollerad påfyllning och tömning.",
+        "en": "For controlled filling and emptying."
+      },
+      "photo": "filling-discharge.jpg"
+    },
+    {
+      "name": {
+        "sv": "FIBC med enkel lyftögla",
+        "en": "Single-loop FIBCs"
+      },
+      "body": {
+        "sv": "För jordbruk, gödsel och automatiserad hantering.",
+        "en": "For agriculture, fertiliser and automated handling."
+      },
+      "photo": "single-loop.jpg"
+    },
+    {
+      "name": {
+        "sv": "Special-FIBC",
+        "en": "Specialist FIBCs"
+      },
+      "body": {
+        "sv": "Bafflade, UN-certifierade, livsmedelsgodkända och tillämpningsspecifika konstruktioner.",
+        "en": "Baffle, UN, food-contact and application-specific designs."
+      },
+      "photo": "specialist.jpg"
+    }
+  ],
+  "builtEyebrow": {
+    "sv": "Byggd kring din produkt",
+    "en": "Built around your product"
+  },
+  "builtHeading": {
+    "sv": "Specificerad efter hur du packar och hanterar.",
+    "en": "Specified for the way you pack and handle."
+  },
+  "builtBody": {
+    "sv": "Varje FIBC konfigureras efter din produkt, din process och kraven på din arbetsplats.",
+    "en": "Every FIBC is configured to match your product, process and site requirements."
+  },
+  "matrix": [
+    {
+      "label": {
+        "sv": "Konstruktion",
+        "en": "Construction"
+      },
+      "options": {
+        "sv": "Rund · U-panel · Fyrpanel · Bafflad",
+        "en": "Circular · U-panel · 4-panel · Baffle"
+      },
+      "icon": "construction.png"
+    },
+    {
+      "label": {
+        "sv": "Påfyllning",
+        "en": "Filling"
+      },
+      "options": {
+        "sv": "Öppen topp · Skärmtopp · Påfyllningspip",
+        "en": "Open top · Duffle top · Filling spout"
+      },
+      "icon": "filling.png"
+    },
+    {
+      "label": {
+        "sv": "Tömning",
+        "en": "Discharge"
+      },
+      "options": {
+        "sv": "Plan botten · Tömningspip · Helöppnande",
+        "en": "Flat base · Discharge spout · Full opening"
+      },
+      "icon": "discharge.png"
+    },
+    {
+      "label": {
+        "sv": "Väv och innerpåse",
+        "en": "Fabric and liner"
+      },
+      "options": {
+        "sv": "Belagd · Obelagd · Med innerpåse",
+        "en": "Coated · Uncoated · Lined"
+      },
+      "icon": "fabric.png"
+    },
+    {
+      "label": {
+        "sv": "Lyft",
+        "en": "Lifting"
+      },
+      "options": {
+        "sv": "Fyra lyftöglor · Enkel lyftögla · Måttanpassat",
+        "en": "4-loop · Single-loop · Custom"
+      },
+      "icon": "lifting.png"
+    }
+  ],
+  "appEyebrow": {
+    "sv": "Tillämpningar",
+    "en": "Applications"
+  },
+  "appHeading": {
+    "sv": "Utformad efter innehållet.",
+    "en": "Designed around what is inside."
+  },
+  "appBody": {
+    "sv": "Vi specificerar rätt FIBC för ditt material och dina hanteringskrav.",
+    "en": "We specify the right FIBC for your material and handling requirements."
+  },
+  "appPhoto": "application.jpg",
+  "appPhotoAlt": {
+    "sv": "Truck som lyfter en fylld storsäck vid en ballasthög.",
+    "en": "Forklift lifting a filled bulk bag beside a pile of aggregate."
+  },
+  "applications": [
+    {
+      "sv": "Pulver",
+      "en": "Powders"
+    },
+    {
+      "sv": "Granulat",
+      "en": "Granules"
+    },
+    {
+      "sv": "Spannmål och utsäde",
+      "en": "Grain and seed"
+    },
+    {
+      "sv": "Gödsel",
+      "en": "Fertiliser"
+    },
+    {
+      "sv": "Ballast och mineral",
+      "en": "Aggregates and minerals"
+    },
+    {
+      "sv": "Kemikalier",
+      "en": "Chemicals"
+    }
+  ],
+  "directEyebrow": {
+    "sv": "Direkt från tillverkningen",
+    "en": "Direct from manufacturing"
+  },
+  "directHeadingLine1": {
+    "sv": "Tillverkad där.",
+    "en": "Made there."
+  },
+  "directHeadingLine2": {
+    "sv": "Servad här.",
+    "en": "Supported here."
+  },
+  "directBody": {
+    "sv": "Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.",
+    "en": "Manufactured at our parent factory, with specification, sales and support handled locally in Sweden."
+  },
+  "directColumns": [
+    {
+      "label": {
+        "sv": "Egen tillverkning",
+        "en": "Direct manufacturing"
+      },
+      "body": {
+        "sv": "Kontroll över specifikation, produktion och tryck.",
+        "en": "Control over specification, production and printing."
+      },
+      "icon": "manufacturing-light.png"
+    },
+    {
+      "label": {
+        "sv": "Lokal support",
+        "en": "Local support"
+      },
+      "body": {
+        "sv": "Svensk kontakt, lagerhållning och planerad leverans.",
+        "en": "Swedish contact, stockholding and planned supply."
+      },
+      "icon": "team-light.png"
+    }
+  ],
+  "helpEyebrow": {
+    "sv": "Behöver du hjälp att specificera?",
+    "en": "Need help specifying?"
+  },
+  "helpHeading": {
+    "sv": "Berätta vad du packar.",
+    "en": "Tell us what you are packing."
+  },
+  "helpBody": {
+    "sv": "Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så hjälper vi dig specificera rätt FIBC.",
+    "en": "Give us the product, weight, filling method and handling requirements. We will help specify the right FIBC."
+  },
+  "helpButtonPrimary": {
+    "sv": "Diskutera ditt behov",
+    "en": "Discuss your requirement"
+  },
+  "helpButtonSecondary": {
+    "sv": "Begär offert",
+    "en": "Request a quote"
+  },
+  "helpGuideLink": {
+    "sv": "Läs guiden: så väljer du rätt storsäck",
+    "en": "Read the guide: how to specify an FIBC"
+  }
+}

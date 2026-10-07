@@ -1,0 +1,221 @@
+---
+import { content, pick, ROUTES, anchors, type Locale } from "../lib/content";
+import { photo } from "../lib/images";
+
+/**
+ * The FIBC product page, built from the supplied mockup.
+ *
+ * Product schema is included because this is the page a shopping or assistant
+ * query should land on, and it is the one place on the site that states the
+ * load range and safety factors as structured data. No price or availability,
+ * since everything here is quoted to specification.
+ */
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const p = content.productFibc;
+const a = anchors(locale);
+const t = (v: { sv: string; en: string } | undefined) => pick(v, locale);
+
+const labels = { home: locale === "sv" ? "Hem" : "Home" };
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: t(p.crumbHere),
+  description: t(p.seoDescription),
+  category: locale === "sv" ? "Storsäckar" : "Bulk bags",
+  material: locale === "sv" ? "Vävt polypropylen" : "Woven polypropylene",
+  brand: { "@type": "Brand", name: "Fortapac" },
+  additionalProperty: p.specs
+    .filter((s) => s.value)
+    .map((s) => ({ "@type": "PropertyValue", name: t(s.label), value: s.value })),
+};
+---
+
+<main class="pdp">
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+
+  <div class="wrap">
+    <nav class="pdp-crumb" aria-label={locale === "sv" ? "Brödsmulor" : "Breadcrumb"}>
+      <a href={ROUTES.home[locale]}>{labels.home}</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <a href={a.products}>{t(p.crumbProducts)}</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">{t(p.crumbHere)}</span>
+    </nav>
+  </div>
+
+  <section class="pdp-hero">
+    <div class="wrap pdp-hero-grid">
+      <div class="pdp-hero-copy">
+        <div class="eyebrow mono">{t(p.heroEyebrow)}</div>
+        <h1>{t(p.heroTitle)}<span class="dot">.</span></h1>
+        <p>{t(p.heroBody1)}</p>
+        <p>{t(p.heroBody2)}</p>
+        <a class="button primary" href={`mailto:${content.site.email}`}>
+          {t(p.heroButton)} <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="pdp-hero-photo">
+        {p.heroPhoto && (
+          <img
+            src={photo(p.heroPhoto).src}
+            srcset={photo(p.heroPhoto).srcset || undefined}
+            sizes="(max-width: 980px) 100vw, 46vw"
+            width={photo(p.heroPhoto).width}
+            height={photo(p.heroPhoto).height}
+            alt={t(p.heroPhotoAlt)}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        )}
+      </div>
+    </div>
+  </section>
+
+  <div class="pdp-spec-strip">
+    <div class="wrap pdp-spec-grid">
+      {p.specs.map((s) => (
+        <div class="pdp-spec-cell">
+          <span class="pdp-spec-ic">
+            {s.icon && <img src={s.icon} alt="" width="40" height="40" loading="lazy" decoding="async" />}
+          </span>
+          <div>
+            <div class="pdp-spec-v">{s.value || t(s.valueLabel)}</div>
+            <div class="pdp-spec-k">{t(s.label)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <section class="pdp-range">
+    <div class="wrap">
+      <div class="guide-head">
+        <div class="eyebrow mono">{t(p.rangeEyebrow)}</div>
+        <h2>{t(p.rangeHeading)}</h2>
+      </div>
+      <div class="pdp-range-grid">
+        {p.range.map((r) => (
+          <div class="pdp-range-card">
+            <div class="pdp-range-photo">
+              {r.photo && (
+                <img
+                  src={photo(r.photo).src}
+                  srcset={photo(r.photo).srcset || undefined}
+                  sizes="(max-width: 560px) 90vw, (max-width: 980px) 45vw, 23vw"
+                  width={photo(r.photo).width}
+                  height={photo(r.photo).height}
+                  alt={t(r.name)}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+            </div>
+            <h3>{t(r.name)}</h3>
+            <p>{t(r.body)}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="pdp-built">
+    <div class="wrap pdp-built-grid">
+      <div class="pdp-built-copy">
+        <div class="eyebrow mono">{t(p.builtEyebrow)}</div>
+        <h2>{t(p.builtHeading)}</h2>
+        <p>{t(p.builtBody)}</p>
+      </div>
+      <dl class="pdp-matrix">
+        {p.matrix.map((m) => (
+          <div class="pdp-matrix-row">
+            <span class="pdp-matrix-ic">
+              {m.icon && <img src={m.icon} alt="" width="36" height="36" loading="lazy" decoding="async" />}
+            </span>
+            <dt>{t(m.label)}</dt>
+            <dd>{t(m.options)}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="pdp-app">
+    <div class="pdp-app-grid">
+      <div class="pdp-app-photo">
+        {p.appPhoto && (
+          <img
+            src={photo(p.appPhoto).src}
+            srcset={photo(p.appPhoto).srcset || undefined}
+            sizes="(max-width: 980px) 100vw, 50vw"
+            width={photo(p.appPhoto).width}
+            height={photo(p.appPhoto).height}
+            alt={t(p.appPhotoAlt)}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+      </div>
+      <div class="pdp-app-copy">
+        <div class="eyebrow mono">{t(p.appEyebrow)}</div>
+        <h2>{t(p.appHeading)}</h2>
+        <p>{t(p.appBody)}</p>
+        <ul class="pdp-app-list">
+          {p.applications.map((item) => (
+            <li>{t(item)}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="pdp-direct">
+    <div class="wrap pdp-direct-grid">
+      <div class="pdp-direct-copy">
+        <div class="eyebrow mono">{t(p.directEyebrow)}</div>
+        <h2>{t(p.directHeadingLine1)}<br />{t(p.directHeadingLine2)}</h2>
+        <p>{t(p.directBody)}</p>
+      </div>
+      <div class="pdp-direct-cols">
+        {p.directColumns.map((c) => (
+          <div class="pdp-direct-col">
+            <span class="pdp-direct-ic">
+              {c.icon && <img src={c.icon} alt="" width="44" height="44" loading="lazy" decoding="async" />}
+            </span>
+            <div class="pdp-direct-lab">{t(c.label)}</div>
+            <div class="pdp-direct-desc">{t(c.body)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="pdp-help">
+    <div class="wrap">
+      <div class="pdp-help-inner">
+        <div class="pdp-help-copy">
+          <div class="eyebrow mono">{t(p.helpEyebrow)}</div>
+          <h3>{t(p.helpHeading)}</h3>
+          <p>{t(p.helpBody)}</p>
+          {/* The guide answers the questions this panel asks for. */}
+          <a class="pdp-help-guide" href={ROUTES.guideFibc[locale]}>
+            {t(p.helpGuideLink)} <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="pdp-help-ctas">
+          <a class="button primary" href={`mailto:${content.site.email}`}>
+            {t(p.helpButtonPrimary)} <span class="arrow">→</span>
+          </a>
+          <a class="button light" href={`mailto:${content.site.email}`}>
+            {t(p.helpButtonSecondary)} <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

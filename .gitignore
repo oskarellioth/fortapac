@@ -48,3 +48,7 @@ _source/
 
 # Generated image variants
 public/_img/
+
+# Design source of record: originals stay on disk, prepared copies are
+# committed under public/. scripts/prepare-fibc-icons.mjs reads from here.
+Fibc product page/

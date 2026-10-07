@@ -27,6 +27,8 @@ const PRIORITY: Record<RouteKey, string> = {
   // The guide is the page most likely to earn links and answer a search
   // directly, so it ranks alongside the home page rather than below about.
   guideFibc: "0.9",
+  // The flagship product page, and the main commercial landing target.
+  productFibc: "0.9",
   privacy: "0.3",
   terms: "0.3",
   cookies: "0.3",

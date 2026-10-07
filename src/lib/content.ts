@@ -3,6 +3,7 @@ import about from "../content/about.json";
 import navigation from "../content/navigation.json";
 import site from "../content/site.json";
 import guideFibc from "../content/guide-fibc.json";
+import productFibc from "../content/product-fibc.json";
 
 export type Locale = "sv" | "en";
 
@@ -21,6 +22,8 @@ export const MEDIA = {
   productIcons: "/products/",
   productPhotos: "/products/focus/",
   industryPhotos: "/industries/focus/",
+  fibcIcons: "/icons/fibc/",
+  fibcPhotos: "/products/fibc/",
 } as const;
 
 /** Empty stays empty, so callers can treat "" as "no image yet". */
@@ -124,12 +127,25 @@ const homeResolved = {
   heroImageMobile: media(MEDIA.hero, home.heroImageMobile),
 };
 
+// Icon and photo filenames are resolved here for the same reason as everywhere
+// else: components should never know where a directory lives.
+const productFibcResolved = {
+  ...productFibc,
+  heroPhoto: media(MEDIA.fibcPhotos, productFibc.heroPhoto),
+  appPhoto: media(MEDIA.fibcPhotos, productFibc.appPhoto),
+  specs: productFibc.specs.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+  range: productFibc.range.map((x) => ({ ...x, photo: media(MEDIA.fibcPhotos, x.photo) })),
+  matrix: productFibc.matrix.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+  directColumns: productFibc.directColumns.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+};
+
 export const content = {
   home: homeResolved,
   about,
   navigation: navigationResolved,
   site,
   guideFibc,
+  productFibc: productFibcResolved,
 };
 
 /**
@@ -144,6 +160,7 @@ export const ROUTES = {
   // Slugs are chosen for search rather than symmetry: a Swedish buyer types
   // "välja storsäck", an English one "fibc selection guide".
   guideFibc: { sv: "/valja-storsack", en: "/en/fibc-selection-guide" },
+  productFibc: { sv: "/produkter/fibc-storsackar", en: "/en/products/fibc-bulk-bags" },
   privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
   terms: { sv: "/anvandarvillkor", en: "/en/terms" },
   cookies: { sv: "/cookies", en: "/en/cookies" },
@@ -170,4 +187,15 @@ export function anchors(locale: Locale) {
     sustainability: `${base}/#sustainability`,
     contact: `${base}/#contact`,
   };
+}
+
+/**
+ * Where a product in the mega menu should link.
+ *
+ * Only FIBC has a page of its own so far; everything else still points at the
+ * products section on the home page. Adding a product page is a matter of
+ * adding its route above and a line here.
+ */
+export function productHrefs(locale: Locale): Record<string, string> {
+  return { fibc: ROUTES.productFibc[locale] };
 }

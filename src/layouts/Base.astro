@@ -3,7 +3,7 @@ import SiteNav from "../components/SiteNav.tsx";
 import Footer from "../components/Footer.astro";
 import {
   content, products, industries, pick, ROUTES, anchors,
-  routeKeyForPath, type Locale,
+  routeKeyForPath, productHrefs, type Locale,
 } from "../lib/content";
 import { isIndexableHost } from "../lib/site";
 import "../styles/site.css";
@@ -150,6 +150,7 @@ const labels = {
         aboutPath={ROUTES.about[locale]}
         otherLocaleHref={ROUTES[routeKey][other]}
         anchors={anchors(locale)}
+        productHrefs={productHrefs(locale)}
         productPhotoLabel={labels.productPhoto}
         featuredLabel={labels.featured}
         featuredLinkLabel={labels.featuredLink}

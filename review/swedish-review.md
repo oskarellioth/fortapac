@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-10-07. 320 Swedish strings across 20 content files.
+Generated 2026-10-07. 379 Swedish strings across 21 content files.
 
 ## How to use this
 
@@ -222,6 +222,8 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 - Correction:
 
 ### Other
+
+#### guide-fibc
 
 **seoTitle**
 
@@ -809,6 +811,362 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 
 - EN: Discuss your requirement
 - SV: Diskutera ditt behov
+- Correction:
+
+#### product-fibc
+
+**seoTitle**
+
+- EN: FIBC bulk bags, built to your specification | Fortapac
+- SV: FIBC storsäckar, byggda efter din specifikation | Fortapac
+- Correction:
+
+**seoDescription**
+
+- EN: Bulk bags from standard to fully customised, specified around your product, filling process and handling. SWL 500 to 2 000 kg, safety factors 5:1 and 6:1. Manufactured at our parent factory, with sales and support in Sweden.
+- SV: Storsäckar från standard till helt måttanpassade, specificerade efter din produkt, påfyllningsprocess och hantering. SWL 500 till 2 000 kg, säkerhetsfaktor 5:1 och 6:1. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.
+- Correction:
+
+**crumbProducts**
+
+- EN: Products
+- SV: Produkter
+- Correction:
+
+**crumbHere**
+
+- EN: FIBC Bulk Bags
+- SV: FIBC storsäckar
+- Correction:
+
+**heroEyebrow**
+
+- EN: FIBC Bulk Bags
+- SV: FIBC storsäckar
+- Correction:
+
+**heroTitle**
+
+- EN: Built to your specification
+- SV: Byggda efter din specifikation
+- Correction:
+
+**heroBody1**
+
+- EN: From standard bulk bags to fully customised FIBCs, specified around your product, filling process and handling requirements.
+- SV: Från standardstorsäckar till helt måttanpassade FIBC, specificerade efter din produkt, din påfyllningsprocess och dina hanteringskrav.
+- Correction:
+
+**heroBody2**
+
+- EN: Manufactured at our parent factory, with local sales and support in Sweden.
+- SV: Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.
+- Correction:
+
+**heroButton**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**heroPhotoAlt**
+
+- EN: Close-up of an FIBC bulk bag showing lifting loops and orange stitching.
+- SV: Närbild på en FIBC storsäck med lyftöglor och orange sömmar.
+- Correction:
+
+**specs › 1 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 1 › label**
+
+- EN: SWL range
+- SV: SWL-intervall
+- Correction:
+
+**specs › 2 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 2 › label**
+
+- EN: Safety factors
+- SV: Säkerhetsfaktorer
+- Correction:
+
+**specs › 3 › valueLabel**
+
+- EN: Custom
+- SV: Måttanpassat
+- Correction:
+
+**specs › 3 › label**
+
+- EN: Sizes and constructions
+- SV: Mått och konstruktioner
+- Correction:
+
+**specs › 4 › valueLabel**
+
+- EN: Printed
+- SV: Tryck
+- Correction:
+
+**specs › 4 › label**
+
+- EN: To your specification
+- SV: Efter din specifikation
+- Correction:
+
+**rangeEyebrow**
+
+- EN: Our FIBC range
+- SV: Vårt FIBC-sortiment
+- Correction:
+
+**rangeHeading**
+
+- EN: The right bag for the job.
+- SV: Rätt säck för jobbet.
+- Correction:
+
+**range › 1 › name**
+
+- EN: Standard FIBCs
+- SV: Standard-FIBC
+- Correction:
+
+**range › 1 › body**
+
+- EN: For general industrial and bulk applications.
+- SV: För allmän industri och bulkhantering.
+- Correction:
+
+**range › 2 › name**
+
+- EN: Filling and discharge FIBCs
+- SV: FIBC med påfyllning och tömning
+- Correction:
+
+**range › 2 › body**
+
+- EN: For controlled filling and emptying.
+- SV: För kontrollerad påfyllning och tömning.
+- Correction:
+
+**range › 3 › name**
+
+- EN: Single-loop FIBCs
+- SV: FIBC med enkel lyftögla
+- Correction:
+
+**range › 3 › body**
+
+- EN: For agriculture, fertiliser and automated handling.
+- SV: För jordbruk, gödsel och automatiserad hantering.
+- Correction:
+
+**range › 4 › name**
+
+- EN: Specialist FIBCs
+- SV: Special-FIBC
+- Correction:
+
+**range › 4 › body**
+
+- EN: Baffle, UN, food-contact and application-specific designs.
+- SV: Bafflade, UN-certifierade, livsmedelsgodkända och tillämpningsspecifika konstruktioner.
+- Correction:
+
+**builtEyebrow**
+
+- EN: Built around your product
+- SV: Byggd kring din produkt
+- Correction:
+
+**builtHeading**
+
+- EN: Specified for the way you pack and handle.
+- SV: Specificerad efter hur du packar och hanterar.
+- Correction:
+
+**builtBody**
+
+- EN: Every FIBC is configured to match your product, process and site requirements.
+- SV: Varje FIBC konfigureras efter din produkt, din process och kraven på din arbetsplats.
+- Correction:
+
+**matrix › 1 › label**
+
+- EN: Construction
+- SV: Konstruktion
+- Correction:
+
+**matrix › 1 › options**
+
+- EN: Circular · U-panel · 4-panel · Baffle
+- SV: Rund · U-panel · Fyrpanel · Bafflad
+- Correction:
+
+**matrix › 2 › label**
+
+- EN: Filling
+- SV: Påfyllning
+- Correction:
+
+**matrix › 2 › options**
+
+- EN: Open top · Duffle top · Filling spout
+- SV: Öppen topp · Skärmtopp · Påfyllningspip
+- Correction:
+
+**matrix › 3 › label**
+
+- EN: Discharge
+- SV: Tömning
+- Correction:
+
+**matrix › 3 › options**
+
+- EN: Flat base · Discharge spout · Full opening
+- SV: Plan botten · Tömningspip · Helöppnande
+- Correction:
+
+**matrix › 4 › label**
+
+- EN: Fabric and liner
+- SV: Väv och innerpåse
+- Correction:
+
+**matrix › 4 › options**
+
+- EN: Coated · Uncoated · Lined
+- SV: Belagd · Obelagd · Med innerpåse
+- Correction:
+
+**matrix › 5 › label**
+
+- EN: Lifting
+- SV: Lyft
+- Correction:
+
+**matrix › 5 › options**
+
+- EN: 4-loop · Single-loop · Custom
+- SV: Fyra lyftöglor · Enkel lyftögla · Måttanpassat
+- Correction:
+
+**appEyebrow**
+
+- EN: Applications
+- SV: Tillämpningar
+- Correction:
+
+**appHeading**
+
+- EN: Designed around what is inside.
+- SV: Utformad efter innehållet.
+- Correction:
+
+**appBody**
+
+- EN: We specify the right FIBC for your material and handling requirements.
+- SV: Vi specificerar rätt FIBC för ditt material och dina hanteringskrav.
+- Correction:
+
+**appPhotoAlt**
+
+- EN: Forklift lifting a filled bulk bag beside a pile of aggregate.
+- SV: Truck som lyfter en fylld storsäck vid en ballasthög.
+- Correction:
+
+**directEyebrow**
+
+- EN: Direct from manufacturing
+- SV: Direkt från tillverkningen
+- Correction:
+
+**directHeadingLine1**
+
+- EN: Made there.
+- SV: Tillverkad där.
+- Correction:
+
+**directHeadingLine2**
+
+- EN: Supported here.
+- SV: Servad här.
+- Correction:
+
+**directBody**
+
+- EN: Manufactured at our parent factory, with specification, sales and support handled locally in Sweden.
+- SV: Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.
+- Correction:
+
+**directColumns › 1 › label**
+
+- EN: Direct manufacturing
+- SV: Egen tillverkning
+- Correction:
+
+**directColumns › 1 › body**
+
+- EN: Control over specification, production and printing.
+- SV: Kontroll över specifikation, produktion och tryck.
+- Correction:
+
+**directColumns › 2 › label**
+
+- EN: Local support
+- SV: Lokal support
+- Correction:
+
+**directColumns › 2 › body**
+
+- EN: Swedish contact, stockholding and planned supply.
+- SV: Svensk kontakt, lagerhållning och planerad leverans.
+- Correction:
+
+**helpEyebrow**
+
+- EN: Need help specifying?
+- SV: Behöver du hjälp att specificera?
+- Correction:
+
+**helpHeading**
+
+- EN: Tell us what you are packing.
+- SV: Berätta vad du packar.
+- Correction:
+
+**helpBody**
+
+- EN: Give us the product, weight, filling method and handling requirements. We will help specify the right FIBC.
+- SV: Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så hjälper vi dig specificera rätt FIBC.
+- Correction:
+
+**helpButtonPrimary**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**helpButtonSecondary**
+
+- EN: Request a quote
+- SV: Begär offert
+- Correction:
+
+**helpGuideLink**
+
+- EN: Read the guide: how to specify an FIBC
+- SV: Läs guiden: så väljer du rätt storsäck
 - Correction:
 
 ### Home page

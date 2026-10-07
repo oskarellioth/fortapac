@@ -54,6 +54,8 @@ type Props = {
   featuredLabel: string;
   featuredLinkLabel: string;
   menuLabel: string;
+  /** Product key to URL. Keys without an entry fall back to the home anchor. */
+  productHrefs?: Record<string, string>;
 };
 
 const t = (v: Bilingual | undefined, l: Locale) => (v ? v[l] || v.sv || "" : "");
@@ -142,7 +144,7 @@ type OpenMega = null | "products" | "industries";
 export default function SiteNav(props: Props) {
   const {
     locale, copy, products, industries, homePath, aboutPath,
-    otherLocaleHref, anchors, productPhotoLabel, featuredLabel,
+    otherLocaleHref, anchors, productHrefs = {}, productPhotoLabel, featuredLabel,
     featuredLinkLabel, menuLabel,
   } = props;
 
@@ -225,7 +227,7 @@ export default function SiteNav(props: Props) {
                           onFocus={() => setProductIdx(i)}
                           onClick={() => {
                             setOpenMega(null);
-                            window.location.href = anchors.products;
+                            window.location.href = productHrefs[p.key] ?? anchors.products;
                           }}
                         >
                           <div className="mega-icon">
@@ -249,7 +251,7 @@ export default function SiteNav(props: Props) {
                         <span className="focus-badge mono">{featuredLabel}</span>
                         <h4 className="focus-title">{t(product.name, locale)}</h4>
                         <p className="focus-blurb">{t(product.focusBlurb, locale)}</p>
-                        <a className="focus-link mono" href={anchors.products}>
+                        <a className="focus-link mono" href={productHrefs[product.key] ?? anchors.products}>
                           {featuredLinkLabel} <span aria-hidden="true">→</span>
                         </a>
                       </div>

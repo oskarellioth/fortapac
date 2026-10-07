@@ -48,5 +48,109 @@
         "src": "/_img/fibc-1200.webp"
       }
     ]
+  },
+  "/products/fibc/application.jpg": {
+    "width": 1400,
+    "height": 788,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/application-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/application-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/application-1200.webp"
+      }
+    ]
+  },
+  "/products/fibc/filling-discharge.jpg": {
+    "width": 1327,
+    "height": 1186,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/filling-discharge-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/filling-discharge-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/filling-discharge-1200.webp"
+      }
+    ]
+  },
+  "/products/fibc/hero.jpg": {
+    "width": 1400,
+    "height": 933,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/hero-1200.webp"
+      }
+    ]
+  },
+  "/products/fibc/single-loop.jpg": {
+    "width": 1199,
+    "height": 1312,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/single-loop-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/single-loop-800.webp"
+      }
+    ]
+  },
+  "/products/fibc/specialist.jpg": {
+    "width": 1400,
+    "height": 933,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/specialist-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/specialist-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/specialist-1200.webp"
+      }
+    ]
+  },
+  "/products/fibc/standard.jpg": {
+    "width": 1327,
+    "height": 1186,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/standard-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/standard-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/standard-1200.webp"
+      }
+    ]
   }
 }
