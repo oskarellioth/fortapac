@@ -137,7 +137,9 @@
 .fortapac .spec-grid>*:first-child{border-left:none;padding-left:0}
 .fortapac .spec-card{text-align:center}
 .fortapac .spec-card svg{width:34px;height:34px;margin:0 auto 1rem;color:#fff}
-.fortapac .spec-value{font-size:1.55rem;font-family:"IBM Plex Mono",monospace}
+/* nowrap keeps ranges like "1 000–2 000 kg" on one line. Swedish uses a space
+   as the thousands separator, so the value contains spaces that must not break. */
+.fortapac .spec-value{font-size:1.55rem;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
 
 .fortapac .industries{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fortapac .industry-layout{display:grid;grid-template-columns:230px 1fr;gap:2rem;align-items:end}
