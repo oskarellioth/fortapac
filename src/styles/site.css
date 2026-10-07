@@ -379,6 +379,9 @@
    one is on paper, so it takes the navy the reference specifies. */
 .fortapac .pdp-hero h1{font-size:clamp(2.6rem,5.4vw,4.5rem);font-weight:900;margin:0 0 1.6rem;line-height:1.02;letter-spacing:-.035em;color:var(--navy)}
 .fortapac .pdp-hero h1 .dot{color:var(--orange)}
+/* The grid end-aligns so the cut-out sits on the spec strip. The copy has no
+   reason to follow it down, so it centres in the same space. */
+.fortapac .pdp-hero-copy{align-self:center}
 .fortapac .pdp-hero-copy p{font-size:1.02rem;line-height:1.6;color:rgba(11,27,45,.78);max-width:460px;margin:0 0 1.1rem}
 .fortapac .pdp-hero .button{margin-top:1.3rem}
 /* The hero is a transparent cut-out sitting straight on the page, so it has no
