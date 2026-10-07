@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-10-07. 379 Swedish strings across 21 content files.
+Generated 2026-10-07. 412 Swedish strings across 22 content files.
 
 ## How to use this
 
@@ -222,6 +222,206 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 - Correction:
 
 ### Other
+
+#### contact
+
+**seoTitle**
+
+- EN: Contact us | Fortapac
+- SV: Kontakta oss | Fortapac
+- Correction:
+
+**seoDescription**
+
+- EN: Tell us what you are packing and we will come back with a specification and a price. Sales, stock and support in Gothenburg.
+- SV: Berätta vad du packar, så återkommer vi med en specifikation och ett pris. Försäljning, lager och support i Göteborg.
+- Correction:
+
+**heroEyebrow**
+
+- EN: Contact
+- SV: Kontakt
+- Correction:
+
+**heroTitle**
+
+- EN: Tell us what you are packing
+- SV: Berätta vad du packar
+- Correction:
+
+**heroBody**
+
+- EN: Give us the product, weight, filling method and handling requirements, and we will come back with a specification and a price. If you do not know all of it yet that is fine, we will help you get to the right bag.
+- SV: Ge oss produkt, vikt, påfyllningsmetod och hanteringskrav, så återkommer vi med en specifikation och ett pris. Vet du inte allt ännu spelar ingen roll, vi hjälper dig fram till rätt säck.
+- Correction:
+
+**detailsHeading**
+
+- EN: Reach us directly
+- SV: Direkt till oss
+- Correction:
+
+**detailsEmailLabel**
+
+- EN: Email
+- SV: E-post
+- Correction:
+
+**detailsPhoneLabel**
+
+- EN: Phone
+- SV: Telefon
+- Correction:
+
+**detailsAddressLabel**
+
+- EN: Address
+- SV: Adress
+- Correction:
+
+**detailsHoursLabel**
+
+- EN: Opening hours
+- SV: Öppettider
+- Correction:
+
+**detailsHours**
+
+- EN: Monday to Friday, 08:00 to 17:00
+- SV: Måndag till fredag, 08.00 till 17.00
+- Correction:
+
+**responseNote**
+
+- EN: We normally reply within one working day.
+- SV: Vi svarar normalt inom en arbetsdag.
+- Correction:
+
+**formHeading**
+
+- EN: Send an enquiry
+- SV: Skicka en förfrågan
+- Correction:
+
+**labelName**
+
+- EN: Name
+- SV: Namn
+- Correction:
+
+**labelCompany**
+
+- EN: Company
+- SV: Företag
+- Correction:
+
+**labelEmail**
+
+- EN: Email
+- SV: E-post
+- Correction:
+
+**labelPhone**
+
+- EN: Phone
+- SV: Telefon
+- Correction:
+
+**labelProduct**
+
+- EN: Which product is this about?
+- SV: Vilken produkt gäller det?
+- Correction:
+
+**labelMessage**
+
+- EN: What are you packing?
+- SV: Vad packar du?
+- Correction:
+
+**messagePlaceholder**
+
+- EN: Product, weight per bag, how it is filled and emptied, and whether it is stored outdoors.
+- SV: Produkt, vikt per säck, hur den fylls och töms, och om den lagras utomhus.
+- Correction:
+
+**optionalSuffix**
+
+- EN: optional
+- SV: valfritt
+- Correction:
+
+**consentLabel**
+
+- EN: I consent to Fortapac processing my details in order to answer this enquiry.
+- SV: Jag samtycker till att Fortapac behandlar mina uppgifter för att besvara den här förfrågan.
+- Correction:
+
+**consentLinkText**
+
+- EN: Read the privacy policy
+- SV: Läs integritetspolicyn
+- Correction:
+
+**submitButton**
+
+- EN: Send enquiry
+- SV: Skicka förfrågan
+- Correction:
+
+**submitSending**
+
+- EN: Sending
+- SV: Skickar
+- Correction:
+
+**successHeading**
+
+- EN: Thank you, we have your enquiry.
+- SV: Tack, vi har tagit emot din förfrågan.
+- Correction:
+
+**successBody**
+
+- EN: We normally reply within one working day. If it is urgent, call us.
+- SV: Vi återkommer normalt inom en arbetsdag. Brådskar det, ring oss.
+- Correction:
+
+**errorHeading**
+
+- EN: The enquiry could not be sent.
+- SV: Förfrågan kunde inte skickas.
+- Correction:
+
+**errorValidation**
+
+- EN: Check your name, email, message, and that you have given consent.
+- SV: Kontrollera namn, e-post, meddelande och att du har samtyckt.
+- Correction:
+
+**errorCaptcha**
+
+- EN: We could not confirm you are human. Reload the page and try again.
+- SV: Vi kunde inte bekräfta att du är en människa. Ladda om sidan och försök igen.
+- Correction:
+
+**errorRate**
+
+- EN: Too many enquiries from this connection. Wait a moment and try again.
+- SV: För många förfrågningar från den här anslutningen. Vänta en stund och försök igen.
+- Correction:
+
+**errorServer**
+
+- EN: Something went wrong on our side. Email us directly and we will help.
+- SV: Något gick fel hos oss. Mejla oss direkt så hjälper vi dig.
+- Correction:
+
+**captchaNotice**
+
+- EN: This form is protected by Cloudflare Turnstile to stop automated spam.
+- SV: Det här formuläret skyddas av Cloudflare Turnstile för att stoppa automatiserad skräppost.
+- Correction:
 
 #### guide-fibc
 
@@ -1596,11 +1796,15 @@ Frågor om hur vi hanterar dina personuppgifter skickas till [FYLL I: e-postadre
 Newsletter: the email address you give us.
 
 The website uses no tracking cookies and no third-party analytics. We do not build a profile of your visit.
+
+Spam protection: when you submit the contact form, Cloudflare Turnstile processes your IP address and technical details about your browser in order to decide whether you are human. Turnstile sets no advertising cookies and does not profile you.
 - SV: Kontaktformulär och e-post: namn, företag, e-postadress, telefonnummer och innehållet i ditt meddelande.
 
 Nyhetsbrev: den e-postadress du anger.
 
 Webbplatsen använder inga spårningskakor och ingen tredjepartsanalys. Vi bygger ingen profil av ditt besök.
+
+Skydd mot skräppost: när du skickar kontaktformuläret behandlar Cloudflare Turnstile din IP-adress och tekniska uppgifter om din webbläsare för att avgöra om du är en människa. Turnstile sätter inga cookies för annonsering och profilerar dig inte.
 - Correction:
 
 **sections › 3 › heading**
@@ -1649,12 +1853,12 @@ Nyhetsbrev: tills du avregistrerar dig.
 
 - EN: We never sell personal data.
 
-We share data with suppliers who process it on our behalf: [COMPLETE: email provider], [COMPLETE: newsletter tool] and our hosting provider. Each is bound by a data processing agreement.
+We share data with suppliers who process it on our behalf: Resend (delivery of contact form messages), [COMPLETE: newsletter tool], Cloudflare (form spam protection) and Vercel (hosting). Each is bound by a data processing agreement.
 
 Where a supplier processes data outside the EU or EEA, it is done under the safeguards the GDPR requires.
 - SV: Vi säljer aldrig personuppgifter.
 
-Vi delar uppgifter med leverantörer som behandlar dem för vår räkning: [FYLL I: e-postleverantör], [FYLL I: nyhetsbrevsverktyg] och vår webbhotellsleverantör. Alla är bundna av personuppgiftsbiträdesavtal.
+Vi delar uppgifter med leverantörer som behandlar dem för vår räkning: Resend (utskick av kontaktformulärets meddelanden), [FYLL I: nyhetsbrevsverktyg], Cloudflare (skydd mot skräppost i formuläret) och Vercel (webbhotell). Alla är bundna av personuppgiftsbiträdesavtal.
 
 Om en leverantör behandlar uppgifter utanför EU/EES sker det med de skyddsåtgärder som dataskyddsförordningen kräver.
 - Correction:

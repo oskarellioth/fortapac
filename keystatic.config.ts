@@ -44,7 +44,7 @@ export default config({
   ui: {
     brand: { name: "Fortapac" },
     navigation: {
-      Pages: ["homePage", "aboutPage", "productFibcPage", "guideFibcPage"],
+      Pages: ["homePage", "aboutPage", "productFibcPage", "guideFibcPage", "contactPage"],
       Catalogue: ["products", "industries"],
       Settings: ["navigation", "siteSettings"],
     },
@@ -157,6 +157,65 @@ export default config({
         ctaHeading: bilingual("Contact band, heading"),
         ctaBody: bilingualLong("Contact band, paragraph"),
         ctaButton: bilingual("Contact band, button"),
+
+        seoTitle: bilingual("SEO title"),
+        seoDescription: bilingualLong("SEO description"),
+      },
+    }),
+
+    contactPage: singleton({
+      label: "Contact page",
+      path: "src/content/contact",
+      format: { data: "json" },
+      // Keys must match src/content/contact.json exactly.
+      schema: {
+        heroEyebrow: bilingual("Hero eyebrow"),
+        heroTitle: bilingual("Hero headline", "A full stop in brand orange is added automatically."),
+        heroBody: bilingualLong("Hero paragraph"),
+
+        detailsHeading: bilingual("Details, heading"),
+        detailsEmailLabel: bilingual("Details, email label"),
+        detailsPhoneLabel: bilingual("Details, phone label"),
+        detailsAddressLabel: bilingual("Details, address label"),
+        detailsHoursLabel: bilingual("Details, hours label"),
+        detailsHours: bilingual("Opening hours"),
+        responseNote: bilingual("Response time note"),
+
+        formHeading: bilingual("Form, heading"),
+        labelName: bilingual("Field, name"),
+        labelCompany: bilingual("Field, company"),
+        labelEmail: bilingual("Field, email"),
+        labelPhone: bilingual("Field, phone"),
+        labelProduct: bilingual("Field, product"),
+        labelMessage: bilingual("Field, message"),
+        messagePlaceholder: bilingualLong("Field, message placeholder"),
+        optionalSuffix: bilingual("Optional marker"),
+        productOptions: fields.array(bilingual("Option"), {
+          label: "Product dropdown options",
+          itemLabel: (props) => props.fields.en.value || "Option",
+        }),
+
+        consentLabel: bilingualLong(
+          "Consent checkbox",
+          "Required by GDPR. Do not remove the checkbox or weaken this wording without legal advice.",
+        ),
+        consentLinkText: bilingual("Consent, privacy policy link text"),
+        submitButton: bilingual("Submit button"),
+        submitSending: bilingual("Submit button, while sending"),
+
+        successHeading: bilingual("Success, heading"),
+        successBody: bilingualLong("Success, paragraph"),
+
+        errorHeading: bilingual("Error, heading"),
+        errorValidation: bilingualLong("Error, missing or invalid fields"),
+        errorCaptcha: bilingualLong("Error, bot check failed"),
+        errorRate: bilingualLong("Error, too many attempts"),
+        errorServer: bilingualLong("Error, something broke on our side"),
+
+        captchaNotice: bilingualLong(
+          "Bot protection notice",
+          "Names Cloudflare Turnstile. The privacy policy must keep naming it too.",
+        ),
 
         seoTitle: bilingual("SEO title"),
         seoDescription: bilingualLong("SEO description"),

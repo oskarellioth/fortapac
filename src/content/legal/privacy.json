@@ -26,8 +26,8 @@
         "en": "What we collect"
       },
       "body": {
-        "sv": "Kontaktformulär och e-post: namn, företag, e-postadress, telefonnummer och innehållet i ditt meddelande.\n\nNyhetsbrev: den e-postadress du anger.\n\nWebbplatsen använder inga spårningskakor och ingen tredjepartsanalys. Vi bygger ingen profil av ditt besök.",
-        "en": "Contact form and email: your name, company, email address, phone number and whatever you write in your message.\n\nNewsletter: the email address you give us.\n\nThe website uses no tracking cookies and no third-party analytics. We do not build a profile of your visit."
+        "sv": "Kontaktformulär och e-post: namn, företag, e-postadress, telefonnummer och innehållet i ditt meddelande.\n\nNyhetsbrev: den e-postadress du anger.\n\nWebbplatsen använder inga spårningskakor och ingen tredjepartsanalys. Vi bygger ingen profil av ditt besök.\n\nSkydd mot skräppost: när du skickar kontaktformuläret behandlar Cloudflare Turnstile din IP-adress och tekniska uppgifter om din webbläsare för att avgöra om du är en människa. Turnstile sätter inga cookies för annonsering och profilerar dig inte.",
+        "en": "Contact form and email: your name, company, email address, phone number and whatever you write in your message.\n\nNewsletter: the email address you give us.\n\nThe website uses no tracking cookies and no third-party analytics. We do not build a profile of your visit.\n\nSpam protection: when you submit the contact form, Cloudflare Turnstile processes your IP address and technical details about your browser in order to decide whether you are human. Turnstile sets no advertising cookies and does not profile you."
       }
     },
     {
@@ -56,8 +56,8 @@
         "en": "Who we share it with"
       },
       "body": {
-        "sv": "Vi säljer aldrig personuppgifter.\n\nVi delar uppgifter med leverantörer som behandlar dem för vår räkning: [FYLL I: e-postleverantör], [FYLL I: nyhetsbrevsverktyg] och vår webbhotellsleverantör. Alla är bundna av personuppgiftsbiträdesavtal.\n\nOm en leverantör behandlar uppgifter utanför EU/EES sker det med de skyddsåtgärder som dataskyddsförordningen kräver.",
-        "en": "We never sell personal data.\n\nWe share data with suppliers who process it on our behalf: [COMPLETE: email provider], [COMPLETE: newsletter tool] and our hosting provider. Each is bound by a data processing agreement.\n\nWhere a supplier processes data outside the EU or EEA, it is done under the safeguards the GDPR requires."
+        "sv": "Vi säljer aldrig personuppgifter.\n\nVi delar uppgifter med leverantörer som behandlar dem för vår räkning: Resend (utskick av kontaktformulärets meddelanden), [FYLL I: nyhetsbrevsverktyg], Cloudflare (skydd mot skräppost i formuläret) och Vercel (webbhotell). Alla är bundna av personuppgiftsbiträdesavtal.\n\nOm en leverantör behandlar uppgifter utanför EU/EES sker det med de skyddsåtgärder som dataskyddsförordningen kräver.",
+        "en": "We never sell personal data.\n\nWe share data with suppliers who process it on our behalf: Resend (delivery of contact form messages), [COMPLETE: newsletter tool], Cloudflare (form spam protection) and Vercel (hosting). Each is bound by a data processing agreement.\n\nWhere a supplier processes data outside the EU or EEA, it is done under the safeguards the GDPR requires."
       }
     },
     {

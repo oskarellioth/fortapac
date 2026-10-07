@@ -4,6 +4,7 @@ import navigation from "../content/navigation.json";
 import site from "../content/site.json";
 import guideFibc from "../content/guide-fibc.json";
 import productFibc from "../content/product-fibc.json";
+import contact from "../content/contact.json";
 
 export type Locale = "sv" | "en";
 
@@ -146,6 +147,7 @@ export const content = {
   site,
   guideFibc,
   productFibc: productFibcResolved,
+  contact,
 };
 
 /**
@@ -161,6 +163,7 @@ export const ROUTES = {
   // "välja storsäck", an English one "fibc selection guide".
   guideFibc: { sv: "/valja-storsack", en: "/en/fibc-selection-guide" },
   productFibc: { sv: "/produkter/fibc-storsackar", en: "/en/products/fibc-bulk-bags" },
+  contact: { sv: "/kontakt", en: "/en/contact" },
   privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
   terms: { sv: "/anvandarvillkor", en: "/en/terms" },
   cookies: { sv: "/cookies", en: "/en/cookies" },
@@ -185,7 +188,9 @@ export function anchors(locale: Locale) {
     industries: `${base}/#industries`,
     materials: `${base}/#materials`,
     sustainability: `${base}/#sustainability`,
-    contact: `${base}/#contact`,
+    // A real page now, not a section on the home page. Every "Contact" link and
+    // "Get a quote" button in the nav resolves through here.
+    contact: ROUTES.contact[locale],
   };
 }
 

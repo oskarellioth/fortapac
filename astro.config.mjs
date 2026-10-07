@@ -43,6 +43,32 @@ export default defineConfig({
         access: "secret",
         optional: true,
       }),
+      // Contact form. All optional so the site still builds before the keys
+      // exist; the endpoint refuses to send and says which one is missing
+      // rather than failing silently or, worse, accepting the message and
+      // dropping it.
+      TURNSTILE_SECRET_KEY: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+      RESEND_API_KEY: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+      /** Where enquiries are delivered. Falls back to the public site email. */
+      CONTACT_TO_EMAIL: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+      /** Verified Resend sender, e.g. "Fortapac <noreply@fortapac.se>". */
+      CONTACT_FROM_EMAIL: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
     },
   },
 });

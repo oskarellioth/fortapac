@@ -1,0 +1,183 @@
+---
+import { content, pick, ROUTES, type Locale } from "../lib/content";
+
+/**
+ * Contact page.
+ *
+ * A plain form that POSTs to /api/contact, so it behaves like a form: no fetch,
+ * no client state, and the back button works. The endpoint redirects back here
+ * with ?status=..., which is what drives the message at the top.
+ *
+ * Turnstile's widget is the only script on the page. Without a site key the
+ * widget is left out entirely and the form explains that it is not accepting
+ * messages yet, rather than rendering a submit button that silently fails.
+ */
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const c = content.contact;
+const s = content.site;
+const t = (v: { sv: string; en: string } | undefined) => pick(v, locale);
+
+const status = Astro.url.searchParams.get("status");
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+
+const errorBody = {
+  invalid: t(c.errorValidation),
+  captcha: t(c.errorCaptcha),
+  rate: t(c.errorRate),
+  server: t(c.errorServer),
+}[status ?? ""];
+
+const labels = {
+  home: locale === "sv" ? "Hem" : "Home",
+  required: locale === "sv" ? "obligatoriskt" : "required",
+  notConfigured:
+    locale === "sv"
+      ? "Formuläret är inte aktiverat än. Mejla oss så länge."
+      : "The form is not switched on yet. Email us in the meantime.",
+};
+---
+
+<main class="contact">
+  <div class="wrap">
+    <nav class="pdp-crumb" aria-label={locale === "sv" ? "Brödsmulor" : "Breadcrumb"}>
+      <a href={ROUTES.home[locale]}>{labels.home}</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">{t(c.heroEyebrow)}</span>
+    </nav>
+  </div>
+
+  <section class="contact-hero">
+    <div class="wrap">
+      <div class="eyebrow mono">{t(c.heroEyebrow)}</div>
+      <h1>{t(c.heroTitle)}<span class="dot">.</span></h1>
+      <p class="contact-lede">{t(c.heroBody)}</p>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="wrap contact-grid">
+      <div class="contact-details">
+        <h2>{t(c.detailsHeading)}</h2>
+        <dl>
+          <dt>{t(c.detailsEmailLabel)}</dt>
+          <dd><a href={`mailto:${s.email}`}>{s.email}</a></dd>
+          {s.phone && (
+            <>
+              <dt>{t(c.detailsPhoneLabel)}</dt>
+              <dd><a href={`tel:${s.phone.replace(/\s+/g, "")}`}>{s.phone}</a></dd>
+            </>
+          )}
+          <dt>{t(c.detailsAddressLabel)}</dt>
+          <dd>{s.companyName}<br />{s.city}</dd>
+          <dt>{t(c.detailsHoursLabel)}</dt>
+          <dd>{t(c.detailsHours)}</dd>
+        </dl>
+        <p class="contact-response">{t(c.responseNote)}</p>
+      </div>
+
+      <div class="contact-form-col" id="form">
+        {status === "sent" && (
+          <div class="contact-alert is-success" role="status">
+            <strong>{t(c.successHeading)}</strong>
+            <p>{t(c.successBody)}</p>
+          </div>
+        )}
+        {errorBody && (
+          <div class="contact-alert is-error" role="alert">
+            <strong>{t(c.errorHeading)}</strong>
+            <p>{errorBody}</p>
+          </div>
+        )}
+
+        <h2>{t(c.formHeading)}</h2>
+
+        {!siteKey ? (
+          <p class="contact-alert is-error">
+            {labels.notConfigured} <a href={`mailto:${s.email}`}>{s.email}</a>
+          </p>
+        ) : (
+          <form class="contact-form" method="POST" action="/api/contact">
+            <input type="hidden" name="locale" value={locale} />
+
+            {/* Honeypot. Hidden from sight and from screen readers, and left out
+                of the tab order, so only a bot ever fills it in. */}
+            <div class="contact-hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="contact-row">
+              <div class="field">
+                <label for="name">{t(c.labelName)} <span class="req">{labels.required}</span></label>
+                <input id="name" name="name" type="text" required maxlength="120" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="company">{t(c.labelCompany)} <span class="opt">{t(c.optionalSuffix)}</span></label>
+                <input id="company" name="company" type="text" maxlength="160" autocomplete="organization" />
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="field">
+                <label for="email">{t(c.labelEmail)} <span class="req">{labels.required}</span></label>
+                <input id="email" name="email" type="email" required maxlength="200" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="phone">{t(c.labelPhone)} <span class="opt">{t(c.optionalSuffix)}</span></label>
+                <input id="phone" name="phone" type="tel" maxlength="60" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="product">{t(c.labelProduct)} <span class="opt">{t(c.optionalSuffix)}</span></label>
+              <select id="product" name="product">
+                <option value="">{locale === "sv" ? "Välj" : "Select"}</option>
+                {c.productOptions.map((o) => (
+                  <option value={t(o)}>{t(o)}</option>
+                ))}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">{t(c.labelMessage)} <span class="req">{labels.required}</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                minlength="10"
+                maxlength="4000"
+                placeholder={t(c.messagePlaceholder)}></textarea>
+            </div>
+
+            <div class="field contact-consent">
+              <label for="consent">
+                <input id="consent" name="consent" type="checkbox" required />
+                <span>
+                  {t(c.consentLabel)}{" "}
+                  <a href={ROUTES.privacy[locale]}>{t(c.consentLinkText)}</a>
+                </span>
+              </label>
+            </div>
+
+            <div class="cf-turnstile" data-sitekey={siteKey} data-language={locale}></div>
+
+            <button class="button primary" type="submit">
+              {t(c.submitButton)} <span class="arrow">→</span>
+            </button>
+
+            <p class="contact-captcha-note">{t(c.captchaNotice)}</p>
+          </form>
+        )}
+      </div>
+    </div>
+  </section>
+</main>
+
+{siteKey && (
+  <script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+)}

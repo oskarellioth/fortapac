@@ -482,3 +482,70 @@
   .fortapac .pdp-app-list li:nth-child(3n){border-right:1px solid var(--line)}
   .fortapac .pdp-app-list li:nth-child(2n){border-right:none}
 }
+
+/* ---------------------------------------------------------------------------
+   Contact page
+   --------------------------------------------------------------------------- */
+.fortapac .contact-hero{padding:1rem 0 2.5rem}
+.fortapac .contact-hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin:0 0 1.25rem;color:var(--navy);max-width:18ch}
+.fortapac .contact-hero h1 .dot{color:var(--orange)}
+.fortapac .contact-lede{font-size:1.05rem;line-height:1.65;color:rgba(11,27,45,.78);max-width:62ch;margin:0}
+
+.fortapac .contact-main{padding:0 0 4rem}
+.fortapac .contact-grid{display:grid;grid-template-columns:.8fr 1.3fr;gap:4rem;align-items:start}
+.fortapac .contact-grid h2{font-size:1.35rem;margin:0 0 1.25rem;letter-spacing:-.02em}
+
+.fortapac .contact-details dl{margin:0;border-top:1px solid var(--line)}
+.fortapac .contact-details dt{font-size:.82rem;color:rgba(11,27,45,.55);padding-top:1rem}
+.fortapac .contact-details dd{margin:.25rem 0 0;padding-bottom:1rem;border-bottom:1px solid var(--line);color:var(--navy);font-weight:600;line-height:1.5}
+.fortapac .contact-details dd a{color:var(--navy);text-decoration:none}
+.fortapac .contact-details dd a:hover{color:var(--orange)}
+.fortapac .contact-response{margin:1.25rem 0 0;font-size:.9rem;color:rgba(11,27,45,.65)}
+
+.fortapac .contact-form{display:flex;flex-direction:column;gap:1.1rem}
+.fortapac .contact-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.fortapac .field{display:flex;flex-direction:column;gap:.4rem}
+.fortapac .field label{font-size:.88rem;font-weight:600;color:var(--navy)}
+.fortapac .field .req,.fortapac .field .opt{font-weight:400;font-size:.78rem;color:rgba(11,27,45,.5)}
+.fortapac .field .req{color:var(--orange)}
+.fortapac .field input[type=text],.fortapac .field input[type=email],.fortapac .field input[type=tel],
+.fortapac .field select,.fortapac .field textarea{
+  width:100%;padding:.8rem .9rem;border:1px solid var(--line);background:#fff;color:var(--ink);
+  font-family:inherit;font-size:.95rem;line-height:1.5;border-radius:2px;transition:border-color .15s}
+.fortapac .field textarea{resize:vertical;min-height:140px}
+.fortapac .field input:focus-visible,.fortapac .field select:focus-visible,.fortapac .field textarea:focus-visible{
+  outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(222,91,38,.15)}
+/* :user-invalid, not :invalid. A required empty field is invalid from the
+   moment it renders, so :invalid painted every required field red before
+   anyone had typed a character. :user-invalid waits until the person has
+   actually interacted with the field or tried to submit.
+   (:placeholder-shown was no guard either: these inputs have no placeholder.) */
+.fortapac .field input:user-invalid,
+.fortapac .field select:user-invalid,
+.fortapac .field textarea:user-invalid{border-color:#B3261E}
+
+.fortapac .contact-consent label{display:grid;grid-template-columns:auto 1fr;gap:.65rem;align-items:start;font-weight:400;font-size:.9rem;line-height:1.5;color:rgba(11,27,45,.78);cursor:pointer}
+.fortapac .contact-consent input{margin-top:.2rem;width:18px;height:18px;accent-color:var(--orange);flex:none}
+.fortapac .contact-consent a{color:var(--orange)}
+
+/* The honeypot. Off-screen rather than display:none, because some bots skip
+   anything that is not rendered. aria-hidden and tabindex keep it away from
+   anyone using the page properly. */
+.fortapac .contact-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.fortapac .contact-form .button{align-self:flex-start;margin-top:.4rem}
+.fortapac .contact-captcha-note{margin:0;font-size:.8rem;color:rgba(11,27,45,.55)}
+
+.fortapac .contact-alert{padding:1rem 1.2rem;border-left:3px solid;margin:0 0 1.5rem;line-height:1.55}
+.fortapac .contact-alert strong{display:block;margin-bottom:.25rem}
+.fortapac .contact-alert p{margin:0;font-size:.92rem}
+.fortapac .contact-alert.is-success{background:rgba(30,107,71,.08);border-color:var(--forest);color:var(--ink)}
+.fortapac .contact-alert.is-error{background:rgba(222,91,38,.08);border-color:var(--orange);color:var(--ink)}
+
+@media (max-width: 980px){
+  .fortapac .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+}
+@media (max-width: 560px){
+  .fortapac .contact-row{grid-template-columns:1fr}
+  .fortapac .contact-form .button{align-self:stretch}
+}

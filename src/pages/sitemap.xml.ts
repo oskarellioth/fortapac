@@ -29,6 +29,7 @@ const PRIORITY: Record<RouteKey, string> = {
   guideFibc: "0.9",
   // The flagship product page, and the main commercial landing target.
   productFibc: "0.9",
+  contact: "0.7",
   privacy: "0.3",
   terms: "0.3",
   cookies: "0.3",

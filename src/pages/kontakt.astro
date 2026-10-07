@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import ContactBody from "../components/ContactBody.astro";
+import { content, pick } from "../lib/content";
+
+// Server rendered rather than prerendered: the page reads ?status= to show the
+// result of a submission, which does not exist at build time.
+export const prerender = false;
+
+const locale = "sv" as const;
+---
+<Base
+  locale={locale}
+  title={pick(content.contact.seoTitle, locale)}
+  description={pick(content.contact.seoDescription, locale)}
+>
+  <ContactBody locale={locale} />
+</Base>

@@ -52,3 +52,5 @@ public/_img/
 # Design source of record: originals stay on disk, prepared copies are
 # committed under public/. scripts/prepare-fibc-icons.mjs reads from here.
 Fibc product page/
+# Documentation only: placeholders and Cloudflare public test keys, no secrets.
+!.env.example

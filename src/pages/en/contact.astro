@@ -1,0 +1,17 @@
+---
+import Base from "../../layouts/Base.astro";
+import ContactBody from "../../components/ContactBody.astro";
+import { content, pick } from "../../lib/content";
+
+// See kontakt.astro: needs ?status= at request time.
+export const prerender = false;
+
+const locale = "en" as const;
+---
+<Base
+  locale={locale}
+  title={pick(content.contact.seoTitle, locale)}
+  description={pick(content.contact.seoDescription, locale)}
+>
+  <ContactBody locale={locale} />
+</Base>
