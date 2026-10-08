@@ -154,8 +154,8 @@
     ]
   },
   "/contact/backdrop.webp": {
-    "width": 1278,
-    "height": 1230,
+    "width": 1316,
+    "height": 1195,
     "variants": [
       {
         "w": 600,
@@ -164,6 +164,10 @@
       {
         "w": 900,
         "src": "/_img/backdrop-900.webp"
+      },
+      {
+        "w": 1300,
+        "src": "/_img/backdrop-1300.webp"
       }
     ]
   }
