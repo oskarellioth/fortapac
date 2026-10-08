@@ -497,7 +497,11 @@
 /* Spans roughly a fifth to three fifths of the width, as the mockup draws it,
    so the bag reads between the copy and the card rather than hiding behind
    the card entirely. */
-.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:24%;width:46%;z-index:0;pointer-events:none}
+/* max-width matters as much as the percentage. The column is a share of the
+   viewport, so on a wide screen the bag grew until its cut-off bottom edge
+   dropped below the card: fine at 1440, visible from about 1800 up. Capping
+   the width caps the height, since contain scales both together. */
+.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:24%;width:46%;max-width:760px;z-index:0;pointer-events:none}
 /* contain, not cover. cover fills the 895px column height, which scales a
    near-square photo up and crops 15% off each side. contain shows the whole
    bag at its own proportions, centred in the column. */
