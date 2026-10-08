@@ -491,7 +491,7 @@
    the mockup uses to pull the eye to the form.
    --------------------------------------------------------------------------- */
 .fortapac .contact-top{position:relative;padding:.5rem 0 4rem;overflow:hidden}
-.fortapac .contact-top-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.fortapac .contact-top-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.7fr 1fr;gap:3rem;align-items:start}
 
 /* Decorative, sits between the two columns and bleeds behind the card. */
 /* Spans roughly a fifth to three fifths of the width, as the mockup draws it,
@@ -501,39 +501,22 @@
    viewport, so on a wide screen the bag grew until its cut-off bottom edge
    dropped below the card: fine at 1440, visible from about 1800 up. Capping
    the width caps the height, since contain scales both together. */
-/* Sized so the bag fills the column height rather than floating in it: with
-   contain the width sets the height, and the height has to exceed the column
-   so the photo's cut-off bottom edge falls outside the clip. The column
-   height barely changes with viewport, so the cap is an absolute px value.
-   The left offset is a fixed px value, not a percentage: the copy is capped
-   in ch units so it always ends at the same point whatever the viewport,
-   and the bag has to clear it. A percentage would slide back over the text
-   on narrow screens.
-
-   The offset is set against the bag's silhouette rather than its bounding
-   box. The photo is transparent down its left side for most of its height,
-   so the box can sit well left of where the bag actually reads. */
-.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:392px;width:1030px;z-index:0;pointer-events:none}
-/* The photograph is cut off by its own frame: transparent around the loops at
-   the top, but fully opaque along the bottom edge where the bag runs out of
-   shot. Centred, that hard edge floats mid-section and reads as a rectangle.
-   Anchoring to the bottom puts the cut exactly on the section boundary, so it
-   reads as the bag continuing out of frame.
-
-   contain, not cover: cover fills the column height, which scales a near-square
-   photo up and crops 15% off each side. */
-.fortapac .contact-bag img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block}
+/* The photograph is a clean cut-out, transparent on all four sides, so it
+   needs none of the clipping the earlier frames did: it simply sits in the
+   copy column at its own proportions. */
+.fortapac .contact-bag{margin:2.25rem 0 2.5rem;max-width:100%}
+.fortapac .contact-bag img{width:100%;height:auto;display:block}
 
 .fortapac .contact-intro h1{font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin:0 0 1.25rem;color:var(--navy);max-width:13ch}
 .fortapac .contact-intro h1 .dot{color:var(--orange)}
-.fortapac .contact-lede{font-size:1.02rem;line-height:1.6;color:rgba(11,27,45,.78);max-width:46ch;margin:0 0 2.5rem}
+.fortapac .contact-lede{font-size:1.02rem;line-height:1.6;color:rgba(11,27,45,.78);max-width:52ch;margin:0}
 
-.fortapac .contact-benefits{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.5rem}
-.fortapac .contact-benefits li{display:grid;grid-template-columns:56px 1fr;gap:1.1rem;align-items:start}
-.fortapac .contact-benefit-ic{width:56px;height:56px;display:block}
+.fortapac .contact-benefits{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+.fortapac .contact-benefits li{display:grid;grid-template-columns:44px 1fr;gap:.85rem;align-items:start}
+.fortapac .contact-benefit-ic{width:44px;height:44px;display:block}
 .fortapac .contact-benefit-ic img{width:100%;height:100%;object-fit:contain;display:block}
 .fortapac .contact-benefits strong{display:block;font-family:"Archivo",Arial,sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.015em;color:var(--navy);margin-bottom:.2rem}
-.fortapac .contact-benefits span{display:block;font-size:.9rem;line-height:1.5;color:rgba(11,27,45,.68);max-width:34ch}
+.fortapac .contact-benefits span{display:block;font-size:.86rem;line-height:1.45;color:rgba(11,27,45,.68)}
 
 .fortapac .contact-card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:2.25rem 2.25rem 2rem;box-shadow:0 18px 50px rgba(16,42,67,.10)}
 .fortapac .contact-card h2{font-size:1.5rem;letter-spacing:-.025em;margin:0 0 1.5rem}
@@ -591,9 +574,6 @@
 .fortapac .contact-direct-note{margin-top:.3rem;font-size:.8rem !important;color:rgba(11,27,45,.5) !important}
 
 @media (max-width: 1100px){
-  /* The photograph only works as a backdrop when there is room for it beside
-     the card. Below this it would sit under the text, so it goes. */
-  .fortapac .contact-bag{display:none}
   .fortapac .contact-top-grid{grid-template-columns:1fr;gap:2.5rem}
   .fortapac .contact-direct-inner{grid-template-columns:1fr 1fr;gap:1.5rem}
   .fortapac .contact-direct h2{grid-column:1 / -1;max-width:none}
@@ -601,6 +581,7 @@
 }
 @media (max-width: 560px){
   .fortapac .contact-row{grid-template-columns:1fr}
+  .fortapac .contact-benefits{grid-template-columns:1fr;gap:1.25rem}
   .fortapac .contact-card{padding:1.5rem 1.25rem}
   .fortapac .contact-direct-inner{grid-template-columns:1fr;padding:1.5rem 1.25rem}
   .fortapac .contact-direct-item{border-left:none;padding-left:0}

@@ -9,9 +9,9 @@ import { photo } from "../lib/images";
  * the back button works. The endpoint redirects back with ?status=, which
  * drives the message above the card.
  *
- * The bag photograph sits behind both columns rather than inside either, which
- * is what lets the form card overlap it. It is decorative, so it carries an
- * empty alt and is hidden from assistive tech.
+ * The photograph sits in the copy column, between the lede and the benefits.
+ * It is decorative, so it carries an empty alt and is hidden from assistive
+ * tech.
  */
 
 interface Props {
@@ -58,24 +58,24 @@ const labels = {
   </div>
 
   <section class="contact-top">
-    <div class="contact-bag" aria-hidden="true">
-      <img
-        src={bag.src}
-        srcset={bag.srcset || undefined}
-        sizes="(max-width: 1100px) 0px, 46vw"
-        width={bag.width}
-        height={bag.height}
-        alt=""
-        loading="eager"
-        decoding="async"
-      />
-    </div>
-
     <div class="wrap contact-top-grid">
       <div class="contact-intro">
         <div class="eyebrow mono">{t(c.heroEyebrow)}</div>
         <h1>{t(c.heroTitle)}<span class="dot">.</span></h1>
         <p class="contact-lede">{t(c.heroBody)}</p>
+
+        <div class="contact-bag" aria-hidden="true">
+          <img
+            src={bag.src}
+            srcset={bag.srcset || undefined}
+            sizes="(max-width: 1100px) 92vw, 56vw"
+            width={bag.width}
+            height={bag.height}
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </div>
 
         <ul class="contact-benefits">
           {c.benefits.map((b) => (
