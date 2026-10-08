@@ -152,5 +152,19 @@
         "src": "/_img/standard-1200.webp"
       }
     ]
+  },
+  "/contact/backdrop.webp": {
+    "width": 1278,
+    "height": 1230,
+    "variants": [
+      {
+        "w": 600,
+        "src": "/_img/backdrop-600.webp"
+      },
+      {
+        "w": 900,
+        "src": "/_img/backdrop-900.webp"
+      }
+    ]
   }
 }

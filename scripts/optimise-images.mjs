@@ -34,6 +34,8 @@ const GROUPS = [
   // Product page photography: a square hero at roughly half the viewport, four
   // range cards at about a quarter, and one half-width application shot.
   { dir: "public/products/fibc", widths: [400, 800, 1200, 1600] },
+  // Contact backdrop: fills roughly half the viewport on a wide screen.
+  { dir: "public/contact", widths: [600, 900, 1300] },
 ];
 
 // WebP is accepted as a source, not just an output, because cut-outs are

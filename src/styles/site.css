@@ -498,7 +498,10 @@
    so the bag reads between the copy and the card rather than hiding behind
    the card entirely. */
 .fortapac .contact-bag{position:absolute;top:0;bottom:0;left:24%;width:46%;z-index:0;pointer-events:none}
-.fortapac .contact-bag img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block}
+/* contain, not cover. cover fills the 895px column height, which scales a
+   near-square photo up and crops 15% off each side. contain shows the whole
+   bag at its own proportions, centred in the column. */
+.fortapac .contact-bag img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
 
 .fortapac .contact-intro h1{font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin:0 0 1.25rem;color:var(--navy);max-width:13ch}
 .fortapac .contact-intro h1 .dot{color:var(--orange)}

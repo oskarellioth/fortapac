@@ -107,6 +107,11 @@ const contactIcons = [
   ["Clock with Motion Lines Icon.webp", "response.png"],
 ];
 
+// Contact page backdrop. Its own file now: it is framed taller than the
+// product hero so it can fill the column beside the form card.
+const CONTACT_PHOTOS = "public/contact";
+const contactPhotos = [["Contact Backdrop Bag.webp", "backdrop.webp"]];
+
 const photos = [
   ["FIBC Top Detail with Four Lifting Loops.webp", "hero.webp"],
   ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
@@ -121,9 +126,10 @@ for (const [src, out] of lightIcons)
   await clean(path.join(SRC, src), path.join(ICONS, out), { navyToWhite: true });
 for (const [src, out] of siteIcons) await clean(src, path.join(ICONS, out));
 for (const [src, out] of contactIcons) await clean(path.join(SRC, src), path.join(CONTACT_ICONS, out));
+for (const [src, out] of contactPhotos) await cutout(path.join(SRC, src), path.join(CONTACT_PHOTOS, out));
 for (const [src, out] of photos) {
   const write = out.endsWith(".webp") ? cutout : photo;
   await write(path.join(SRC, src), path.join(PHOTOS, out));
 }
 
-console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length + contactIcons.length} icons, ${photos.length} photos prepared`);
+console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length + contactIcons.length} icons, ${photos.length + contactPhotos.length} photos prepared`);

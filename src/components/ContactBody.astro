@@ -28,8 +28,9 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 /** The mockup's counter reads 0/500, so that is the limit the field enforces. */
 const MESSAGE_MAX = 500;
 
-// Same photograph as the product page hero, reused rather than shipped twice.
-const bag = photo("/products/fibc/hero.webp");
+// Its own file, framed taller than the product hero so it fills the column
+// beside the form card.
+const bag = photo("/contact/backdrop.webp");
 
 const errorBody = {
   invalid: t(c.errorValidation),
