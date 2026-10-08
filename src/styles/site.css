@@ -501,11 +501,16 @@
    viewport, so on a wide screen the bag grew until its cut-off bottom edge
    dropped below the card: fine at 1440, visible from about 1800 up. Capping
    the width caps the height, since contain scales both together. */
-.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:24%;width:46%;max-width:760px;z-index:0;pointer-events:none}
-/* contain, not cover. cover fills the 895px column height, which scales a
-   near-square photo up and crops 15% off each side. contain shows the whole
-   bag at its own proportions, centred in the column. */
-.fortapac .contact-bag img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.fortapac .contact-bag{position:absolute;top:0;bottom:-4rem;left:24%;width:46%;max-width:760px;z-index:0;pointer-events:none}
+/* The photograph is cut off by its own frame: transparent around the loops at
+   the top, but fully opaque along the bottom edge where the bag runs out of
+   shot. Centred, that hard edge floats mid-section and reads as a rectangle.
+   Anchoring to the bottom puts the cut exactly on the section boundary, so it
+   reads as the bag continuing out of frame.
+
+   contain, not cover: cover fills the column height, which scales a near-square
+   photo up and crops 15% off each side. */
+.fortapac .contact-bag img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block}
 
 .fortapac .contact-intro h1{font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin:0 0 1.25rem;color:var(--navy);max-width:13ch}
 .fortapac .contact-intro h1 .dot{color:var(--orange)}
