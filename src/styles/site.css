@@ -505,8 +505,11 @@
    contain the width sets the height, and the height has to exceed the column
    so the photo's cut-off bottom edge falls outside the clip. The column
    height barely changes with viewport, so the cap is an absolute px value.
-   Starts further left than the card so enough of the bag reads beside it. */
-.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:14%;width:76%;min-width:950px;max-width:960px;z-index:0;pointer-events:none}
+   The left offset is a fixed px value, not a percentage: the headline is
+   capped at 13ch so the text always ends at the same 501px whatever the
+   viewport, and the bag has to clear it. A percentage would slide back over
+   the text on narrow screens. */
+.fortapac .contact-bag{position:absolute;top:0;bottom:0;left:506px;width:76%;min-width:950px;max-width:960px;z-index:0;pointer-events:none}
 /* The photograph is cut off by its own frame: transparent around the loops at
    the top, but fully opaque along the bottom edge where the bag runs out of
    shot. Centred, that hard edge floats mid-section and reads as a rectangle.
