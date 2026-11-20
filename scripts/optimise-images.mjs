@@ -36,6 +36,7 @@ const GROUPS = [
   { dir: "public/products/fibc", widths: [400, 800, 1200, 1600] },
   // Contact backdrop: fills roughly half the viewport on a wide screen.
   { dir: "public/contact", widths: [600, 900, 1300] },
+  { dir: "public/products/covers", widths: [400, 800, 1200, 1600] },
 ];
 
 // WebP is accepted as a source, not just an output, because cut-outs are

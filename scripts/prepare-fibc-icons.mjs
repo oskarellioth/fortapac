@@ -112,6 +112,12 @@ const contactIcons = [
 const CONTACT_PHOTOS = "public/contact";
 const contactPhotos = [["Contact Backdrop Bag.webp", "backdrop.webp"]];
 
+// Lumber covers product page. The same shoot as the contact backdrop, which is
+// the only lumber cover photography in hand; a dedicated hero would be better,
+// since this frame also carries an FIBC.
+const COVERS_PHOTOS = "public/products/covers";
+const coversPhotos = [["Contact Backdrop Bag.webp", "hero.webp"]];
+
 const photos = [
   ["FIBC Top Detail with Four Lifting Loops.webp", "hero.webp"],
   ["Standard Four Loop Bulk Bag.webp", "standard.jpg"],
@@ -127,9 +133,10 @@ for (const [src, out] of lightIcons)
 for (const [src, out] of siteIcons) await clean(src, path.join(ICONS, out));
 for (const [src, out] of contactIcons) await clean(path.join(SRC, src), path.join(CONTACT_ICONS, out));
 for (const [src, out] of contactPhotos) await cutout(path.join(SRC, src), path.join(CONTACT_PHOTOS, out));
+for (const [src, out] of coversPhotos) await cutout(path.join(SRC, src), path.join(COVERS_PHOTOS, out));
 for (const [src, out] of photos) {
   const write = out.endsWith(".webp") ? cutout : photo;
   await write(path.join(SRC, src), path.join(PHOTOS, out));
 }
 
-console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length + contactIcons.length} icons, ${photos.length + contactPhotos.length} photos prepared`);
+console.log(`[fibc] ${icons.length + lightIcons.length + siteIcons.length + contactIcons.length} icons, ${photos.length + contactPhotos.length + coversPhotos.length} photos prepared`);

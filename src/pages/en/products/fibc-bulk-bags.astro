@@ -1,13 +1,14 @@
 ---
 import Base from "../../../layouts/Base.astro";
-import ProductFibcBody from "../../../components/ProductFibcBody.astro";
+import ProductBody from "../../../components/ProductBody.astro";
 import { content, pick } from "../../../lib/content";
 const locale = "en" as const;
+const page = content.productFibc;
 ---
 <Base
   locale={locale}
-  title={pick(content.productFibc.seoTitle, locale)}
-  description={pick(content.productFibc.seoDescription, locale)}
+  title={pick(page.seoTitle, locale)}
+  description={pick(page.seoDescription, locale)}
 >
-  <ProductFibcBody locale={locale} />
+  <ProductBody locale={locale} page={page} />
 </Base>

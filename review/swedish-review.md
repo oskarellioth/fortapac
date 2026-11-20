@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-10-07. 425 Swedish strings across 22 content files.
+Generated 2026-11-20. 488 Swedish strings across 23 content files.
 
 ## How to use this
 
@@ -1091,6 +1091,374 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 - SV: Diskutera ditt behov
 - Correction:
 
+#### product-covers
+
+**seoTitle**
+
+- EN: Lumber covers, UV stabilised and made to measure | Fortapac
+- SV: Virkesöverdrag, UV-stabiliserade och måttanpassade | Fortapac
+- Correction:
+
+**seoDescription**
+
+- EN: Woven polypropylene lumber covers that protect sawn and planed timber in storage and transit. UV stabilised, made to the size of your package and printed with your mark. Manufactured at our parent factory, with sales and support in Sweden.
+- SV: Virkesöverdrag i vävt polypropylen som skyddar sågat och hyvlat virke under lagring och transport. UV-stabiliserade, måttanpassade efter ditt paket och tryckta med ditt märke. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.
+- Correction:
+
+**crumbProducts**
+
+- EN: Products
+- SV: Produkter
+- Correction:
+
+**crumbHere**
+
+- EN: Lumber Covers
+- SV: Virkesöverdrag
+- Correction:
+
+**heroEyebrow**
+
+- EN: Lumber Covers
+- SV: Virkesöverdrag
+- Correction:
+
+**heroTitle**
+
+- EN: Built to stand outside
+- SV: Byggda för att stå ute
+- Correction:
+
+**heroBody1**
+
+- EN: Woven polypropylene covers that keep sawn and planed timber dry and clean, from the sawmill all the way to the site.
+- SV: Överdrag i vävt polypropylen som håller sågat och hyvlat virke torrt och rent, från sågverket hela vägen till byggarbetsplatsen.
+- Correction:
+
+**heroBody2**
+
+- EN: Made to the size of your package and printed with your mark. Manufactured at our parent factory, with local sales and support in Sweden.
+- SV: Måttanpassade efter ditt paket och tryckta med ditt märke. Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.
+- Correction:
+
+**heroButton**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**heroPhotoAlt**
+
+- EN: Packaged timber on a pallet under a white lumber cover with orange stitching, one end open to show the boards.
+- SV: Virkespaket på pall med vitt virkesöverdrag och orange sömmar, med ena gaveln öppen så att virket syns.
+- Correction:
+
+**specs › 1 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 1 › label**
+
+- EN: UV stabilisation
+- SV: UV-stabilisering
+- Correction:
+
+**specs › 2 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 2 › label**
+
+- EN: Recyclable PP
+- SV: Återvinningsbar PP
+- Correction:
+
+**specs › 3 › valueLabel**
+
+- EN: Custom
+- SV: Måttanpassat
+- Correction:
+
+**specs › 3 › label**
+
+- EN: Sizes and constructions
+- SV: Mått och konstruktioner
+- Correction:
+
+**specs › 4 › valueLabel**
+
+- EN: Printed
+- SV: Tryck
+- Correction:
+
+**specs › 4 › label**
+
+- EN: To your specification
+- SV: Efter din specifikation
+- Correction:
+
+**rangeEyebrow**
+
+- EN: Our range
+- SV: Vårt sortiment
+- Correction:
+
+**rangeHeading**
+
+- EN: The right cover for the storage.
+- SV: Rätt överdrag för lagringen.
+- Correction:
+
+**range › 1 › name**
+
+- EN: Top covers
+- SV: Toppöverdrag
+- Correction:
+
+**range › 1 › body**
+
+- EN: Cover the top and part way down the sides. For packages stored under cover or outdoors for short periods.
+- SV: Täcker ovansidan och en bit ned på sidorna. För paket som lagras under tak eller kort tid ute.
+- Correction:
+
+**range › 2 › name**
+
+- EN: Full covers
+- SV: Helöverdrag
+- Correction:
+
+**range › 2 › body**
+
+- EN: Cover the whole package down to the pallet. For longer outdoor storage.
+- SV: Täcker hela paketet ned till pallen. För lagring utomhus under längre tid.
+- Correction:
+
+**range › 3 › name**
+
+- EN: Ventilated covers
+- SV: Ventilerade överdrag
+- Correction:
+
+**range › 3 › body**
+
+- EN: Let moisture out of the package while keeping rain off. For timber that is not dry when it is packed.
+- SV: Släpper ut fukt ur paketet men håller regn ute. För virke som inte är torrt när det packas.
+- Correction:
+
+**range › 4 › name**
+
+- EN: Made-to-measure covers
+- SV: Måttanpassade överdrag
+- Correction:
+
+**range › 4 › body**
+
+- EN: Sewn to your package dimensions, with print, colour and fixing to your specification.
+- SV: Sydda efter dina paketmått, med tryck, färg och fästning efter din specifikation.
+- Correction:
+
+**builtEyebrow**
+
+- EN: Built around your package
+- SV: Byggt kring ditt paket
+- Correction:
+
+**builtHeading**
+
+- EN: Specified for the way you store and load.
+- SV: Specificerat efter hur du lagrar och lastar.
+- Correction:
+
+**builtBody**
+
+- EN: Every cover is configured to the package dimensions, how long it stands outside and how it is handled.
+- SV: Varje överdrag konfigureras efter paketets mått, hur länge det står ute och hur det hanteras.
+- Correction:
+
+**matrix › 1 › label**
+
+- EN: Construction
+- SV: Konstruktion
+- Correction:
+
+**matrix › 1 › options**
+
+- EN: Top · Full · Ventilated
+- SV: Topp · Hel · Ventilerad
+- Correction:
+
+**matrix › 2 › label**
+
+- EN: Fabric
+- SV: Väv
+- Correction:
+
+**matrix › 2 › options**
+
+- EN: Coated · Uncoated · UV stabilised
+- SV: Belagd · Obelagd · UV-stabiliserad
+- Correction:
+
+**matrix › 3 › label**
+
+- EN: Fixing
+- SV: Fästning
+- Correction:
+
+**matrix › 3 › options**
+
+- EN: Elastic hem · Straps · Sewn pocket
+- SV: Elastisk kant · Spännband · Sydd ficka
+- Correction:
+
+**matrix › 4 › label**
+
+- EN: Printing
+- SV: Tryck
+- Correction:
+
+**matrix › 4 › options**
+
+- EN: One colour · Multicolour · Unprinted
+- SV: Enfärgat · Flerfärgat · Otryckt
+- Correction:
+
+**matrix › 5 › label**
+
+- EN: Dimensions
+- SV: Mått
+- Correction:
+
+**matrix › 5 › options**
+
+- EN: Standard sizes · Made to measure
+- SV: Standardmått · Måttanpassat
+- Correction:
+
+**appEyebrow**
+
+- EN: Applications
+- SV: Tillämpningar
+- Correction:
+
+**appHeading**
+
+- EN: Designed around what is underneath.
+- SV: Utformat efter vad som ligger under.
+- Correction:
+
+**appBody**
+
+- EN: We specify the right cover for your material, your storage and your handling.
+- SV: Vi specificerar rätt överdrag för ditt material, din lagring och din hantering.
+- Correction:
+
+**appPhotoAlt**
+
+- EN: Covered timber packages stacked in a timber yard.
+- SV: Virkespaket med överdrag staplade på en timmergård.
+- Correction:
+
+**directEyebrow**
+
+- EN: Direct from manufacturing
+- SV: Direkt från tillverkningen
+- Correction:
+
+**directHeadingLine1**
+
+- EN: Made there.
+- SV: Tillverkat där.
+- Correction:
+
+**directHeadingLine2**
+
+- EN: Supported here.
+- SV: Servat här.
+- Correction:
+
+**directBody**
+
+- EN: Manufactured at our parent factory, with specification, sales and support handled locally in Sweden.
+- SV: Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.
+- Correction:
+
+**directColumns › 1 › label**
+
+- EN: Direct manufacturing
+- SV: Egen tillverkning
+- Correction:
+
+**directColumns › 1 › body**
+
+- EN: Control over specification, production and printing.
+- SV: Kontroll över specifikation, produktion och tryck.
+- Correction:
+
+**directColumns › 2 › label**
+
+- EN: Local support
+- SV: Lokal support
+- Correction:
+
+**directColumns › 2 › body**
+
+- EN: Swedish contact, stockholding and planned supply.
+- SV: Svensk kontakt, lagerhållning och planerad leverans.
+- Correction:
+
+**helpEyebrow**
+
+- EN: Need help specifying?
+- SV: Behöver du hjälp att specificera?
+- Correction:
+
+**helpHeading**
+
+- EN: Tell us what you are storing.
+- SV: Berätta vad du lagrar.
+- Correction:
+
+**helpBody**
+
+- EN: Give us the package dimensions, how long it stands outside and how it is handled. We will help specify the right cover.
+- SV: Ge oss paketets mått, hur länge det står ute och hur det hanteras, så hjälper vi dig specificera rätt överdrag.
+- Correction:
+
+**helpButtonPrimary**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**helpButtonSecondary**
+
+- EN: Request a quote
+- SV: Begär offert
+- Correction:
+
+**helpGuideLink**
+
+- EN: Read the guide: how to specify an FIBC
+- SV: Läs guiden: så väljer du rätt storsäck
+- Correction:
+
+**schemaCategory**
+
+- EN: Lumber covers
+- SV: Virkesöverdrag
+- Correction:
+
+**schemaMaterial**
+
+- EN: Woven polypropylene
+- SV: Vävt polypropylen
+- Correction:
+
 #### product-fibc
 
 **seoTitle**
@@ -1445,6 +1813,18 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 
 - EN: Read the guide: how to specify an FIBC
 - SV: Läs guiden: så väljer du rätt storsäck
+- Correction:
+
+**schemaCategory**
+
+- EN: Bulk bags
+- SV: Storsäckar
+- Correction:
+
+**schemaMaterial**
+
+- EN: Woven polypropylene
+- SV: Vävt polypropylen
 - Correction:
 
 ### Home page

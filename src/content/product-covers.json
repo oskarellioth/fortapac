@@ -1,0 +1,172 @@
+{
+  "seoTitle": {
+    "sv": "Virkesöverdrag, UV-stabiliserade och måttanpassade | Fortapac",
+    "en": "Lumber covers, UV stabilised and made to measure | Fortapac"
+  },
+  "seoDescription": {
+    "sv": "Virkesöverdrag i vävt polypropylen som skyddar sågat och hyvlat virke under lagring och transport. UV-stabiliserade, måttanpassade efter ditt paket och tryckta med ditt märke. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.",
+    "en": "Woven polypropylene lumber covers that protect sawn and planed timber in storage and transit. UV stabilised, made to the size of your package and printed with your mark. Manufactured at our parent factory, with sales and support in Sweden."
+  },
+
+  "crumbProducts": { "sv": "Produkter", "en": "Products" },
+  "crumbHere": { "sv": "Virkesöverdrag", "en": "Lumber Covers" },
+
+  "heroEyebrow": { "sv": "Virkesöverdrag", "en": "Lumber Covers" },
+  "heroTitle": { "sv": "Byggda för att stå ute", "en": "Built to stand outside" },
+  "heroBody1": {
+    "sv": "Överdrag i vävt polypropylen som håller sågat och hyvlat virke torrt och rent, från sågverket hela vägen till byggarbetsplatsen.",
+    "en": "Woven polypropylene covers that keep sawn and planed timber dry and clean, from the sawmill all the way to the site."
+  },
+  "heroBody2": {
+    "sv": "Måttanpassade efter ditt paket och tryckta med ditt märke. Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.",
+    "en": "Made to the size of your package and printed with your mark. Manufactured at our parent factory, with local sales and support in Sweden."
+  },
+  "heroButton": { "sv": "Diskutera ditt behov", "en": "Discuss your requirement" },
+  "heroPhoto": "hero.webp",
+  "heroPhotoAlt": {
+    "sv": "Virkespaket på pall med vitt virkesöverdrag och orange sömmar, med ena gaveln öppen så att virket syns.",
+    "en": "Packaged timber on a pallet under a white lumber cover with orange stitching, one end open to show the boards."
+  },
+
+  "specs": [
+    {
+      "value": "1 600 h",
+      "valueLabel": { "sv": "", "en": "" },
+      "label": { "sv": "UV-stabilisering", "en": "UV stabilisation" },
+      "icon": "safety-light.png"
+    },
+    {
+      "value": "100%",
+      "valueLabel": { "sv": "", "en": "" },
+      "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" },
+      "icon": "swl-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": { "sv": "Måttanpassat", "en": "Custom" },
+      "label": { "sv": "Mått och konstruktioner", "en": "Sizes and constructions" },
+      "icon": "sizes-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": { "sv": "Tryck", "en": "Printed" },
+      "label": { "sv": "Efter din specifikation", "en": "To your specification" },
+      "icon": "printed-light.png"
+    }
+  ],
+
+  "rangeEyebrow": { "sv": "Vårt sortiment", "en": "Our range" },
+  "rangeHeading": { "sv": "Rätt överdrag för lagringen.", "en": "The right cover for the storage." },
+  "range": [
+    {
+      "name": { "sv": "Toppöverdrag", "en": "Top covers" },
+      "body": { "sv": "Täcker ovansidan och en bit ned på sidorna. För paket som lagras under tak eller kort tid ute.", "en": "Cover the top and part way down the sides. For packages stored under cover or outdoors for short periods." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Helöverdrag", "en": "Full covers" },
+      "body": { "sv": "Täcker hela paketet ned till pallen. För lagring utomhus under längre tid.", "en": "Cover the whole package down to the pallet. For longer outdoor storage." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Ventilerade överdrag", "en": "Ventilated covers" },
+      "body": { "sv": "Släpper ut fukt ur paketet men håller regn ute. För virke som inte är torrt när det packas.", "en": "Let moisture out of the package while keeping rain off. For timber that is not dry when it is packed." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Måttanpassade överdrag", "en": "Made-to-measure covers" },
+      "body": { "sv": "Sydda efter dina paketmått, med tryck, färg och fästning efter din specifikation.", "en": "Sewn to your package dimensions, with print, colour and fixing to your specification." },
+      "photo": ""
+    }
+  ],
+
+  "builtEyebrow": { "sv": "Byggt kring ditt paket", "en": "Built around your package" },
+  "builtHeading": {
+    "sv": "Specificerat efter hur du lagrar och lastar.",
+    "en": "Specified for the way you store and load."
+  },
+  "builtBody": {
+    "sv": "Varje överdrag konfigureras efter paketets mått, hur länge det står ute och hur det hanteras.",
+    "en": "Every cover is configured to the package dimensions, how long it stands outside and how it is handled."
+  },
+  "matrix": [
+    {
+      "label": { "sv": "Konstruktion", "en": "Construction" },
+      "options": { "sv": "Topp · Hel · Ventilerad", "en": "Top · Full · Ventilated" },
+      "icon": "construction.png"
+    },
+    {
+      "label": { "sv": "Väv", "en": "Fabric" },
+      "options": { "sv": "Belagd · Obelagd · UV-stabiliserad", "en": "Coated · Uncoated · UV stabilised" },
+      "icon": "fabric.png"
+    },
+    {
+      "label": { "sv": "Fästning", "en": "Fixing" },
+      "options": { "sv": "Elastisk kant · Spännband · Sydd ficka", "en": "Elastic hem · Straps · Sewn pocket" },
+      "icon": "lifting.png"
+    },
+    {
+      "label": { "sv": "Tryck", "en": "Printing" },
+      "options": { "sv": "Enfärgat · Flerfärgat · Otryckt", "en": "One colour · Multicolour · Unprinted" },
+      "icon": "filling.png"
+    },
+    {
+      "label": { "sv": "Mått", "en": "Dimensions" },
+      "options": { "sv": "Standardmått · Måttanpassat", "en": "Standard sizes · Made to measure" },
+      "icon": "sizes.png"
+    }
+  ],
+
+  "appEyebrow": { "sv": "Tillämpningar", "en": "Applications" },
+  "appHeading": { "sv": "Utformat efter vad som ligger under.", "en": "Designed around what is underneath." },
+  "appBody": {
+    "sv": "Vi specificerar rätt överdrag för ditt material, din lagring och din hantering.",
+    "en": "We specify the right cover for your material, your storage and your handling."
+  },
+  "appPhoto": "",
+  "appPhotoAlt": {
+    "sv": "Virkespaket med överdrag staplade på en timmergård.",
+    "en": "Covered timber packages stacked in a timber yard."
+  },
+  "applications": [
+    { "sv": "Sågat virke", "en": "Sawn timber" },
+    { "sv": "Hyvlat virke", "en": "Planed timber" },
+    { "sv": "Plywood och skivor", "en": "Plywood and panels" },
+    { "sv": "Stolpar och reglar", "en": "Posts and battens" },
+    { "sv": "Byggmaterial", "en": "Building materials" },
+    { "sv": "Utomhuslagring", "en": "Outdoor storage" }
+  ],
+
+  "directEyebrow": { "sv": "Direkt från tillverkningen", "en": "Direct from manufacturing" },
+  "directHeadingLine1": { "sv": "Tillverkat där.", "en": "Made there." },
+  "directHeadingLine2": { "sv": "Servat här.", "en": "Supported here." },
+  "directBody": {
+    "sv": "Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.",
+    "en": "Manufactured at our parent factory, with specification, sales and support handled locally in Sweden."
+  },
+  "directColumns": [
+    {
+      "label": { "sv": "Egen tillverkning", "en": "Direct manufacturing" },
+      "body": { "sv": "Kontroll över specifikation, produktion och tryck.", "en": "Control over specification, production and printing." },
+      "icon": "manufacturing-light.png"
+    },
+    {
+      "label": { "sv": "Lokal support", "en": "Local support" },
+      "body": { "sv": "Svensk kontakt, lagerhållning och planerad leverans.", "en": "Swedish contact, stockholding and planned supply." },
+      "icon": "team-light.png"
+    }
+  ],
+
+  "helpEyebrow": { "sv": "Behöver du hjälp att specificera?", "en": "Need help specifying?" },
+  "helpHeading": { "sv": "Berätta vad du lagrar.", "en": "Tell us what you are storing." },
+  "helpBody": {
+    "sv": "Ge oss paketets mått, hur länge det står ute och hur det hanteras, så hjälper vi dig specificera rätt överdrag.",
+    "en": "Give us the package dimensions, how long it stands outside and how it is handled. We will help specify the right cover."
+  },
+  "helpButtonPrimary": { "sv": "Diskutera ditt behov", "en": "Discuss your requirement" },
+  "helpButtonSecondary": { "sv": "Begär offert", "en": "Request a quote" },
+  "helpGuideLink": { "sv": "Läs guiden: så väljer du rätt storsäck", "en": "Read the guide: how to specify an FIBC" },
+
+  "schemaCategory": { "sv": "Virkesöverdrag", "en": "Lumber covers" },
+  "schemaMaterial": { "sv": "Vävt polypropylen", "en": "Woven polypropylene" }
+}

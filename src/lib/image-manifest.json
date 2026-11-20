@@ -170,5 +170,23 @@
         "src": "/_img/backdrop-1300.webp"
       }
     ]
+  },
+  "/products/covers/hero.webp": {
+    "width": 1400,
+    "height": 922,
+    "variants": [
+      {
+        "w": 400,
+        "src": "/_img/hero-400.webp"
+      },
+      {
+        "w": 800,
+        "src": "/_img/hero-800.webp"
+      },
+      {
+        "w": 1200,
+        "src": "/_img/hero-1200.webp"
+      }
+    ]
   }
 }

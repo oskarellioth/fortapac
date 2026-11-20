@@ -5,6 +5,7 @@ import site from "../content/site.json";
 import guideFibc from "../content/guide-fibc.json";
 import productFibc from "../content/product-fibc.json";
 import contact from "../content/contact.json";
+import productCovers from "../content/product-covers.json";
 
 export type Locale = "sv" | "en";
 
@@ -25,6 +26,7 @@ export const MEDIA = {
   industryPhotos: "/industries/focus/",
   fibcIcons: "/icons/fibc/",
   fibcPhotos: "/products/fibc/",
+  coversPhotos: "/products/covers/",
   contactIcons: "/icons/contact/",
 } as const;
 
@@ -129,17 +131,28 @@ const homeResolved = {
   heroImageMobile: media(MEDIA.hero, home.heroImageMobile),
 };
 
-// Icon and photo filenames are resolved here for the same reason as everywhere
-// else: components should never know where a directory lives.
-const productFibcResolved = {
-  ...productFibc,
-  heroPhoto: media(MEDIA.fibcPhotos, productFibc.heroPhoto),
-  appPhoto: media(MEDIA.fibcPhotos, productFibc.appPhoto),
-  specs: productFibc.specs.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
-  range: productFibc.range.map((x) => ({ ...x, photo: media(MEDIA.fibcPhotos, x.photo) })),
-  matrix: productFibc.matrix.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
-  directColumns: productFibc.directColumns.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
-};
+/**
+ * Every product page has the same shape, so they share one template and one
+ * resolver. Only the photo directory differs; the icons are common to all of
+ * them and live in one place.
+ */
+function resolveProductPage<T extends typeof productFibc>(page: T, photos: string) {
+  return {
+    ...page,
+    heroPhoto: media(photos, page.heroPhoto),
+    appPhoto: media(photos, page.appPhoto),
+    specs: page.specs.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+    range: page.range.map((x) => ({ ...x, photo: media(photos, x.photo) })),
+    matrix: page.matrix.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+    directColumns: page.directColumns.map((x) => ({ ...x, icon: media(MEDIA.fibcIcons, x.icon) })),
+  };
+}
+
+const productFibcResolved = resolveProductPage(productFibc, MEDIA.fibcPhotos);
+const productCoversResolved = resolveProductPage(productCovers, MEDIA.coversPhotos);
+
+/** What the shared product template accepts. */
+export type ProductPage = typeof productFibcResolved;
 
 export const content = {
   home: homeResolved,
@@ -148,6 +161,7 @@ export const content = {
   site,
   guideFibc,
   productFibc: productFibcResolved,
+  productCovers: productCoversResolved,
   contact,
 };
 
@@ -164,6 +178,7 @@ export const ROUTES = {
   // "välja storsäck", an English one "fibc selection guide".
   guideFibc: { sv: "/valja-storsack", en: "/en/fibc-selection-guide" },
   productFibc: { sv: "/produkter/fibc-storsackar", en: "/en/products/fibc-bulk-bags" },
+  productCovers: { sv: "/produkter/virkesoverdrag", en: "/en/products/lumber-covers" },
   contact: { sv: "/kontakt", en: "/en/contact" },
   privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
   terms: { sv: "/anvandarvillkor", en: "/en/terms" },
@@ -203,5 +218,8 @@ export function anchors(locale: Locale) {
  * adding its route above and a line here.
  */
 export function productHrefs(locale: Locale): Record<string, string> {
-  return { fibc: ROUTES.productFibc[locale] };
+  return {
+    fibc: ROUTES.productFibc[locale],
+    covers: ROUTES.productCovers[locale],
+  };
 }

@@ -27,6 +27,94 @@ const bilingualLong = (label: string, description?: string) =>
     { label, description, layout: [6, 6] },
   );
 
+/**
+ * Product pages share one template, so they share one schema. Adding a product
+ * is a content file, a route and one line here.
+ *
+ * Keys must match the JSON exactly, and every item in an array must carry the
+ * same keys, or the entry blanks in the admin.
+ */
+const productPageSchema = (photoDir: string) => ({
+        crumbProducts: bilingual("Breadcrumb, products"),
+        crumbHere: bilingual("Breadcrumb, this page"),
+
+        heroEyebrow: bilingual("Hero eyebrow"),
+        heroTitle: bilingual("Hero headline", "A full stop in brand orange is added automatically."),
+        heroBody1: bilingualLong("Hero paragraph 1"),
+        heroBody2: bilingualLong("Hero paragraph 2"),
+        heroButton: bilingual("Hero button"),
+        heroPhoto: fields.image({ label: "Hero photo", directory: `public/products/${photoDir}`, publicPath: `/products/${photoDir}/` }),
+        heroPhotoAlt: bilingualLong("Hero photo, alt text", "Describe the photo for screen readers and search."),
+
+        specs: fields.array(
+          fields.object({
+            value: fields.text({ label: "Value", description: "Shown in both languages, e.g. 500-2 000 kg. Leave empty to use the worded value below." }),
+            valueLabel: bilingual("Worded value", "Used only when Value is empty, e.g. Custom / Printed."),
+            label: bilingual("Label"),
+            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/. Use a -light variant: this strip sits on navy." }),
+          }),
+          { label: "Spec strip", itemLabel: (props) => props.fields.label.fields.en.value || "Spec" },
+        ),
+
+        rangeEyebrow: bilingual("Range, eyebrow"),
+        rangeHeading: bilingual("Range, heading"),
+        range: fields.array(
+          fields.object({
+            name: bilingual("Name"),
+            body: bilingualLong("Body"),
+            photo: fields.image({ label: "Photo", directory: `public/products/${photoDir}`, publicPath: `/products/${photoDir}/` }),
+          }),
+          { label: "Range cards", itemLabel: (props) => props.fields.name.fields.en.value || "Card" },
+        ),
+
+        builtEyebrow: bilingual("Configuration, eyebrow"),
+        builtHeading: bilingual("Configuration, heading"),
+        builtBody: bilingualLong("Configuration, paragraph"),
+        matrix: fields.array(
+          fields.object({
+            label: bilingual("Row label"),
+            options: bilingual("Options", "Separate with a middle dot, e.g. Circular · U-panel · 4-panel."),
+            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/." }),
+          }),
+          { label: "Configuration rows", itemLabel: (props) => props.fields.label.fields.en.value || "Row" },
+        ),
+
+        appEyebrow: bilingual("Applications, eyebrow"),
+        appHeading: bilingual("Applications, heading"),
+        appBody: bilingualLong("Applications, paragraph"),
+        appPhoto: fields.image({ label: "Applications photo", directory: `public/products/${photoDir}`, publicPath: `/products/${photoDir}/` }),
+        appPhotoAlt: bilingualLong("Applications photo, alt text"),
+        applications: fields.array(bilingual("Application"), {
+          label: "Applications",
+          itemLabel: (props) => props.fields.en.value || "Application",
+        }),
+
+        directEyebrow: bilingual("Manufacturing band, eyebrow"),
+        directHeadingLine1: bilingual("Manufacturing band, heading line 1"),
+        directHeadingLine2: bilingual("Manufacturing band, heading line 2"),
+        directBody: bilingualLong("Manufacturing band, paragraph"),
+        directColumns: fields.array(
+          fields.object({
+            label: bilingual("Label"),
+            body: bilingualLong("Body"),
+            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/. Use a -light variant: this band is navy." }),
+          }),
+          { label: "Manufacturing columns", itemLabel: (props) => props.fields.label.fields.en.value || "Column" },
+        ),
+
+        helpEyebrow: bilingual("Help panel, eyebrow"),
+        helpHeading: bilingual("Help panel, heading"),
+        helpBody: bilingualLong("Help panel, paragraph"),
+        helpButtonPrimary: bilingual("Help panel, primary button"),
+        helpButtonSecondary: bilingual("Help panel, secondary button"),
+        helpGuideLink: bilingual("Help panel, link to the selection guide"),
+
+        seoTitle: bilingual("SEO title"),
+        seoDescription: bilingualLong("SEO description"),
+        schemaCategory: bilingual("Structured data, category", "Used in the Product schema search engines read."),
+        schemaMaterial: bilingual("Structured data, material"),
+});
+
 export default config({
   // GitHub storage: Save becomes a commit to the repo, so the CMS works from
   // any machine for anyone with write access, rather than only against the
@@ -44,7 +132,7 @@ export default config({
   ui: {
     brand: { name: "Fortapac" },
     navigation: {
-      Pages: ["homePage", "aboutPage", "productFibcPage", "guideFibcPage", "contactPage"],
+      Pages: ["homePage", "aboutPage", "productFibcPage", "productCoversPage", "guideFibcPage", "contactPage"],
       Catalogue: ["products", "industries"],
       Settings: ["navigation", "siteSettings"],
     },
@@ -242,86 +330,14 @@ export default config({
       label: "FIBC product page",
       path: "src/content/product-fibc",
       format: { data: "json" },
-      // Keys must match src/content/product-fibc.json exactly, and every item in
-      // an array must carry the same keys, or the entry blanks in the admin.
-      schema: {
-        crumbProducts: bilingual("Breadcrumb, products"),
-        crumbHere: bilingual("Breadcrumb, this page"),
+      schema: productPageSchema("fibc"),
+    }),
 
-        heroEyebrow: bilingual("Hero eyebrow"),
-        heroTitle: bilingual("Hero headline", "A full stop in brand orange is added automatically."),
-        heroBody1: bilingualLong("Hero paragraph 1"),
-        heroBody2: bilingualLong("Hero paragraph 2"),
-        heroButton: bilingual("Hero button"),
-        heroPhoto: fields.image({ label: "Hero photo", directory: "public/products/fibc", publicPath: "/products/fibc/" }),
-        heroPhotoAlt: bilingualLong("Hero photo, alt text", "Describe the photo for screen readers and search."),
-
-        specs: fields.array(
-          fields.object({
-            value: fields.text({ label: "Value", description: "Shown in both languages, e.g. 500-2 000 kg. Leave empty to use the worded value below." }),
-            valueLabel: bilingual("Worded value", "Used only when Value is empty, e.g. Custom / Printed."),
-            label: bilingual("Label"),
-            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/. Use a -light variant: this strip sits on navy." }),
-          }),
-          { label: "Spec strip", itemLabel: (props) => props.fields.label.fields.en.value || "Spec" },
-        ),
-
-        rangeEyebrow: bilingual("Range, eyebrow"),
-        rangeHeading: bilingual("Range, heading"),
-        range: fields.array(
-          fields.object({
-            name: bilingual("Name"),
-            body: bilingualLong("Body"),
-            photo: fields.image({ label: "Photo", directory: "public/products/fibc", publicPath: "/products/fibc/" }),
-          }),
-          { label: "Range cards", itemLabel: (props) => props.fields.name.fields.en.value || "Card" },
-        ),
-
-        builtEyebrow: bilingual("Configuration, eyebrow"),
-        builtHeading: bilingual("Configuration, heading"),
-        builtBody: bilingualLong("Configuration, paragraph"),
-        matrix: fields.array(
-          fields.object({
-            label: bilingual("Row label"),
-            options: bilingual("Options", "Separate with a middle dot, e.g. Circular · U-panel · 4-panel."),
-            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/." }),
-          }),
-          { label: "Configuration rows", itemLabel: (props) => props.fields.label.fields.en.value || "Row" },
-        ),
-
-        appEyebrow: bilingual("Applications, eyebrow"),
-        appHeading: bilingual("Applications, heading"),
-        appBody: bilingualLong("Applications, paragraph"),
-        appPhoto: fields.image({ label: "Applications photo", directory: "public/products/fibc", publicPath: "/products/fibc/" }),
-        appPhotoAlt: bilingualLong("Applications photo, alt text"),
-        applications: fields.array(bilingual("Application"), {
-          label: "Applications",
-          itemLabel: (props) => props.fields.en.value || "Application",
-        }),
-
-        directEyebrow: bilingual("Manufacturing band, eyebrow"),
-        directHeadingLine1: bilingual("Manufacturing band, heading line 1"),
-        directHeadingLine2: bilingual("Manufacturing band, heading line 2"),
-        directBody: bilingualLong("Manufacturing band, paragraph"),
-        directColumns: fields.array(
-          fields.object({
-            label: bilingual("Label"),
-            body: bilingualLong("Body"),
-            icon: fields.text({ label: "Icon filename", description: "In public/icons/fibc/. Use a -light variant: this band is navy." }),
-          }),
-          { label: "Manufacturing columns", itemLabel: (props) => props.fields.label.fields.en.value || "Column" },
-        ),
-
-        helpEyebrow: bilingual("Help panel, eyebrow"),
-        helpHeading: bilingual("Help panel, heading"),
-        helpBody: bilingualLong("Help panel, paragraph"),
-        helpButtonPrimary: bilingual("Help panel, primary button"),
-        helpButtonSecondary: bilingual("Help panel, secondary button"),
-        helpGuideLink: bilingual("Help panel, link to the selection guide"),
-
-        seoTitle: bilingual("SEO title"),
-        seoDescription: bilingualLong("SEO description"),
-      },
+    productCoversPage: singleton({
+      label: "Lumber covers product page",
+      path: "src/content/product-covers",
+      format: { data: "json" },
+      schema: productPageSchema("covers"),
     }),
 
     guideFibcPage: singleton({

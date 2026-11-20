@@ -319,5 +319,13 @@
   "helpGuideLink": {
     "sv": "Läs guiden: så väljer du rätt storsäck",
     "en": "Read the guide: how to specify an FIBC"
+  },
+  "schemaCategory": {
+    "sv": "Storsäckar",
+    "en": "Bulk bags"
+  },
+  "schemaMaterial": {
+    "sv": "Vävt polypropylen",
+    "en": "Woven polypropylene"
   }
 }

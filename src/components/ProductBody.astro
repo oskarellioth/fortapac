@@ -1,21 +1,26 @@
 ---
-import { content, pick, ROUTES, anchors, type Locale } from "../lib/content";
+import { content, pick, ROUTES, anchors, type Locale, type ProductPage } from "../lib/content";
 import { photo } from "../lib/images";
 
 /**
- * The FIBC product page, built from the supplied mockup.
+ * Shared product page template, built from the FIBC mockup.
+ *
+ * Every product uses this: the sections are the same and only the content
+ * differs, so the page is a prop rather than a copy. The FIBC page was the
+ * first and defined the shape.
  *
  * Product schema is included because this is the page a shopping or assistant
  * query should land on, and it is the one place on the site that states the
- * load range and safety factors as structured data. No price or availability,
- * since everything here is quoted to specification.
+ * specs as structured data. No price or availability, since everything here is
+ * quoted to specification.
  */
 
 interface Props {
   locale: Locale;
+  page: ProductPage;
 }
-const { locale } = Astro.props;
-const p = content.productFibc;
+const { locale, page } = Astro.props;
+const p = page;
 const a = anchors(locale);
 const t = (v: { sv: string; en: string } | undefined) => pick(v, locale);
 
@@ -26,8 +31,8 @@ const productSchema = {
   "@type": "Product",
   name: t(p.crumbHere),
   description: t(p.seoDescription),
-  category: locale === "sv" ? "Storsäckar" : "Bulk bags",
-  material: locale === "sv" ? "Vävt polypropylen" : "Woven polypropylene",
+  category: t(p.schemaCategory),
+  material: t(p.schemaMaterial),
   brand: { "@type": "Brand", name: "Fortapac" },
   additionalProperty: p.specs
     .filter((s) => s.value)
