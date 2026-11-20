@@ -70,7 +70,11 @@ async function run() {
     for (const file of files) {
       const src = path.join(ROOT, group.dir, file);
       const publicPath = "/" + path.join(group.dir.replace(/^public\//, ""), file);
-      const base = file.replace(PHOTO, "");
+      // Derived from the full public path, not the basename. Every product
+      // page has a file called hero.webp, and a flat output directory keyed by
+      // basename made them collide: whichever was processed last overwrote the
+      // rest, so one product silently showed another's photograph.
+      const base = publicPath.replace(/^\//, "").replace(PHOTO, "").replace(/\//g, "-");
       const meta = await sharp(src).metadata();
 
       // Never upscale: a 1200px source gets no 1600px variant.

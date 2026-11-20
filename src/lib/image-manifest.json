@@ -5,15 +5,15 @@
     "variants": [
       {
         "w": 640,
-        "src": "/_img/home-640.webp"
+        "src": "/_img/hero-home-640.webp"
       },
       {
         "w": 1024,
-        "src": "/_img/home-1024.webp"
+        "src": "/_img/hero-home-1024.webp"
       },
       {
         "w": 1600,
-        "src": "/_img/home-1600.webp"
+        "src": "/_img/hero-home-1600.webp"
       }
     ]
   },
@@ -23,11 +23,11 @@
     "variants": [
       {
         "w": 640,
-        "src": "/_img/mobile-640.webp"
+        "src": "/_img/hero-mobile-640.webp"
       },
       {
         "w": 1024,
-        "src": "/_img/mobile-1024.webp"
+        "src": "/_img/hero-mobile-1024.webp"
       }
     ]
   },
@@ -37,15 +37,15 @@
     "variants": [
       {
         "w": 480,
-        "src": "/_img/fibc-480.webp"
+        "src": "/_img/products-focus-fibc-480.webp"
       },
       {
         "w": 800,
-        "src": "/_img/fibc-800.webp"
+        "src": "/_img/products-focus-fibc-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/fibc-1200.webp"
+        "src": "/_img/products-focus-fibc-1200.webp"
       }
     ]
   },
@@ -55,15 +55,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/application-400.webp"
+        "src": "/_img/products-fibc-application-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/application-800.webp"
+        "src": "/_img/products-fibc-application-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/application-1200.webp"
+        "src": "/_img/products-fibc-application-1200.webp"
       }
     ]
   },
@@ -73,15 +73,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/filling-discharge-400.webp"
+        "src": "/_img/products-fibc-filling-discharge-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/filling-discharge-800.webp"
+        "src": "/_img/products-fibc-filling-discharge-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/filling-discharge-1200.webp"
+        "src": "/_img/products-fibc-filling-discharge-1200.webp"
       }
     ]
   },
@@ -91,15 +91,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/hero-400.webp"
+        "src": "/_img/products-fibc-hero-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/hero-800.webp"
+        "src": "/_img/products-fibc-hero-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/hero-1200.webp"
+        "src": "/_img/products-fibc-hero-1200.webp"
       }
     ]
   },
@@ -109,11 +109,11 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/single-loop-400.webp"
+        "src": "/_img/products-fibc-single-loop-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/single-loop-800.webp"
+        "src": "/_img/products-fibc-single-loop-800.webp"
       }
     ]
   },
@@ -123,15 +123,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/specialist-400.webp"
+        "src": "/_img/products-fibc-specialist-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/specialist-800.webp"
+        "src": "/_img/products-fibc-specialist-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/specialist-1200.webp"
+        "src": "/_img/products-fibc-specialist-1200.webp"
       }
     ]
   },
@@ -141,15 +141,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/standard-400.webp"
+        "src": "/_img/products-fibc-standard-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/standard-800.webp"
+        "src": "/_img/products-fibc-standard-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/standard-1200.webp"
+        "src": "/_img/products-fibc-standard-1200.webp"
       }
     ]
   },
@@ -159,15 +159,15 @@
     "variants": [
       {
         "w": 600,
-        "src": "/_img/backdrop-600.webp"
+        "src": "/_img/contact-backdrop-600.webp"
       },
       {
         "w": 900,
-        "src": "/_img/backdrop-900.webp"
+        "src": "/_img/contact-backdrop-900.webp"
       },
       {
         "w": 1300,
-        "src": "/_img/backdrop-1300.webp"
+        "src": "/_img/contact-backdrop-1300.webp"
       }
     ]
   },
@@ -177,15 +177,15 @@
     "variants": [
       {
         "w": 400,
-        "src": "/_img/hero-400.webp"
+        "src": "/_img/products-covers-hero-400.webp"
       },
       {
         "w": 800,
-        "src": "/_img/hero-800.webp"
+        "src": "/_img/products-covers-hero-800.webp"
       },
       {
         "w": 1200,
-        "src": "/_img/hero-1200.webp"
+        "src": "/_img/products-covers-hero-1200.webp"
       }
     ]
   }
