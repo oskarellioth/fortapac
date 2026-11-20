@@ -1,0 +1,14 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductBody from "../../components/ProductBody.astro";
+import { content, pick } from "../../lib/content";
+const locale = "sv" as const;
+const page = content.productSacks;
+---
+<Base
+  locale={locale}
+  title={pick(page.seoTitle, locale)}
+  description={pick(page.seoDescription, locale)}
+>
+  <ProductBody locale={locale} page={page} />
+</Base>

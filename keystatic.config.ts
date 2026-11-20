@@ -132,7 +132,7 @@ export default config({
   ui: {
     brand: { name: "Fortapac" },
     navigation: {
-      Pages: ["homePage", "aboutPage", "productFibcPage", "productCoversPage", "guideFibcPage", "contactPage"],
+      Pages: ["homePage", "aboutPage", "productFibcPage", "productCoversPage", "productSacksPage", "guideFibcPage", "contactPage"],
       Catalogue: ["products", "industries"],
       Settings: ["navigation", "siteSettings"],
     },
@@ -338,6 +338,13 @@ export default config({
       path: "src/content/product-covers",
       format: { data: "json" },
       schema: productPageSchema("covers"),
+    }),
+
+    productSacksPage: singleton({
+      label: "PP woven sacks product page",
+      path: "src/content/product-sacks",
+      format: { data: "json" },
+      schema: productPageSchema("sacks"),
     }),
 
     guideFibcPage: singleton({

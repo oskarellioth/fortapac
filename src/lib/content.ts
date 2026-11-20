@@ -6,6 +6,7 @@ import guideFibc from "../content/guide-fibc.json";
 import productFibc from "../content/product-fibc.json";
 import contact from "../content/contact.json";
 import productCovers from "../content/product-covers.json";
+import productSacks from "../content/product-sacks.json";
 
 export type Locale = "sv" | "en";
 
@@ -27,6 +28,7 @@ export const MEDIA = {
   fibcIcons: "/icons/fibc/",
   fibcPhotos: "/products/fibc/",
   coversPhotos: "/products/covers/",
+  sacksPhotos: "/products/sacks/",
   contactIcons: "/icons/contact/",
 } as const;
 
@@ -150,6 +152,7 @@ function resolveProductPage<T extends typeof productFibc>(page: T, photos: strin
 
 const productFibcResolved = resolveProductPage(productFibc, MEDIA.fibcPhotos);
 const productCoversResolved = resolveProductPage(productCovers, MEDIA.coversPhotos);
+const productSacksResolved = resolveProductPage(productSacks, MEDIA.sacksPhotos);
 
 /** What the shared product template accepts. */
 export type ProductPage = typeof productFibcResolved;
@@ -162,6 +165,7 @@ export const content = {
   guideFibc,
   productFibc: productFibcResolved,
   productCovers: productCoversResolved,
+  productSacks: productSacksResolved,
   contact,
 };
 
@@ -179,6 +183,7 @@ export const ROUTES = {
   guideFibc: { sv: "/valja-storsack", en: "/en/fibc-selection-guide" },
   productFibc: { sv: "/produkter/fibc-storsackar", en: "/en/products/fibc-bulk-bags" },
   productCovers: { sv: "/produkter/virkesoverdrag", en: "/en/products/lumber-covers" },
+  productSacks: { sv: "/produkter/pp-vavda-sackar", en: "/en/products/pp-woven-sacks" },
   contact: { sv: "/kontakt", en: "/en/contact" },
   privacy: { sv: "/integritetspolicy", en: "/en/privacy" },
   terms: { sv: "/anvandarvillkor", en: "/en/terms" },
@@ -221,5 +226,6 @@ export function productHrefs(locale: Locale): Record<string, string> {
   return {
     fibc: ROUTES.productFibc[locale],
     covers: ROUTES.productCovers[locale],
+    sacks: ROUTES.productSacks[locale],
   };
 }

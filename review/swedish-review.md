@@ -1,6 +1,6 @@
 # Fortapac, Swedish copy review
 
-Generated 2026-11-20. 488 Swedish strings across 23 content files.
+Generated 2026-11-20. 549 Swedish strings across 24 content files.
 
 ## How to use this
 
@@ -1819,6 +1819,374 @@ Left in English on purpose: `FIBC`, `SWL`, `PP`, `PE`, `UV`, `UN`, `Fortapac`, `
 
 - EN: Bulk bags
 - SV: Storsäckar
+- Correction:
+
+**schemaMaterial**
+
+- EN: Woven polypropylene
+- SV: Vävt polypropylen
+- Correction:
+
+#### product-sacks
+
+**seoTitle**
+
+- EN: PP woven sacks: valve, open-mouth and leno | Fortapac
+- SV: PP-säckar: ventilsäckar, öppen mynning och leno | Fortapac
+- Correction:
+
+**seoDescription**
+
+- EN: Woven PP sacks from 10 to 100 kg for grain, feed, seed, fertiliser and chemicals. Valve sacks, open-mouth sacks and leno sacks, printed to your specification. Manufactured at our parent factory, with sales and support in Sweden.
+- SV: Vävda PP-säckar från 10 till 100 kg för spannmål, foder, utsäde, gödsel och kemikalier. Ventilsäckar, säckar med öppen mynning och leno-säckar, tryckta efter din specifikation. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.
+- Correction:
+
+**crumbProducts**
+
+- EN: Products
+- SV: Produkter
+- Correction:
+
+**crumbHere**
+
+- EN: PP Woven Sacks
+- SV: PP-säckar
+- Correction:
+
+**heroEyebrow**
+
+- EN: PP Woven Sacks
+- SV: PP-säckar
+- Correction:
+
+**heroTitle**
+
+- EN: The sack does the work
+- SV: Säcken gör jobbet
+- Correction:
+
+**heroBody1**
+
+- EN: Woven polypropylene sacks from 10 to 100 kg, built around how you fill, close and stack them.
+- SV: Vävda polypropensäckar från 10 till 100 kg, byggda kring hur du fyller, förseglar och staplar dem.
+- Correction:
+
+**heroBody2**
+
+- EN: Printed to your specification. Manufactured at our parent factory, with local sales and support in Sweden.
+- SV: Tryckta efter din specifikation. Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.
+- Correction:
+
+**heroButton**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**heroPhotoAlt**
+
+- EN: Woven PP sack filled with granules, printed on the face.
+- SV: Vävd PP-säck fylld med granulat, med tryck på framsidan.
+- Correction:
+
+**specs › 1 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 1 › label**
+
+- EN: Capacity
+- SV: Kapacitet
+- Correction:
+
+**specs › 2 › valueLabel**
+
+- EN: Printed
+- SV: Tryck
+- Correction:
+
+**specs › 2 › label**
+
+- EN: To your specification
+- SV: Efter din specifikation
+- Correction:
+
+**specs › 3 › valueLabel**
+
+- EN: Custom
+- SV: Måttanpassat
+- Correction:
+
+**specs › 3 › label**
+
+- EN: Sizes and constructions
+- SV: Mått och konstruktioner
+- Correction:
+
+**specs › 4 › valueLabel**
+
+- EN: 
+- SV: 
+- Correction:
+
+**specs › 4 › label**
+
+- EN: Recyclable PP
+- SV: Återvinningsbar PP
+- Correction:
+
+**rangeEyebrow**
+
+- EN: Our range
+- SV: Vårt sortiment
+- Correction:
+
+**rangeHeading**
+
+- EN: The right sack for the filling line.
+- SV: Rätt säck för påfyllningen.
+- Correction:
+
+**range › 1 › name**
+
+- EN: Valve sacks
+- SV: Ventilsäckar
+- Correction:
+
+**range › 1 › body**
+
+- EN: Filled through a valve that closes itself. For powders and granules on automated lines, with no sewing step.
+- SV: Fylls genom en ventil som sluter sig själv. För pulver och granulat på automatiska linjer, utan att säcken behöver sys.
+- Correction:
+
+**range › 2 › name**
+
+- EN: Open-mouth sacks
+- SV: Säckar med öppen mynning
+- Correction:
+
+**range › 2 › body**
+
+- EN: Filled from the top and closed by sewing or heat seal. The most flexible option, and the easiest to fill by hand.
+- SV: Fylls uppifrån och försluts med sömnad eller värme. Det mest flexibla utförandet, och det enklaste att fylla för hand.
+- Correction:
+
+**range › 3 › name**
+
+- EN: Leno sacks
+- SV: Leno-säckar
+- Correction:
+
+**range › 3 › body**
+
+- EN: Open mesh weave that lets air through. For produce that needs ventilation, such as potatoes, onions and firewood.
+- SV: Öppen nätväv som släpper igenom luft. För produkter som behöver ventilation, som potatis, lök och ved.
+- Correction:
+
+**range › 4 › name**
+
+- EN: Laminated sacks
+- SV: Laminerade säckar
+- Correction:
+
+**range › 4 › body**
+
+- EN: Fabric laminated with film, for a moisture barrier and photographic print quality. For products sold in the sack.
+- SV: Väv laminerad med film, för fuktspärr och tryck i fotokvalitet. För produkter som säljs i säcken.
+- Correction:
+
+**builtEyebrow**
+
+- EN: Built around your line
+- SV: Byggd kring din linje
+- Correction:
+
+**builtHeading**
+
+- EN: Specified for the way you fill and close.
+- SV: Specificerad efter hur du fyller och försluter.
+- Correction:
+
+**builtBody**
+
+- EN: Every sack is configured around the product, the filling equipment, and how it is stacked and sold.
+- SV: Varje säck konfigureras efter produkten, påfyllningsutrustningen och hur den ska staplas och säljas.
+- Correction:
+
+**matrix › 1 › label**
+
+- EN: Construction
+- SV: Konstruktion
+- Correction:
+
+**matrix › 1 › options**
+
+- EN: Valve · Open-mouth · Leno
+- SV: Ventil · Öppen mynning · Leno
+- Correction:
+
+**matrix › 2 › label**
+
+- EN: Filling
+- SV: Påfyllning
+- Correction:
+
+**matrix › 2 › options**
+
+- EN: Automated · By hand
+- SV: Automatisk · För hand
+- Correction:
+
+**matrix › 3 › label**
+
+- EN: Base and closure
+- SV: Botten och förslutning
+- Correction:
+
+**matrix › 3 › options**
+
+- EN: Sewn · Heat sealed · Block bottom
+- SV: Sydd · Värmeförseglad · Blockbotten
+- Correction:
+
+**matrix › 4 › label**
+
+- EN: Fabric
+- SV: Väv
+- Correction:
+
+**matrix › 4 › options**
+
+- EN: Coated · Uncoated · Laminated
+- SV: Belagd · Obelagd · Laminerad
+- Correction:
+
+**matrix › 5 › label**
+
+- EN: Printing
+- SV: Tryck
+- Correction:
+
+**matrix › 5 › options**
+
+- EN: One colour · Multicolour · Photographic
+- SV: Enfärgat · Flerfärgat · Fotokvalitet
+- Correction:
+
+**appEyebrow**
+
+- EN: Applications
+- SV: Tillämpningar
+- Correction:
+
+**appHeading**
+
+- EN: Designed around what goes in.
+- SV: Utformad efter innehållet.
+- Correction:
+
+**appBody**
+
+- EN: We specify the right sack for your product, your equipment and your requirements for durability and print.
+- SV: Vi specificerar rätt säck för din produkt, din utrustning och dina krav på hållbarhet och tryck.
+- Correction:
+
+**appPhotoAlt**
+
+- EN: Stacked PP sacks on a pallet in a warehouse.
+- SV: Staplade PP-säckar på pall i ett lager.
+- Correction:
+
+**directEyebrow**
+
+- EN: Direct from manufacturing
+- SV: Direkt från tillverkningen
+- Correction:
+
+**directHeadingLine1**
+
+- EN: Made there.
+- SV: Tillverkade där.
+- Correction:
+
+**directHeadingLine2**
+
+- EN: Supported here.
+- SV: Servade här.
+- Correction:
+
+**directBody**
+
+- EN: Manufactured at our parent factory, with specification, sales and support handled locally in Sweden.
+- SV: Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.
+- Correction:
+
+**directColumns › 1 › label**
+
+- EN: Direct manufacturing
+- SV: Egen tillverkning
+- Correction:
+
+**directColumns › 1 › body**
+
+- EN: Control over specification, production and printing.
+- SV: Kontroll över specifikation, produktion och tryck.
+- Correction:
+
+**directColumns › 2 › label**
+
+- EN: Local support
+- SV: Lokal support
+- Correction:
+
+**directColumns › 2 › body**
+
+- EN: Swedish contact, stockholding and planned supply.
+- SV: Svensk kontakt, lagerhållning och planerad leverans.
+- Correction:
+
+**helpEyebrow**
+
+- EN: Need help specifying?
+- SV: Behöver du hjälp att specificera?
+- Correction:
+
+**helpHeading**
+
+- EN: Tell us what you are filling.
+- SV: Berätta vad du fyller.
+- Correction:
+
+**helpBody**
+
+- EN: Give us the product, weight per sack, and how it is filled and closed. We will help specify the right sack.
+- SV: Ge oss produkt, vikt per säck, hur den fylls och försluts, så hjälper vi dig specificera rätt säck.
+- Correction:
+
+**helpButtonPrimary**
+
+- EN: Discuss your requirement
+- SV: Diskutera ditt behov
+- Correction:
+
+**helpButtonSecondary**
+
+- EN: Request a quote
+- SV: Begär offert
+- Correction:
+
+**helpGuideLink**
+
+- EN: Read the guide: how to specify an FIBC
+- SV: Läs guiden: så väljer du rätt storsäck
+- Correction:
+
+**schemaCategory**
+
+- EN: PP woven sacks
+- SV: PP-säckar
 - Correction:
 
 **schemaMaterial**

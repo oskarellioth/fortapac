@@ -1,0 +1,172 @@
+{
+  "seoTitle": {
+    "sv": "PP-säckar: ventilsäckar, öppen mynning och leno | Fortapac",
+    "en": "PP woven sacks: valve, open-mouth and leno | Fortapac"
+  },
+  "seoDescription": {
+    "sv": "Vävda PP-säckar från 10 till 100 kg för spannmål, foder, utsäde, gödsel och kemikalier. Ventilsäckar, säckar med öppen mynning och leno-säckar, tryckta efter din specifikation. Tillverkade i vår moderfabrik, med försäljning och support i Sverige.",
+    "en": "Woven PP sacks from 10 to 100 kg for grain, feed, seed, fertiliser and chemicals. Valve sacks, open-mouth sacks and leno sacks, printed to your specification. Manufactured at our parent factory, with sales and support in Sweden."
+  },
+
+  "crumbProducts": { "sv": "Produkter", "en": "Products" },
+  "crumbHere": { "sv": "PP-säckar", "en": "PP Woven Sacks" },
+
+  "heroEyebrow": { "sv": "PP-säckar", "en": "PP Woven Sacks" },
+  "heroTitle": { "sv": "Säcken gör jobbet", "en": "The sack does the work" },
+  "heroBody1": {
+    "sv": "Vävda polypropensäckar från 10 till 100 kg, byggda kring hur du fyller, förseglar och staplar dem.",
+    "en": "Woven polypropylene sacks from 10 to 100 kg, built around how you fill, close and stack them."
+  },
+  "heroBody2": {
+    "sv": "Tryckta efter din specifikation. Tillverkade i vår moderfabrik, med försäljning och support lokalt i Sverige.",
+    "en": "Printed to your specification. Manufactured at our parent factory, with local sales and support in Sweden."
+  },
+  "heroButton": { "sv": "Diskutera ditt behov", "en": "Discuss your requirement" },
+  "heroPhoto": "",
+  "heroPhotoAlt": {
+    "sv": "Vävd PP-säck fylld med granulat, med tryck på framsidan.",
+    "en": "Woven PP sack filled with granules, printed on the face."
+  },
+
+  "specs": [
+    {
+      "value": "10–100 kg",
+      "valueLabel": { "sv": "", "en": "" },
+      "label": { "sv": "Kapacitet", "en": "Capacity" },
+      "icon": "swl-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": { "sv": "Tryck", "en": "Printed" },
+      "label": { "sv": "Efter din specifikation", "en": "To your specification" },
+      "icon": "printed-light.png"
+    },
+    {
+      "value": "",
+      "valueLabel": { "sv": "Måttanpassat", "en": "Custom" },
+      "label": { "sv": "Mått och konstruktioner", "en": "Sizes and constructions" },
+      "icon": "sizes-light.png"
+    },
+    {
+      "value": "100%",
+      "valueLabel": { "sv": "", "en": "" },
+      "label": { "sv": "Återvinningsbar PP", "en": "Recyclable PP" },
+      "icon": "safety-light.png"
+    }
+  ],
+
+  "rangeEyebrow": { "sv": "Vårt sortiment", "en": "Our range" },
+  "rangeHeading": { "sv": "Rätt säck för påfyllningen.", "en": "The right sack for the filling line." },
+  "range": [
+    {
+      "name": { "sv": "Ventilsäckar", "en": "Valve sacks" },
+      "body": { "sv": "Fylls genom en ventil som sluter sig själv. För pulver och granulat på automatiska linjer, utan att säcken behöver sys.", "en": "Filled through a valve that closes itself. For powders and granules on automated lines, with no sewing step." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Säckar med öppen mynning", "en": "Open-mouth sacks" },
+      "body": { "sv": "Fylls uppifrån och försluts med sömnad eller värme. Det mest flexibla utförandet, och det enklaste att fylla för hand.", "en": "Filled from the top and closed by sewing or heat seal. The most flexible option, and the easiest to fill by hand." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Leno-säckar", "en": "Leno sacks" },
+      "body": { "sv": "Öppen nätväv som släpper igenom luft. För produkter som behöver ventilation, som potatis, lök och ved.", "en": "Open mesh weave that lets air through. For produce that needs ventilation, such as potatoes, onions and firewood." },
+      "photo": ""
+    },
+    {
+      "name": { "sv": "Laminerade säckar", "en": "Laminated sacks" },
+      "body": { "sv": "Väv laminerad med film, för fuktspärr och tryck i fotokvalitet. För produkter som säljs i säcken.", "en": "Fabric laminated with film, for a moisture barrier and photographic print quality. For products sold in the sack." },
+      "photo": ""
+    }
+  ],
+
+  "builtEyebrow": { "sv": "Byggd kring din linje", "en": "Built around your line" },
+  "builtHeading": {
+    "sv": "Specificerad efter hur du fyller och försluter.",
+    "en": "Specified for the way you fill and close."
+  },
+  "builtBody": {
+    "sv": "Varje säck konfigureras efter produkten, påfyllningsutrustningen och hur den ska staplas och säljas.",
+    "en": "Every sack is configured around the product, the filling equipment, and how it is stacked and sold."
+  },
+  "matrix": [
+    {
+      "label": { "sv": "Konstruktion", "en": "Construction" },
+      "options": { "sv": "Ventil · Öppen mynning · Leno", "en": "Valve · Open-mouth · Leno" },
+      "icon": "construction.png"
+    },
+    {
+      "label": { "sv": "Påfyllning", "en": "Filling" },
+      "options": { "sv": "Automatisk · För hand", "en": "Automated · By hand" },
+      "icon": "filling.png"
+    },
+    {
+      "label": { "sv": "Botten och förslutning", "en": "Base and closure" },
+      "options": { "sv": "Sydd · Värmeförseglad · Blockbotten", "en": "Sewn · Heat sealed · Block bottom" },
+      "icon": "discharge.png"
+    },
+    {
+      "label": { "sv": "Väv", "en": "Fabric" },
+      "options": { "sv": "Belagd · Obelagd · Laminerad", "en": "Coated · Uncoated · Laminated" },
+      "icon": "fabric.png"
+    },
+    {
+      "label": { "sv": "Tryck", "en": "Printing" },
+      "options": { "sv": "Enfärgat · Flerfärgat · Fotokvalitet", "en": "One colour · Multicolour · Photographic" },
+      "icon": "sizes.png"
+    }
+  ],
+
+  "appEyebrow": { "sv": "Tillämpningar", "en": "Applications" },
+  "appHeading": { "sv": "Utformad efter innehållet.", "en": "Designed around what goes in." },
+  "appBody": {
+    "sv": "Vi specificerar rätt säck för din produkt, din utrustning och dina krav på hållbarhet och tryck.",
+    "en": "We specify the right sack for your product, your equipment and your requirements for durability and print."
+  },
+  "appPhoto": "",
+  "appPhotoAlt": {
+    "sv": "Staplade PP-säckar på pall i ett lager.",
+    "en": "Stacked PP sacks on a pallet in a warehouse."
+  },
+  "applications": [
+    { "sv": "Spannmål", "en": "Grain" },
+    { "sv": "Foder", "en": "Animal feed" },
+    { "sv": "Utsäde", "en": "Seed" },
+    { "sv": "Gödsel", "en": "Fertiliser" },
+    { "sv": "Granulat och pulver", "en": "Granules and powders" },
+    { "sv": "Byggmaterial", "en": "Building materials" }
+  ],
+
+  "directEyebrow": { "sv": "Direkt från tillverkningen", "en": "Direct from manufacturing" },
+  "directHeadingLine1": { "sv": "Tillverkade där.", "en": "Made there." },
+  "directHeadingLine2": { "sv": "Servade här.", "en": "Supported here." },
+  "directBody": {
+    "sv": "Tillverkade i vår moderfabrik, med specifikation, försäljning och support som sköts lokalt i Sverige.",
+    "en": "Manufactured at our parent factory, with specification, sales and support handled locally in Sweden."
+  },
+  "directColumns": [
+    {
+      "label": { "sv": "Egen tillverkning", "en": "Direct manufacturing" },
+      "body": { "sv": "Kontroll över specifikation, produktion och tryck.", "en": "Control over specification, production and printing." },
+      "icon": "manufacturing-light.png"
+    },
+    {
+      "label": { "sv": "Lokal support", "en": "Local support" },
+      "body": { "sv": "Svensk kontakt, lagerhållning och planerad leverans.", "en": "Swedish contact, stockholding and planned supply." },
+      "icon": "team-light.png"
+    }
+  ],
+
+  "helpEyebrow": { "sv": "Behöver du hjälp att specificera?", "en": "Need help specifying?" },
+  "helpHeading": { "sv": "Berätta vad du fyller.", "en": "Tell us what you are filling." },
+  "helpBody": {
+    "sv": "Ge oss produkt, vikt per säck, hur den fylls och försluts, så hjälper vi dig specificera rätt säck.",
+    "en": "Give us the product, weight per sack, and how it is filled and closed. We will help specify the right sack."
+  },
+  "helpButtonPrimary": { "sv": "Diskutera ditt behov", "en": "Discuss your requirement" },
+  "helpButtonSecondary": { "sv": "Begär offert", "en": "Request a quote" },
+  "helpGuideLink": { "sv": "Läs guiden: så väljer du rätt storsäck", "en": "Read the guide: how to specify an FIBC" },
+
+  "schemaCategory": { "sv": "PP-säckar", "en": "PP woven sacks" },
+  "schemaMaterial": { "sv": "Vävt polypropylen", "en": "Woven polypropylene" }
+}
